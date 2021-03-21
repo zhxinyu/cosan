@@ -31,8 +31,19 @@ class model_select_evaluate{
   
   }
   
+  // split a data set with a given ratio
+  list<T for dataset> split(<T> x, <T> y, ratio){
+      ind_train = x.length * ratio
+      x_train, x_test = x[:ind_train], x[ind_train+1:]
+      // do the same for y
+      return [x_train, y_train, x_test, y_test]
+  }
+  
   // hyper-parameter tuning
-  <T> grid_search(<T> grid,<model type> model, <T> x_train, <T> y_train, <T> x_test, <T> y_test, <not_sure> metric){
+  <T> grid_search(<T> grid,<model type> model, <T> x, <T> y, <not_sure> metric){
+     // split the dataset into training and testing 
+     x_train, y_train, x_test, y_test = split(x, y)
+  
      min_err = inf;
      best_para = 0;
      

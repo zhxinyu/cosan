@@ -93,11 +93,17 @@ class model_select_evaluate{
     
     Output: double, the averaged error from each cv iteration
   */
-  double cv(<model type> model, <T> x, <T> y, int fold){
+  double cv(<model type> model, <T> x, <T> y, int fold, <not sure> metric){
+    // potentially replace for loop with parallel processing
+    list<double> or <eigen matrix> errors = []
     for i in (1: fold):
         x_train, y_train, x_test, y_test = split_cv(x, y, fold, test_ind)
-        model.fit()
+        model.fit(x_train, y_train)
+        y_predict = model.predict(x_test)
+        error = metric(y_test, y_predict)
+        errors.add(error)
         
+    return mean(error)
   }
   
 };

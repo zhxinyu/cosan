@@ -5,9 +5,8 @@
 #ifndef COSAN_COSANMATRIX_H
 #define COSAN_COSANMATRIX_H
 #include <Eigen/Dense>
+namespace Cosan{
 
-class CosanMatrix: public Eigen::MatrixXd {
-};
-
+}
 
 #endif //COSAN_COSANMATRIX_H

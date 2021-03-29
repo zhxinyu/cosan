@@ -4,50 +4,42 @@
 
 #ifndef COSAN_COSANMODEL_H
 #define COSAN_COSANMODEL_H
-#include "base/CosanBO.h"
-namespace cosan{
-
-    class InputFeatures;
-    class OutputValues;
-
+#include <chrono>
+#include <cosan/base/CosanBO.h>
+namespace Cosan{
+    enum EProblemType{
+        PdNone   = 0,
+        PdBinaryClassification = 1,
+        PdUnivariateRegression=2,
+    };
     enum EModelType{
-        md_None = 0,
-        md_LinearRegression=1,
-        md_RidgeRegression=2,
-        md_KernelRegression=3
+        MdNone = 0,
+        MdLinearRegression=1,
+        MdRidgeRegression=2,
+        MdKernelRegression=3
     };
     enum ESolverType{
-        sr_Auto = 0
+        SrAuto = 0
     };
-    enum EProblemType{
-        pm_Binary = 0,
-        pm_UniRegression=1,
-//        pm_MultiClassification=2,
-//        pm_MultiRegression=3
-    };
-
-    class CosanModel: public CosanBO{
+    class CosanModel: public CosanBO {
     public:
-        CosanModel();
-        virtual ~CosanModel();
-        virtual bool fit(InputFeatures* X = NULL,OutputValues* y = NULL);
-        virtual OutputValues* predict(InputFeatures* X = NULL);//fixed later
+        CosanModel(): CosanBO(),MaxTrainTime(std::chrono::seconds(std::chrono::hours(1)).count()),
+        SolverType(SrAuto){
+        }
+//        virtual ~CosanModel();
+//        virtual Response* predict(const Feature* X = NULL)=0;//fixed later
 
-        virtual OutputBinaryLabels* predict(InputFeatures* X = NULL);
-        virtual OuputUniRegression* predict(InputFeatures* X = NULL);
+        void SetMaxTrainTime(double t) { MaxTrainTime=t;}
+        double GetMaxTrainTime() const {return MaxTrainTime;}
 
-        void SetMaxTrainTime(double t);
-        double GetMaxTrainTime();
-
-        virtual EModelType GetModelType();
-        void SetSolverType(ESolverType sr);
-        ESolverType GetSolverType();
-    protect:
+        virtual EModelType GetModelType() {return MdNone;}
+        virtual EProblemType GetProblemType(){return PdNone;}
+        virtual ESolverType GetSolverType() const {return SolverType;}
+        void SetSolverType(ESolverType sr) {SolverType=sr;}
+    protected:
         double MaxTrainTime;
-        OutputValues* = y;
         ESolverType SolverType;
     };
-
 }
 
 #endif //COSAN_COSANMODEL_H

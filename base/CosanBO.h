@@ -1,27 +1,24 @@
 #ifndef __COSANBO_H_INCLUDED__
 #define __COSANBO_H_INCLUDED__
 #include <string>
-namespace cosan
+namespace Cosan
 {
     class CosanBO
     {
     public:
-        CosanBO();
-        virtual ~CosanBO();
+        CosanBO(){}
+//        virtual ~CosanBO();
+//        virtual CosanBO *Shallow_copy() const;
+//        virtual CosanBO *Deep_copy() const;
+        virtual const std::string  GetName() const {return "Abstract Object";}
+//        virtual bool SaveFile(const std::string &path ,const std::string & prefix = "");
+//        virtual bool LoadFile(const std::string &path);
+//        void PrintModel();
+//        virtual bool Equals(CosanBO* other, float accuracy = 0.0);
+//        virtual CosanBO* Clone();
 
-        virtual CosanBO *shallow_copy() const;
-        virtual CosanBO *deep_copy() const;
-
-        virtual const std::string  get_name() const = 0;
-
-        virtual bool save_file(const std::string &path ,const std::string & prefix = "");
-        virtual bool load_file(const std::string &path);
-        void print_model();
-        virtual bool equals(CosanBO* other, float accuracy = 0.0);
-        virtual CosanBO* clone();
-
+    protected:
     };
-
 
 }
 

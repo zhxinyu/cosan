@@ -6,9 +6,11 @@
 #define COSAN_COSANROWVECTOR_H
 #include <Eigen/Dense>
 
-class CosanRowVector : public Eigen::RowVectorXd {
-
-};
-
+namespace Cosan{
+    class CosanRowVector : public Eigen::RowVectorXd {
+        public:
+            CosanRowVector():Eigen::RowVectorXd(){}
+    };
+}
 
 #endif //COSAN_COSANROWVECTOR_H

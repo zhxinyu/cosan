@@ -4,11 +4,12 @@
 
 #ifndef COSAN_INPUTFEATURES_H
 #define COSAN_INPUTFEATURES_H
-#include "CosanBO.h"
+#include <cosan/data/CosanMatrix.h>
 
-class InputFeatures {
+namespace Cosan{
+    class InputFeatures :public CosanMatrix {
 
-};
-
+    };
+}
 
 #endif //COSAN_INPUTFEATURES_H

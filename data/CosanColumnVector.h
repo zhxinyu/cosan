@@ -6,8 +6,11 @@
 #define COSAN_COSANCOLUMNVECTOR_H
 #include <Eigen/Dense>
 
+using namespace Cosan{
 class CosanColumnVector: public Eigen::VectorXd {
+    public:
+        CosanColumnVector():Eigen::VectorXd(){}
 };
-
+}
 
 #endif //COSAN_COSANCOLUMNVECTOR_H

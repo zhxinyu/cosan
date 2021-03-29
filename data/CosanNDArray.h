@@ -6,9 +6,10 @@
 #define COSAN_COSANNDARRAY_H
 #include <Eigen/Dense>
 
-class CosanNDArray : public Eigen::ArrayXXd {
-
-};
-
-
+namespace Cosan{
+    class CosanNDArray : public Eigen::ArrayXXd {
+        public:
+            CosanNDArray():Eigen::ArrayXXd(){}
+    };
+}
 #endif //COSAN_COSANNDARRAY_H

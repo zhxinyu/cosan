@@ -1,3 +1,13 @@
+### Run preprocessing tests
+
+```g++ -Wall -std=c++17 -O2 standardScalerTests.cpp ../preprocessing/standardScaler.cpp && ./a.out```
+
+```g++ -Wall -std=c++17 -O2 csvLoaderTest.cpp && ./a.out ```
+
+----
+
+(History)
+
 
 ### General Questions:
 

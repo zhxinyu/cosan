@@ -11,15 +11,17 @@
 //using namespace std;
 
 int main() {
-    Cosan::CosanData CD("./data/toy/X.csv","./data/toy/y.csv");
+//    Cosan::CosanRawData CD("./example_data/toy/X_.csv","./example_data/toy/y.csv");
+    Cosan::CosanRawData CD("./example_data/toy2/X_.csv");
+
     // Cosan::CosanLinearRegression CLR(true);
     // CLR.fit(CD.GetInput(),CD.GetTarget());
-
-    double RegularizationTerm = 1;
-    Cosan::CosanRidgeRegression CRR(RegularizationTerm,true);
-    CRR.fit(CD.GetInput(),CD.GetTarget());
-    std::cout<<CRR.GetBeta()<<std::endl;    
-    save_csv("./data/toy/beta_c1.csv",CRR.GetBeta());
+    std::cout<<CD.GetSummaryMessageX()<<std::endl;
+//    double RegularizationTerm = 1;
+//    Cosan::CosanRidgeRegression CRR(RegularizationTerm,true);
+//    CRR.fit(CD.GetInput(),CD.GetTarget());
+//    std::cout<<CRR.GetBeta()<<std::endl;
+//    save_csv("./example_data/toy/beta_c1.csv",CRR.GetBeta());
 
 //    m(0, 0) = 3;
 //    m(1, 0) = 2.5;

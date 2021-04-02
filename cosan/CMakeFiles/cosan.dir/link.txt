@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libcosan.a CMakeFiles/cosan.dir/model/CosanLinearModel.cpp.o CMakeFiles/cosan.dir/model/CosanLinearRegression.cpp.o CMakeFiles/cosan.dir/model/CosanRidgeRegression.cpp.o CMakeFiles/cosan.dir/model/CosanLasso.cpp.o CMakeFiles/cosan.dir/model/CosanElasticNet.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libcosan.a

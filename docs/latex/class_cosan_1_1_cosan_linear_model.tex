@@ -1,0 +1,175 @@
+\hypertarget{class_cosan_1_1_cosan_linear_model}{}\doxysection{Cosan\+::Cosan\+Linear\+Model Class Reference}
+\label{class_cosan_1_1_cosan_linear_model}\index{Cosan::CosanLinearModel@{Cosan::CosanLinearModel}}
+
+
+{\ttfamily \#include $<$Cosan\+Linear\+Model.\+h$>$}
+
+Inheritance diagram for Cosan\+::Cosan\+Linear\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.737733cm]{class_cosan_1_1_cosan_linear_model}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cosan_1_1_cosan_linear_model_ab4b7424a32b3d4a3039a946d95d0af1c}{Cosan\+Linear\+Model}} ()=delete
+\item 
+\mbox{\hyperlink{class_cosan_1_1_cosan_linear_model_a33054264fa0e8d1be9d8d3a5583f3228}{Cosan\+Linear\+Model}} (bool Bias)
+\item 
+void \mbox{\hyperlink{class_cosan_1_1_cosan_linear_model_a2efc3558834a8b3703af3aaed6ed1007}{Set\+Bias}} (const bool New\+Bias)
+\item 
+virtual void \mbox{\hyperlink{class_cosan_1_1_cosan_linear_model_ab09563d11c97e601de5cf96205515127}{Set\+Beta}} (const \mbox{\hyperlink{class_cosan_1_1_cosan_matrix}{Cosan\+Matrix}} \&Init\+Beta)
+\item 
+\mbox{\hyperlink{class_cosan_1_1_cosan_matrix}{Cosan\+Matrix}} \& \mbox{\hyperlink{class_cosan_1_1_cosan_linear_model_abc98d32ed2f542eb79770372b0bbd71a}{Get\+Beta}} ()
+\item 
+bool \mbox{\hyperlink{class_cosan_1_1_cosan_linear_model_a36d60ceeae05d9e343e234f059552227}{Get\+Bias}} () const
+\item 
+virtual bool \mbox{\hyperlink{class_cosan_1_1_cosan_linear_model_accd25da81171ded9098f8ed1fd682c7a}{fit}} (\mbox{\hyperlink{class_cosan_1_1_cosan_matrix}{Cosan\+Matrix}} \&X, const \mbox{\hyperlink{class_cosan_1_1_cosan_matrix}{Cosan\+Matrix}} \&Y)=0
+\item 
+virtual \mbox{\hyperlink{class_cosan_1_1_cosan_matrix}{Cosan\+Matrix}} \mbox{\hyperlink{class_cosan_1_1_cosan_linear_model_a68e9e6da5ef0b2bcb03238a879dc28fd}{predict}} (const \mbox{\hyperlink{class_cosan_1_1_cosan_matrix}{Cosan\+Matrix}} \&X)=0
+\item 
+virtual const std\+::string \mbox{\hyperlink{class_cosan_1_1_cosan_linear_model_a441a2fcedef4b42230de3b63b71e95d0}{Get\+Name}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cosan_1_1_cosan_matrix}{Cosan\+Matrix}} \mbox{\hyperlink{class_cosan_1_1_cosan_linear_model_a0763dc5d657ee8286ac25530b24ee206}{M\+Beta}}
+\item 
+bool \mbox{\hyperlink{class_cosan_1_1_cosan_linear_model_a60f7dd86b65538c332dd7f457a033685}{M\+Bias}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 15 of file Cosan\+Linear\+Model.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cosan_1_1_cosan_linear_model_ab4b7424a32b3d4a3039a946d95d0af1c}\label{class_cosan_1_1_cosan_linear_model_ab4b7424a32b3d4a3039a946d95d0af1c}} 
+\index{Cosan::CosanLinearModel@{Cosan::CosanLinearModel}!CosanLinearModel@{CosanLinearModel}}
+\index{CosanLinearModel@{CosanLinearModel}!Cosan::CosanLinearModel@{Cosan::CosanLinearModel}}
+\doxysubsubsection{\texorpdfstring{CosanLinearModel()}{CosanLinearModel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Cosan\+::\+Cosan\+Linear\+Model\+::\+Cosan\+Linear\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_cosan_1_1_cosan_linear_model_a33054264fa0e8d1be9d8d3a5583f3228}\label{class_cosan_1_1_cosan_linear_model_a33054264fa0e8d1be9d8d3a5583f3228}} 
+\index{Cosan::CosanLinearModel@{Cosan::CosanLinearModel}!CosanLinearModel@{CosanLinearModel}}
+\index{CosanLinearModel@{CosanLinearModel}!Cosan::CosanLinearModel@{Cosan::CosanLinearModel}}
+\doxysubsubsection{\texorpdfstring{CosanLinearModel()}{CosanLinearModel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Cosan\+::\+Cosan\+Linear\+Model\+::\+Cosan\+Linear\+Model (\begin{DoxyParamCaption}\item[{bool}]{Bias }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 19 of file Cosan\+Linear\+Model.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cosan_1_1_cosan_linear_model_accd25da81171ded9098f8ed1fd682c7a}\label{class_cosan_1_1_cosan_linear_model_accd25da81171ded9098f8ed1fd682c7a}} 
+\index{Cosan::CosanLinearModel@{Cosan::CosanLinearModel}!fit@{fit}}
+\index{fit@{fit}!Cosan::CosanLinearModel@{Cosan::CosanLinearModel}}
+\doxysubsubsection{\texorpdfstring{fit()}{fit()}}
+{\footnotesize\ttfamily virtual bool Cosan\+::\+Cosan\+Linear\+Model\+::fit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cosan_1_1_cosan_matrix}{Cosan\+Matrix}} \&}]{X,  }\item[{const \mbox{\hyperlink{class_cosan_1_1_cosan_matrix}{Cosan\+Matrix}} \&}]{Y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_cosan_1_1_cosan_linear_regression_aff8f240e58bfe3a7632b91f7446c3a34}{Cosan\+::\+Cosan\+Linear\+Regression}}.
+
+\mbox{\Hypertarget{class_cosan_1_1_cosan_linear_model_abc98d32ed2f542eb79770372b0bbd71a}\label{class_cosan_1_1_cosan_linear_model_abc98d32ed2f542eb79770372b0bbd71a}} 
+\index{Cosan::CosanLinearModel@{Cosan::CosanLinearModel}!GetBeta@{GetBeta}}
+\index{GetBeta@{GetBeta}!Cosan::CosanLinearModel@{Cosan::CosanLinearModel}}
+\doxysubsubsection{\texorpdfstring{GetBeta()}{GetBeta()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_cosan_1_1_cosan_matrix}{Cosan\+Matrix}}\& Cosan\+::\+Cosan\+Linear\+Model\+::\+Get\+Beta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 34 of file Cosan\+Linear\+Model.\+h.
+
+\mbox{\Hypertarget{class_cosan_1_1_cosan_linear_model_a36d60ceeae05d9e343e234f059552227}\label{class_cosan_1_1_cosan_linear_model_a36d60ceeae05d9e343e234f059552227}} 
+\index{Cosan::CosanLinearModel@{Cosan::CosanLinearModel}!GetBias@{GetBias}}
+\index{GetBias@{GetBias}!Cosan::CosanLinearModel@{Cosan::CosanLinearModel}}
+\doxysubsubsection{\texorpdfstring{GetBias()}{GetBias()}}
+{\footnotesize\ttfamily bool Cosan\+::\+Cosan\+Linear\+Model\+::\+Get\+Bias (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 35 of file Cosan\+Linear\+Model.\+h.
+
+\mbox{\Hypertarget{class_cosan_1_1_cosan_linear_model_a441a2fcedef4b42230de3b63b71e95d0}\label{class_cosan_1_1_cosan_linear_model_a441a2fcedef4b42230de3b63b71e95d0}} 
+\index{Cosan::CosanLinearModel@{Cosan::CosanLinearModel}!GetName@{GetName}}
+\index{GetName@{GetName}!Cosan::CosanLinearModel@{Cosan::CosanLinearModel}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily virtual const std\+::string Cosan\+::\+Cosan\+Linear\+Model\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_cosan_1_1_cosan_b_o_a36a75e161a183482930e5b97151e566f}{Cosan\+::\+Cosan\+BO}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_cosan_1_1_cosan_ridge_regression_a0465ad09676891bc0d78e598e79f7e62}{Cosan\+::\+Cosan\+Ridge\+Regression}}, and \mbox{\hyperlink{class_cosan_1_1_cosan_linear_regression_ab3195079ead29c0709b2260d91de36a8}{Cosan\+::\+Cosan\+Linear\+Regression}}.
+
+
+
+Definition at line 43 of file Cosan\+Linear\+Model.\+h.
+
+\mbox{\Hypertarget{class_cosan_1_1_cosan_linear_model_a68e9e6da5ef0b2bcb03238a879dc28fd}\label{class_cosan_1_1_cosan_linear_model_a68e9e6da5ef0b2bcb03238a879dc28fd}} 
+\index{Cosan::CosanLinearModel@{Cosan::CosanLinearModel}!predict@{predict}}
+\index{predict@{predict}!Cosan::CosanLinearModel@{Cosan::CosanLinearModel}}
+\doxysubsubsection{\texorpdfstring{predict()}{predict()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_cosan_1_1_cosan_matrix}{Cosan\+Matrix}} Cosan\+::\+Cosan\+Linear\+Model\+::predict (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_cosan_1_1_cosan_matrix}{Cosan\+Matrix}} \&}]{X }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_cosan_1_1_cosan_linear_regression_a00289e68e8e003c3bd33abbdd4e2b352}{Cosan\+::\+Cosan\+Linear\+Regression}}.
+
+\mbox{\Hypertarget{class_cosan_1_1_cosan_linear_model_ab09563d11c97e601de5cf96205515127}\label{class_cosan_1_1_cosan_linear_model_ab09563d11c97e601de5cf96205515127}} 
+\index{Cosan::CosanLinearModel@{Cosan::CosanLinearModel}!SetBeta@{SetBeta}}
+\index{SetBeta@{SetBeta}!Cosan::CosanLinearModel@{Cosan::CosanLinearModel}}
+\doxysubsubsection{\texorpdfstring{SetBeta()}{SetBeta()}}
+{\footnotesize\ttfamily virtual void Cosan\+::\+Cosan\+Linear\+Model\+::\+Set\+Beta (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_cosan_1_1_cosan_matrix}{Cosan\+Matrix}} \&}]{Init\+Beta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 32 of file Cosan\+Linear\+Model.\+h.
+
+\mbox{\Hypertarget{class_cosan_1_1_cosan_linear_model_a2efc3558834a8b3703af3aaed6ed1007}\label{class_cosan_1_1_cosan_linear_model_a2efc3558834a8b3703af3aaed6ed1007}} 
+\index{Cosan::CosanLinearModel@{Cosan::CosanLinearModel}!SetBias@{SetBias}}
+\index{SetBias@{SetBias}!Cosan::CosanLinearModel@{Cosan::CosanLinearModel}}
+\doxysubsubsection{\texorpdfstring{SetBias()}{SetBias()}}
+{\footnotesize\ttfamily void Cosan\+::\+Cosan\+Linear\+Model\+::\+Set\+Bias (\begin{DoxyParamCaption}\item[{const bool}]{New\+Bias }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 31 of file Cosan\+Linear\+Model.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cosan_1_1_cosan_linear_model_a0763dc5d657ee8286ac25530b24ee206}\label{class_cosan_1_1_cosan_linear_model_a0763dc5d657ee8286ac25530b24ee206}} 
+\index{Cosan::CosanLinearModel@{Cosan::CosanLinearModel}!MBeta@{MBeta}}
+\index{MBeta@{MBeta}!Cosan::CosanLinearModel@{Cosan::CosanLinearModel}}
+\doxysubsubsection{\texorpdfstring{MBeta}{MBeta}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_cosan_1_1_cosan_matrix}{Cosan\+Matrix}} Cosan\+::\+Cosan\+Linear\+Model\+::\+M\+Beta\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 45 of file Cosan\+Linear\+Model.\+h.
+
+\mbox{\Hypertarget{class_cosan_1_1_cosan_linear_model_a60f7dd86b65538c332dd7f457a033685}\label{class_cosan_1_1_cosan_linear_model_a60f7dd86b65538c332dd7f457a033685}} 
+\index{Cosan::CosanLinearModel@{Cosan::CosanLinearModel}!MBias@{MBias}}
+\index{MBias@{MBias}!Cosan::CosanLinearModel@{Cosan::CosanLinearModel}}
+\doxysubsubsection{\texorpdfstring{MBias}{MBias}}
+{\footnotesize\ttfamily bool Cosan\+::\+Cosan\+Linear\+Model\+::\+M\+Bias\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 46 of file Cosan\+Linear\+Model.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cosan/model/\mbox{\hyperlink{_cosan_linear_model_8h}{Cosan\+Linear\+Model.\+h}}\end{DoxyCompactItemize}

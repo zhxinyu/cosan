@@ -9,7 +9,7 @@ EigenMatrix Cosan::standardScaler::transform(EigenMatrix X) {
     return (X.rowwise() - this->mean).array().rowwise() / this->std.array();
 }
 
-EigenMatrix Cosan::standardScaler::standardize(EigenMatrix X) {
+EigenMatrix Cosan::standardScaler::standardize(const EigenMatrix& X) {
     this->fit(X);
     return this->transform(X);
 }

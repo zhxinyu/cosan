@@ -10,7 +10,7 @@ namespace Cosan {
 
         ~standardScaler() override = default;
 
-        EigenMatrix standardize(EigenMatrix X);
+        EigenMatrix standardize(const EigenMatrix& X);
 
 //    private:
 

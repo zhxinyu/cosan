@@ -16,5 +16,9 @@ add_executable(cosan
         preprocessing/preprocesssor.h
         preprocessing/standardScaler.cpp
         preprocessing/standardScaler.h
-        test/standardScalerTests.cpp
-        base/common.h)
+        test/standardScalerTest.cpp
+        base/common.h
+        preprocessing/normalizer.cpp
+        preprocessing/normalizer.h
+        test/normalizerTest.cpp
+        )

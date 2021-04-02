@@ -1,0 +1,11 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/xinyuzhang/Desktop/Spring2021/c++pattern/project/cosan
+CMake Error at CMakeLists.txt:7 (add_subdirectory):
+  The source directory
+
+    /Users/xinyuzhang/Desktop/Spring2021/c++pattern/project/cosan/docs
+
+  does not contain a CMakeLists.txt file.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/xinyuzhang/Desktop/Spring2021/c++pattern/project/cosan/CMakeFiles/CMakeOutput.log".

@@ -7,8 +7,9 @@
 4. how to tune hyperparameters if a model has multiple hyper-parameters?  
 
 ### for each metric function
-  1. the first step is always check whether the shape of both input matrix are the same 
-     If not, exceptions will be thrown
+  1. the first step is always check whether the shape of both input matrix are the same. 
+     If not, exceptions will be thrown.
+  2. If the shape of the input label is not (n, 1), an exception will be thrown.
      
 
 ### Model Selection and Evaluation Design

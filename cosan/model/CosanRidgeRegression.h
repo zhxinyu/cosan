@@ -21,12 +21,12 @@ namespace Cosan{
             double GetTau() {return MLambda;}
 //            bool Load(const string & path);
 //            bool Save(const string & path);
-            EModelType GetModelType(){return MdRidgeRegression;};
-            const std::string  GetName() const{ return "Linear Ridge Regression";}
+            EModelType GetModelType() override {return MdRidgeRegression;};
+            const std::string  GetName()  const override{ return "Linear Ridge Regression";}
 
 
 
-            bool fit(CosanMatrix X,const CosanMatrix& Y){
+            bool fit(CosanMatrix X,const CosanMatrix& Y)  {
                 CosanMatrix Identity = MLambda*Eigen::MatrixXd::Identity(X.cols(),X.cols());
                 if (MBias==true){
                     X.conservativeResize(X.rows(), X.cols()+1);
@@ -45,7 +45,6 @@ namespace Cosan{
 //                MBeta = (X.transpose()*X+CosanMatrix(MLambda*Eigen::MatrixXd::Identity(X.cols(),X.cols()))).colPivHouseholderQr().solve(X.transpose()*Y);
                 if (MBias==true){
                     removeColumn(X,X.cols()-1);
-
                 }
                 return true;
             }

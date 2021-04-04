@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['solvertype_189',['SolverType',['../class_cosan_1_1_cosan_model.html#ac63606d39c558164bebeb5f3866a522f',1,'Cosan::CosanModel']]],
-  ['summarymessagex_190',['SummaryMessageX',['../class_cosan_1_1_cosan_raw_data.html#aa1ef8ff6e9b8803024a614a0d85f767e',1,'Cosan::CosanRawData']]],
-  ['summarymessagey_191',['SummaryMessageY',['../class_cosan_1_1_cosan_raw_data.html#a325171b1ccc9eaaa79f16c6372262bc6',1,'Cosan::CosanRawData']]],
-  ['svaluesx_192',['svaluesX',['../class_cosan_1_1_cosan_raw_data.html#abb22def8049f0e12e5605dc0590f9129',1,'Cosan::CosanRawData']]],
-  ['svaluesy_193',['svaluesY',['../class_cosan_1_1_cosan_raw_data.html#ad613eb3e7cc42ddf181f0da3aa394b64',1,'Cosan::CosanRawData']]]
+  ['maxtraintime_305',['MaxTrainTime',['../class_cosan_1_1_cosan_model.html#ab0df64fbc6ac35bc4198338705435b76',1,'Cosan::CosanModel']]],
+  ['mbeta_306',['MBeta',['../class_cosan_1_1_cosan_linear_model.html#a0763dc5d657ee8286ac25530b24ee206',1,'Cosan::CosanLinearModel']]],
+  ['mbias_307',['MBias',['../class_cosan_1_1_cosan_linear_model.html#a60f7dd86b65538c332dd7f457a033685',1,'Cosan::CosanLinearModel']]],
+  ['mean_308',['mean',['../class_cosan_1_1_standard_scaler.html#a31130fba42cbdc35d6c3ffbe941ad85d',1,'Cosan::StandardScaler']]],
+  ['mlambda_309',['MLambda',['../class_cosan_1_1_cosan_ridge_regression.html#a47674ab43c5e00693bca4a5b3f7b474c',1,'Cosan::CosanRidgeRegression']]]
 ];

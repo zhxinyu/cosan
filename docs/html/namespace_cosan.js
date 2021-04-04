@@ -6,9 +6,21 @@ var namespace_cosan =
     [ "CosanLasso", "class_cosan_1_1_cosan_lasso.html", null ],
     [ "CosanLinearModel", "class_cosan_1_1_cosan_linear_model.html", "class_cosan_1_1_cosan_linear_model" ],
     [ "CosanLinearRegression", "class_cosan_1_1_cosan_linear_regression.html", "class_cosan_1_1_cosan_linear_regression" ],
-    [ "CosanMatrix", "class_cosan_1_1_cosan_matrix.html", "class_cosan_1_1_cosan_matrix" ],
     [ "CosanModel", "class_cosan_1_1_cosan_model.html", "class_cosan_1_1_cosan_model" ],
     [ "CosanRawData", "class_cosan_1_1_cosan_raw_data.html", "class_cosan_1_1_cosan_raw_data" ],
     [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html", "class_cosan_1_1_cosan_ridge_regression" ],
-    [ "InputFeatures", "class_cosan_1_1_input_features.html", null ]
+    [ "CrossValidation", "class_cosan_1_1_cross_validation.html", null ],
+    [ "CustomerTransform", "class_cosan_1_1_customer_transform.html", null ],
+    [ "GridSearch", "class_cosan_1_1_grid_search.html", null ],
+    [ "InputFeatures", "class_cosan_1_1_input_features.html", null ],
+    [ "MinmaxScaler", "class_cosan_1_1_minmax_scaler.html", null ],
+    [ "MissingValues", "class_cosan_1_1_missing_values.html", null ],
+    [ "Normalizer", "class_cosan_1_1_normalizer.html", "class_cosan_1_1_normalizer" ],
+    [ "OnehotEncoding", "class_cosan_1_1_onehot_encoding.html", null ],
+    [ "PolynomialFeatures", "class_cosan_1_1_polynomial_features.html", null ],
+    [ "Preprocessor", "class_cosan_1_1_preprocessor.html", "class_cosan_1_1_preprocessor" ],
+    [ "PrincipalComponentAnalysis", "class_cosan_1_1_principal_component_analysis.html", null ],
+    [ "RandomGridCV", "class_cosan_1_1_random_grid_c_v.html", null ],
+    [ "StandardScaler", "class_cosan_1_1_standard_scaler.html", "class_cosan_1_1_standard_scaler" ],
+    [ "TrainTestSplit", "class_cosan_1_1_train_test_split.html", null ]
 ];

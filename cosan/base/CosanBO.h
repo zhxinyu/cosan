@@ -1,6 +1,9 @@
 #ifndef __COSANBO_H_INCLUDED__
 #define __COSANBO_H_INCLUDED__
 #include <string>
+//typedef Eigen::Matrix<float, 1, Eigen::Dynamic, Eigen::RowMajor> EigenVector;
+#include <gsl/gsl>
+
 namespace Cosan
 {
     class CosanBO

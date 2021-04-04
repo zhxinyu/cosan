@@ -6,7 +6,7 @@
 #include <tuple>
 #include <math.h>
 #include <Eigen/Dense>
-
+#include <gsl/gsl>
 #define __UTILS_H_INCLUDED__
 
 //typedef struct {
@@ -170,7 +170,7 @@ Matrix load_csv1 (const std::string & path) {
     indata.open(path);
     std::string line;
     std::vector<double> values;
-    uint rows = 0;
+    gsl::index rows = 0;
     while (std::getline(indata, line)) {
         std::stringstream lineStream(line);
         std::string cell;
@@ -199,8 +199,8 @@ void save_csv(const std::string & path, const Matrix & matrix){
 
 void removeRow(Eigen::MatrixXd& matrix, unsigned int rowToRemove)
 {
-    unsigned int numRows = matrix.rows()-1;
-    unsigned int numCols = matrix.cols();
+    gsl::index numRows = matrix.rows()-1;
+    gsl::index numCols = matrix.cols();
 
     if( rowToRemove < numRows )
         matrix.block(rowToRemove,0,numRows-rowToRemove,numCols) = matrix.block(rowToRemove+1,0,numRows-rowToRemove,numCols).eval();
@@ -210,8 +210,8 @@ void removeRow(Eigen::MatrixXd& matrix, unsigned int rowToRemove)
 
 void removeColumn(Eigen::MatrixXd& matrix, unsigned int colToRemove)
 {
-    unsigned int numRows = matrix.rows();
-    unsigned int numCols = matrix.cols()-1;
+    gsl::index numRows = matrix.rows();
+    gsl::index numCols = matrix.cols()-1;
 
     if( colToRemove < numCols )
         matrix.block(0,colToRemove,numRows,numCols-colToRemove) = matrix.block(0,colToRemove+1,numRows,numCols-colToRemove).eval();

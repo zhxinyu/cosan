@@ -1,4 +1,23 @@
 var searchData=
 [
-  ['utils_2eh_97',['utils.h',['../utils_8h.html',1,'']]]
+  ['samplenorm_135',['SampleNorm',['../class_cosan_1_1_normalizer.html#abce113104d11e99d36d493aab4bd24ef',1,'Cosan::Normalizer']]],
+  ['save_5fcsv_136',['save_csv',['../utils_8h.html#a87f8af2815bab97d01c5dce049c27e1c',1,'utils.h']]],
+  ['setbeta_137',['SetBeta',['../class_cosan_1_1_cosan_linear_model.html#ab09563d11c97e601de5cf96205515127',1,'Cosan::CosanLinearModel']]],
+  ['setbias_138',['SetBias',['../class_cosan_1_1_cosan_linear_model.html#a2efc3558834a8b3703af3aaed6ed1007',1,'Cosan::CosanLinearModel']]],
+  ['setinput_139',['SetInput',['../class_cosan_1_1_cosan_raw_data.html#a0ad704660a66bea4c951cb8d327b8413',1,'Cosan::CosanRawData']]],
+  ['setmaxtraintime_140',['SetMaxTrainTime',['../class_cosan_1_1_cosan_model.html#aa26e85bff4012c2f8ff66d57bc920627',1,'Cosan::CosanModel']]],
+  ['setp_141',['Setp',['../class_cosan_1_1_normalizer.html#a4e54800270b8756f319fb3099e55c51d',1,'Cosan::Normalizer']]],
+  ['setsolvertype_142',['SetSolverType',['../class_cosan_1_1_cosan_model.html#a47298a30af3c07828b7f7ce1205e8685',1,'Cosan::CosanModel']]],
+  ['settarget_143',['SetTarget',['../class_cosan_1_1_cosan_raw_data.html#a0bc0d05af133296d3e39b83c5e268b5a',1,'Cosan::CosanRawData']]],
+  ['settau_144',['SetTau',['../class_cosan_1_1_cosan_ridge_regression.html#ab0338256855d26979442b4d7478d8214',1,'Cosan::CosanRidgeRegression']]],
+  ['solvertype_145',['SolverType',['../class_cosan_1_1_cosan_model.html#ac63606d39c558164bebeb5f3866a522f',1,'Cosan::CosanModel']]],
+  ['srauto_146',['SrAuto',['../namespace_cosan.html#a4344a216eb3571c76e1bf5944f42be2fad420d0c3f0f54174562fbad458067941',1,'Cosan']]],
+  ['standardize_147',['standardize',['../class_cosan_1_1_standard_scaler.html#a1fc552f8fd4abdafcc1dda85e4b97cc4',1,'Cosan::StandardScaler']]],
+  ['standardscaler_148',['StandardScaler',['../class_cosan_1_1_standard_scaler.html',1,'Cosan::StandardScaler'],['../class_cosan_1_1_standard_scaler.html#a973609e2f75cd6bcf75b8b1d5499702b',1,'Cosan::StandardScaler::StandardScaler()']]],
+  ['standardscaler_2eh_149',['standardScaler.h',['../standard_scaler_8h.html',1,'']]],
+  ['std_150',['std',['../class_cosan_1_1_standard_scaler.html#a7dfe85b8a08b76e19e6249c0ac1db3c1',1,'Cosan::StandardScaler']]],
+  ['summarymessagex_151',['SummaryMessageX',['../class_cosan_1_1_cosan_raw_data.html#aa1ef8ff6e9b8803024a614a0d85f767e',1,'Cosan::CosanRawData']]],
+  ['summarymessagey_152',['SummaryMessageY',['../class_cosan_1_1_cosan_raw_data.html#a325171b1ccc9eaaa79f16c6372262bc6',1,'Cosan::CosanRawData']]],
+  ['svaluesx_153',['svaluesX',['../class_cosan_1_1_cosan_raw_data.html#abb22def8049f0e12e5605dc0590f9129',1,'Cosan::CosanRawData']]],
+  ['svaluesy_154',['svaluesY',['../class_cosan_1_1_cosan_raw_data.html#ad613eb3e7cc42ddf181f0da3aa394b64',1,'Cosan::CosanRawData']]]
 ];

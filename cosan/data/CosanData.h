@@ -85,8 +85,8 @@ namespace Cosan
             gsl::index GetcolsX() {return this->colsX;}
             gsl::index GetcolsY()  {return this->colsY;}
 
-            std::vector<std::string> & GetsvaluesX()  {return this->svaluesX;}
-            std::vector<std::string> & GetsvaluesY()  {return this->svaluesY;}
+            std::vector<std::vector<std::string>> & GetsvaluesX()  {return this->svaluesX;}
+            std::vector<std::vector<std::string>> & GetsvaluesY()  {return this->svaluesY;}
 
 
         protected:
@@ -99,14 +99,14 @@ namespace Cosan
                 bool catY = false;
                 gsl::index rowsX = 0,colsX = 0;
                 gsl::index rowsY = 0,colsY = 0;
-                std::vector<std::string> svaluesX,svaluesY;
+                std::vector<std::vector<std::string>> svaluesX,svaluesY;
         private:
 
             std::unordered_map<gsl::index,gsl::index> _raw2numIdx,_raw2catIdx;
             template<typename Matrix>
             std::tuple<gsl::index,gsl::index,std::string> _load_csv (const std::string & path,CosanMatrix& X,std::vector<std::vector<gsl::index>>& Idxpinf,
                                                          std::vector<std::vector<gsl::index>>& Idxminf,std::vector<std::vector<gsl::index>>& Idxmissing,
-                                                         std::vector<std::string> &svalues, std::set<gsl::index> & colCat) {
+                                                         std::vector<std::vector<std::string>> &svalues, std::set<gsl::index> & colCat) {
 
                 std::ifstream indata;
                 indata.open(path);
@@ -149,7 +149,7 @@ namespace Cosan
                     try{
                         result = std::stod(cell, &pos);
                     }catch(...){
-                        svalues.push_back(cell);
+                        svalues.push_back(std::vector<std::string>{cell});
                         colCat.insert(col_idx);
                         col_idx++;
                         cols=std::max(cols,col_idx);
@@ -182,13 +182,15 @@ namespace Cosan
                     lineStream.str("");
                     lineStream.clear(); // Clear state flags.
                     lineStream<<line;
+                    gsl::index tmpCatIdx = 0;
                     while(getline(lineStream, cell, ',')) {
                         if (cell.size()==0){
                             if (colCat.find(col_idx)==colCat.end()){
                                 values.push_back(stod(std::string("nan")));
                             }
                             else{
-                                svalues.push_back("");
+                                svalues[tmpCatIdx].push_back("");
+                                tmpCatIdx++;
                             }
                             Idxmissing.push_back(std::vector<gsl::index>({rows,col_idx}));
                             col_idx++;
@@ -199,7 +201,8 @@ namespace Cosan
                         }catch(...){
                             if (colCat.find(col_idx)!=colCat.end())
                             {
-                                svalues.push_back(cell);
+                                svalues[tmpCatIdx].push_back(cell);
+                                tmpCatIdx++;
                                 colCat.insert(col_idx);
                                 col_idx++;
                                 continue;}

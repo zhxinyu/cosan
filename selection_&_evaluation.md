@@ -1,4 +1,4 @@
-### Things to figure out
+### Things to figure out meeting 1
 1. model type
 2. dataset type: 
     1. example: https://github.com/scikit-learn/scikit-learn/blob/95119c13af77c76e150b753485c662b7c52a41a2/sklearn/preprocessing/_data.py#L84
@@ -6,10 +6,16 @@
 3. comment format
 4. how to tune hyperparameters if a model has multiple hyper-parameters?  
 
+### things to figure out meeting april 6th
+1. hyperpara_huning, the output and input type, should be a vector, change or not
+2. only linear model has the fit function, should be the general model right?
+
 ### for each metric function
   1. the first step is always check whether the shape of both input matrix are the same. 
      If not, exceptions will be thrown.
   2. If the shape of the input label is not (n, 1), an exception will be thrown.
+
+
      
 
 ### Model Selection and Evaluation Design

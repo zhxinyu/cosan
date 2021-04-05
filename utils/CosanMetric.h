@@ -1,3 +1,7 @@
+/*
+	Created by Jiahe Chen 
+*/
+
 #ifndef COSAN_METRIC_H
 #define COSAN_METRIC_H
 
@@ -16,62 +20,94 @@
 namespace Cosan
 {
 	/*
+		Base class for metric function
+	*/
+	class CosanMetric
+	{
+		CosanMatrix& yTrue;
+		CosanMatrix& yPredict;
+
+		public:
+			/*
+				Default constructor 
+			*/
+			CosanMetric(CosanMatrix& y1, CosanMatrix& y2)
+			{
+				// check if the input matrices have the same size
+				if (!SameSize(yTrue, yPredict))
+				{
+					throw DiffSize;
+				}
+
+				// check the shape of the input
+				if (!LabelShape(yTrue))
+				{
+					throw InvalidLabelShape;
+				}
+
+				// TODO: type check if the input type gets expanded
+
+				yTrue{y1}; 
+				yPredict{y2};
+			};
+
+
+			// Destructor
+			CosanMetric()=delete;
+
+
+		// returns the error rate
+		virtual double GetError(){}=0;
+	};
+
+	/*
 	count the number of errors in a prediction
-	Input:
+	Parameters:
 		yTrue: a refrence to a CosanMatrix object; the real labels
 			   with a shape of (#_of_samples, 1)
 		yPredict: a refrence to a CosanMatrix object; the predicted labels
 				  with a shape of (#_of_samples, 1)
 		threshold: double; threshold for error
-	Output:
+	Output of GetError:
 		result: double; number of mismatch between predicted
 				and real labels
 	*/
-	double NumOfError(CosanMatrix& yTrue, CosanMatrix& yPredict, double threshold)
+	class NumOfError: public CosanMetric
 	{
-		// check if the input matrices have the same size
-		if (!SameSize(yTrue, yPredict))
+		double Mthreshold;
+
+		public:
+			NumOfError(CosanMatrix& y1, CosanMatrix& y2, double threshold): CosanMetric(y1, y2)
+			{
+				Mthreshold{threshold};
+			}
+
+		double GetError()
 		{
-			throw DiffSize;
+			return ((yTrue - yPredict) > Mthreshold).count();
 		}
-
-		// check the shape of the input
-		if (!LabelShape(yTrue))
-		{
-			throw InvalidLabelShape;
-		}
-
-		// TODO: type check if the input type gets expanded
-
-		return ((yTrue - yPredict) > threshold).count();
 	};
 
+	
 	/*
 	Mean absolute error
-	Input:
+	Parameters:
 		yTrue: see in error_num cooments
 		yPredict: see in error_num cooments
-	Output:
+	Output of GetError:
 		result: double; refer to 
 				https://scikit-learn.org/stable/modules/model_evaluation.html#mean-absolute-error
 	*/
-	double MabsError(CosanMatrix& yTrue, CosanMatrix& yPredict)
+	class MabsError: public CosanMetric
 	{
-		// check if the input matrices have the same size
-		if (!SameSize(yTrue, yPredict)){
-			throw DiffSize;
-		}
+		// TODO: might get an error. class ihenritance grammar errors
 
-		// check the shape of the input
-		if (!LabelShape(yTrue))
+		double GetError()
 		{
-			throw InvalidLabelShape;
+			return (yTrue - yPredict).abs().sum()/yTrue.rows();
 		}
-
-		// TODO: type check if the input type gets expanded
-
-		return (yTrue - yPredict).abs().sum()/yTrue.rows()
 	};
+
 
 	/*
 	Mean squared error
@@ -82,23 +118,16 @@ namespace Cosan
 		result: double; refer to
 				https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error
 	*/
-	double MseMeanError(CosanMatrix& yTrue, CosanMatrix& yPredict)
+	class MseMeanError: public CosanMetric
 	{
-		// check if the input matrices have the same size
-		if (!SameSize(yTrue, yPredict)){
-			throw DiffSize;
-		}
+		// TODO: might get an error. class ihenritance grammar errors
 
-		// check the shape of the input
-		if (!LabelShape(yTrue))
+		double GetError()
 		{
-			throw InvalidLabelShape;
+			return (yTrue - yPredict).squaredNorm()/yTrue.rows();
 		}
-
-		// TODO: type check if the input type gets expanded
-
-		return (yTrue - yPredict).squaredNorm()/yTrue.rows();
 	};
+	
 
 	/*
 	R2 score, computes the coefficient of determination
@@ -109,26 +138,18 @@ namespace Cosan
 		result: double; refer to
 				https://scikit-learn.org/stable/modules/model_evaluation.html#r2-score-the-coefficient-of-determination
 	*/
-	double R2Score(CosanMatrix& yTrue, CosanMatrix& yPredict)
+	class R2Score: public CosanMetric
 	{
-		// check if the input matrices have the same size
-		if (!SameSize(yTrue, yPredict)){
-			throw DiffSize;
-		}
+		// TODO: might get an error. class ihenritance grammar errors
 
-		// check the shape of the input
-		if (!LabelShape(yTrue))
+		double GetError()
 		{
-			throw InvalidLabelShape;
+			yTrueMean = Constant(yTrue.rows(), yTrue.cols(). yTrue.mean());
+
+			return 1-(yTrue-yPredict).squaredNorm()/(yTrue-yTrueMean).squaredNorm();
 		}
-
-		// TODO: type check if the input type gets expanded
-
-		yTrueMean = Constant(yTrue.rows(), yTrue.cols(). yTrue.mean());
-
-		return 1-(yTrue-yPredict).squaredNorm()/(yTrue-yTrueMean).squaredNorm();
 	};
-
+	
 }
 
 #endif

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['onehotencoding_115',['OnehotEncoding',['../class_cosan_1_1_onehot_encoding.html',1,'Cosan']]],
-  ['onehotencoding_2eh_116',['onehotencoding.h',['../onehotencoding_8h.html',1,'']]]
+  ['labelshape_135',['LabelShape',['../namespace_cosan.html#a128bd558187aaee1b190ffb8c574d67c',1,'Cosan']]],
+  ['linearregressiontest_2ecpp_136',['LinearRegressionTest.cpp',['../_linear_regression_test_8cpp.html',1,'']]],
+  ['load_5fcsv_137',['load_csv',['../test__bak_8cpp.html#af890b388fd5ecab93d03e7a4095c1766',1,'test_bak.cpp']]],
+  ['load_5fcsv1_138',['load_csv1',['../io_2utils_8h.html#ac5dbff97cc740e6cc442be77308a258a',1,'utils.h']]]
 ];

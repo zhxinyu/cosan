@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['exist_5fzero_298',['exist_zero',['../class_cosan_1_1_normalizer.html#a3f3610c8f1b410eae78a262d1797b986',1,'Cosan::Normalizer']]]
+  ['b_456',['b',['../class_cosan_1_1_test.html#a4ecb9bd444a68970a0ed68fd43bf03d6',1,'Cosan::Test']]]
 ];

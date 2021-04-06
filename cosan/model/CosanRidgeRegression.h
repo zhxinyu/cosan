@@ -7,18 +7,20 @@
 #include <cosan/model/CosanLinearRegression.h>
 
 namespace Cosan{
-    class CosanRidgeRegression: public CosanLinearRegression{
+    template<typename NumericType,
+            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    class CosanRidgeRegression: public CosanLinearRegression<NumericType>{
         public:
 //        Initialization
             CosanRidgeRegression()=delete;
-            CosanRidgeRegression(double Lambda):CosanLinearRegression(true){
+            CosanRidgeRegression(NumericType Lambda):CosanLinearRegression<NumericType>(true){
                 MLambda=Lambda;
             }
-            CosanRidgeRegression(double Lambda,bool Bias): CosanLinearRegression(Bias){
+            CosanRidgeRegression(NumericType Lambda,bool Bias): CosanLinearRegression<NumericType>(Bias){
                 MLambda=Lambda;
             }
-            inline void SetTau(double Lambda) {MLambda = Lambda; };
-            double GetTau() {return MLambda;}
+            inline void SetTau(NumericType Lambda) {MLambda = Lambda; };
+            double GetTau() {NumericType MLambda;}
 //            bool Load(const string & path);
 //            bool Save(const string & path);
             EModelType GetModelType() override {return MdRidgeRegression;};
@@ -26,14 +28,14 @@ namespace Cosan{
 
 
 
-            bool fit(CosanMatrix X,const CosanMatrix& Y)  {
-                CosanMatrix Identity = MLambda*Eigen::MatrixXd::Identity(X.cols(),X.cols());
+            bool fit(CosanMatrix<NumericType> X,const CosanMatrix<NumericType>& Y)  {
+                CosanMatrix Identity = MLambda*CosanMatrix<NumericType>::Identity(X.cols(),X.cols());
                 if (MBias==true){
                     X.conservativeResize(X.rows(), X.cols()+1);
-                    X.col(X.cols()-1) = Eigen::MatrixXd::Ones(X.rows(),1);
+                    X.col(X.cols()-1) = CosanMatrix<NumericType>::Ones(X.rows(),1);
                     Identity.conservativeResize(Identity.rows()+1, Identity.cols()+1);
-                    Identity.col(Identity.cols()-1) = Eigen::MatrixXd::Zero(Identity.rows(),1);
-                    Identity.row(Identity.rows()-1) = Eigen::MatrixXd::Zero(1,Identity.cols());
+                    Identity.col(Identity.cols()-1) = CosanMatrix<NumericType>::Zero(Identity.rows(),1);
+                    Identity.row(Identity.rows()-1) = CosanMatrix<NumericType>::Zero(1,Identity.cols());
                 }
 //                const auto& svd = X.jacobiSvd(Eigen::ComputeFullU | Eigen::ComputeFullV);
 //                const auto& s = svd.singularValues();

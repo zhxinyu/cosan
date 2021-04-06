@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['transform_287',['transform',['../class_cosan_1_1_normalizer.html#a2999133968df6a23ae985a3a0effc878',1,'Cosan::Normalizer::transform()'],['../class_cosan_1_1_preprocessor.html#aeb512d69cd674f08f1c5b10835aa612e',1,'Cosan::Preprocessor::transform()'],['../class_cosan_1_1_standard_scaler.html#afca15be959647fc81094985b0efa1625',1,'Cosan::StandardScaler::transform()']]]
+  ['r2score_422',['R2Score',['../class_cosan_1_1_r2_score.html#a1b9fa08a9f750ab190ed55e49407078d',1,'Cosan::R2Score']]],
+  ['removecolumn_423',['removeColumn',['../utils_2utils_8h.html#aae675471018eaa7498b5f325358c08d9',1,'utils.h']]],
+  ['removerow_424',['removeRow',['../utils_2utils_8h.html#ab3d2a356a462e00a7ab584b8833dba24',1,'utils.h']]]
 ];

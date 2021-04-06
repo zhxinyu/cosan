@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['eigenmatrix_326',['EigenMatrix',['../_cosan_data_8h.html#a89e043196e0e2b94c3126f06b7195035',1,'CosanData.h']]]
+  ['vec_508',['vec',['../namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd',1,'Cosan']]]
 ];

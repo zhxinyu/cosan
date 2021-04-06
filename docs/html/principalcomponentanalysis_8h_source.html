@@ -16,6 +16,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -26,7 +33,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cosan
-   &#160;<span id="projectnumber">0.8</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Data Analytics Library</div>
   </td>
@@ -93,26 +100,77 @@ $(document).ready(function(){initNavTree('principalcomponentanalysis_8h_source.h
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef COSAN_PRINCIPALCOMPONENTANALYSIS_H</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define COSAN_PRINCIPALCOMPONENTANALYSIS_H</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;numeric&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="preprocessor_8h.html">cosan/preprocessing/preprocessor.h</a>&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_cosan.html">Cosan</a>{</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_cosan_1_1_principal_component_analysis.html">   11</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_cosan_1_1_principal_component_analysis.html">PrincipalComponentAnalysis</a>: <span class="keyword">public</span> <a class="code" href="class_cosan_1_1_preprocessor.html">Preprocessor</a>  {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    };</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif //COSAN_PRINCIPALCOMPONENTANALYSIS_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> <a class="code" href="class_numeric_type.html">NumericType</a>,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <span class="keyword">typename</span> = <span class="keyword">typename</span> std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,<a class="code" href="class_numeric_type.html">NumericType</a>&gt;::type&gt;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_cosan_1_1_principal_component_analysis.html">   13</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_cosan_1_1_principal_component_analysis.html">PrincipalComponentAnalysis</a>: <span class="keyword">public</span> <a class="code" href="class_cosan_1_1_preprocessor.html">Preprocessor</a>&lt;NumericType&gt;  {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_cosan_1_1_principal_component_analysis.html#a6d9a1f55111d0c764859eebbb86e839a">   15</a></span>&#160;            <a class="code" href="class_cosan_1_1_principal_component_analysis.html#a6d9a1f55111d0c764859eebbb86e839a">PrincipalComponentAnalysis</a>()=<span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_cosan_1_1_principal_component_analysis.html#a97ec0e5d3e5552ae03ab4e128a1fafce">   16</a></span>&#160;            <a class="code" href="class_cosan_1_1_principal_component_analysis.html#a97ec0e5d3e5552ae03ab4e128a1fafce">PrincipalComponentAnalysis</a>(<a class="code" href="class_cosan_1_1_cosan_raw_data.html">CosanRawData&lt;NumericType&gt;</a>&amp; RD,gsl::index ncom = 3):<a class="code" href="class_cosan_1_1_preprocessor.html">Preprocessor</a>&lt;<a class="code" href="class_numeric_type.html">NumericType</a>&gt;(){</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                ncom = std::min(ncom,RD.<a class="code" href="class_cosan_1_1_cosan_raw_data.html#a331f0e0e27095c81e7072a5b52e75b89">GetcolsX</a>());</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                this-&gt;<a class="code" href="class_cosan_1_1_principal_component_analysis.html#a4cdb2667c93af9cb70bf5c21579f9065">fit</a>(RD,ncom);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            }</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_cosan_1_1_principal_component_analysis.html#a4b13f7b6368ca059688d469d72c4650b">   20</a></span>&#160;            <a class="code" href="class_cosan_matrix_3_01_numeric_type_01_4.html">CosanMatrix&lt;NumericType&gt;</a> <a class="code" href="class_cosan_1_1_principal_component_analysis.html#a4b13f7b6368ca059688d469d72c4650b">GetPC</a>(){<span class="keywordflow">return</span> <a class="code" href="class_cosan_1_1_principal_component_analysis.html#a6d379ff1fc56ff6675572bc69f806598">PrincipalComponent</a>;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_cosan_1_1_principal_component_analysis.html#a6d379ff1fc56ff6675572bc69f806598">   22</a></span>&#160;            <a class="code" href="class_cosan_matrix_3_01_numeric_type_01_4.html">CosanMatrix&lt;NumericType&gt;</a> <a class="code" href="class_cosan_1_1_principal_component_analysis.html#a6d379ff1fc56ff6675572bc69f806598">PrincipalComponent</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_cosan_1_1_principal_component_analysis.html#a4cdb2667c93af9cb70bf5c21579f9065">   23</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="class_cosan_1_1_principal_component_analysis.html#a4cdb2667c93af9cb70bf5c21579f9065">fit</a>(<a class="code" href="class_cosan_1_1_cosan_raw_data.html">CosanRawData&lt;NumericType&gt;</a>&amp; RD,gsl::index ncom){</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                fmt::print(<span class="stringliteral">&quot;*********************************\n&quot;</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                fmt::print(<span class="stringliteral">&quot;Begin PCA on Input Data X. Select the first {:} principal components\n&quot;</span>,ncom);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <a class="code" href="class_cosan_matrix_3_01_numeric_type_01_4.html">CosanMatrix&lt;NumericType&gt;</a> X = RD.<a class="code" href="class_cosan_1_1_cosan_raw_data.html#aa40bbbed48778eff3f328876ff0714d7">GetInput</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <a class="code" href="class_cosan_matrix_3_01_numeric_type_01_4.html">CosanMatrix&lt;NumericType&gt;</a> centered = X.rowwise() - X.colwise().mean();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <a class="code" href="class_cosan_matrix_3_01_numeric_type_01_4.html">CosanMatrix&lt;NumericType&gt;</a> cov = centered.adjoint() * centered;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                Eigen::SelfAdjointEigenSolver&lt;CosanMatrix&lt;NumericType&gt;&gt; eigensolver(cov);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keywordflow">if</span> (eigensolver.info() != Eigen::Success) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                    <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Cannot solve eigenvalue decomposition.&quot;</span>);}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                std::vector&lt;NumericType&gt; <a class="code" href="namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd">vec</a>(eigensolver.eigenvalues().data(), eigensolver.eigenvalues().data() + eigensolver.eigenvalues().size());</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                std::reverse(<a class="code" href="namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd">vec</a>.begin(),<a class="code" href="namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd">vec</a>.end());</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                std::vector&lt;NumericType&gt; runningSum(<a class="code" href="namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd">vec</a>.size());</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                std::partial_sum(<a class="code" href="namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd">vec</a>.begin(), <a class="code" href="namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd">vec</a>.end(), runningSum.begin(), std::plus&lt;NumericType&gt;());</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="keywordflow">for</span> (gsl::index i =0;i&lt;runningSum.size();i++){</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    fmt::print(<span class="stringliteral">&quot;The first {:} principal components explains {:f}% of the total variance.\n&quot;</span>,i,runningSum[i]/runningSum.back()*100);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    <span class="keywordflow">if</span> (runningSum[i]/runningSum.back()&gt;0.98 and i&gt;=8){</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">//                std::cout&lt;&lt;eigensolver.eigenvalues()&lt;&lt;std::endl;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//                std::cout&lt;&lt;eigensolver.eigenvectors()&lt;&lt;std::endl;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">//                std::cout&lt;&lt;eigensolver.eigenvectors().rightCols(1)&lt;&lt;std::endl;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                fmt::print(<span class="stringliteral">&quot;Finsh PCA on Input Data X. The first {:} principal components explains {:f}% of the total variance.\n&quot;</span>,ncom,runningSum[ncom]/runningSum.back()*100);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                fmt::print(<span class="stringliteral">&quot;Uer .GetPC() function to get the principal components.\n&quot;</span> );</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                fmt::print(<span class="stringliteral">&quot;*********************************\n&quot;</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <a class="code" href="class_cosan_1_1_principal_component_analysis.html#a6d379ff1fc56ff6675572bc69f806598">PrincipalComponent</a> = eigensolver.eigenvectors().rightCols(ncom);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    };</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif //COSAN_PRINCIPALCOMPONENTANALYSIS_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespace_cosan_html"><div class="ttname"><a href="namespace_cosan.html">Cosan</a></div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00007">CosanBO.h:8</a></div></div>
-<div class="ttc" id="aclass_cosan_1_1_principal_component_analysis_html"><div class="ttname"><a href="class_cosan_1_1_principal_component_analysis.html">Cosan::PrincipalComponentAnalysis</a></div><div class="ttdef"><b>Definition:</b> <a href="principalcomponentanalysis_8h_source.html#l00011">principalcomponentanalysis.h:11</a></div></div>
-<div class="ttc" id="aclass_cosan_1_1_preprocessor_html"><div class="ttname"><a href="class_cosan_1_1_preprocessor.html">Cosan::Preprocessor</a></div><div class="ttdef"><b>Definition:</b> <a href="preprocessor_8h_source.html#l00007">preprocessor.h:7</a></div></div>
+<div class="ttc" id="anamespace_cosan_html"><div class="ttname"><a href="namespace_cosan.html">Cosan</a></div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00008">CosanBO.h:9</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_principal_component_analysis_html_a6d379ff1fc56ff6675572bc69f806598"><div class="ttname"><a href="class_cosan_1_1_principal_component_analysis.html#a6d379ff1fc56ff6675572bc69f806598">Cosan::PrincipalComponentAnalysis::PrincipalComponent</a></div><div class="ttdeci">CosanMatrix&lt; NumericType &gt; PrincipalComponent</div><div class="ttdef"><b>Definition:</b> <a href="principalcomponentanalysis_8h_source.html#l00022">principalcomponentanalysis.h:22</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_principal_component_analysis_html_a97ec0e5d3e5552ae03ab4e128a1fafce"><div class="ttname"><a href="class_cosan_1_1_principal_component_analysis.html#a97ec0e5d3e5552ae03ab4e128a1fafce">Cosan::PrincipalComponentAnalysis::PrincipalComponentAnalysis</a></div><div class="ttdeci">PrincipalComponentAnalysis(CosanRawData&lt; NumericType &gt; &amp;RD, gsl::index ncom=3)</div><div class="ttdef"><b>Definition:</b> <a href="principalcomponentanalysis_8h_source.html#l00016">principalcomponentanalysis.h:16</a></div></div>
+<div class="ttc" id="anamespace_cosan_html_a1a8460659b32d3c54f0f6d8595246dfd"><div class="ttname"><a href="namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd">Cosan::vec</a></div><div class="ttdeci">std::vector&lt; NumericType &gt; vec</div><div class="ttdef"><b>Definition:</b> <a href="template_test_8cpp_source.html#l00014">templateTest.cpp:14</a></div></div>
+<div class="ttc" id="aclass_cosan_matrix_3_01_numeric_type_01_4_html"><div class="ttname"><a href="class_cosan_matrix_3_01_numeric_type_01_4.html">CosanMatrix&lt; NumericType &gt;</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_cosan_raw_data_html_aa40bbbed48778eff3f328876ff0714d7"><div class="ttname"><a href="class_cosan_1_1_cosan_raw_data.html#aa40bbbed48778eff3f328876ff0714d7">Cosan::CosanRawData::GetInput</a></div><div class="ttdeci">CosanMatrix&lt; NumericType &gt; GetInput()</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_data_8h_source.html#l00089">CosanData.h:89</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_principal_component_analysis_html"><div class="ttname"><a href="class_cosan_1_1_principal_component_analysis.html">Cosan::PrincipalComponentAnalysis</a></div><div class="ttdef"><b>Definition:</b> <a href="principalcomponentanalysis_8h_source.html#l00013">principalcomponentanalysis.h:13</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_cosan_raw_data_html_a331f0e0e27095c81e7072a5b52e75b89"><div class="ttname"><a href="class_cosan_1_1_cosan_raw_data.html#a331f0e0e27095c81e7072a5b52e75b89">Cosan::CosanRawData::GetcolsX</a></div><div class="ttdeci">gsl::index GetcolsX()</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_data_8h_source.html#l00130">CosanData.h:130</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_cosan_raw_data_html"><div class="ttname"><a href="class_cosan_1_1_cosan_raw_data.html">Cosan::CosanRawData&lt; NumericType &gt;</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_preprocessor_html"><div class="ttname"><a href="class_cosan_1_1_preprocessor.html">Cosan::Preprocessor</a></div><div class="ttdef"><b>Definition:</b> <a href="preprocessor_8h_source.html#l00009">preprocessor.h:9</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_principal_component_analysis_html_a6d9a1f55111d0c764859eebbb86e839a"><div class="ttname"><a href="class_cosan_1_1_principal_component_analysis.html#a6d9a1f55111d0c764859eebbb86e839a">Cosan::PrincipalComponentAnalysis::PrincipalComponentAnalysis</a></div><div class="ttdeci">PrincipalComponentAnalysis()=delete</div></div>
+<div class="ttc" id="aclass_numeric_type_html"><div class="ttname"><a href="class_numeric_type.html">NumericType</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_principal_component_analysis_html_a4b13f7b6368ca059688d469d72c4650b"><div class="ttname"><a href="class_cosan_1_1_principal_component_analysis.html#a4b13f7b6368ca059688d469d72c4650b">Cosan::PrincipalComponentAnalysis::GetPC</a></div><div class="ttdeci">CosanMatrix&lt; NumericType &gt; GetPC()</div><div class="ttdef"><b>Definition:</b> <a href="principalcomponentanalysis_8h_source.html#l00020">principalcomponentanalysis.h:20</a></div></div>
 <div class="ttc" id="apreprocessor_8h_html"><div class="ttname"><a href="preprocessor_8h.html">preprocessor.h</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_principal_component_analysis_html_a4cdb2667c93af9cb70bf5c21579f9065"><div class="ttname"><a href="class_cosan_1_1_principal_component_analysis.html#a4cdb2667c93af9cb70bf5c21579f9065">Cosan::PrincipalComponentAnalysis::fit</a></div><div class="ttdeci">void fit(CosanRawData&lt; NumericType &gt; &amp;RD, gsl::index ncom)</div><div class="ttdef"><b>Definition:</b> <a href="principalcomponentanalysis_8h_source.html#l00023">principalcomponentanalysis.h:23</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

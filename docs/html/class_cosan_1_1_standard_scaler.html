@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Cosan: Cosan::StandardScaler Class Reference</title>
+<title>Cosan: Cosan::StandardScaler&lt; NumericType, typename &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -16,6 +16,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -26,7 +33,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cosan
-   &#160;<span id="projectnumber">0.8</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Data Analytics Library</div>
   </td>
@@ -88,56 +95,56 @@ $(document).ready(function(){initNavTree('class_cosan_1_1_standard_scaler.html',
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_cosan_1_1_standard_scaler-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Cosan::StandardScaler Class Reference</div>  </div>
+<div class="title">Cosan::StandardScaler&lt; NumericType, typename &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="standard_scaler_8h_source.html">standardScaler.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Cosan::StandardScaler:</div>
+Inheritance diagram for Cosan::StandardScaler&lt; NumericType, typename &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_cosan_1_1_standard_scaler__inherit__graph.png" border="0" usemap="#a_cosan_1_1_standard_scaler_inherit__map" alt="Inheritance graph"/></div>
-<map name="_cosan_1_1_standard_scaler_inherit__map" id="_cosan_1_1_standard_scaler_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,155,163,181"/>
-<area shape="rect" href="class_cosan_1_1_preprocessor.html" title=" " alt="" coords="11,80,157,107"/>
-<area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="21,5,147,32"/>
+<div class="center"><img src="class_cosan_1_1_standard_scaler__inherit__graph.png" border="0" usemap="#a_cosan_1_1_standard_scaler_3_01_numeric_type_00_01typename_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="_cosan_1_1_standard_scaler_3_01_numeric_type_00_01typename_01_4_inherit__map" id="a_cosan_1_1_standard_scaler_3_01_numeric_type_00_01typename_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,169,193,211"/>
+<area shape="rect" href="class_cosan_1_1_preprocessor.html" title=" " alt="" coords="27,80,172,121"/>
+<area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="37,5,162,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
-Collaboration diagram for Cosan::StandardScaler:</div>
+Collaboration diagram for Cosan::StandardScaler&lt; NumericType, typename &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_cosan_1_1_standard_scaler__coll__graph.png" border="0" usemap="#a_cosan_1_1_standard_scaler_coll__map" alt="Collaboration graph"/></div>
-<map name="_cosan_1_1_standard_scaler_coll__map" id="_cosan_1_1_standard_scaler_coll__map">
-<area shape="rect" title=" " alt="" coords="81,200,238,227"/>
-<area shape="rect" href="class_cosan_1_1_preprocessor.html" title=" " alt="" coords="5,89,151,115"/>
+<div class="center"><img src="class_cosan_1_1_standard_scaler__coll__graph.png" border="0" usemap="#a_cosan_1_1_standard_scaler_3_01_numeric_type_00_01typename_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="_cosan_1_1_standard_scaler_3_01_numeric_type_00_01typename_01_4_coll__map" id="a_cosan_1_1_standard_scaler_3_01_numeric_type_00_01typename_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="89,200,277,241"/>
+<area shape="rect" href="class_cosan_1_1_preprocessor.html" title=" " alt="" coords="5,81,151,123"/>
 <area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="15,5,141,32"/>
-<area shape="rect" title=" " alt="" coords="175,81,306,123"/>
+<area shape="rect" title=" " alt="" coords="175,89,402,115"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a973609e2f75cd6bcf75b8b1d5499702b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_standard_scaler.html#a973609e2f75cd6bcf75b8b1d5499702b">StandardScaler</a> ()=default</td></tr>
-<tr class="separator:a973609e2f75cd6bcf75b8b1d5499702b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa466106fa416021bbf0025561bd89033"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_standard_scaler.html#aa466106fa416021bbf0025561bd89033">~StandardScaler</a> () override=default</td></tr>
-<tr class="separator:aa466106fa416021bbf0025561bd89033"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fc552f8fd4abdafcc1dda85e4b97cc4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_standard_scaler.html#a1fc552f8fd4abdafcc1dda85e4b97cc4">standardize</a> (const <a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> &amp;X)</td></tr>
-<tr class="separator:a1fc552f8fd4abdafcc1dda85e4b97cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96c5a98b2c724d2d41f7dcecebab476a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#afff85a699ba81bd4e3a09e0ec5ebe56b">CosanRowVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_standard_scaler.html#a96c5a98b2c724d2d41f7dcecebab476a">GetMean</a> () const</td></tr>
-<tr class="separator:a96c5a98b2c724d2d41f7dcecebab476a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8aec03dc537303b5d1aa65e1d871b88f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#afff85a699ba81bd4e3a09e0ec5ebe56b">CosanRowVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_standard_scaler.html#a8aec03dc537303b5d1aa65e1d871b88f">GetStd</a> () const</td></tr>
-<tr class="separator:a8aec03dc537303b5d1aa65e1d871b88f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35c7c6a966d2e39560fcf54cc6606d2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_standard_scaler.html#a35c7c6a966d2e39560fcf54cc6606d2f">fit</a> (const <a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> &amp;X) override</td></tr>
-<tr class="separator:a35c7c6a966d2e39560fcf54cc6606d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afca15be959647fc81094985b0efa1625"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_standard_scaler.html#afca15be959647fc81094985b0efa1625">transform</a> (const <a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> &amp;X) override</td></tr>
-<tr class="separator:afca15be959647fc81094985b0efa1625"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5adad1ac6ce7f3b2ab46d01ca1e7fe19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_standard_scaler.html#a5adad1ac6ce7f3b2ab46d01ca1e7fe19">InvTransform</a> (const <a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> &amp;X)</td></tr>
-<tr class="separator:a5adad1ac6ce7f3b2ab46d01ca1e7fe19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_cosan_1_1_preprocessor"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_cosan_1_1_preprocessor')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_cosan_1_1_preprocessor.html">Cosan::Preprocessor</a></td></tr>
-<tr class="memitem:a7b93d5b1f0240f02fada0c7d31d3614f inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_preprocessor.html#a7b93d5b1f0240f02fada0c7d31d3614f">Preprocessor</a> ()</td></tr>
-<tr class="separator:a7b93d5b1f0240f02fada0c7d31d3614f inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6bbd5d45c43e65dbf1a247f6b2ffdec inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_preprocessor.html#ac6bbd5d45c43e65dbf1a247f6b2ffdec">~Preprocessor</a> ()=default</td></tr>
-<tr class="separator:ac6bbd5d45c43e65dbf1a247f6b2ffdec inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5c4342a262f6f3228a8d670f6a48cb4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_standard_scaler.html#af5c4342a262f6f3228a8d670f6a48cb4">StandardScaler</a> ()=default</td></tr>
+<tr class="separator:af5c4342a262f6f3228a8d670f6a48cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13c4122ec690f5bc97f2528d50a72c6b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_standard_scaler.html#a13c4122ec690f5bc97f2528d50a72c6b">StandardScaler</a> (<a class="el" href="class_cosan_1_1_cosan_raw_data.html">CosanRawData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;RD)</td></tr>
+<tr class="separator:a13c4122ec690f5bc97f2528d50a72c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2951b0fff8bb81da10c39928106d9cbd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a086156060ec06f02404563451d420df8">CosanRowVector</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_standard_scaler.html#a2951b0fff8bb81da10c39928106d9cbd">GetMean</a> () const</td></tr>
+<tr class="separator:a2951b0fff8bb81da10c39928106d9cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b7177b8fa2a322fd1faa8ec6869b14a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a086156060ec06f02404563451d420df8">CosanRowVector</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_standard_scaler.html#a7b7177b8fa2a322fd1faa8ec6869b14a">GetStd</a> () const</td></tr>
+<tr class="separator:a7b7177b8fa2a322fd1faa8ec6869b14a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a464b57e45c96e72ef2bc990f85bf7905"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_standard_scaler.html#a464b57e45c96e72ef2bc990f85bf7905">fit</a> (<a class="el" href="class_cosan_1_1_cosan_raw_data.html">CosanRawData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;RD)</td></tr>
+<tr class="separator:a464b57e45c96e72ef2bc990f85bf7905"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a398e3925afd41a3467cb6419c200295a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_standard_scaler.html#a398e3925afd41a3467cb6419c200295a">fit</a> (const <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;X) override</td></tr>
+<tr class="separator:a398e3925afd41a3467cb6419c200295a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ab9f013a210bf257cf79a9f8b14df7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_standard_scaler.html#a4ab9f013a210bf257cf79a9f8b14df7b">transform</a> (const <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;X) override</td></tr>
+<tr class="separator:a4ab9f013a210bf257cf79a9f8b14df7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29b504f567547fad1c570e94ec7c7eef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_standard_scaler.html#a29b504f567547fad1c570e94ec7c7eef">InvTransform</a> (const <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;X)</td></tr>
+<tr class="separator:a29b504f567547fad1c570e94ec7c7eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_cosan_1_1_preprocessor"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_cosan_1_1_preprocessor')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_cosan_1_1_preprocessor.html">Cosan::Preprocessor&lt; NumericType &gt;</a></td></tr>
+<tr class="memitem:ac92f20517545ac3d014db36b2690de65 inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_preprocessor.html#ac92f20517545ac3d014db36b2690de65">Preprocessor</a> ()</td></tr>
+<tr class="separator:ac92f20517545ac3d014db36b2690de65 inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a3d607c61c23c5b8c17c2628eba0eca inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_preprocessor.html#a1a3d607c61c23c5b8c17c2628eba0eca">~Preprocessor</a> ()=default</td></tr>
+<tr class="separator:a1a3d607c61c23c5b8c17c2628eba0eca inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_cosan_1_1_cosan_b_o"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_cosan_1_1_cosan_b_o')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_cosan_1_1_cosan_b_o.html">Cosan::CosanBO</a></td></tr>
 <tr class="memitem:ade4a14f5f042dfe1cdf79f5183586b4c inherit pub_methods_class_cosan_1_1_cosan_b_o"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_b_o.html#ade4a14f5f042dfe1cdf79f5183586b4c">CosanBO</a> ()</td></tr>
 <tr class="separator:ade4a14f5f042dfe1cdf79f5183586b4c inherit pub_methods_class_cosan_1_1_cosan_b_o"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,26 +153,31 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a31130fba42cbdc35d6c3ffbe941ad85d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#afff85a699ba81bd4e3a09e0ec5ebe56b">CosanRowVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_standard_scaler.html#a31130fba42cbdc35d6c3ffbe941ad85d">mean</a></td></tr>
-<tr class="separator:a31130fba42cbdc35d6c3ffbe941ad85d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dfe85b8a08b76e19e6249c0ac1db3c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#afff85a699ba81bd4e3a09e0ec5ebe56b">CosanRowVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_standard_scaler.html#a7dfe85b8a08b76e19e6249c0ac1db3c1">std</a></td></tr>
-<tr class="separator:a7dfe85b8a08b76e19e6249c0ac1db3c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7edb4cd0dbfea0fa14cda4e861e9824a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a086156060ec06f02404563451d420df8">CosanRowVector</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_standard_scaler.html#a7edb4cd0dbfea0fa14cda4e861e9824a">mean</a></td></tr>
+<tr class="separator:a7edb4cd0dbfea0fa14cda4e861e9824a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7f79aa29eeda12116240f92efe1102e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a086156060ec06f02404563451d420df8">CosanRowVector</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_standard_scaler.html#ac7f79aa29eeda12116240f92efe1102e">std</a></td></tr>
+<tr class="separator:ac7f79aa29eeda12116240f92efe1102e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="standard_scaler_8h_source.html#l00007">7</a> of file <a class="el" href="standard_scaler_8h_source.html">standardScaler.h</a>.</p>
+<div class="textblock"><h3>template&lt;typename NumericType, typename = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt;<br />
+class Cosan::StandardScaler&lt; NumericType, typename &gt;</h3>
+
+
+<p class="definition">Definition at line <a class="el" href="standard_scaler_8h_source.html#l00009">9</a> of file <a class="el" href="standard_scaler_8h_source.html">standardScaler.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a973609e2f75cd6bcf75b8b1d5499702b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a973609e2f75cd6bcf75b8b1d5499702b">&#9670;&nbsp;</a></span>StandardScaler()</h2>
+<a id="af5c4342a262f6f3228a8d670f6a48cb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5c4342a262f6f3228a8d670f6a48cb4">&#9670;&nbsp;</a></span>StandardScaler() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Cosan::StandardScaler::StandardScaler </td>
+          <td class="memname"><a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::<a class="el" href="class_cosan_1_1_standard_scaler.html">StandardScaler</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -180,45 +192,64 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aa466106fa416021bbf0025561bd89033"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa466106fa416021bbf0025561bd89033">&#9670;&nbsp;</a></span>~StandardScaler()</h2>
+<a id="a13c4122ec690f5bc97f2528d50a72c6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13c4122ec690f5bc97f2528d50a72c6b">&#9670;&nbsp;</a></span>StandardScaler() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Cosan::StandardScaler::~StandardScaler </td>
+          <td class="memname"><a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::<a class="el" href="class_cosan_1_1_standard_scaler.html">StandardScaler</a> </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_cosan_1_1_cosan_raw_data.html">CosanRawData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>RD</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="standard_scaler_8h_source.html#l00017">17</a> of file <a class="el" href="standard_scaler_8h_source.html">standardScaler.h</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_cosan_1_1_standard_scaler_a13c4122ec690f5bc97f2528d50a72c6b_cgraph.png" border="0" usemap="#aclass_cosan_1_1_standard_scaler_a13c4122ec690f5bc97f2528d50a72c6b_cgraph" alt=""/></div>
+<map name="class_cosan_1_1_standard_scaler_a13c4122ec690f5bc97f2528d50a72c6b_cgraph" id="aclass_cosan_1_1_standard_scaler_a13c4122ec690f5bc97f2528d50a72c6b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,71,163,112"/>
+<area shape="rect" href="class_cosan_1_1_standard_scaler.html#a464b57e45c96e72ef2bc990f85bf7905" title=" " alt="" coords="211,78,387,105"/>
+<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html#aa40bbbed48778eff3f328876ff0714d7" title=" " alt="" coords="435,5,596,47"/>
+<area shape="rect" href="class_cosan_1_1_standard_scaler.html#a4ab9f013a210bf257cf79a9f8b14df7b" title=" " alt="" coords="437,71,594,112"/>
+<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html#a7714c036ad02f98ee3c664815be8bd29" title=" " alt="" coords="435,136,596,177"/>
+</map>
+</div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a35c7c6a966d2e39560fcf54cc6606d2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35c7c6a966d2e39560fcf54cc6606d2f">&#9670;&nbsp;</a></span>fit()</h2>
+<a id="a398e3925afd41a3467cb6419c200295a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a398e3925afd41a3467cb6419c200295a">&#9670;&nbsp;</a></span>fit() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Cosan::StandardScaler::fit </td>
+          <td class="memname">void <a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::fit </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>X</em></td><td>)</td>
           <td></td>
         </tr>
@@ -230,89 +261,28 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_cosan_1_1_preprocessor.html#a30726ec665163b8fd3bf8fa7b8251ec3">Cosan::Preprocessor</a>.</p>
+<p>Reimplemented from <a class="el" href="class_cosan_1_1_preprocessor.html#aa633b01dba35640544a679928ecda39d">Cosan::Preprocessor&lt; NumericType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="standard_scaler_8h_source.html#l00018">18</a> of file <a class="el" href="standard_scaler_8h_source.html">standardScaler.h</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_cosan_1_1_standard_scaler_a35c7c6a966d2e39560fcf54cc6606d2f_icgraph.png" border="0" usemap="#aclass_cosan_1_1_standard_scaler_a35c7c6a966d2e39560fcf54cc6606d2f_icgraph" alt=""/></div>
-<map name="class_cosan_1_1_standard_scaler_a35c7c6a966d2e39560fcf54cc6606d2f_icgraph" id="class_cosan_1_1_standard_scaler_a35c7c6a966d2e39560fcf54cc6606d2f_icgraph">
-<area shape="rect" title=" " alt="" coords="211,13,387,39"/>
-<area shape="rect" href="class_cosan_1_1_standard_scaler.html#a1fc552f8fd4abdafcc1dda85e4b97cc4" title=" " alt="" coords="5,5,163,47"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="standard_scaler_8h_source.html#l00026">26</a> of file <a class="el" href="standard_scaler_8h_source.html">standardScaler.h</a>.</p>
 
 </div>
 </div>
-<a id="a96c5a98b2c724d2d41f7dcecebab476a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96c5a98b2c724d2d41f7dcecebab476a">&#9670;&nbsp;</a></span>GetMean()</h2>
+<a id="a464b57e45c96e72ef2bc990f85bf7905"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a464b57e45c96e72ef2bc990f85bf7905">&#9670;&nbsp;</a></span>fit() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_cosan.html#afff85a699ba81bd4e3a09e0ec5ebe56b">CosanRowVector</a> Cosan::StandardScaler::GetMean </td>
+          <td class="memname">void <a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::fit </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="standard_scaler_8h_source.html#l00015">15</a> of file <a class="el" href="standard_scaler_8h_source.html">standardScaler.h</a>.</p>
-
-</div>
-</div>
-<a id="a8aec03dc537303b5d1aa65e1d871b88f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8aec03dc537303b5d1aa65e1d871b88f">&#9670;&nbsp;</a></span>GetStd()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespace_cosan.html#afff85a699ba81bd4e3a09e0ec5ebe56b">CosanRowVector</a> Cosan::StandardScaler::GetStd </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="standard_scaler_8h_source.html#l00016">16</a> of file <a class="el" href="standard_scaler_8h_source.html">standardScaler.h</a>.</p>
-
-</div>
-</div>
-<a id="a5adad1ac6ce7f3b2ab46d01ca1e7fe19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5adad1ac6ce7f3b2ab46d01ca1e7fe19">&#9670;&nbsp;</a></span>InvTransform()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> Cosan::StandardScaler::InvTransform </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> &amp;&#160;</td>
-          <td class="paramname"><em>X</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_cosan_1_1_cosan_raw_data.html">CosanRawData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>RD</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -323,61 +293,134 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="standard_scaler_8h_source.html#l00037">37</a> of file <a class="el" href="standard_scaler_8h_source.html">standardScaler.h</a>.</p>
-
-</div>
-</div>
-<a id="a1fc552f8fd4abdafcc1dda85e4b97cc4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fc552f8fd4abdafcc1dda85e4b97cc4">&#9670;&nbsp;</a></span>standardize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> Cosan::StandardScaler::standardize </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> &amp;&#160;</td>
-          <td class="paramname"><em>X</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="standard_scaler_8h_source.html#l00011">11</a> of file <a class="el" href="standard_scaler_8h_source.html">standardScaler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="standard_scaler_8h_source.html#l00022">22</a> of file <a class="el" href="standard_scaler_8h_source.html">standardScaler.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_cosan_1_1_standard_scaler_a1fc552f8fd4abdafcc1dda85e4b97cc4_cgraph.png" border="0" usemap="#aclass_cosan_1_1_standard_scaler_a1fc552f8fd4abdafcc1dda85e4b97cc4_cgraph" alt=""/></div>
-<map name="class_cosan_1_1_standard_scaler_a1fc552f8fd4abdafcc1dda85e4b97cc4_cgraph" id="class_cosan_1_1_standard_scaler_a1fc552f8fd4abdafcc1dda85e4b97cc4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,27,163,69"/>
-<area shape="rect" href="class_cosan_1_1_standard_scaler.html#a35c7c6a966d2e39560fcf54cc6606d2f" title=" " alt="" coords="211,5,387,32"/>
-<area shape="rect" href="class_cosan_1_1_standard_scaler.html#afca15be959647fc81094985b0efa1625" title=" " alt="" coords="220,57,377,98"/>
+<div class="center"><img src="class_cosan_1_1_standard_scaler_a464b57e45c96e72ef2bc990f85bf7905_cgraph.png" border="0" usemap="#aclass_cosan_1_1_standard_scaler_a464b57e45c96e72ef2bc990f85bf7905_cgraph" alt=""/></div>
+<map name="class_cosan_1_1_standard_scaler_a464b57e45c96e72ef2bc990f85bf7905_cgraph" id="aclass_cosan_1_1_standard_scaler_a464b57e45c96e72ef2bc990f85bf7905_cgraph">
+<area shape="rect" title=" " alt="" coords="5,78,181,105"/>
+<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html#aa40bbbed48778eff3f328876ff0714d7" title=" " alt="" coords="229,5,391,47"/>
+<area shape="rect" href="class_cosan_1_1_standard_scaler.html#a4ab9f013a210bf257cf79a9f8b14df7b" title=" " alt="" coords="231,71,389,112"/>
+<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html#a7714c036ad02f98ee3c664815be8bd29" title=" " alt="" coords="229,136,391,177"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_cosan_1_1_standard_scaler_a464b57e45c96e72ef2bc990f85bf7905_icgraph.png" border="0" usemap="#aclass_cosan_1_1_standard_scaler_a464b57e45c96e72ef2bc990f85bf7905_icgraph" alt=""/></div>
+<map name="class_cosan_1_1_standard_scaler_a464b57e45c96e72ef2bc990f85bf7905_icgraph" id="aclass_cosan_1_1_standard_scaler_a464b57e45c96e72ef2bc990f85bf7905_icgraph">
+<area shape="rect" title=" " alt="" coords="211,35,387,61"/>
+<area shape="rect" href="_standard_scaler_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="59,5,109,32"/>
+<area shape="rect" href="class_cosan_1_1_standard_scaler.html#a13c4122ec690f5bc97f2528d50a72c6b" title=" " alt="" coords="5,57,163,98"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="afca15be959647fc81094985b0efa1625"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afca15be959647fc81094985b0efa1625">&#9670;&nbsp;</a></span>transform()</h2>
+<a id="a2951b0fff8bb81da10c39928106d9cbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2951b0fff8bb81da10c39928106d9cbd">&#9670;&nbsp;</a></span>GetMean()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> Cosan::StandardScaler::transform </td>
+          <td class="memname"><a class="el" href="namespace_cosan.html#a086156060ec06f02404563451d420df8">CosanRowVector</a>&lt;<a class="el" href="class_numeric_type.html">NumericType</a>&gt; <a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::GetMean </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="standard_scaler_8h_source.html#l00020">20</a> of file <a class="el" href="standard_scaler_8h_source.html">standardScaler.h</a>.</p>
+
+</div>
+</div>
+<a id="a7b7177b8fa2a322fd1faa8ec6869b14a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b7177b8fa2a322fd1faa8ec6869b14a">&#9670;&nbsp;</a></span>GetStd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_cosan.html#a086156060ec06f02404563451d420df8">CosanRowVector</a>&lt;<a class="el" href="class_numeric_type.html">NumericType</a>&gt; <a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::GetStd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="standard_scaler_8h_source.html#l00021">21</a> of file <a class="el" href="standard_scaler_8h_source.html">standardScaler.h</a>.</p>
+
+</div>
+</div>
+<a id="a29b504f567547fad1c570e94ec7c7eef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29b504f567547fad1c570e94ec7c7eef">&#9670;&nbsp;</a></span>InvTransform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt;<a class="el" href="class_numeric_type.html">NumericType</a>&gt; <a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::InvTransform </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>X</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="standard_scaler_8h_source.html#l00050">50</a> of file <a class="el" href="standard_scaler_8h_source.html">standardScaler.h</a>.</p>
+
+</div>
+</div>
+<a id="a4ab9f013a210bf257cf79a9f8b14df7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ab9f013a210bf257cf79a9f8b14df7b">&#9670;&nbsp;</a></span>transform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt;<a class="el" href="class_numeric_type.html">NumericType</a>&gt; <a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::transform </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>X</em></td><td>)</td>
           <td></td>
         </tr>
@@ -389,33 +432,37 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_cosan_1_1_preprocessor.html#aeb512d69cd674f08f1c5b10835aa612e">Cosan::Preprocessor</a>.</p>
+<p>Reimplemented from <a class="el" href="class_cosan_1_1_preprocessor.html#a3dc738458247240f5567870605a70316">Cosan::Preprocessor&lt; NumericType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="standard_scaler_8h_source.html#l00033">33</a> of file <a class="el" href="standard_scaler_8h_source.html">standardScaler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="standard_scaler_8h_source.html#l00046">46</a> of file <a class="el" href="standard_scaler_8h_source.html">standardScaler.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_cosan_1_1_standard_scaler_afca15be959647fc81094985b0efa1625_icgraph.png" border="0" usemap="#aclass_cosan_1_1_standard_scaler_afca15be959647fc81094985b0efa1625_icgraph" alt=""/></div>
-<map name="class_cosan_1_1_standard_scaler_afca15be959647fc81094985b0efa1625_icgraph" id="class_cosan_1_1_standard_scaler_afca15be959647fc81094985b0efa1625_icgraph">
-<area shape="rect" title=" " alt="" coords="211,5,368,47"/>
-<area shape="rect" href="class_cosan_1_1_standard_scaler.html#a1fc552f8fd4abdafcc1dda85e4b97cc4" title=" " alt="" coords="5,5,163,47"/>
+<div class="center"><img src="class_cosan_1_1_standard_scaler_a4ab9f013a210bf257cf79a9f8b14df7b_icgraph.png" border="0" usemap="#aclass_cosan_1_1_standard_scaler_a4ab9f013a210bf257cf79a9f8b14df7b_icgraph" alt=""/></div>
+<map name="class_cosan_1_1_standard_scaler_a4ab9f013a210bf257cf79a9f8b14df7b_icgraph" id="aclass_cosan_1_1_standard_scaler_a4ab9f013a210bf257cf79a9f8b14df7b_icgraph">
+<area shape="rect" title=" " alt="" coords="435,27,592,69"/>
+<area shape="rect" href="class_cosan_1_1_standard_scaler.html#a464b57e45c96e72ef2bc990f85bf7905" title=" " alt="" coords="211,35,387,61"/>
+<area shape="rect" href="_standard_scaler_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="59,5,109,32"/>
+<area shape="rect" href="class_cosan_1_1_standard_scaler.html#a13c4122ec690f5bc97f2528d50a72c6b" title=" " alt="" coords="5,57,163,98"/>
 </map>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a31130fba42cbdc35d6c3ffbe941ad85d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31130fba42cbdc35d6c3ffbe941ad85d">&#9670;&nbsp;</a></span>mean</h2>
+<a id="a7edb4cd0dbfea0fa14cda4e861e9824a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7edb4cd0dbfea0fa14cda4e861e9824a">&#9670;&nbsp;</a></span>mean</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_cosan.html#afff85a699ba81bd4e3a09e0ec5ebe56b">CosanRowVector</a> Cosan::StandardScaler::mean</td>
+          <td class="memname"><a class="el" href="namespace_cosan.html#a086156060ec06f02404563451d420df8">CosanRowVector</a>&lt;<a class="el" href="class_numeric_type.html">NumericType</a>&gt; <a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::mean</td>
         </tr>
       </table>
   </td>
@@ -425,21 +472,23 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="standard_scaler_8h_source.html#l00041">41</a> of file <a class="el" href="standard_scaler_8h_source.html">standardScaler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="standard_scaler_8h_source.html#l00054">54</a> of file <a class="el" href="standard_scaler_8h_source.html">standardScaler.h</a>.</p>
 
 </div>
 </div>
-<a id="a7dfe85b8a08b76e19e6249c0ac1db3c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7dfe85b8a08b76e19e6249c0ac1db3c1">&#9670;&nbsp;</a></span>std</h2>
+<a id="ac7f79aa29eeda12116240f92efe1102e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7f79aa29eeda12116240f92efe1102e">&#9670;&nbsp;</a></span>std</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_cosan.html#afff85a699ba81bd4e3a09e0ec5ebe56b">CosanRowVector</a> Cosan::StandardScaler::std</td>
+          <td class="memname"><a class="el" href="namespace_cosan.html#a086156060ec06f02404563451d420df8">CosanRowVector</a>&lt;<a class="el" href="class_numeric_type.html">NumericType</a>&gt; <a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::std</td>
         </tr>
       </table>
   </td>
@@ -449,7 +498,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="standard_scaler_8h_source.html#l00042">42</a> of file <a class="el" href="standard_scaler_8h_source.html">standardScaler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="standard_scaler_8h_source.html#l00055">55</a> of file <a class="el" href="standard_scaler_8h_source.html">standardScaler.h</a>.</p>
 
 </div>
 </div>

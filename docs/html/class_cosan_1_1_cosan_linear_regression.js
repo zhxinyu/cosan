@@ -1,10 +1,10 @@
 var class_cosan_1_1_cosan_linear_regression =
 [
-    [ "CosanLinearRegression", "class_cosan_1_1_cosan_linear_regression.html#a952ec2f54328e6f32194a2224bf69976", null ],
-    [ "CosanLinearRegression", "class_cosan_1_1_cosan_linear_regression.html#a377cf7b7aaa29564b662d31bb7737f5c", null ],
-    [ "fit", "class_cosan_1_1_cosan_linear_regression.html#ac2cb337f6496ae7b5cddc849bd3e1917", null ],
-    [ "GetModelType", "class_cosan_1_1_cosan_linear_regression.html#a56cd2ca62cb2b40fa6a23718bd500f15", null ],
-    [ "GetName", "class_cosan_1_1_cosan_linear_regression.html#ada67c4791b0a113e73d2660556eccf86", null ],
-    [ "GetProblemType", "class_cosan_1_1_cosan_linear_regression.html#a6f11e4c51193a63e15d8ba9c3bbb3c8b", null ],
-    [ "predict", "class_cosan_1_1_cosan_linear_regression.html#aedd2cc579ebbd397ffe50c4924fcbb6f", null ]
+    [ "CosanLinearRegression", "class_cosan_1_1_cosan_linear_regression.html#a06472680af51d0aa2dac5ffb4100628a", null ],
+    [ "CosanLinearRegression", "class_cosan_1_1_cosan_linear_regression.html#ae8418d3d62f085bdfb85802cd46c79b0", null ],
+    [ "fit", "class_cosan_1_1_cosan_linear_regression.html#afbb251c21418770243fb5a7a2cc90c44", null ],
+    [ "GetModelType", "class_cosan_1_1_cosan_linear_regression.html#a72bd96bc10320d34d0c1a76c82b56909", null ],
+    [ "GetName", "class_cosan_1_1_cosan_linear_regression.html#a9a6bbd4b5b622cda9b836d76a6fe2a5f", null ],
+    [ "GetProblemType", "class_cosan_1_1_cosan_linear_regression.html#af7cdfa021f9f9cb8b3ccc594ef028623", null ],
+    [ "predict", "class_cosan_1_1_cosan_linear_regression.html#a68a41990eb94bb4214bbc3506fd40974", null ]
 ];

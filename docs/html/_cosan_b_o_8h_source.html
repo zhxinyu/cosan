@@ -16,6 +16,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -26,7 +33,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cosan
-   &#160;<span id="projectnumber">0.8</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Data Analytics Library</div>
   </td>
@@ -92,36 +99,59 @@ $(document).ready(function(){initNavTree('_cosan_b_o_8h_source.html',''); initRe
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//typedef Eigen::Matrix&lt;float, 1, Eigen::Dynamic, Eigen::RowMajor&gt; EigenVector;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;gsl/gsl&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="namespace_cosan.html">    7</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_cosan.html">Cosan</a></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_cosan_1_1_cosan_b_o.html">    9</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_cosan_1_1_cosan_b_o.html">CosanBO</a></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_cosan_1_1_cosan_b_o.html#ade4a14f5f042dfe1cdf79f5183586b4c">   12</a></span>&#160;        <a class="code" href="class_cosan_1_1_cosan_b_o.html#ade4a14f5f042dfe1cdf79f5183586b4c">CosanBO</a>(){}</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//        virtual ~CosanBO();</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//        virtual CosanBO *Shallow_copy() const;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//        virtual CosanBO *Deep_copy() const;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_cosan_1_1_cosan_b_o.html#a36a75e161a183482930e5b97151e566f">   16</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> std::string  <a class="code" href="class_cosan_1_1_cosan_b_o.html#a36a75e161a183482930e5b97151e566f">GetName</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Abstract Object&quot;</span>;}</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//        virtual bool SaveFile(const std::string &amp;path ,const std::string &amp; prefix = &quot;&quot;);</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//        virtual bool LoadFile(const std::string &amp;path);</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//        void PrintModel();</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//        virtual bool Equals(CosanBO* other, float accuracy = 0.0);</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//        virtual CosanBO* Clone();</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    };</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;type_traits&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="utils_2utils_8h.html">cosan/utils/utils.h</a>&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="namespace_cosan.html">    8</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_cosan.html">Cosan</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> <a class="code" href="class_numeric_type.html">NumericType</a>,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            <span class="keyword">typename</span> = <span class="keyword">typename</span> std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,<a class="code" href="class_numeric_type.html">NumericType</a>&gt;::type</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    &gt;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">   13</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a> = Eigen::Matrix&lt;NumericType, Eigen::Dynamic, Eigen::Dynamic&gt; ;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> <a class="code" href="class_numeric_type.html">NumericType</a>,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keyword">typename</span> = <span class="keyword">typename</span> std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,<a class="code" href="class_numeric_type.html">NumericType</a>&gt;::type</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    &gt;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="namespace_cosan.html#ab16c0eeeb31f616c25331418b611f08a">   17</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="namespace_cosan.html#ab16c0eeeb31f616c25331418b611f08a">CosanColVector</a> =  Eigen::Matrix&lt;NumericType,  Eigen::Dynamic, 1&gt; ;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> <a class="code" href="class_numeric_type.html">NumericType</a>,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keyword">typename</span> = <span class="keyword">typename</span> std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,<a class="code" href="class_numeric_type.html">NumericType</a>&gt;::type</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    &gt;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="namespace_cosan.html#a086156060ec06f02404563451d420df8">   21</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="namespace_cosan.html#a086156060ec06f02404563451d420df8">CosanRowVector</a> =  Eigen::Matrix&lt;NumericType,  1, Eigen::Dynamic&gt; ;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//    typedef std::variant&lt;CosanMatrix&lt;unsigned int&gt;, CosanMatrix&lt;unsigned long&gt;,</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//                         CosanMatrix&lt;unsigned long long&gt;, &gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_cosan_1_1_cosan_b_o.html">   26</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_cosan_1_1_cosan_b_o.html">CosanBO</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_cosan_1_1_cosan_b_o.html#ade4a14f5f042dfe1cdf79f5183586b4c">   29</a></span>&#160;        <a class="code" href="class_cosan_1_1_cosan_b_o.html#ade4a14f5f042dfe1cdf79f5183586b4c">CosanBO</a>(){}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">//        virtual ~CosanBO();</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">//        virtual CosanBO *Shallow_copy() const;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">//        virtual CosanBO *Deep_copy() const;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_cosan_1_1_cosan_b_o.html#a36a75e161a183482930e5b97151e566f">   33</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> std::string  <a class="code" href="class_cosan_1_1_cosan_b_o.html#a36a75e161a183482930e5b97151e566f">GetName</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Abstract Object&quot;</span>;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">//        virtual bool SaveFile(const std::string &amp;path ,const std::string &amp; prefix = &quot;&quot;);</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//        virtual bool LoadFile(const std::string &amp;path);</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//        void PrintModel();</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">//        virtual bool Equals(CosanBO* other, float accuracy = 0.0);</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">//        virtual CosanBO* Clone();</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    };</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespace_cosan_html"><div class="ttname"><a href="namespace_cosan.html">Cosan</a></div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00007">CosanBO.h:8</a></div></div>
-<div class="ttc" id="aclass_cosan_1_1_cosan_b_o_html"><div class="ttname"><a href="class_cosan_1_1_cosan_b_o.html">Cosan::CosanBO</a></div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00009">CosanBO.h:10</a></div></div>
-<div class="ttc" id="aclass_cosan_1_1_cosan_b_o_html_a36a75e161a183482930e5b97151e566f"><div class="ttname"><a href="class_cosan_1_1_cosan_b_o.html#a36a75e161a183482930e5b97151e566f">Cosan::CosanBO::GetName</a></div><div class="ttdeci">virtual const std::string GetName() const</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00016">CosanBO.h:16</a></div></div>
-<div class="ttc" id="aclass_cosan_1_1_cosan_b_o_html_ade4a14f5f042dfe1cdf79f5183586b4c"><div class="ttname"><a href="class_cosan_1_1_cosan_b_o.html#ade4a14f5f042dfe1cdf79f5183586b4c">Cosan::CosanBO::CosanBO</a></div><div class="ttdeci">CosanBO()</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00012">CosanBO.h:12</a></div></div>
+<div class="ttc" id="anamespace_cosan_html"><div class="ttname"><a href="namespace_cosan.html">Cosan</a></div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00008">CosanBO.h:9</a></div></div>
+<div class="ttc" id="anamespace_cosan_html_a75b716a4a4a14d8d6679a152c0a054b1"><div class="ttname"><a href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">Cosan::CosanMatrix</a></div><div class="ttdeci">Eigen::Matrix&lt; NumericType, Eigen::Dynamic, Eigen::Dynamic &gt; CosanMatrix</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00013">CosanBO.h:13</a></div></div>
+<div class="ttc" id="autils_2utils_8h_html"><div class="ttname"><a href="utils_2utils_8h.html">utils.h</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_cosan_b_o_html"><div class="ttname"><a href="class_cosan_1_1_cosan_b_o.html">Cosan::CosanBO</a></div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00026">CosanBO.h:27</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_cosan_b_o_html_a36a75e161a183482930e5b97151e566f"><div class="ttname"><a href="class_cosan_1_1_cosan_b_o.html#a36a75e161a183482930e5b97151e566f">Cosan::CosanBO::GetName</a></div><div class="ttdeci">virtual const std::string GetName() const</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00033">CosanBO.h:33</a></div></div>
+<div class="ttc" id="a_c_make_lists_8txt_html_a17efdc922d140c182800faf58b8f09f4"><div class="ttname"><a href="_c_make_lists_8txt.html#a17efdc922d140c182800faf58b8f09f4">cmake_minimum_required</a></div><div class="ttdeci">cmake_minimum_required(VERSION 3.17) project(cosan) set(CMAKE_MODULE_PATH &quot;$</div><div class="ttdef"><b>Definition:</b> <a href="_c_make_lists_8txt_source.html#l00001">CMakeLists.txt:1</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_cosan_b_o_html_ade4a14f5f042dfe1cdf79f5183586b4c"><div class="ttname"><a href="class_cosan_1_1_cosan_b_o.html#ade4a14f5f042dfe1cdf79f5183586b4c">Cosan::CosanBO::CosanBO</a></div><div class="ttdeci">CosanBO()</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00029">CosanBO.h:29</a></div></div>
+<div class="ttc" id="aclass_numeric_type_html"><div class="ttname"><a href="class_numeric_type.html">NumericType</a></div></div>
+<div class="ttc" id="anamespace_cosan_html_a086156060ec06f02404563451d420df8"><div class="ttname"><a href="namespace_cosan.html#a086156060ec06f02404563451d420df8">Cosan::CosanRowVector</a></div><div class="ttdeci">Eigen::Matrix&lt; NumericType, 1, Eigen::Dynamic &gt; CosanRowVector</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00021">CosanBO.h:21</a></div></div>
+<div class="ttc" id="anamespace_cosan_html_ab16c0eeeb31f616c25331418b611f08a"><div class="ttname"><a href="namespace_cosan.html#ab16c0eeeb31f616c25331418b611f08a">Cosan::CosanColVector</a></div><div class="ttdeci">Eigen::Matrix&lt; NumericType, Eigen::Dynamic, 1 &gt; CosanColVector</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00017">CosanBO.h:17</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

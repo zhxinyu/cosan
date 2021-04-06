@@ -8,7 +8,7 @@
 #include <cosan/base/CosanBO.h>
 #include <cosan/data/CosanData.h>
 namespace Cosan{
-    class RandomGridCV: public CrossValidation {
+    class RandomGridCV: public Selection {
 
     };
 }

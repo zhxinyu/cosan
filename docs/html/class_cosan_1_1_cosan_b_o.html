@@ -16,6 +16,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -26,7 +33,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cosan
-   &#160;<span id="projectnumber">0.8</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Data Analytics Library</div>
   </td>
@@ -97,28 +104,32 @@ Inheritance diagram for Cosan::CosanBO:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_cosan_1_1_cosan_b_o__inherit__graph.png" border="0" usemap="#a_cosan_1_1_cosan_b_o_inherit__map" alt="Inheritance graph"/></div>
 <map name="_cosan_1_1_cosan_b_o_inherit__map" id="a_cosan_1_1_cosan_b_o_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,176,131,203"/>
-<area shape="rect" href="class_cosan_1_1_cosan_model.html" title=" " alt="" coords="189,63,330,89"/>
-<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html" title=" " alt="" coords="179,125,340,152"/>
-<area shape="rect" href="class_cosan_1_1_cross_validation.html" title=" " alt="" coords="180,201,339,228"/>
-<area shape="rect" href="class_cosan_1_1_preprocessor.html" title=" " alt="" coords="187,461,332,488"/>
-<area shape="rect" href="class_cosan_1_1_cosan_linear_model.html" title=" " alt="" coords="393,56,569,83"/>
-<area shape="rect" href="class_cosan_1_1_cosan_linear_regression.html" title=" " alt="" coords="621,56,828,83"/>
-<area shape="rect" href="class_cosan_1_1_cosan_elastic_net.html" title=" " alt="" coords="896,5,1063,32"/>
-<area shape="rect" href="class_cosan_1_1_cosan_lasso.html" title=" " alt="" coords="909,56,1050,83"/>
-<area shape="rect" href="class_cosan_1_1_cosan_ridge_regression.html" title=" " alt="" coords="876,107,1083,133"/>
-<area shape="rect" href="class_cosan_1_1_cosan_data.html" title=" " alt="" coords="413,107,548,133"/>
-<area shape="rect" href="class_cosan_1_1_grid_search.html" title=" " alt="" coords="414,157,547,184"/>
-<area shape="rect" href="class_cosan_1_1_random_grid_c_v.html" title=" " alt="" coords="401,208,561,235"/>
-<area shape="rect" href="class_cosan_1_1_train_test_split.html" title=" " alt="" coords="407,259,555,285"/>
-<area shape="rect" href="class_cosan_1_1_customer_transform.html" title=" " alt="" coords="389,309,573,336"/>
-<area shape="rect" href="class_cosan_1_1_minmax_scaler.html" title=" " alt="" coords="405,360,556,387"/>
-<area shape="rect" href="class_cosan_1_1_missing_values.html" title=" " alt="" coords="405,411,557,437"/>
-<area shape="rect" href="class_cosan_1_1_normalizer.html" title=" " alt="" coords="415,461,546,488"/>
-<area shape="rect" href="class_cosan_1_1_onehot_encoding.html" title=" " alt="" coords="399,512,563,539"/>
-<area shape="rect" href="class_cosan_1_1_polynomial_features.html" title=" " alt="" coords="389,563,572,589"/>
-<area shape="rect" href="class_cosan_1_1_principal_component_analysis.html" title=" " alt="" coords="388,614,573,655"/>
-<area shape="rect" href="class_cosan_1_1_standard_scaler.html" title=" " alt="" coords="402,680,559,707"/>
+<area shape="rect" title=" " alt="" coords="5,237,131,264"/>
+<area shape="rect" href="class_cosan_1_1_cosan_model.html" title=" " alt="" coords="202,84,343,111"/>
+<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html" title=" " alt="" coords="179,135,367,177"/>
+<area shape="rect" href="class_cosan_1_1_preprocessor.html" title=" " alt="" coords="179,201,367,242"/>
+<area shape="rect" href="class_cosan_1_1_selection.html" title=" " alt="" coords="211,267,334,293"/>
+<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html" title=" " alt="" coords="192,346,353,387"/>
+<area shape="rect" href="class_cosan_1_1_preprocessor.html" title=" " alt="" coords="200,603,345,645"/>
+<area shape="rect" href="class_cosan_1_1_cosan_linear_model.html" title=" " alt="" coords="418,11,606,53"/>
+<area shape="rect" href="class_cosan_1_1_cosan_linear_model.html" title=" " alt="" coords="424,77,600,118"/>
+<area shape="rect" href="class_cosan_1_1_cosan_linear_regression.html" title=" " alt="" coords="657,45,864,86"/>
+<area shape="rect" href="class_cosan_1_1_cosan_linear_regression.html" title=" " alt="" coords="657,110,864,151"/>
+<area shape="rect" href="class_cosan_1_1_cosan_elastic_net.html" title=" " alt="" coords="932,5,1099,32"/>
+<area shape="rect" href="class_cosan_1_1_cosan_lasso.html" title=" " alt="" coords="945,56,1086,83"/>
+<area shape="rect" href="class_cosan_1_1_cosan_ridge_regression.html" title=" " alt="" coords="912,110,1119,151"/>
+<area shape="rect" href="class_cosan_1_1_customer_transform.html" title=" " alt="" coords="420,142,604,183"/>
+<area shape="rect" href="class_cosan_1_1_onehot_encoding.html" title=" " alt="" coords="430,208,594,235"/>
+<area shape="rect" href="class_cosan_1_1_random_grid_c_v.html" title=" " alt="" coords="432,259,592,285"/>
+<area shape="rect" href="class_cosan_1_1_train_test_split.html" title=" " alt="" coords="418,310,606,351"/>
+<area shape="rect" href="class_cosan_1_1_cosan_data.html" title=" " alt="" coords="415,375,609,417"/>
+<area shape="rect" href="class_cosan_1_1_minmax_scaler.html" title=" " alt="" coords="418,441,606,482"/>
+<area shape="rect" href="class_cosan_1_1_missing_values.html" title=" " alt="" coords="418,506,606,547"/>
+<area shape="rect" href="class_cosan_1_1_normalizer.html" title=" " alt="" coords="422,571,602,613"/>
+<area shape="rect" href="class_cosan_1_1_over_under_flow.html" title=" " alt="" coords="418,637,606,678"/>
+<area shape="rect" href="class_cosan_1_1_polynomial_features.html" title=" " alt="" coords="418,702,606,743"/>
+<area shape="rect" href="class_cosan_1_1_principal_component_analysis.html" title=" " alt="" coords="419,768,605,824"/>
+<area shape="rect" href="class_cosan_1_1_standard_scaler.html" title=" " alt="" coords="418,849,606,890"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -131,7 +142,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_cosan_b_o_8h_source.html#l00009">9</a> of file <a class="el" href="_cosan_b_o_8h_source.html">CosanBO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cosan_b_o_8h_source.html#l00026">26</a> of file <a class="el" href="_cosan_b_o_8h_source.html">CosanBO.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ade4a14f5f042dfe1cdf79f5183586b4c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ade4a14f5f042dfe1cdf79f5183586b4c">&#9670;&nbsp;</a></span>CosanBO()</h2>
@@ -156,7 +167,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_cosan_b_o_8h_source.html#l00012">12</a> of file <a class="el" href="_cosan_b_o_8h_source.html">CosanBO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cosan_b_o_8h_source.html#l00029">29</a> of file <a class="el" href="_cosan_b_o_8h_source.html">CosanBO.h</a>.</p>
 
 </div>
 </div>
@@ -185,9 +196,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the name of the object. It should return "Abstract Object"</p>
 
-<p>Reimplemented in <a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#a0ceeb677959c0219e3be19498b3f55ef">Cosan::CosanRidgeRegression</a>, <a class="el" href="class_cosan_1_1_cosan_linear_regression.html#ada67c4791b0a113e73d2660556eccf86">Cosan::CosanLinearRegression</a>, <a class="el" href="class_cosan_1_1_cosan_linear_model.html#a441a2fcedef4b42230de3b63b71e95d0">Cosan::CosanLinearModel</a>, <a class="el" href="class_cosan_1_1_cosan_data.html#a9c66192ef22482ce1c130cdce97a5156">Cosan::CosanData</a>, and <a class="el" href="class_cosan_1_1_cosan_raw_data.html#ab99e80efab1494e535e281268f2cdeaf">Cosan::CosanRawData</a>.</p>
+<p>Reimplemented in <a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#aa42c0f4d08605a6f04dc7a85dc7075a2">Cosan::CosanRidgeRegression&lt; NumericType, typename &gt;</a>, <a class="el" href="class_cosan_1_1_cosan_linear_regression.html#a9a6bbd4b5b622cda9b836d76a6fe2a5f">Cosan::CosanLinearRegression&lt; NumericType, typename &gt;</a>, <a class="el" href="class_cosan_1_1_cosan_linear_model.html#a6105699c6c580d196a4ae5bb42a504f7">Cosan::CosanLinearModel&lt; NumericType, typename &gt;</a>, <a class="el" href="class_cosan_1_1_cosan_data.html#a080ce1515f0f65036749498dc9dc0bce">Cosan::CosanData&lt; NumericType, typename &gt;</a>, <a class="el" href="class_cosan_1_1_cosan_raw_data.html#a70c1bb0b78dd63fa4b547527dd98dcdd">Cosan::CosanRawData&lt; NumericType, typename &gt;</a>, <a class="el" href="class_cosan_1_1_cosan_data.html#a080ce1515f0f65036749498dc9dc0bce">Cosan::CosanData&lt; NumericType, typename &gt;</a>, and <a class="el" href="class_cosan_1_1_cosan_raw_data.html#a70c1bb0b78dd63fa4b547527dd98dcdd">Cosan::CosanRawData&lt; NumericType, typename &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_cosan_b_o_8h_source.html#l00016">16</a> of file <a class="el" href="_cosan_b_o_8h_source.html">CosanBO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cosan_b_o_8h_source.html#l00033">33</a> of file <a class="el" href="_cosan_b_o_8h_source.html">CosanBO.h</a>.</p>
 
 </div>
 </div>

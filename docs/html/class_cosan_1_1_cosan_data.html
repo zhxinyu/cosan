@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Cosan: Cosan::CosanData Class Reference</title>
+<title>Cosan: Cosan::CosanData&lt; NumericType, typename &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -16,6 +16,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -26,7 +33,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cosan
-   &#160;<span id="projectnumber">0.8</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Data Analytics Library</div>
   </td>
@@ -85,166 +92,284 @@ $(document).ready(function(){initNavTree('class_cosan_1_1_cosan_data.html',''); 
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_cosan_1_1_cosan_data-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Cosan::CosanData Class Reference</div>  </div>
+<div class="title">Cosan::CosanData&lt; NumericType, typename &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_cosan_data_8h_source.html">CosanData.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Cosan::CosanData:</div>
+Inheritance diagram for Cosan::CosanData&lt; NumericType, typename &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_cosan_1_1_cosan_data__inherit__graph.png" border="0" usemap="#a_cosan_1_1_cosan_data_inherit__map" alt="Inheritance graph"/></div>
-<map name="_cosan_1_1_cosan_data_inherit__map" id="_cosan_1_1_cosan_data_inherit__map">
-<area shape="rect" title=" " alt="" coords="19,155,153,181"/>
-<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html" title=" " alt="" coords="5,80,167,107"/>
-<area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="23,5,149,32"/>
+<div class="center"><img src="class_cosan_1_1_cosan_data__inherit__graph.png" border="0" usemap="#a_cosan_1_1_cosan_data_3_01_numeric_type_00_01typename_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="_cosan_1_1_cosan_data_3_01_numeric_type_00_01typename_01_4_inherit__map" id="a_cosan_1_1_cosan_data_3_01_numeric_type_00_01typename_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,169,200,211"/>
+<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html" title=" " alt="" coords="22,80,183,121"/>
+<area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="40,5,165,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
-Collaboration diagram for Cosan::CosanData:</div>
+Collaboration diagram for Cosan::CosanData&lt; NumericType, typename &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_cosan_1_1_cosan_data__coll__graph.png" border="0" usemap="#a_cosan_1_1_cosan_data_coll__map" alt="Collaboration graph"/></div>
-<map name="_cosan_1_1_cosan_data_coll__map" id="_cosan_1_1_cosan_data_coll__map">
-<area shape="rect" title=" " alt="" coords="581,326,716,352"/>
-<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html" title=" " alt="" coords="371,326,532,352"/>
-<area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="40,7,165,34"/>
-<area shape="rect" title=" " alt="" coords="43,58,163,84"/>
-<area shape="rect" title=" " alt="" coords="33,118,173,144"/>
-<area shape="rect" title=" " alt="" coords="76,207,129,234"/>
-<area shape="rect" title=" " alt="" coords="37,309,169,350"/>
-<area shape="rect" title=" " alt="" coords="79,375,126,402"/>
-<area shape="rect" title=" " alt="" coords="75,431,130,458"/>
-<area shape="rect" title=" " alt="" coords="5,484,200,525"/>
-<area shape="rect" title=" " alt="" coords="33,549,173,590"/>
+<div class="center"><img src="class_cosan_1_1_cosan_data__coll__graph.png" border="0" usemap="#a_cosan_1_1_cosan_data_3_01_numeric_type_00_01typename_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="_cosan_1_1_cosan_data_3_01_numeric_type_00_01typename_01_4_coll__map" id="a_cosan_1_1_cosan_data_3_01_numeric_type_00_01typename_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="584,282,779,323"/>
+<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html" title=" " alt="" coords="373,282,535,323"/>
+<area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="41,269,167,296"/>
+<area shape="rect" title=" " alt="" coords="24,5,184,61"/>
+<area shape="rect" title=" " alt="" coords="44,320,164,347"/>
+<area shape="rect" title=" " alt="" coords="34,373,174,400"/>
+<area shape="rect" title=" " alt="" coords="77,463,131,489"/>
+<area shape="rect" title=" " alt="" coords="38,574,170,615"/>
+<area shape="rect" href="classbool.html" title=" " alt="" coords="81,100,127,127"/>
+<area shape="rect" title=" " alt="" coords="77,152,131,179"/>
+<area shape="rect" title=" " alt="" coords="34,203,174,245"/>
+<area shape="rect" href="class_cosan_matrix_3_01_numeric_type_01_4.html" title=" " alt="" coords="5,677,203,704"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2a08551f95b20283346a628f73f8dd36"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_data.html#a2a08551f95b20283346a628f73f8dd36">CosanData</a> ()=delete</td></tr>
-<tr class="separator:a2a08551f95b20283346a628f73f8dd36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5a53b0e86ddd2b346f0d173762956d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_data.html#ac5a53b0e86ddd2b346f0d173762956d8">GetInput</a> ()</td></tr>
-<tr class="separator:ac5a53b0e86ddd2b346f0d173762956d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace936a299ca37f5522f56e565ebdf187"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_data.html#ace936a299ca37f5522f56e565ebdf187">GetTarget</a> () const</td></tr>
-<tr class="separator:ace936a299ca37f5522f56e565ebdf187"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c66192ef22482ce1c130cdce97a5156"><td class="memItemLeft" align="right" valign="top">virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_data.html#a9c66192ef22482ce1c130cdce97a5156">GetName</a> () const</td></tr>
-<tr class="separator:a9c66192ef22482ce1c130cdce97a5156"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_cosan_1_1_cosan_raw_data"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_cosan_1_1_cosan_raw_data')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_cosan_1_1_cosan_raw_data.html">Cosan::CosanRawData</a></td></tr>
-<tr class="memitem:a1607feb21a6c9a71d622be07bbee2a31 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a1607feb21a6c9a71d622be07bbee2a31">CosanRawData</a> ()=delete</td></tr>
-<tr class="separator:a1607feb21a6c9a71d622be07bbee2a31 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a497bfe6c0de229861b8b6021d3ee9b7b inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a497bfe6c0de229861b8b6021d3ee9b7b">CosanRawData</a> (const std::string &amp;srcX)</td></tr>
-<tr class="separator:a497bfe6c0de229861b8b6021d3ee9b7b inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ebaedcc639a7cb1712741495b64be79 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a2ebaedcc639a7cb1712741495b64be79">CosanRawData</a> (const std::string &amp;srcX, const std::string &amp;srcY)</td></tr>
-<tr class="separator:a2ebaedcc639a7cb1712741495b64be79 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ad704660a66bea4c951cb8d327b8413 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a0ad704660a66bea4c951cb8d327b8413">SetInput</a> (const std::string &amp;srcX)</td></tr>
-<tr class="separator:a0ad704660a66bea4c951cb8d327b8413 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bc0d05af133296d3e39b83c5e268b5a inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a0bc0d05af133296d3e39b83c5e268b5a">SetTarget</a> (const std::string &amp;srcY)</td></tr>
-<tr class="separator:a0bc0d05af133296d3e39b83c5e268b5a inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2b3a0cd8b7f5b6363234cb61cb9617e inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ae2b3a0cd8b7f5b6363234cb61cb9617e">GetInput</a> ()</td></tr>
-<tr class="separator:ae2b3a0cd8b7f5b6363234cb61cb9617e inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedbf8e04ea50e888cef3cff6c49142e9 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#aedbf8e04ea50e888cef3cff6c49142e9">GetTarget</a> () const</td></tr>
-<tr class="separator:aedbf8e04ea50e888cef3cff6c49142e9 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c1a2be6eebf4d1e24655ae847bd8245 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a2c1a2be6eebf4d1e24655ae847bd8245">GetSummaryMessageX</a> () const</td></tr>
-<tr class="separator:a2c1a2be6eebf4d1e24655ae847bd8245 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a794590737d7b5e82ffd7a6ce2d59cdc6 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a794590737d7b5e82ffd7a6ce2d59cdc6">GetSummaryMessageY</a> () const</td></tr>
-<tr class="separator:a794590737d7b5e82ffd7a6ce2d59cdc6 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4403b78e88bd8201523e83a2e843f56a inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; gsl::index, gsl::index &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a4403b78e88bd8201523e83a2e843f56a">GetRawToNumIdx</a> ()</td></tr>
-<tr class="separator:a4403b78e88bd8201523e83a2e843f56a inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc1b7bcda03910f72c2c8c95f023d8b9 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; gsl::index, gsl::index &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#abc1b7bcda03910f72c2c8c95f023d8b9">GetRawToCatIdx</a> ()</td></tr>
-<tr class="separator:abc1b7bcda03910f72c2c8c95f023d8b9 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b8bf4476c3e64d087f64dd1f172fc4d inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a6b8bf4476c3e64d087f64dd1f172fc4d">GetIdxpinfX</a> ()</td></tr>
-<tr class="separator:a6b8bf4476c3e64d087f64dd1f172fc4d inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a979f646ac3962291cd06ef0abcdd09d8 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a979f646ac3962291cd06ef0abcdd09d8">GetIdxminfX</a> ()</td></tr>
-<tr class="separator:a979f646ac3962291cd06ef0abcdd09d8 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a838beab82072494d615cf4714497cd9b inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a838beab82072494d615cf4714497cd9b">GetIdxmissingX</a> ()</td></tr>
-<tr class="separator:a838beab82072494d615cf4714497cd9b inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51deafdadfd7704d693eb1f2948768c8 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a51deafdadfd7704d693eb1f2948768c8">GetIdxpinfY</a> ()</td></tr>
-<tr class="separator:a51deafdadfd7704d693eb1f2948768c8 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bbf550e81c615e05b4a2ecd130d07dc inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a5bbf550e81c615e05b4a2ecd130d07dc">GetIdxminfY</a> ()</td></tr>
-<tr class="separator:a5bbf550e81c615e05b4a2ecd130d07dc inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fb9ec2544acb5343690b96684c469ef inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a2fb9ec2544acb5343690b96684c469ef">GetIdxmissingY</a> ()</td></tr>
-<tr class="separator:a2fb9ec2544acb5343690b96684c469ef inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad91ff04bf8267073b1656aa7e7f96d43 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::set&lt; gsl::index &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ad91ff04bf8267073b1656aa7e7f96d43">GetcolCatX</a> ()</td></tr>
-<tr class="separator:ad91ff04bf8267073b1656aa7e7f96d43 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63e76d9cd5b22cb259ca863439ffb400 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::set&lt; gsl::index &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a63e76d9cd5b22cb259ca863439ffb400">GetcolCatY</a> ()</td></tr>
-<tr class="separator:a63e76d9cd5b22cb259ca863439ffb400 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a0521899c45b350a551e29418787edc inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a4a0521899c45b350a551e29418787edc">GetcatY</a> () const</td></tr>
-<tr class="separator:a4a0521899c45b350a551e29418787edc inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a232942698690ee43d0366fbc4c43b292 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">gsl::index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a232942698690ee43d0366fbc4c43b292">GetrowsX</a> ()</td></tr>
-<tr class="separator:a232942698690ee43d0366fbc4c43b292 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a927c100846efa8a606c72619d7e8dddf inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">gsl::index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a927c100846efa8a606c72619d7e8dddf">GetrowsY</a> ()</td></tr>
-<tr class="separator:a927c100846efa8a606c72619d7e8dddf inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86f81be3e9b3611783c83cb76aa6b56e inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">gsl::index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a86f81be3e9b3611783c83cb76aa6b56e">GetcolsX</a> ()</td></tr>
-<tr class="separator:a86f81be3e9b3611783c83cb76aa6b56e inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fc08343d2019b97516ce4fea9af72c7 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">gsl::index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a8fc08343d2019b97516ce4fea9af72c7">GetcolsY</a> ()</td></tr>
-<tr class="separator:a8fc08343d2019b97516ce4fea9af72c7 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef0b9c1d604b8ebaa06f5434a3414fc7 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#aef0b9c1d604b8ebaa06f5434a3414fc7">GetsvaluesX</a> ()</td></tr>
-<tr class="separator:aef0b9c1d604b8ebaa06f5434a3414fc7 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc6c4be2990bab08a4f2f02fc1bc06e0 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#abc6c4be2990bab08a4f2f02fc1bc06e0">GetsvaluesY</a> ()</td></tr>
-<tr class="separator:abc6c4be2990bab08a4f2f02fc1bc06e0 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a962d8dd675c6be42a76cef509c9ac4cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_data.html#a962d8dd675c6be42a76cef509c9ac4cf">CosanData</a> ()=default</td></tr>
+<tr class="separator:a962d8dd675c6be42a76cef509c9ac4cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a559955fcd11c5d3f9f4d0bcbab991145"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_data.html#a559955fcd11c5d3f9f4d0bcbab991145">CosanData</a> (<a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; inputX)</td></tr>
+<tr class="separator:a559955fcd11c5d3f9f4d0bcbab991145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dbbf03e4756de3e13456bc554220eec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_data.html#a8dbbf03e4756de3e13456bc554220eec">CosanData</a> (<a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; inputX, <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; inputY)</td></tr>
+<tr class="separator:a8dbbf03e4756de3e13456bc554220eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa837cb585ad996bf3966ce91bc763177"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_data.html#aa837cb585ad996bf3966ce91bc763177">GetInput</a> () const</td></tr>
+<tr class="separator:aa837cb585ad996bf3966ce91bc763177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1ee2ba158d8e751e1b86ec7e65ea324"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_data.html#ae1ee2ba158d8e751e1b86ec7e65ea324">GetTarget</a> () const</td></tr>
+<tr class="separator:ae1ee2ba158d8e751e1b86ec7e65ea324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a080ce1515f0f65036749498dc9dc0bce"><td class="memItemLeft" align="right" valign="top">virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_data.html#a080ce1515f0f65036749498dc9dc0bce">GetName</a> () const</td></tr>
+<tr class="separator:a080ce1515f0f65036749498dc9dc0bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a962d8dd675c6be42a76cef509c9ac4cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_data.html#a962d8dd675c6be42a76cef509c9ac4cf">CosanData</a> ()=default</td></tr>
+<tr class="separator:a962d8dd675c6be42a76cef509c9ac4cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a732a770badf4ac2f20c6c98f7c2bfd8c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_data.html#a732a770badf4ac2f20c6c98f7c2bfd8c">CosanData</a> (<a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a> inputX)</td></tr>
+<tr class="separator:a732a770badf4ac2f20c6c98f7c2bfd8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab410f143f217a94145080719a2362dab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_data.html#ab410f143f217a94145080719a2362dab">CosanData</a> (<a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a> inputX, <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a> inputY)</td></tr>
+<tr class="separator:ab410f143f217a94145080719a2362dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f41175daa03ba371330dda642bc2cd0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_data.html#a8f41175daa03ba371330dda642bc2cd0">GetInput</a> () const</td></tr>
+<tr class="separator:a8f41175daa03ba371330dda642bc2cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a733650bbad5c0cb63ad00dfdaa27b1ef"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_data.html#a733650bbad5c0cb63ad00dfdaa27b1ef">GetTarget</a> () const</td></tr>
+<tr class="separator:a733650bbad5c0cb63ad00dfdaa27b1ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a080ce1515f0f65036749498dc9dc0bce"><td class="memItemLeft" align="right" valign="top">virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_data.html#a080ce1515f0f65036749498dc9dc0bce">GetName</a> () const</td></tr>
+<tr class="separator:a080ce1515f0f65036749498dc9dc0bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_cosan_1_1_cosan_raw_data"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_cosan_1_1_cosan_raw_data')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_cosan_1_1_cosan_raw_data.html">Cosan::CosanRawData&lt; NumericType &gt;</a></td></tr>
+<tr class="memitem:a95abd995a2135354e90e0452bc55e876 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a95abd995a2135354e90e0452bc55e876">CosanRawData</a> ()=delete</td></tr>
+<tr class="separator:a95abd995a2135354e90e0452bc55e876 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1620bb5e015caa9a17d93610c7195d8 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ab1620bb5e015caa9a17d93610c7195d8">CosanRawData</a> (const std::string &amp;srcX)</td></tr>
+<tr class="separator:ab1620bb5e015caa9a17d93610c7195d8 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c4a5d187bf146a8f702c8c9c96c79d3 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a5c4a5d187bf146a8f702c8c9c96c79d3">CosanRawData</a> (const std::string &amp;srcX, const std::string &amp;srcY)</td></tr>
+<tr class="separator:a5c4a5d187bf146a8f702c8c9c96c79d3 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95abd995a2135354e90e0452bc55e876 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a95abd995a2135354e90e0452bc55e876">CosanRawData</a> ()=delete</td></tr>
+<tr class="separator:a95abd995a2135354e90e0452bc55e876 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1620bb5e015caa9a17d93610c7195d8 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ab1620bb5e015caa9a17d93610c7195d8">CosanRawData</a> (const std::string &amp;srcX)</td></tr>
+<tr class="separator:ab1620bb5e015caa9a17d93610c7195d8 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c4a5d187bf146a8f702c8c9c96c79d3 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a5c4a5d187bf146a8f702c8c9c96c79d3">CosanRawData</a> (const std::string &amp;srcX, const std::string &amp;srcY)</td></tr>
+<tr class="separator:a5c4a5d187bf146a8f702c8c9c96c79d3 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a872b75b752aadb19875f5602557f4d5a inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a872b75b752aadb19875f5602557f4d5a">SetInput</a> (const std::string &amp;srcX)</td></tr>
+<tr class="separator:a872b75b752aadb19875f5602557f4d5a inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a872b75b752aadb19875f5602557f4d5a inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a872b75b752aadb19875f5602557f4d5a">SetInput</a> (const std::string &amp;srcX)</td></tr>
+<tr class="separator:a872b75b752aadb19875f5602557f4d5a inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23290918b8f554676e7623338008c9a2 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a23290918b8f554676e7623338008c9a2">SetTarget</a> (const std::string &amp;srcY)</td></tr>
+<tr class="separator:a23290918b8f554676e7623338008c9a2 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23290918b8f554676e7623338008c9a2 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a23290918b8f554676e7623338008c9a2">SetTarget</a> (const std::string &amp;srcY)</td></tr>
+<tr class="separator:a23290918b8f554676e7623338008c9a2 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7714c036ad02f98ee3c664815be8bd29 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a7714c036ad02f98ee3c664815be8bd29">UpdateData</a> (<a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; inputX)</td></tr>
+<tr class="separator:a7714c036ad02f98ee3c664815be8bd29 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10d2c6179b612fbacb1eae037f775233 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a10d2c6179b612fbacb1eae037f775233">UpdateData</a> (<a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; inputX, <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; inputY)</td></tr>
+<tr class="separator:a10d2c6179b612fbacb1eae037f775233 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a66e6644aded1557dcc1ace479b5a33 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a7a66e6644aded1557dcc1ace479b5a33">UpdateData</a> (<a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a> inputX)</td></tr>
+<tr class="separator:a7a66e6644aded1557dcc1ace479b5a33 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abca7d55f8069b7e11d142b43865e512e inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#abca7d55f8069b7e11d142b43865e512e">UpdateData</a> (<a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a> inputX, <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a> inputY)</td></tr>
+<tr class="separator:abca7d55f8069b7e11d142b43865e512e inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc5660f7e9937ad8a3c2d12b123d2213 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#afc5660f7e9937ad8a3c2d12b123d2213">UpdateCat</a> (std::vector&lt; std::string &gt; &amp;inputX)</td></tr>
+<tr class="separator:afc5660f7e9937ad8a3c2d12b123d2213 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d2557ae5289c5a41f610d868c188f98 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a3d2557ae5289c5a41f610d868c188f98">UpdateCat</a> (std::vector&lt; std::string &gt; &amp;inputX, std::vector&lt; std::string &gt; &amp;inputY)</td></tr>
+<tr class="separator:a3d2557ae5289c5a41f610d868c188f98 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc5660f7e9937ad8a3c2d12b123d2213 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#afc5660f7e9937ad8a3c2d12b123d2213">UpdateCat</a> (std::vector&lt; std::string &gt; &amp;inputX)</td></tr>
+<tr class="separator:afc5660f7e9937ad8a3c2d12b123d2213 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d2557ae5289c5a41f610d868c188f98 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a3d2557ae5289c5a41f610d868c188f98">UpdateCat</a> (std::vector&lt; std::string &gt; &amp;inputX, std::vector&lt; std::string &gt; &amp;inputY)</td></tr>
+<tr class="separator:a3d2557ae5289c5a41f610d868c188f98 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa40bbbed48778eff3f328876ff0714d7 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#aa40bbbed48778eff3f328876ff0714d7">GetInput</a> ()</td></tr>
+<tr class="separator:aa40bbbed48778eff3f328876ff0714d7 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56901b5a13a1d543b30b65790bd66f1c inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a56901b5a13a1d543b30b65790bd66f1c">GetInput</a> ()</td></tr>
+<tr class="separator:a56901b5a13a1d543b30b65790bd66f1c inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae209e5e83c4afad4b072edb014b4c683 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ae209e5e83c4afad4b072edb014b4c683">GetTarget</a> ()</td></tr>
+<tr class="separator:ae209e5e83c4afad4b072edb014b4c683 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae06714afc7433b5abed61845cfb1f94b inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ae06714afc7433b5abed61845cfb1f94b">GetTarget</a> ()</td></tr>
+<tr class="separator:ae06714afc7433b5abed61845cfb1f94b inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fc3a047ac4d5a6b581d5521814ba3b3 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; gsl::index, gsl::index &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a3fc3a047ac4d5a6b581d5521814ba3b3">GetMissingNumber</a> ()</td></tr>
+<tr class="separator:a3fc3a047ac4d5a6b581d5521814ba3b3 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acab3ceef43f10978c2de38f5c0e2203a inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#acab3ceef43f10978c2de38f5c0e2203a">GetMissingNumber</a> ()</td></tr>
+<tr class="separator:acab3ceef43f10978c2de38f5c0e2203a inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70c1bb0b78dd63fa4b547527dd98dcdd inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a70c1bb0b78dd63fa4b547527dd98dcdd">GetName</a> () const</td></tr>
+<tr class="separator:a70c1bb0b78dd63fa4b547527dd98dcdd inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70c1bb0b78dd63fa4b547527dd98dcdd inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a70c1bb0b78dd63fa4b547527dd98dcdd">GetName</a> () const</td></tr>
+<tr class="separator:a70c1bb0b78dd63fa4b547527dd98dcdd inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a223e7f5fc2449d7edc107175fadb4fe5 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a223e7f5fc2449d7edc107175fadb4fe5">GetSummaryMessageX</a> () const</td></tr>
+<tr class="separator:a223e7f5fc2449d7edc107175fadb4fe5 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a223e7f5fc2449d7edc107175fadb4fe5 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a223e7f5fc2449d7edc107175fadb4fe5">GetSummaryMessageX</a> () const</td></tr>
+<tr class="separator:a223e7f5fc2449d7edc107175fadb4fe5 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac53022dc99ead293566a19d58425c437 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ac53022dc99ead293566a19d58425c437">GetSummaryMessageY</a> () const</td></tr>
+<tr class="separator:ac53022dc99ead293566a19d58425c437 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac53022dc99ead293566a19d58425c437 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ac53022dc99ead293566a19d58425c437">GetSummaryMessageY</a> () const</td></tr>
+<tr class="separator:ac53022dc99ead293566a19d58425c437 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ec2b712144056b0c50d1eeb451dc57b inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; gsl::index, gsl::index &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a8ec2b712144056b0c50d1eeb451dc57b">GetRawToNumIdx</a> ()</td></tr>
+<tr class="separator:a8ec2b712144056b0c50d1eeb451dc57b inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ec2b712144056b0c50d1eeb451dc57b inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; gsl::index, gsl::index &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a8ec2b712144056b0c50d1eeb451dc57b">GetRawToNumIdx</a> ()</td></tr>
+<tr class="separator:a8ec2b712144056b0c50d1eeb451dc57b inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16d49f38a5542232c8ed13639861f7a9 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; gsl::index, gsl::index &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a16d49f38a5542232c8ed13639861f7a9">GetRawToCatIdx</a> ()</td></tr>
+<tr class="separator:a16d49f38a5542232c8ed13639861f7a9 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16d49f38a5542232c8ed13639861f7a9 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; gsl::index, gsl::index &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a16d49f38a5542232c8ed13639861f7a9">GetRawToCatIdx</a> ()</td></tr>
+<tr class="separator:a16d49f38a5542232c8ed13639861f7a9 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e225335e8384d1f75b921c39ec16498 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a3e225335e8384d1f75b921c39ec16498">GetIdxpinfX</a> () const</td></tr>
+<tr class="separator:a3e225335e8384d1f75b921c39ec16498 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e225335e8384d1f75b921c39ec16498 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a3e225335e8384d1f75b921c39ec16498">GetIdxpinfX</a> () const</td></tr>
+<tr class="separator:a3e225335e8384d1f75b921c39ec16498 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae4f5cfff5934c9ae26fb603f055dd88 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#aae4f5cfff5934c9ae26fb603f055dd88">GetIdxminfX</a> () const</td></tr>
+<tr class="separator:aae4f5cfff5934c9ae26fb603f055dd88 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae4f5cfff5934c9ae26fb603f055dd88 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#aae4f5cfff5934c9ae26fb603f055dd88">GetIdxminfX</a> () const</td></tr>
+<tr class="separator:aae4f5cfff5934c9ae26fb603f055dd88 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a858958da3338e000c959649443b04aa5 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a858958da3338e000c959649443b04aa5">GetIdxmissingX</a> () const</td></tr>
+<tr class="separator:a858958da3338e000c959649443b04aa5 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a858958da3338e000c959649443b04aa5 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a858958da3338e000c959649443b04aa5">GetIdxmissingX</a> () const</td></tr>
+<tr class="separator:a858958da3338e000c959649443b04aa5 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed375855e5397754dc4bc5b53a1b73b9 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#aed375855e5397754dc4bc5b53a1b73b9">GetIdxpinfY</a> () const</td></tr>
+<tr class="separator:aed375855e5397754dc4bc5b53a1b73b9 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed375855e5397754dc4bc5b53a1b73b9 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#aed375855e5397754dc4bc5b53a1b73b9">GetIdxpinfY</a> () const</td></tr>
+<tr class="separator:aed375855e5397754dc4bc5b53a1b73b9 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa71c6c85ec4bd66c3e7eb80a995433b5 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#aa71c6c85ec4bd66c3e7eb80a995433b5">GetIdxminfY</a> () const</td></tr>
+<tr class="separator:aa71c6c85ec4bd66c3e7eb80a995433b5 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa71c6c85ec4bd66c3e7eb80a995433b5 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#aa71c6c85ec4bd66c3e7eb80a995433b5">GetIdxminfY</a> () const</td></tr>
+<tr class="separator:aa71c6c85ec4bd66c3e7eb80a995433b5 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad24c20b0cd66dd578c48f9b921089e59 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ad24c20b0cd66dd578c48f9b921089e59">GetIdxmissingY</a> () const</td></tr>
+<tr class="separator:ad24c20b0cd66dd578c48f9b921089e59 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad24c20b0cd66dd578c48f9b921089e59 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ad24c20b0cd66dd578c48f9b921089e59">GetIdxmissingY</a> () const</td></tr>
+<tr class="separator:ad24c20b0cd66dd578c48f9b921089e59 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d5b227fa62d2197f3a7d8e3e597de86 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::set&lt; gsl::index &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a6d5b227fa62d2197f3a7d8e3e597de86">GetcolCatX</a> () const</td></tr>
+<tr class="separator:a6d5b227fa62d2197f3a7d8e3e597de86 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d5b227fa62d2197f3a7d8e3e597de86 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::set&lt; gsl::index &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a6d5b227fa62d2197f3a7d8e3e597de86">GetcolCatX</a> () const</td></tr>
+<tr class="separator:a6d5b227fa62d2197f3a7d8e3e597de86 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb86a57fff90518926883e236322165 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::set&lt; gsl::index &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#afeb86a57fff90518926883e236322165">GetcolCatY</a> () const</td></tr>
+<tr class="separator:afeb86a57fff90518926883e236322165 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb86a57fff90518926883e236322165 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::set&lt; gsl::index &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#afeb86a57fff90518926883e236322165">GetcolCatY</a> () const</td></tr>
+<tr class="separator:afeb86a57fff90518926883e236322165 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a246d0217171351daecffabafbe7a9078 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a246d0217171351daecffabafbe7a9078">GetcatY</a> () const</td></tr>
+<tr class="separator:a246d0217171351daecffabafbe7a9078 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a246d0217171351daecffabafbe7a9078 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a246d0217171351daecffabafbe7a9078">GetcatY</a> () const</td></tr>
+<tr class="separator:a246d0217171351daecffabafbe7a9078 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb351f5627042ce56d726560c8911560 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">gsl::index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#acb351f5627042ce56d726560c8911560">GetrowsX</a> ()</td></tr>
+<tr class="separator:acb351f5627042ce56d726560c8911560 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb351f5627042ce56d726560c8911560 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">gsl::index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#acb351f5627042ce56d726560c8911560">GetrowsX</a> ()</td></tr>
+<tr class="separator:acb351f5627042ce56d726560c8911560 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab619f8981c6aba0c8ce451eef2b28f23 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">gsl::index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ab619f8981c6aba0c8ce451eef2b28f23">GetrowsY</a> ()</td></tr>
+<tr class="separator:ab619f8981c6aba0c8ce451eef2b28f23 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab619f8981c6aba0c8ce451eef2b28f23 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">gsl::index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ab619f8981c6aba0c8ce451eef2b28f23">GetrowsY</a> ()</td></tr>
+<tr class="separator:ab619f8981c6aba0c8ce451eef2b28f23 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a331f0e0e27095c81e7072a5b52e75b89 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">gsl::index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a331f0e0e27095c81e7072a5b52e75b89">GetcolsX</a> ()</td></tr>
+<tr class="separator:a331f0e0e27095c81e7072a5b52e75b89 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a331f0e0e27095c81e7072a5b52e75b89 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">gsl::index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a331f0e0e27095c81e7072a5b52e75b89">GetcolsX</a> ()</td></tr>
+<tr class="separator:a331f0e0e27095c81e7072a5b52e75b89 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3f9301cfc59641f78b0019a9b6017ba inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">gsl::index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#af3f9301cfc59641f78b0019a9b6017ba">GetcolsY</a> ()</td></tr>
+<tr class="separator:af3f9301cfc59641f78b0019a9b6017ba inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3f9301cfc59641f78b0019a9b6017ba inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">gsl::index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#af3f9301cfc59641f78b0019a9b6017ba">GetcolsY</a> ()</td></tr>
+<tr class="separator:af3f9301cfc59641f78b0019a9b6017ba inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a716d8c062d57c7356075b82b413916d9 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a716d8c062d57c7356075b82b413916d9">GetsvaluesX</a> () const</td></tr>
+<tr class="separator:a716d8c062d57c7356075b82b413916d9 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a716d8c062d57c7356075b82b413916d9 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a716d8c062d57c7356075b82b413916d9">GetsvaluesX</a> () const</td></tr>
+<tr class="separator:a716d8c062d57c7356075b82b413916d9 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e8b310028bf926e2bf90839677d7053 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a0e8b310028bf926e2bf90839677d7053">GetsvaluesY</a> () const</td></tr>
+<tr class="separator:a0e8b310028bf926e2bf90839677d7053 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e8b310028bf926e2bf90839677d7053 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a0e8b310028bf926e2bf90839677d7053">GetsvaluesY</a> () const</td></tr>
+<tr class="separator:a0e8b310028bf926e2bf90839677d7053 inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a665d53d39549ec0e48b2d580620bce9e inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a665d53d39549ec0e48b2d580620bce9e">GetType</a> ()</td></tr>
+<tr class="separator:a665d53d39549ec0e48b2d580620bce9e inherit pub_methods_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_cosan_1_1_cosan_b_o"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_cosan_1_1_cosan_b_o')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_cosan_1_1_cosan_b_o.html">Cosan::CosanBO</a></td></tr>
 <tr class="memitem:ade4a14f5f042dfe1cdf79f5183586b4c inherit pub_methods_class_cosan_1_1_cosan_b_o"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_b_o.html#ade4a14f5f042dfe1cdf79f5183586b4c">CosanBO</a> ()</td></tr>
 <tr class="separator:ade4a14f5f042dfe1cdf79f5183586b4c inherit pub_methods_class_cosan_1_1_cosan_b_o"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a68a40b1bed43a1bf2e8e7eb1fd51bd58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_data.html#a68a40b1bed43a1bf2e8e7eb1fd51bd58">X</a></td></tr>
+<tr class="separator:a68a40b1bed43a1bf2e8e7eb1fd51bd58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb699b223df048af2f76ea76c191f8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_data.html#afeb699b223df048af2f76ea76c191f8f">Y</a></td></tr>
+<tr class="separator:afeb699b223df048af2f76ea76c191f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bc8ee088f5dd8a444b6e00a6bd9b9aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_data.html#a4bc8ee088f5dd8a444b6e00a6bd9b9aa">X</a></td></tr>
+<tr class="separator:a4bc8ee088f5dd8a444b6e00a6bd9b9aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a717a1bfeda328a81729795c51eccb903"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_data.html#a717a1bfeda328a81729795c51eccb903">Y</a></td></tr>
+<tr class="separator:a717a1bfeda328a81729795c51eccb903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_attribs_class_cosan_1_1_cosan_raw_data"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_cosan_1_1_cosan_raw_data')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_cosan_1_1_cosan_raw_data.html">Cosan::CosanRawData</a></td></tr>
-<tr class="memitem:ab0df9397db7452c5c764389942f94b2f inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ab0df9397db7452c5c764389942f94b2f">X</a></td></tr>
-<tr class="separator:ab0df9397db7452c5c764389942f94b2f inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a104c1f05ca973d374a814f096e0f3d63 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a104c1f05ca973d374a814f096e0f3d63">Y</a></td></tr>
-<tr class="separator:a104c1f05ca973d374a814f096e0f3d63 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1ef8ff6e9b8803024a614a0d85f767e inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#aa1ef8ff6e9b8803024a614a0d85f767e">SummaryMessageX</a></td></tr>
-<tr class="separator:aa1ef8ff6e9b8803024a614a0d85f767e inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a325171b1ccc9eaaa79f16c6372262bc6 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a325171b1ccc9eaaa79f16c6372262bc6">SummaryMessageY</a></td></tr>
-<tr class="separator:a325171b1ccc9eaaa79f16c6372262bc6 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92d43953065a25c3dd4e70894810ca4c inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a92d43953065a25c3dd4e70894810ca4c">IdxpinfX</a></td></tr>
-<tr class="separator:a92d43953065a25c3dd4e70894810ca4c inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fb5108402757ea6c6bb97799a07b1a9 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a0fb5108402757ea6c6bb97799a07b1a9">IdxminfX</a></td></tr>
-<tr class="separator:a0fb5108402757ea6c6bb97799a07b1a9 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07f27bcb7353e1e4e2b8cfbeab50c8bf inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a07f27bcb7353e1e4e2b8cfbeab50c8bf">IdxmissingX</a></td></tr>
-<tr class="separator:a07f27bcb7353e1e4e2b8cfbeab50c8bf inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7f21912a747901d6bd3f4bce03933f3 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ad7f21912a747901d6bd3f4bce03933f3">IdxpinfY</a></td></tr>
-<tr class="separator:ad7f21912a747901d6bd3f4bce03933f3 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab186d886f74fa67728a6d14bb1b7eea0 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ab186d886f74fa67728a6d14bb1b7eea0">IdxminfY</a></td></tr>
-<tr class="separator:ab186d886f74fa67728a6d14bb1b7eea0 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9134ea34130950778f750ef62c3a2c1d inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a9134ea34130950778f750ef62c3a2c1d">IdxmissingY</a></td></tr>
-<tr class="separator:a9134ea34130950778f750ef62c3a2c1d inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1ffb2d1ed10cf20199ebd0c3acf0229 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::set&lt; gsl::index &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ae1ffb2d1ed10cf20199ebd0c3acf0229">colCatX</a></td></tr>
-<tr class="separator:ae1ffb2d1ed10cf20199ebd0c3acf0229 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bcbfe8a4e11d2c6b25bd64b293caea2 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::set&lt; gsl::index &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a8bcbfe8a4e11d2c6b25bd64b293caea2">colCatY</a></td></tr>
-<tr class="separator:a8bcbfe8a4e11d2c6b25bd64b293caea2 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdbb1a0232a1fd68f0b4983b2269578e inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#afdbb1a0232a1fd68f0b4983b2269578e">catY</a> = false</td></tr>
-<tr class="separator:afdbb1a0232a1fd68f0b4983b2269578e inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2d46d2c5ad22bb87b1c89017b9e18e9 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">gsl::index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ac2d46d2c5ad22bb87b1c89017b9e18e9">rowsX</a> = 0</td></tr>
-<tr class="separator:ac2d46d2c5ad22bb87b1c89017b9e18e9 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeed24e3901f84686a713da077aba5a99 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">gsl::index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#aeed24e3901f84686a713da077aba5a99">colsX</a> = 0</td></tr>
-<tr class="separator:aeed24e3901f84686a713da077aba5a99 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a377d06466751b28a97d63788a983dc2c inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">gsl::index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a377d06466751b28a97d63788a983dc2c">rowsY</a> = 0</td></tr>
-<tr class="separator:a377d06466751b28a97d63788a983dc2c inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2b53dc3916b200ed66ad8321cdf5ec2 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">gsl::index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#aa2b53dc3916b200ed66ad8321cdf5ec2">colsY</a> = 0</td></tr>
-<tr class="separator:aa2b53dc3916b200ed66ad8321cdf5ec2 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb22def8049f0e12e5605dc0590f9129 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#abb22def8049f0e12e5605dc0590f9129">svaluesX</a></td></tr>
-<tr class="separator:abb22def8049f0e12e5605dc0590f9129 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad613eb3e7cc42ddf181f0da3aa394b64 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ad613eb3e7cc42ddf181f0da3aa394b64">svaluesY</a></td></tr>
-<tr class="separator:ad613eb3e7cc42ddf181f0da3aa394b64 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_cosan_1_1_cosan_raw_data"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_cosan_1_1_cosan_raw_data')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_cosan_1_1_cosan_raw_data.html">Cosan::CosanRawData&lt; NumericType &gt;</a></td></tr>
+<tr class="memitem:aae0b424216f04d2f47f0297dcc76d379 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#aae0b424216f04d2f47f0297dcc76d379">X</a></td></tr>
+<tr class="separator:aae0b424216f04d2f47f0297dcc76d379 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae403414d0c520fad1205d25830e37ff6 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ae403414d0c520fad1205d25830e37ff6">X</a></td></tr>
+<tr class="separator:ae403414d0c520fad1205d25830e37ff6 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad948916954ef47c0ae6e97ae75d6aff2 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ad948916954ef47c0ae6e97ae75d6aff2">Y</a></td></tr>
+<tr class="separator:ad948916954ef47c0ae6e97ae75d6aff2 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a637b9ec7dd1418152819b642f78df526 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a637b9ec7dd1418152819b642f78df526">Y</a></td></tr>
+<tr class="separator:a637b9ec7dd1418152819b642f78df526 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ad298c64ac99183921c36b80938b179 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a1ad298c64ac99183921c36b80938b179">__TYPE</a></td></tr>
+<tr class="separator:a1ad298c64ac99183921c36b80938b179 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70bff86db899327ee986347613bef3c0 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a70bff86db899327ee986347613bef3c0">SummaryMessageX</a></td></tr>
+<tr class="separator:a70bff86db899327ee986347613bef3c0 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2590a9cf1f811f848b3b3d2ad9b19e3 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ad2590a9cf1f811f848b3b3d2ad9b19e3">SummaryMessageY</a></td></tr>
+<tr class="separator:ad2590a9cf1f811f848b3b3d2ad9b19e3 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89f4e727b298ebf49b63b85179ab20c1 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a89f4e727b298ebf49b63b85179ab20c1">IdxpinfX</a></td></tr>
+<tr class="separator:a89f4e727b298ebf49b63b85179ab20c1 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38d61dea6061369cf476dc4397869eb0 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a38d61dea6061369cf476dc4397869eb0">IdxminfX</a></td></tr>
+<tr class="separator:a38d61dea6061369cf476dc4397869eb0 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf13376eef11b1aaba21a7818575ca0d inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#abf13376eef11b1aaba21a7818575ca0d">IdxmissingX</a></td></tr>
+<tr class="separator:abf13376eef11b1aaba21a7818575ca0d inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad368f4cd5ef7fec067bfd3166b8788d2 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ad368f4cd5ef7fec067bfd3166b8788d2">IdxpinfY</a></td></tr>
+<tr class="separator:ad368f4cd5ef7fec067bfd3166b8788d2 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a877484d4fce3eb63478e3bff5263efbd inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a877484d4fce3eb63478e3bff5263efbd">IdxminfY</a></td></tr>
+<tr class="separator:a877484d4fce3eb63478e3bff5263efbd inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0793edf606c95d6b8fc7ae1cee7117a0 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; gsl::index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a0793edf606c95d6b8fc7ae1cee7117a0">IdxmissingY</a></td></tr>
+<tr class="separator:a0793edf606c95d6b8fc7ae1cee7117a0 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8768c746e7ceaf7cd3ddaf5809ee5b7b inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::set&lt; gsl::index &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a8768c746e7ceaf7cd3ddaf5809ee5b7b">colCatX</a></td></tr>
+<tr class="separator:a8768c746e7ceaf7cd3ddaf5809ee5b7b inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac705764ee7729bb9d2ee13c39a257e13 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::set&lt; gsl::index &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ac705764ee7729bb9d2ee13c39a257e13">colCatY</a></td></tr>
+<tr class="separator:ac705764ee7729bb9d2ee13c39a257e13 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1fd4c7f296ab62c8a07fe74d3be18b9 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ab1fd4c7f296ab62c8a07fe74d3be18b9">catY</a></td></tr>
+<tr class="separator:ab1fd4c7f296ab62c8a07fe74d3be18b9 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c693177989829a01a741c7c1679a71c inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">gsl::index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a2c693177989829a01a741c7c1679a71c">rowsX</a></td></tr>
+<tr class="separator:a2c693177989829a01a741c7c1679a71c inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83c7cc00679c0138539f97754ef3714a inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">gsl::index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a83c7cc00679c0138539f97754ef3714a">colsX</a></td></tr>
+<tr class="separator:a83c7cc00679c0138539f97754ef3714a inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae075ccec5c5380110d87fd1f7f04661a inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">gsl::index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ae075ccec5c5380110d87fd1f7f04661a">rowsY</a></td></tr>
+<tr class="separator:ae075ccec5c5380110d87fd1f7f04661a inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a915ec69f32b0a15e663e7336cf7c0081 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">gsl::index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#a915ec69f32b0a15e663e7336cf7c0081">colsY</a></td></tr>
+<tr class="separator:a915ec69f32b0a15e663e7336cf7c0081 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb5e0b7ae6df98cf76ec7a3a71099e53 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#acb5e0b7ae6df98cf76ec7a3a71099e53">svaluesX</a></td></tr>
+<tr class="separator:acb5e0b7ae6df98cf76ec7a3a71099e53 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad83234d6809afa8f4c2c65e0d015fe60 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_raw_data.html#ad83234d6809afa8f4c2c65e0d015fe60">svaluesY</a></td></tr>
+<tr class="separator:ad83234d6809afa8f4c2c65e0d015fe60 inherit pro_attribs_class_cosan_1_1_cosan_raw_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_cosan_data_8h_source.html#l00280">280</a> of file <a class="el" href="_cosan_data_8h_source.html">CosanData.h</a>.</p>
+<div class="textblock"><h3>template&lt;typename NumericType, typename = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt;<br />
+class Cosan::CosanData&lt; NumericType, typename &gt;</h3>
+
+
+<p class="definition">Definition at line <a class="el" href="_cosan_data_8h_source.html#l00339">339</a> of file <a class="el" href="_cosan_data_8h_source.html">CosanData.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a2a08551f95b20283346a628f73f8dd36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a08551f95b20283346a628f73f8dd36">&#9670;&nbsp;</a></span>CosanData()</h2>
+<a id="a962d8dd675c6be42a76cef509c9ac4cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a962d8dd675c6be42a76cef509c9ac4cf">&#9670;&nbsp;</a></span>CosanData() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Cosan::CosanData::CosanData </td>
+          <td class="memname"><a class="el" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::<a class="el" href="class_cosan_1_1_cosan_data.html">CosanData</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -252,27 +377,29 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac5a53b0e86ddd2b346f0d173762956d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5a53b0e86ddd2b346f0d173762956d8">&#9670;&nbsp;</a></span>GetInput()</h2>
+<a id="a559955fcd11c5d3f9f4d0bcbab991145"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a559955fcd11c5d3f9f4d0bcbab991145">&#9670;&nbsp;</a></span>CosanData() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a>&amp; Cosan::CosanData::GetInput </td>
+          <td class="memname"><a class="el" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::<a class="el" href="class_cosan_1_1_cosan_data.html">CosanData</a> </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td>
+          <td class="paramname"><em>inputX</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -283,21 +410,219 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_cosan_data_8h_source.html#l00283">283</a> of file <a class="el" href="_cosan_data_8h_source.html">CosanData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cosan_data_8h_source.html#l00342">342</a> of file <a class="el" href="_cosan_data_8h_source.html">CosanData.h</a>.</p>
 
 </div>
 </div>
-<a id="a9c66192ef22482ce1c130cdce97a5156"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c66192ef22482ce1c130cdce97a5156">&#9670;&nbsp;</a></span>GetName()</h2>
+<a id="a8dbbf03e4756de3e13456bc554220eec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dbbf03e4756de3e13456bc554220eec">&#9670;&nbsp;</a></span>CosanData() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const std::string Cosan::CosanData::GetName </td>
+          <td class="memname"><a class="el" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::<a class="el" href="class_cosan_1_1_cosan_data.html">CosanData</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td>
+          <td class="paramname"><em>inputX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td>
+          <td class="paramname"><em>inputY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_cosan_data_8h_source.html#l00346">346</a> of file <a class="el" href="_cosan_data_8h_source.html">CosanData.h</a>.</p>
+
+</div>
+</div>
+<a id="a962d8dd675c6be42a76cef509c9ac4cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a962d8dd675c6be42a76cef509c9ac4cf">&#9670;&nbsp;</a></span>CosanData() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::<a class="el" href="class_cosan_1_1_cosan_data.html">CosanData</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a732a770badf4ac2f20c6c98f7c2bfd8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a732a770badf4ac2f20c6c98f7c2bfd8c">&#9670;&nbsp;</a></span>CosanData() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::<a class="el" href="class_cosan_1_1_cosan_data.html">CosanData</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&#160;</td>
+          <td class="paramname"><em>inputX</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_cosan_data__copy_8h_source.html#l00320">320</a> of file <a class="el" href="_cosan_data__copy_8h_source.html">CosanData_copy.h</a>.</p>
+
+</div>
+</div>
+<a id="ab410f143f217a94145080719a2362dab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab410f143f217a94145080719a2362dab">&#9670;&nbsp;</a></span>CosanData() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::<a class="el" href="class_cosan_1_1_cosan_data.html">CosanData</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&#160;</td>
+          <td class="paramname"><em>inputX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&#160;</td>
+          <td class="paramname"><em>inputY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_cosan_data__copy_8h_source.html#l00323">323</a> of file <a class="el" href="_cosan_data__copy_8h_source.html">CosanData_copy.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa837cb585ad996bf3966ce91bc763177"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa837cb585ad996bf3966ce91bc763177">&#9670;&nbsp;</a></span>GetInput() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt;<a class="el" href="class_numeric_type.html">NumericType</a>&gt; <a class="el" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::GetInput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_cosan_data_8h_source.html#l00351">351</a> of file <a class="el" href="_cosan_data_8h_source.html">CosanData.h</a>.</p>
+
+</div>
+</div>
+<a id="a8f41175daa03ba371330dda642bc2cd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f41175daa03ba371330dda642bc2cd0">&#9670;&nbsp;</a></span>GetInput() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a> <a class="el" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::GetInput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_cosan_data__copy_8h_source.html#l00327">327</a> of file <a class="el" href="_cosan_data__copy_8h_source.html">CosanData_copy.h</a>.</p>
+
+</div>
+</div>
+<a id="a080ce1515f0f65036749498dc9dc0bce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a080ce1515f0f65036749498dc9dc0bce">&#9670;&nbsp;</a></span>GetName() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const std::string <a class="el" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::GetName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -310,23 +635,56 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="class_cosan_1_1_cosan_raw_data.html#ab99e80efab1494e535e281268f2cdeaf">Cosan::CosanRawData</a>.</p>
+<p>Reimplemented from <a class="el" href="class_cosan_1_1_cosan_b_o.html#a36a75e161a183482930e5b97151e566f">Cosan::CosanBO</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_cosan_data_8h_source.html#l00289">289</a> of file <a class="el" href="_cosan_data_8h_source.html">CosanData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cosan_data_8h_source.html#l00363">363</a> of file <a class="el" href="_cosan_data_8h_source.html">CosanData.h</a>.</p>
 
 </div>
 </div>
-<a id="ace936a299ca37f5522f56e565ebdf187"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace936a299ca37f5522f56e565ebdf187">&#9670;&nbsp;</a></span>GetTarget()</h2>
+<a id="a080ce1515f0f65036749498dc9dc0bce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a080ce1515f0f65036749498dc9dc0bce">&#9670;&nbsp;</a></span>GetName() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a>&amp; Cosan::CosanData::GetTarget </td>
+          <td class="memname">virtual const std::string <a class="el" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::GetName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="class_cosan_1_1_cosan_b_o.html#a36a75e161a183482930e5b97151e566f">Cosan::CosanBO</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_cosan_data__copy_8h_source.html#l00339">339</a> of file <a class="el" href="_cosan_data__copy_8h_source.html">CosanData_copy.h</a>.</p>
+
+</div>
+</div>
+<a id="ae1ee2ba158d8e751e1b86ec7e65ea324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1ee2ba158d8e751e1b86ec7e65ea324">&#9670;&nbsp;</a></span>GetTarget() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt;<a class="el" href="class_numeric_type.html">NumericType</a>&gt;&amp; <a class="el" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::GetTarget </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -339,12 +697,147 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_cosan_data_8h_source.html#l00286">286</a> of file <a class="el" href="_cosan_data_8h_source.html">CosanData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cosan_data_8h_source.html#l00354">354</a> of file <a class="el" href="_cosan_data_8h_source.html">CosanData.h</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a id="a733650bbad5c0cb63ad00dfdaa27b1ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a733650bbad5c0cb63ad00dfdaa27b1ef">&#9670;&nbsp;</a></span>GetTarget() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&amp; <a class="el" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::GetTarget </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_cosan_data__copy_8h_source.html#l00330">330</a> of file <a class="el" href="_cosan_data__copy_8h_source.html">CosanData_copy.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a68a40b1bed43a1bf2e8e7eb1fd51bd58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68a40b1bed43a1bf2e8e7eb1fd51bd58">&#9670;&nbsp;</a></span>X <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt;<a class="el" href="class_numeric_type.html">NumericType</a>&gt; <a class="el" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::X</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_cosan_data_8h_source.html#l00365">365</a> of file <a class="el" href="_cosan_data_8h_source.html">CosanData.h</a>.</p>
+
+</div>
+</div>
+<a id="a4bc8ee088f5dd8a444b6e00a6bd9b9aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bc8ee088f5dd8a444b6e00a6bd9b9aa">&#9670;&nbsp;</a></span>X <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a> <a class="el" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::X</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_cosan_data__copy_8h_source.html#l00341">341</a> of file <a class="el" href="_cosan_data__copy_8h_source.html">CosanData_copy.h</a>.</p>
+
+</div>
+</div>
+<a id="afeb699b223df048af2f76ea76c191f8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeb699b223df048af2f76ea76c191f8f">&#9670;&nbsp;</a></span>Y <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt;<a class="el" href="class_numeric_type.html">NumericType</a>&gt; <a class="el" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::Y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_cosan_data_8h_source.html#l00366">366</a> of file <a class="el" href="_cosan_data_8h_source.html">CosanData.h</a>.</p>
+
+</div>
+</div>
+<a id="a717a1bfeda328a81729795c51eccb903"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a717a1bfeda328a81729795c51eccb903">&#9670;&nbsp;</a></span>Y <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a> <a class="el" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::Y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_cosan_data__copy_8h_source.html#l00342">342</a> of file <a class="el" href="_cosan_data__copy_8h_source.html">CosanData_copy.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>cosan/data/<a class="el" href="_cosan_data_8h_source.html">CosanData.h</a></li>
+<li>cosan/data/<a class="el" href="_cosan_data__copy_8h_source.html">CosanData_copy.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

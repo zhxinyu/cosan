@@ -4,15 +4,19 @@
 #include <cosan/base/CosanBO.h>
 #include <cosan/data/CosanData.h>
 namespace Cosan {
+    template<typename NumericType,
+            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
     class Preprocessor: public CosanBO{
     public:
-        Preprocessor() {}
+        Preprocessor():CosanBO() {};
 
         virtual ~Preprocessor() = default;
 
-        virtual void fit(const CosanMatrix& X) = 0;
+        virtual void fit(const CosanMatrix<NumericType> & X){}
 
-        virtual CosanMatrix transform(const CosanMatrix& X) = 0;
+        virtual CosanMatrix<NumericType> transform(const CosanMatrix<NumericType> & X) {
+            return CosanMatrix<NumericType>();
+        };
     };
 }
 

@@ -1,12 +1,12 @@
 var class_cosan_1_1_cosan_ridge_regression =
 [
-    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#aaca59ca8bc2b7667fceb2332bdc711ab", null ],
-    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#ac6019b4e94ea2c532a5b4028d97311c5", null ],
-    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#a3f44e10b2a68aa7e2b71d26d82500223", null ],
-    [ "fit", "class_cosan_1_1_cosan_ridge_regression.html#a6463db92d1330bcd17aabbaab00332e9", null ],
-    [ "GetModelType", "class_cosan_1_1_cosan_ridge_regression.html#a2513f2a058b11086a677bf155d3897a2", null ],
-    [ "GetName", "class_cosan_1_1_cosan_ridge_regression.html#a0ceeb677959c0219e3be19498b3f55ef", null ],
-    [ "GetTau", "class_cosan_1_1_cosan_ridge_regression.html#aa8a8408d070a97d628c9143ac62f8a26", null ],
-    [ "SetTau", "class_cosan_1_1_cosan_ridge_regression.html#ab0338256855d26979442b4d7478d8214", null ],
-    [ "MLambda", "class_cosan_1_1_cosan_ridge_regression.html#a47674ab43c5e00693bca4a5b3f7b474c", null ]
+    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#aa12c2535075773e53a296c1636c06d9c", null ],
+    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#a723281d62c751685fc601a1e8299e57a", null ],
+    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#abef34c07b77b1575406b0fb961bdae19", null ],
+    [ "fit", "class_cosan_1_1_cosan_ridge_regression.html#a8a0b18b54702b6bb37e6b2ff05ab3a2c", null ],
+    [ "GetModelType", "class_cosan_1_1_cosan_ridge_regression.html#ac47565793e8558a3eac2ad8ad4adca5d", null ],
+    [ "GetName", "class_cosan_1_1_cosan_ridge_regression.html#aa42c0f4d08605a6f04dc7a85dc7075a2", null ],
+    [ "GetTau", "class_cosan_1_1_cosan_ridge_regression.html#aa124aad38808257bd5cd0542cb2b5d0c", null ],
+    [ "SetTau", "class_cosan_1_1_cosan_ridge_regression.html#af7b492d0b07bef78121f1aa27c2e8dbb", null ],
+    [ "MLambda", "class_cosan_1_1_cosan_ridge_regression.html#a99074a731a540d1cc97140366dcbd12f", null ]
 ];

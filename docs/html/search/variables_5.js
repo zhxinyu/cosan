@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['p_310',['p',['../class_cosan_1_1_normalizer.html#ab2365ecbb21d8cd078b1cd0109ce263d',1,'Cosan::Normalizer']]],
-  ['plist_311',['plist',['../class_cosan_1_1_normalizer.html#a55f212c78572c57392dff86e45203e4a',1,'Cosan::Normalizer']]]
+  ['error_464',['error',['../class_cosan_1_1_cosan_metric.html#a518e6cf3dce60ae0e7e25bd136219425',1,'Cosan::CosanMetric']]],
+  ['exist_5fzero_465',['exist_zero',['../class_cosan_1_1_normalizer.html#ad0c7342a165377903e000c33141b7401',1,'Cosan::Normalizer']]]
 ];

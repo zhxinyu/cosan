@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['predict_272',['predict',['../class_cosan_1_1_cosan_linear_model.html#a68e9e6da5ef0b2bcb03238a879dc28fd',1,'Cosan::CosanLinearModel::predict()'],['../class_cosan_1_1_cosan_linear_regression.html#aedd2cc579ebbd397ffe50c4924fcbb6f',1,'Cosan::CosanLinearRegression::predict()']]],
-  ['preprocessor_273',['Preprocessor',['../class_cosan_1_1_preprocessor.html#a7b93d5b1f0240f02fada0c7d31d3614f',1,'Cosan::Preprocessor']]]
+  ['normalizer_415',['Normalizer',['../class_cosan_1_1_normalizer.html#a7c7fba4544219ddd092ad0d74d217cbc',1,'Cosan::Normalizer::Normalizer(CosanRawData&lt; NumericType &gt; &amp;RD)'],['../class_cosan_1_1_normalizer.html#aa63d628101a728aa4d8ffc304a82a3c1',1,'Cosan::Normalizer::Normalizer(CosanRawData&lt; NumericType &gt; &amp;RD, int new_p)']]],
+  ['numoferror_416',['NumOfError',['../class_cosan_1_1_num_of_error.html#a8619ea879e289d185f8e63569159f49c',1,'Cosan::NumOfError']]]
 ];

@@ -1,15 +1,16 @@
 var class_cosan_1_1_normalizer =
 [
-    [ "Normalizer", "class_cosan_1_1_normalizer.html#a22380ba3434440c87fb20d680b53228a", null ],
-    [ "~Normalizer", "class_cosan_1_1_normalizer.html#a49c0f27a4e06584f5e7f08896775f312", null ],
-    [ "Normalizer", "class_cosan_1_1_normalizer.html#a3688fe9c1f62d49485b91b440538c830", null ],
-    [ "fit", "class_cosan_1_1_normalizer.html#afb27cfb8f5f6f8a9ae6ba045c52fb9eb", null ],
-    [ "Getp", "class_cosan_1_1_normalizer.html#a2995beb6ebe73e4e4af6b18208b5d932", null ],
-    [ "normalize", "class_cosan_1_1_normalizer.html#a2c755200f1ef3e6e30f192ae933e2bd6", null ],
-    [ "Setp", "class_cosan_1_1_normalizer.html#a4e54800270b8756f319fb3099e55c51d", null ],
-    [ "transform", "class_cosan_1_1_normalizer.html#a2999133968df6a23ae985a3a0effc878", null ],
-    [ "exist_zero", "class_cosan_1_1_normalizer.html#a3f3610c8f1b410eae78a262d1797b986", null ],
-    [ "p", "class_cosan_1_1_normalizer.html#ab2365ecbb21d8cd078b1cd0109ce263d", null ],
-    [ "plist", "class_cosan_1_1_normalizer.html#a55f212c78572c57392dff86e45203e4a", null ],
-    [ "SampleNorm", "class_cosan_1_1_normalizer.html#abce113104d11e99d36d493aab4bd24ef", null ]
+    [ "Normalizer", "class_cosan_1_1_normalizer.html#a7c7fba4544219ddd092ad0d74d217cbc", null ],
+    [ "~Normalizer", "class_cosan_1_1_normalizer.html#a085ac6fc24a2b191313cdb47adf4f184", null ],
+    [ "Normalizer", "class_cosan_1_1_normalizer.html#aa63d628101a728aa4d8ffc304a82a3c1", null ],
+    [ "fit", "class_cosan_1_1_normalizer.html#a1199cb403a314aeab5118df5bd70927f", null ],
+    [ "fit", "class_cosan_1_1_normalizer.html#acb8293b1403f23fd498d1c13058626fe", null ],
+    [ "Getp", "class_cosan_1_1_normalizer.html#a231a5dbb6471b0b1d68fb63984b44795", null ],
+    [ "GetSampleNorm", "class_cosan_1_1_normalizer.html#a88ad3d16ac5f721f4bf1be4fd3a213ff", null ],
+    [ "Setp", "class_cosan_1_1_normalizer.html#a2f2ae99fcc394e3685e8d8b5098c6222", null ],
+    [ "transform", "class_cosan_1_1_normalizer.html#a01d43af5e76016f92412a19581b4d235", null ],
+    [ "exist_zero", "class_cosan_1_1_normalizer.html#ad0c7342a165377903e000c33141b7401", null ],
+    [ "p", "class_cosan_1_1_normalizer.html#a1785b71e41174c22b952ef9d0f397279", null ],
+    [ "plist", "class_cosan_1_1_normalizer.html#a75d19930cd1450691f638d709fbeebc6", null ],
+    [ "SampleNorm", "class_cosan_1_1_normalizer.html#af9b090c4147318ae381158601756a977", null ]
 ];

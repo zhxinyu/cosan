@@ -25,10 +25,20 @@
 var NAVTREE =
 [
   [ "Cosan", "index.html", [
+    [ "Tutorial", "md_tutorial_selectionandevaluation.html", [
+      [ "Overview:", "index.html#autotoc_md1", null ],
+      [ "Introduction:", "index.html#autotoc_md2", null ],
+      [ "Design:", "index.html#autotoc_md3", [
+        [ "Things to fig", "md_tutorial_selectionandevaluation.html#autotoc_md5", null ],
+        [ "Model Selection and Evaluation Design", "md_tutorial_selectionandevaluation.html#autotoc_md6", null ]
+      ] ]
+    ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ],
         [ "Typedefs", "namespacemembers_type.html", null ],
         [ "Enumerations", "namespacemembers_enum.html", null ],
         [ "Enumerator", "namespacemembers_eval.html", null ]
@@ -39,7 +49,7 @@ var NAVTREE =
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
@@ -49,16 +59,19 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
-        [ "Typedefs", "globals_type.html", null ]
+        [ "Variables", "globals_vars.html", null ],
+        [ "Macros", "globals_defs.html", null ]
       ] ]
-    ] ]
+    ] ],
+    [ "Tutorial", "md_tutorial_selectionandevaluation.html", null ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"_cosan_b_o_8h.html",
-"randomgridcv_8h.html"
+"3_817_85_2_compiler_id_c_2_c_make_c_compiler_id_8c.html",
+"class_cosan_1_1_cosan_raw_data.html#a5d502c68f1704166f02faf1f2e106106",
+"md_tutorial_selectionandevaluation.html#autotoc_md6"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

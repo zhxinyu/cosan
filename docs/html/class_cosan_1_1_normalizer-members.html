@@ -16,6 +16,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -26,7 +33,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cosan
-   &#160;<span id="projectnumber">0.8</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Data Analytics Library</div>
   </td>
@@ -84,28 +91,29 @@ $(document).ready(function(){initNavTree('class_cosan_1_1_normalizer.html',''); 
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Cosan::Normalizer Member List</div>  </div>
+<div class="title">Cosan::Normalizer&lt; NumericType, typename &gt; Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer</a>, including all inherited members.</p>
+<p>This is the complete list of members for <a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer&lt; NumericType, typename &gt;</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_cosan_b_o.html#ade4a14f5f042dfe1cdf79f5183586b4c">CosanBO</a>()</td><td class="entry"><a class="el" href="class_cosan_1_1_cosan_b_o.html">Cosan::CosanBO</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#a3f3610c8f1b410eae78a262d1797b986">exist_zero</a></td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#afb27cfb8f5f6f8a9ae6ba045c52fb9eb">fit</a>(const CosanMatrix &amp;X) override</td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_cosan_1_1_cosan_b_o.html#a36a75e161a183482930e5b97151e566f">GetName</a>() const</td><td class="entry"><a class="el" href="class_cosan_1_1_cosan_b_o.html">Cosan::CosanBO</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#a2995beb6ebe73e4e4af6b18208b5d932">Getp</a>() const</td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#a2c755200f1ef3e6e30f192ae933e2bd6">normalize</a>(const CosanMatrix &amp;X)</td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#a22380ba3434440c87fb20d680b53228a">Normalizer</a>()</td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#a3688fe9c1f62d49485b91b440538c830">Normalizer</a>(int new_p)</td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#ab2365ecbb21d8cd078b1cd0109ce263d">p</a></td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#a55f212c78572c57392dff86e45203e4a">plist</a></td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_preprocessor.html#a7b93d5b1f0240f02fada0c7d31d3614f">Preprocessor</a>()</td><td class="entry"><a class="el" href="class_cosan_1_1_preprocessor.html">Cosan::Preprocessor</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#abce113104d11e99d36d493aab4bd24ef">SampleNorm</a></td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#a4e54800270b8756f319fb3099e55c51d">Setp</a>(int new_p)</td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#a2999133968df6a23ae985a3a0effc878">transform</a>(const CosanMatrix &amp;X) override</td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#a49c0f27a4e06584f5e7f08896775f312">~Normalizer</a>() override=default</td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_cosan_1_1_preprocessor.html#ac6bbd5d45c43e65dbf1a247f6b2ffdec">~Preprocessor</a>()=default</td><td class="entry"><a class="el" href="class_cosan_1_1_preprocessor.html">Cosan::Preprocessor</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#ad0c7342a165377903e000c33141b7401">exist_zero</a></td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer&lt; NumericType, typename &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#acb8293b1403f23fd498d1c13058626fe">fit</a>(CosanRawData&lt; NumericType &gt; &amp;RD)</td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer&lt; NumericType, typename &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#a1199cb403a314aeab5118df5bd70927f">fit</a>(const CosanMatrix&lt; NumericType &gt; &amp;X) override</td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer&lt; NumericType, typename &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_cosan_b_o.html#a36a75e161a183482930e5b97151e566f">GetName</a>() const</td><td class="entry"><a class="el" href="class_cosan_1_1_cosan_b_o.html">Cosan::CosanBO</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#a231a5dbb6471b0b1d68fb63984b44795">Getp</a>() const</td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer&lt; NumericType, typename &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#a88ad3d16ac5f721f4bf1be4fd3a213ff">GetSampleNorm</a>()</td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer&lt; NumericType, typename &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#a7c7fba4544219ddd092ad0d74d217cbc">Normalizer</a>(CosanRawData&lt; NumericType &gt; &amp;RD)</td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer&lt; NumericType, typename &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#aa63d628101a728aa4d8ffc304a82a3c1">Normalizer</a>(CosanRawData&lt; NumericType &gt; &amp;RD, int new_p)</td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer&lt; NumericType, typename &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#a1785b71e41174c22b952ef9d0f397279">p</a></td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer&lt; NumericType, typename &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#a75d19930cd1450691f638d709fbeebc6">plist</a></td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer&lt; NumericType, typename &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_cosan_1_1_preprocessor.html#ac92f20517545ac3d014db36b2690de65">Preprocessor</a>()</td><td class="entry"><a class="el" href="class_cosan_1_1_preprocessor.html">Cosan::Preprocessor&lt; NumericType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#af9b090c4147318ae381158601756a977">SampleNorm</a></td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer&lt; NumericType, typename &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#a2f2ae99fcc394e3685e8d8b5098c6222">Setp</a>(int new_p)</td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer&lt; NumericType, typename &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#a01d43af5e76016f92412a19581b4d235">transform</a>(const CosanMatrix&lt; NumericType &gt; &amp;X) override</td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer&lt; NumericType, typename &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html#a085ac6fc24a2b191313cdb47adf4f184">~Normalizer</a>() override=default</td><td class="entry"><a class="el" href="class_cosan_1_1_normalizer.html">Cosan::Normalizer&lt; NumericType, typename &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_preprocessor.html#a1a3d607c61c23c5b8c17c2628eba0eca">~Preprocessor</a>()=default</td><td class="entry"><a class="el" href="class_cosan_1_1_preprocessor.html">Cosan::Preprocessor&lt; NumericType &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

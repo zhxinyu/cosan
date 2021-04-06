@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Cosan: Cosan::PrincipalComponentAnalysis Class Reference</title>
+<title>Cosan: Cosan::PrincipalComponentAnalysis&lt; NumericType, typename &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -16,6 +16,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -26,7 +33,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cosan
-   &#160;<span id="projectnumber">0.8</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Data Analytics Library</div>
   </td>
@@ -84,55 +91,272 @@ $(document).ready(function(){initNavTree('class_cosan_1_1_principal_component_an
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_cosan_1_1_principal_component_analysis-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Cosan::PrincipalComponentAnalysis Class Reference</div>  </div>
+<div class="title">Cosan::PrincipalComponentAnalysis&lt; NumericType, typename &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="principalcomponentanalysis_8h_source.html">principalcomponentanalysis.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Cosan::PrincipalComponentAnalysis:</div>
+Inheritance diagram for Cosan::PrincipalComponentAnalysis&lt; NumericType, typename &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_cosan_1_1_principal_component_analysis__inherit__graph.png" border="0" usemap="#a_cosan_1_1_principal_component_analysis_inherit__map" alt="Inheritance graph"/></div>
-<map name="_cosan_1_1_principal_component_analysis_inherit__map" id="_cosan_1_1_principal_component_analysis_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,155,191,196"/>
-<area shape="rect" href="class_cosan_1_1_preprocessor.html" title=" " alt="" coords="25,80,171,107"/>
+<div class="center"><img src="class_cosan_1_1_principal_component_analysis__inherit__graph.png" border="0" usemap="#a_cosan_1_1_principal_component_analysis_3_01_numeric_type_00_01typename_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="_cosan_1_1_principal_component_analysis_3_01_numeric_type_00_01typename_01_4_inherit__map" id="a_cosan_1_1_principal_component_analysis_3_01_numeric_type_00_01typename_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,169,191,225"/>
+<area shape="rect" href="class_cosan_1_1_preprocessor.html" title=" " alt="" coords="25,80,171,121"/>
 <area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="35,5,161,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
-Collaboration diagram for Cosan::PrincipalComponentAnalysis:</div>
+Collaboration diagram for Cosan::PrincipalComponentAnalysis&lt; NumericType, typename &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_cosan_1_1_principal_component_analysis__coll__graph.png" border="0" usemap="#a_cosan_1_1_principal_component_analysis_coll__map" alt="Collaboration graph"/></div>
-<map name="_cosan_1_1_principal_component_analysis_coll__map" id="_cosan_1_1_principal_component_analysis_coll__map">
-<area shape="rect" title=" " alt="" coords="5,155,191,196"/>
-<area shape="rect" href="class_cosan_1_1_preprocessor.html" title=" " alt="" coords="25,80,171,107"/>
-<area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="35,5,161,32"/>
+<div class="center"><img src="class_cosan_1_1_principal_component_analysis__coll__graph.png" border="0" usemap="#a_cosan_1_1_principal_component_analysis_3_01_numeric_type_00_01typename_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="_cosan_1_1_principal_component_analysis_3_01_numeric_type_00_01typename_01_4_coll__map" id="a_cosan_1_1_principal_component_analysis_3_01_numeric_type_00_01typename_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="83,185,268,241"/>
+<area shape="rect" href="class_cosan_1_1_preprocessor.html" title=" " alt="" coords="5,81,151,123"/>
+<area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="15,5,141,32"/>
+<area shape="rect" href="class_cosan_matrix_3_01_numeric_type_01_4.html" title=" " alt="" coords="175,89,373,115"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_methods_class_cosan_1_1_preprocessor"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_cosan_1_1_preprocessor')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_cosan_1_1_preprocessor.html">Cosan::Preprocessor</a></td></tr>
-<tr class="memitem:a7b93d5b1f0240f02fada0c7d31d3614f inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_preprocessor.html#a7b93d5b1f0240f02fada0c7d31d3614f">Preprocessor</a> ()</td></tr>
-<tr class="separator:a7b93d5b1f0240f02fada0c7d31d3614f inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6bbd5d45c43e65dbf1a247f6b2ffdec inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_preprocessor.html#ac6bbd5d45c43e65dbf1a247f6b2ffdec">~Preprocessor</a> ()=default</td></tr>
-<tr class="separator:ac6bbd5d45c43e65dbf1a247f6b2ffdec inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30726ec665163b8fd3bf8fa7b8251ec3 inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_preprocessor.html#a30726ec665163b8fd3bf8fa7b8251ec3">fit</a> (const <a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> &amp;X)=0</td></tr>
-<tr class="separator:a30726ec665163b8fd3bf8fa7b8251ec3 inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb512d69cd674f08f1c5b10835aa612e inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_preprocessor.html#aeb512d69cd674f08f1c5b10835aa612e">transform</a> (const <a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> &amp;X)=0</td></tr>
-<tr class="separator:aeb512d69cd674f08f1c5b10835aa612e inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a6d9a1f55111d0c764859eebbb86e839a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_principal_component_analysis.html#a6d9a1f55111d0c764859eebbb86e839a">PrincipalComponentAnalysis</a> ()=delete</td></tr>
+<tr class="separator:a6d9a1f55111d0c764859eebbb86e839a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97ec0e5d3e5552ae03ab4e128a1fafce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_principal_component_analysis.html#a97ec0e5d3e5552ae03ab4e128a1fafce">PrincipalComponentAnalysis</a> (<a class="el" href="class_cosan_1_1_cosan_raw_data.html">CosanRawData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;RD, gsl::index ncom=3)</td></tr>
+<tr class="separator:a97ec0e5d3e5552ae03ab4e128a1fafce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b13f7b6368ca059688d469d72c4650b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_principal_component_analysis.html#a4b13f7b6368ca059688d469d72c4650b">GetPC</a> ()</td></tr>
+<tr class="separator:a4b13f7b6368ca059688d469d72c4650b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_cosan_1_1_preprocessor"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_cosan_1_1_preprocessor')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_cosan_1_1_preprocessor.html">Cosan::Preprocessor&lt; NumericType &gt;</a></td></tr>
+<tr class="memitem:ac92f20517545ac3d014db36b2690de65 inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_preprocessor.html#ac92f20517545ac3d014db36b2690de65">Preprocessor</a> ()</td></tr>
+<tr class="separator:ac92f20517545ac3d014db36b2690de65 inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a3d607c61c23c5b8c17c2628eba0eca inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_preprocessor.html#a1a3d607c61c23c5b8c17c2628eba0eca">~Preprocessor</a> ()=default</td></tr>
+<tr class="separator:a1a3d607c61c23c5b8c17c2628eba0eca inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa633b01dba35640544a679928ecda39d inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_preprocessor.html#aa633b01dba35640544a679928ecda39d">fit</a> (const <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;X)</td></tr>
+<tr class="separator:aa633b01dba35640544a679928ecda39d inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dc738458247240f5567870605a70316 inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_preprocessor.html#a3dc738458247240f5567870605a70316">transform</a> (const <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;X)</td></tr>
+<tr class="separator:a3dc738458247240f5567870605a70316 inherit pub_methods_class_cosan_1_1_preprocessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_cosan_1_1_cosan_b_o"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_cosan_1_1_cosan_b_o')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_cosan_1_1_cosan_b_o.html">Cosan::CosanBO</a></td></tr>
 <tr class="memitem:ade4a14f5f042dfe1cdf79f5183586b4c inherit pub_methods_class_cosan_1_1_cosan_b_o"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_b_o.html#ade4a14f5f042dfe1cdf79f5183586b4c">CosanBO</a> ()</td></tr>
 <tr class="separator:ade4a14f5f042dfe1cdf79f5183586b4c inherit pub_methods_class_cosan_1_1_cosan_b_o"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36a75e161a183482930e5b97151e566f inherit pub_methods_class_cosan_1_1_cosan_b_o"><td class="memItemLeft" align="right" valign="top">virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_b_o.html#a36a75e161a183482930e5b97151e566f">GetName</a> () const</td></tr>
 <tr class="separator:a36a75e161a183482930e5b97151e566f inherit pub_methods_class_cosan_1_1_cosan_b_o"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a4cdb2667c93af9cb70bf5c21579f9065"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_principal_component_analysis.html#a4cdb2667c93af9cb70bf5c21579f9065">fit</a> (<a class="el" href="class_cosan_1_1_cosan_raw_data.html">CosanRawData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;RD, gsl::index ncom)</td></tr>
+<tr class="separator:a4cdb2667c93af9cb70bf5c21579f9065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a6d379ff1fc56ff6675572bc69f806598"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_principal_component_analysis.html#a6d379ff1fc56ff6675572bc69f806598">PrincipalComponent</a></td></tr>
+<tr class="separator:a6d379ff1fc56ff6675572bc69f806598"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="principalcomponentanalysis_8h_source.html#l00011">11</a> of file <a class="el" href="principalcomponentanalysis_8h_source.html">principalcomponentanalysis.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><h3>template&lt;typename NumericType, typename = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt;<br />
+class Cosan::PrincipalComponentAnalysis&lt; NumericType, typename &gt;</h3>
+
+
+<p class="definition">Definition at line <a class="el" href="principalcomponentanalysis_8h_source.html#l00013">13</a> of file <a class="el" href="principalcomponentanalysis_8h_source.html">principalcomponentanalysis.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6d9a1f55111d0c764859eebbb86e839a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d9a1f55111d0c764859eebbb86e839a">&#9670;&nbsp;</a></span>PrincipalComponentAnalysis() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_cosan_1_1_principal_component_analysis.html">Cosan::PrincipalComponentAnalysis</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::<a class="el" href="class_cosan_1_1_principal_component_analysis.html">PrincipalComponentAnalysis</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97ec0e5d3e5552ae03ab4e128a1fafce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97ec0e5d3e5552ae03ab4e128a1fafce">&#9670;&nbsp;</a></span>PrincipalComponentAnalysis() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_cosan_1_1_principal_component_analysis.html">Cosan::PrincipalComponentAnalysis</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::<a class="el" href="class_cosan_1_1_principal_component_analysis.html">PrincipalComponentAnalysis</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_cosan_1_1_cosan_raw_data.html">CosanRawData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>RD</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gsl::index&#160;</td>
+          <td class="paramname"><em>ncom</em> = <code>3</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="principalcomponentanalysis_8h_source.html#l00016">16</a> of file <a class="el" href="principalcomponentanalysis_8h_source.html">principalcomponentanalysis.h</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_cosan_1_1_principal_component_analysis_a97ec0e5d3e5552ae03ab4e128a1fafce_cgraph.png" border="0" usemap="#aclass_cosan_1_1_principal_component_analysis_a97ec0e5d3e5552ae03ab4e128a1fafce_cgraph" alt=""/></div>
+<map name="class_cosan_1_1_principal_component_analysis_a97ec0e5d3e5552ae03ab4e128a1fafce_cgraph" id="aclass_cosan_1_1_principal_component_analysis_a97ec0e5d3e5552ae03ab4e128a1fafce_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,252,80"/>
+<area shape="rect" href="class_cosan_1_1_principal_component_analysis.html#a4cdb2667c93af9cb70bf5c21579f9065" title=" " alt="" coords="300,5,485,47"/>
+<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html#a331f0e0e27095c81e7072a5b52e75b89" title=" " alt="" coords="312,71,473,112"/>
+<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html#aa40bbbed48778eff3f328876ff0714d7" title=" " alt="" coords="533,5,695,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4cdb2667c93af9cb70bf5c21579f9065"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cdb2667c93af9cb70bf5c21579f9065">&#9670;&nbsp;</a></span>fit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_cosan_1_1_principal_component_analysis.html">Cosan::PrincipalComponentAnalysis</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::fit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_cosan_1_1_cosan_raw_data.html">CosanRawData</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>RD</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gsl::index&#160;</td>
+          <td class="paramname"><em>ncom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="principalcomponentanalysis_8h_source.html#l00023">23</a> of file <a class="el" href="principalcomponentanalysis_8h_source.html">principalcomponentanalysis.h</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_cosan_1_1_principal_component_analysis_a4cdb2667c93af9cb70bf5c21579f9065_cgraph.png" border="0" usemap="#aclass_cosan_1_1_principal_component_analysis_a4cdb2667c93af9cb70bf5c21579f9065_cgraph" alt=""/></div>
+<map name="class_cosan_1_1_principal_component_analysis_a4cdb2667c93af9cb70bf5c21579f9065_cgraph" id="aclass_cosan_1_1_principal_component_analysis_a4cdb2667c93af9cb70bf5c21579f9065_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,191,47"/>
+<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html#aa40bbbed48778eff3f328876ff0714d7" title=" " alt="" coords="239,5,400,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_cosan_1_1_principal_component_analysis_a4cdb2667c93af9cb70bf5c21579f9065_icgraph.png" border="0" usemap="#aclass_cosan_1_1_principal_component_analysis_a4cdb2667c93af9cb70bf5c21579f9065_icgraph" alt=""/></div>
+<map name="class_cosan_1_1_principal_component_analysis_a4cdb2667c93af9cb70bf5c21579f9065_icgraph" id="aclass_cosan_1_1_principal_component_analysis_a4cdb2667c93af9cb70bf5c21579f9065_icgraph">
+<area shape="rect" title=" " alt="" coords="300,5,485,47"/>
+<area shape="rect" href="class_cosan_1_1_principal_component_analysis.html#a97ec0e5d3e5552ae03ab4e128a1fafce" title=" " alt="" coords="5,5,252,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4b13f7b6368ca059688d469d72c4650b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b13f7b6368ca059688d469d72c4650b">&#9670;&nbsp;</a></span>GetPC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt;<a class="el" href="class_numeric_type.html">NumericType</a>&gt; <a class="el" href="class_cosan_1_1_principal_component_analysis.html">Cosan::PrincipalComponentAnalysis</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::GetPC </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="principalcomponentanalysis_8h_source.html#l00020">20</a> of file <a class="el" href="principalcomponentanalysis_8h_source.html">principalcomponentanalysis.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6d379ff1fc56ff6675572bc69f806598"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d379ff1fc56ff6675572bc69f806598">&#9670;&nbsp;</a></span>PrincipalComponent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt;<a class="el" href="class_numeric_type.html">NumericType</a>&gt; <a class="el" href="class_cosan_1_1_principal_component_analysis.html">Cosan::PrincipalComponentAnalysis</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::PrincipalComponent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="principalcomponentanalysis_8h_source.html#l00022">22</a> of file <a class="el" href="principalcomponentanalysis_8h_source.html">principalcomponentanalysis.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>cosan/preprocessing/<a class="el" href="principalcomponentanalysis_8h_source.html">principalcomponentanalysis.h</a></li>
 </ul>
 </div><!-- contents -->

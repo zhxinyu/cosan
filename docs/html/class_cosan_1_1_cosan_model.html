@@ -16,6 +16,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -26,7 +33,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cosan
-   &#160;<span id="projectnumber">0.8</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Data Analytics Library</div>
   </td>
@@ -97,14 +104,16 @@ $(document).ready(function(){initNavTree('class_cosan_1_1_cosan_model.html','');
 Inheritance diagram for Cosan::CosanModel:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_cosan_1_1_cosan_model__inherit__graph.png" border="0" usemap="#a_cosan_1_1_cosan_model_inherit__map" alt="Inheritance graph"/></div>
-<map name="_cosan_1_1_cosan_model_inherit__map" id="_cosan_1_1_cosan_model_inherit__map">
-<area shape="rect" title=" " alt="" coords="197,80,338,107"/>
-<area shape="rect" href="class_cosan_1_1_cosan_linear_model.html" title=" " alt="" coords="179,155,355,181"/>
-<area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="205,5,330,32"/>
-<area shape="rect" href="class_cosan_1_1_cosan_linear_regression.html" title=" " alt="" coords="164,229,371,256"/>
-<area shape="rect" href="class_cosan_1_1_cosan_elastic_net.html" title=" " alt="" coords="5,304,172,331"/>
-<area shape="rect" href="class_cosan_1_1_cosan_lasso.html" title=" " alt="" coords="197,304,338,331"/>
-<area shape="rect" href="class_cosan_1_1_cosan_ridge_regression.html" title=" " alt="" coords="363,304,569,331"/>
+<map name="_cosan_1_1_cosan_model_inherit__map" id="a_cosan_1_1_cosan_model_inherit__map">
+<area shape="rect" title=" " alt="" coords="179,53,320,80"/>
+<area shape="rect" href="class_cosan_1_1_cosan_linear_model.html" title=" " alt="" coords="368,13,556,54"/>
+<area shape="rect" href="class_cosan_1_1_cosan_linear_model.html" title=" " alt="" coords="374,78,550,119"/>
+<area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="5,53,131,80"/>
+<area shape="rect" href="class_cosan_1_1_cosan_linear_regression.html" title=" " alt="" coords="604,45,811,86"/>
+<area shape="rect" href="class_cosan_1_1_cosan_linear_regression.html" title=" " alt="" coords="604,110,811,151"/>
+<area shape="rect" href="class_cosan_1_1_cosan_elastic_net.html" title=" " alt="" coords="879,5,1045,32"/>
+<area shape="rect" href="class_cosan_1_1_cosan_lasso.html" title=" " alt="" coords="891,56,1033,83"/>
+<area shape="rect" href="class_cosan_1_1_cosan_ridge_regression.html" title=" " alt="" coords="859,110,1065,151"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -230,7 +239,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#a2513f2a058b11086a677bf155d3897a2">Cosan::CosanRidgeRegression</a>, and <a class="el" href="class_cosan_1_1_cosan_linear_regression.html#a56cd2ca62cb2b40fa6a23718bd500f15">Cosan::CosanLinearRegression</a>.</p>
+<p>Reimplemented in <a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#ac47565793e8558a3eac2ad8ad4adca5d">Cosan::CosanRidgeRegression&lt; NumericType, typename &gt;</a>, <a class="el" href="class_cosan_1_1_cosan_linear_regression.html#a72bd96bc10320d34d0c1a76c82b56909">Cosan::CosanLinearRegression&lt; NumericType, typename &gt;</a>, and <a class="el" href="class_cosan_1_1_cosan_linear_regression.html#a72bd96bc10320d34d0c1a76c82b56909">Cosan::CosanLinearRegression&lt; NumericType &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_cosan_model_8h_source.html#l00037">37</a> of file <a class="el" href="_cosan_model_8h_source.html">CosanModel.h</a>.</p>
 
@@ -259,7 +268,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_cosan_1_1_cosan_linear_regression.html#a6f11e4c51193a63e15d8ba9c3bbb3c8b">Cosan::CosanLinearRegression</a>.</p>
+<p>Reimplemented in <a class="el" href="class_cosan_1_1_cosan_linear_regression.html#af7cdfa021f9f9cb8b3ccc594ef028623">Cosan::CosanLinearRegression&lt; NumericType, typename &gt;</a>, and <a class="el" href="class_cosan_1_1_cosan_linear_regression.html#af7cdfa021f9f9cb8b3ccc594ef028623">Cosan::CosanLinearRegression&lt; NumericType &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_cosan_model_8h_source.html#l00038">38</a> of file <a class="el" href="_cosan_model_8h_source.html">CosanModel.h</a>.</p>
 

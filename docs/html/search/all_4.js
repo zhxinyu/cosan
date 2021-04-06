@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['fit_51',['fit',['../class_cosan_1_1_cosan_linear_model.html#accd25da81171ded9098f8ed1fd682c7a',1,'Cosan::CosanLinearModel::fit()'],['../class_cosan_1_1_cosan_linear_regression.html#ac2cb337f6496ae7b5cddc849bd3e1917',1,'Cosan::CosanLinearRegression::fit()'],['../class_cosan_1_1_cosan_ridge_regression.html#a6463db92d1330bcd17aabbaab00332e9',1,'Cosan::CosanRidgeRegression::fit()'],['../class_cosan_1_1_normalizer.html#afb27cfb8f5f6f8a9ae6ba045c52fb9eb',1,'Cosan::Normalizer::fit()'],['../class_cosan_1_1_preprocessor.html#a30726ec665163b8fd3bf8fa7b8251ec3',1,'Cosan::Preprocessor::fit()'],['../class_cosan_1_1_standard_scaler.html#a35c7c6a966d2e39560fcf54cc6606d2f',1,'Cosan::StandardScaler::fit()']]]
+  ['dcmake_5fbuild_5ftype_63',['DCMAKE_BUILD_TYPE',['../clion-log_8txt.html#ab379023e2b302f2f2767ad8b1eed4f67',1,'clion-log.txt']]],
+  ['dec_64',['DEC',['../3_817_85_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC():&#160;CMakeCCompilerId.c'],['../3_817_85_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC():&#160;CMakeCXXCompilerId.cpp'],['../3_820_80_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC():&#160;CMakeCCompilerId.c'],['../3_820_80_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC():&#160;CMakeCXXCompilerId.cpp']]],
+  ['diffsize_65',['DiffSize',['../namespace_cosan.html#a8a82535e1ccd52cccfe368cbe55fb604',1,'Cosan']]],
+  ['diffsizeexception_66',['DiffSizeException',['../class_cosan_1_1_diff_size_exception.html',1,'Cosan']]]
 ];

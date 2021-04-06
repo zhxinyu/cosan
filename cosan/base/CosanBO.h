@@ -3,9 +3,26 @@
 #include <string>
 //typedef Eigen::Matrix<float, 1, Eigen::Dynamic, Eigen::RowMajor> EigenVector;
 #include <gsl/gsl>
-
+#include <type_traits>
+#include <cosan/utils/utils.h>
 namespace Cosan
 {
+    template<typename NumericType,
+            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type
+    >
+    using CosanMatrix = Eigen::Matrix<NumericType, Eigen::Dynamic, Eigen::Dynamic> ;
+    template<typename NumericType,
+            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type
+    >
+    using CosanColVector =  Eigen::Matrix<NumericType,  Eigen::Dynamic, 1> ;
+    template<typename NumericType,
+            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type
+    >
+    using CosanRowVector =  Eigen::Matrix<NumericType,  1, Eigen::Dynamic> ;
+
+//    typedef std::variant<CosanMatrix<unsigned int>, CosanMatrix<unsigned long>,
+//                         CosanMatrix<unsigned long long>, >
+
     class CosanBO
     {
     public:

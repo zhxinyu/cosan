@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['randomgridcv_129',['RandomGridCV',['../class_cosan_1_1_random_grid_c_v.html',1,'Cosan']]],
-  ['randomgridcv_2eh_130',['randomgridcv.h',['../randomgridcv_8h.html',1,'']]],
-  ['removecolumn_131',['removeColumn',['../utils_8h.html#a05a555e2f83d10928a5a7202009f4f2f',1,'utils.h']]],
-  ['removerow_132',['removeRow',['../utils_8h.html#a9a8df2e00594376f2c7ffb25988813d7',1,'utils.h']]],
-  ['rowsx_133',['rowsX',['../class_cosan_1_1_cosan_raw_data.html#ac2d46d2c5ad22bb87b1c89017b9e18e9',1,'Cosan::CosanRawData']]],
-  ['rowsy_134',['rowsY',['../class_cosan_1_1_cosan_raw_data.html#a377d06466751b28a97d63788a983dc2c',1,'Cosan::CosanRawData']]]
+  ['normalizer_159',['Normalizer',['../class_cosan_1_1_normalizer.html',1,'Cosan::Normalizer&lt; NumericType, typename &gt;'],['../class_cosan_1_1_normalizer.html#a7c7fba4544219ddd092ad0d74d217cbc',1,'Cosan::Normalizer::Normalizer(CosanRawData&lt; NumericType &gt; &amp;RD)'],['../class_cosan_1_1_normalizer.html#aa63d628101a728aa4d8ffc304a82a3c1',1,'Cosan::Normalizer::Normalizer(CosanRawData&lt; NumericType &gt; &amp;RD, int new_p)']]],
+  ['normalizer_2eh_160',['normalizer.h',['../normalizer_8h.html',1,'']]],
+  ['normalizertest_20copy_2ecpp_161',['NormalizerTest copy.cpp',['../_normalizer_test_01copy_8cpp.html',1,'']]],
+  ['normalizertest_2ecpp_162',['NormalizerTest.cpp',['../_normalizer_test_8cpp.html',1,'(Global Namespace)'],['../preprocessor_2_normalizer_test_8cpp.html',1,'(Global Namespace)']]],
+  ['nrows_163',['nrows',['../class_cosan_1_1_train_test_split.html#a9e652a9672678a009b195e2b11ca27d8',1,'Cosan::TrainTestSplit']]],
+  ['ntest_164',['ntest',['../class_cosan_1_1_train_test_split.html#a5b0604d8269107437121a4b24c2c9a19',1,'Cosan::TrainTestSplit']]],
+  ['ntrain_165',['ntrain',['../class_cosan_1_1_train_test_split.html#acd69203e31572a31c0690227263f2eda',1,'Cosan::TrainTestSplit']]],
+  ['numoferror_166',['NumOfError',['../class_cosan_1_1_num_of_error.html',1,'Cosan::NumOfError&lt; NumericType, typename &gt;'],['../class_cosan_1_1_num_of_error.html#a8619ea879e289d185f8e63569159f49c',1,'Cosan::NumOfError::NumOfError()']]]
 ];

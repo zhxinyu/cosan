@@ -1,25 +1,4 @@
 var searchData=
 [
-  ['cmakelists_2etxt_189',['CMakeLists.txt',['../_c_make_lists_8txt.html',1,'']]],
-  ['cosanbo_2eh_190',['CosanBO.h',['../_cosan_b_o_8h.html',1,'']]],
-  ['cosandata_2eh_191',['CosanData.h',['../_cosan_data_8h.html',1,'']]],
-  ['cosanelasticnet_2ecpp_192',['CosanElasticNet.cpp',['../_cosan_elastic_net_8cpp.html',1,'']]],
-  ['cosanelasticnet_2ecpp_2eo_2ed_193',['CosanElasticNet.cpp.o.d',['../_cosan_elastic_net_8cpp_8o_8d.html',1,'']]],
-  ['cosanelasticnet_2eh_194',['CosanElasticNet.h',['../_cosan_elastic_net_8h.html',1,'']]],
-  ['cosanlasso_2ecpp_195',['CosanLasso.cpp',['../_cosan_lasso_8cpp.html',1,'']]],
-  ['cosanlasso_2ecpp_2eo_2ed_196',['CosanLasso.cpp.o.d',['../_cosan_lasso_8cpp_8o_8d.html',1,'']]],
-  ['cosanlasso_2eh_197',['CosanLasso.h',['../_cosan_lasso_8h.html',1,'']]],
-  ['cosanlinearmodel_2ecpp_198',['CosanLinearModel.cpp',['../_cosan_linear_model_8cpp.html',1,'']]],
-  ['cosanlinearmodel_2ecpp_2eo_2ed_199',['CosanLinearModel.cpp.o.d',['../_cosan_linear_model_8cpp_8o_8d.html',1,'']]],
-  ['cosanlinearmodel_2eh_200',['CosanLinearModel.h',['../_cosan_linear_model_8h.html',1,'']]],
-  ['cosanlinearregression_2ecpp_201',['CosanLinearRegression.cpp',['../_cosan_linear_regression_8cpp.html',1,'']]],
-  ['cosanlinearregression_2ecpp_2eo_2ed_202',['CosanLinearRegression.cpp.o.d',['../_cosan_linear_regression_8cpp_8o_8d.html',1,'']]],
-  ['cosanlinearregression_2eh_203',['CosanLinearRegression.h',['../_cosan_linear_regression_8h.html',1,'']]],
-  ['cosanmodel_2ecpp_204',['CosanModel.cpp',['../_cosan_model_8cpp.html',1,'']]],
-  ['cosanmodel_2eh_205',['CosanModel.h',['../_cosan_model_8h.html',1,'']]],
-  ['cosanridgeregression_2ecpp_206',['CosanRidgeRegression.cpp',['../_cosan_ridge_regression_8cpp.html',1,'']]],
-  ['cosanridgeregression_2ecpp_2eo_2ed_207',['CosanRidgeRegression.cpp.o.d',['../_cosan_ridge_regression_8cpp_8o_8d.html',1,'']]],
-  ['cosanridgeregression_2eh_208',['CosanRidgeRegression.h',['../_cosan_ridge_regression_8h.html',1,'']]],
-  ['crossvalidation_2eh_209',['crossvalidation.h',['../crossvalidation_8h.html',1,'']]],
-  ['customertransform_2eh_210',['customertransform.h',['../customertransform_8h.html',1,'']]]
+  ['argcheck_2eh_292',['ArgCheck.h',['../_arg_check_8h.html',1,'']]]
 ];

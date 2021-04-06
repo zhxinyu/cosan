@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Cosan: Cosan::CosanRidgeRegression Class Reference</title>
+<title>Cosan: Cosan::CosanRidgeRegression&lt; NumericType, typename &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -16,6 +16,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -26,7 +33,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cosan
-   &#160;<span id="projectnumber">0.8</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Data Analytics Library</div>
   </td>
@@ -88,82 +95,84 @@ $(document).ready(function(){initNavTree('class_cosan_1_1_cosan_ridge_regression
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_cosan_1_1_cosan_ridge_regression-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Cosan::CosanRidgeRegression Class Reference</div>  </div>
+<div class="title">Cosan::CosanRidgeRegression&lt; NumericType, typename &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_cosan_ridge_regression_8h_source.html">CosanRidgeRegression.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Cosan::CosanRidgeRegression:</div>
+Inheritance diagram for Cosan::CosanRidgeRegression&lt; NumericType, typename &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_cosan_1_1_cosan_ridge_regression__inherit__graph.png" border="0" usemap="#a_cosan_1_1_cosan_ridge_regression_inherit__map" alt="Inheritance graph"/></div>
-<map name="_cosan_1_1_cosan_ridge_regression_inherit__map" id="_cosan_1_1_cosan_ridge_regression_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,304,212,331"/>
-<area shape="rect" href="class_cosan_1_1_cosan_linear_regression.html" title=" " alt="" coords="5,229,212,256"/>
-<area shape="rect" href="class_cosan_1_1_cosan_linear_model.html" title=" " alt="" coords="21,155,197,181"/>
+<div class="center"><img src="class_cosan_1_1_cosan_ridge_regression__inherit__graph.png" border="0" usemap="#a_cosan_1_1_cosan_ridge_regression_3_01_numeric_type_00_01typename_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="_cosan_1_1_cosan_ridge_regression_3_01_numeric_type_00_01typename_01_4_inherit__map" id="a_cosan_1_1_cosan_ridge_regression_3_01_numeric_type_00_01typename_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,333,212,375"/>
+<area shape="rect" href="class_cosan_1_1_cosan_linear_regression.html" title=" " alt="" coords="5,244,212,285"/>
+<area shape="rect" href="class_cosan_1_1_cosan_linear_model.html" title=" " alt="" coords="21,155,197,196"/>
 <area shape="rect" href="class_cosan_1_1_cosan_model.html" title=" " alt="" coords="38,80,179,107"/>
 <area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="46,5,171,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
-Collaboration diagram for Cosan::CosanRidgeRegression:</div>
+Collaboration diagram for Cosan::CosanRidgeRegression&lt; NumericType, typename &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_cosan_1_1_cosan_ridge_regression__coll__graph.png" border="0" usemap="#a_cosan_1_1_cosan_ridge_regression_coll__map" alt="Collaboration graph"/></div>
-<map name="_cosan_1_1_cosan_ridge_regression_coll__map" id="_cosan_1_1_cosan_ridge_regression_coll__map">
-<area shape="rect" title=" " alt="" coords="5,351,212,377"/>
-<area shape="rect" href="class_cosan_1_1_cosan_linear_regression.html" title=" " alt="" coords="128,275,335,301"/>
-<area shape="rect" href="class_cosan_1_1_cosan_linear_model.html" title=" " alt="" coords="169,199,345,225"/>
-<area shape="rect" href="class_cosan_1_1_cosan_model.html" title=" " alt="" coords="386,102,527,129"/>
-<area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="461,5,586,32"/>
-<area shape="rect" title=" " alt="" coords="143,5,203,32"/>
-<area shape="rect" title=" " alt="" coords="341,5,437,32"/>
-<area shape="rect" title=" " alt="" coords="96,102,143,129"/>
-<area shape="rect" title=" " alt="" coords="167,95,362,136"/>
+<div class="center"><img src="class_cosan_1_1_cosan_ridge_regression__coll__graph.png" border="0" usemap="#a_cosan_1_1_cosan_ridge_regression_3_01_numeric_type_00_01typename_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="_cosan_1_1_cosan_ridge_regression_3_01_numeric_type_00_01typename_01_4_coll__map" id="a_cosan_1_1_cosan_ridge_regression_3_01_numeric_type_00_01typename_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="5,365,212,407"/>
+<area shape="rect" href="class_cosan_1_1_cosan_linear_regression.html" title=" " alt="" coords="128,275,335,316"/>
+<area shape="rect" href="class_cosan_1_1_cosan_linear_model.html" title=" " alt="" coords="169,184,345,225"/>
+<area shape="rect" href="class_cosan_1_1_cosan_model.html" title=" " alt="" coords="387,95,529,121"/>
+<area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="462,5,587,32"/>
+<area shape="rect" title=" " alt="" coords="141,5,201,32"/>
+<area shape="rect" title=" " alt="" coords="342,5,438,32"/>
+<area shape="rect" href="classbool.html" title=" " alt="" coords="95,95,141,121"/>
+<area shape="rect" href="class_cosan_matrix_3_01_numeric_type_01_4.html" title=" " alt="" coords="166,95,363,121"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aaca59ca8bc2b7667fceb2332bdc711ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#aaca59ca8bc2b7667fceb2332bdc711ab">CosanRidgeRegression</a> ()=delete</td></tr>
-<tr class="separator:aaca59ca8bc2b7667fceb2332bdc711ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6019b4e94ea2c532a5b4028d97311c5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#ac6019b4e94ea2c532a5b4028d97311c5">CosanRidgeRegression</a> (double Lambda)</td></tr>
-<tr class="separator:ac6019b4e94ea2c532a5b4028d97311c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f44e10b2a68aa7e2b71d26d82500223"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#a3f44e10b2a68aa7e2b71d26d82500223">CosanRidgeRegression</a> (double Lambda, bool Bias)</td></tr>
-<tr class="separator:a3f44e10b2a68aa7e2b71d26d82500223"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0338256855d26979442b4d7478d8214"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#ab0338256855d26979442b4d7478d8214">SetTau</a> (double Lambda)</td></tr>
-<tr class="separator:ab0338256855d26979442b4d7478d8214"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8a8408d070a97d628c9143ac62f8a26"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#aa8a8408d070a97d628c9143ac62f8a26">GetTau</a> ()</td></tr>
-<tr class="separator:aa8a8408d070a97d628c9143ac62f8a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2513f2a058b11086a677bf155d3897a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a2e87a02a9e36d79ab7fd199821292eff">EModelType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#a2513f2a058b11086a677bf155d3897a2">GetModelType</a> () override</td></tr>
-<tr class="separator:a2513f2a058b11086a677bf155d3897a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ceeb677959c0219e3be19498b3f55ef"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#a0ceeb677959c0219e3be19498b3f55ef">GetName</a> () const override</td></tr>
-<tr class="separator:a0ceeb677959c0219e3be19498b3f55ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6463db92d1330bcd17aabbaab00332e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#a6463db92d1330bcd17aabbaab00332e9">fit</a> (<a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> X, const <a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> &amp;Y)</td></tr>
-<tr class="separator:a6463db92d1330bcd17aabbaab00332e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_cosan_1_1_cosan_linear_regression"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_cosan_1_1_cosan_linear_regression')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_cosan_1_1_cosan_linear_regression.html">Cosan::CosanLinearRegression</a></td></tr>
-<tr class="memitem:a952ec2f54328e6f32194a2224bf69976 inherit pub_methods_class_cosan_1_1_cosan_linear_regression"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_regression.html#a952ec2f54328e6f32194a2224bf69976">CosanLinearRegression</a> ()</td></tr>
-<tr class="separator:a952ec2f54328e6f32194a2224bf69976 inherit pub_methods_class_cosan_1_1_cosan_linear_regression"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a377cf7b7aaa29564b662d31bb7737f5c inherit pub_methods_class_cosan_1_1_cosan_linear_regression"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_regression.html#a377cf7b7aaa29564b662d31bb7737f5c">CosanLinearRegression</a> (bool Bias)</td></tr>
-<tr class="separator:a377cf7b7aaa29564b662d31bb7737f5c inherit pub_methods_class_cosan_1_1_cosan_linear_regression"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f11e4c51193a63e15d8ba9c3bbb3c8b inherit pub_methods_class_cosan_1_1_cosan_linear_regression"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_cosan.html#ac4565f65322db2c53ef57bb2e6f3f883">EProblemType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_regression.html#a6f11e4c51193a63e15d8ba9c3bbb3c8b">GetProblemType</a> () override</td></tr>
-<tr class="separator:a6f11e4c51193a63e15d8ba9c3bbb3c8b inherit pub_methods_class_cosan_1_1_cosan_linear_regression"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2cb337f6496ae7b5cddc849bd3e1917 inherit pub_methods_class_cosan_1_1_cosan_linear_regression"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_regression.html#ac2cb337f6496ae7b5cddc849bd3e1917">fit</a> (<a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> &amp;X, const <a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> &amp;Y) override</td></tr>
-<tr class="separator:ac2cb337f6496ae7b5cddc849bd3e1917 inherit pub_methods_class_cosan_1_1_cosan_linear_regression"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedd2cc579ebbd397ffe50c4924fcbb6f inherit pub_methods_class_cosan_1_1_cosan_linear_regression"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_regression.html#aedd2cc579ebbd397ffe50c4924fcbb6f">predict</a> (const <a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> &amp;X) override</td></tr>
-<tr class="separator:aedd2cc579ebbd397ffe50c4924fcbb6f inherit pub_methods_class_cosan_1_1_cosan_linear_regression"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_cosan_1_1_cosan_linear_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_cosan_1_1_cosan_linear_model')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_cosan_1_1_cosan_linear_model.html">Cosan::CosanLinearModel</a></td></tr>
-<tr class="memitem:ab4b7424a32b3d4a3039a946d95d0af1c inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_model.html#ab4b7424a32b3d4a3039a946d95d0af1c">CosanLinearModel</a> ()=delete</td></tr>
-<tr class="separator:ab4b7424a32b3d4a3039a946d95d0af1c inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33054264fa0e8d1be9d8d3a5583f3228 inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_model.html#a33054264fa0e8d1be9d8d3a5583f3228">CosanLinearModel</a> (bool Bias)</td></tr>
-<tr class="separator:a33054264fa0e8d1be9d8d3a5583f3228 inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2efc3558834a8b3703af3aaed6ed1007 inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_model.html#a2efc3558834a8b3703af3aaed6ed1007">SetBias</a> (const bool NewBias)</td></tr>
-<tr class="separator:a2efc3558834a8b3703af3aaed6ed1007 inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab09563d11c97e601de5cf96205515127 inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_model.html#ab09563d11c97e601de5cf96205515127">SetBeta</a> (const <a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> &amp;InitBeta)</td></tr>
-<tr class="separator:ab09563d11c97e601de5cf96205515127 inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc98d32ed2f542eb79770372b0bbd71a inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_model.html#abc98d32ed2f542eb79770372b0bbd71a">GetBeta</a> ()</td></tr>
-<tr class="separator:abc98d32ed2f542eb79770372b0bbd71a inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36d60ceeae05d9e343e234f059552227 inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_model.html#a36d60ceeae05d9e343e234f059552227">GetBias</a> () const</td></tr>
-<tr class="separator:a36d60ceeae05d9e343e234f059552227 inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa12c2535075773e53a296c1636c06d9c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#aa12c2535075773e53a296c1636c06d9c">CosanRidgeRegression</a> ()=delete</td></tr>
+<tr class="separator:aa12c2535075773e53a296c1636c06d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a723281d62c751685fc601a1e8299e57a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#a723281d62c751685fc601a1e8299e57a">CosanRidgeRegression</a> (<a class="el" href="class_numeric_type.html">NumericType</a> Lambda)</td></tr>
+<tr class="separator:a723281d62c751685fc601a1e8299e57a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abef34c07b77b1575406b0fb961bdae19"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#abef34c07b77b1575406b0fb961bdae19">CosanRidgeRegression</a> (<a class="el" href="class_numeric_type.html">NumericType</a> Lambda, <a class="el" href="classbool.html">bool</a> Bias)</td></tr>
+<tr class="separator:abef34c07b77b1575406b0fb961bdae19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7b492d0b07bef78121f1aa27c2e8dbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#af7b492d0b07bef78121f1aa27c2e8dbb">SetTau</a> (<a class="el" href="class_numeric_type.html">NumericType</a> Lambda)</td></tr>
+<tr class="separator:af7b492d0b07bef78121f1aa27c2e8dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa124aad38808257bd5cd0542cb2b5d0c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#aa124aad38808257bd5cd0542cb2b5d0c">GetTau</a> ()</td></tr>
+<tr class="separator:aa124aad38808257bd5cd0542cb2b5d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac47565793e8558a3eac2ad8ad4adca5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a2e87a02a9e36d79ab7fd199821292eff">EModelType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#ac47565793e8558a3eac2ad8ad4adca5d">GetModelType</a> () override</td></tr>
+<tr class="separator:ac47565793e8558a3eac2ad8ad4adca5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa42c0f4d08605a6f04dc7a85dc7075a2"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#aa42c0f4d08605a6f04dc7a85dc7075a2">GetName</a> () const override</td></tr>
+<tr class="separator:aa42c0f4d08605a6f04dc7a85dc7075a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a0b18b54702b6bb37e6b2ff05ab3a2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#a8a0b18b54702b6bb37e6b2ff05ab3a2c">fit</a> (<a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; X, const <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;Y)</td></tr>
+<tr class="separator:a8a0b18b54702b6bb37e6b2ff05ab3a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_cosan_1_1_cosan_linear_regression"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_cosan_1_1_cosan_linear_regression')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_cosan_1_1_cosan_linear_regression.html">Cosan::CosanLinearRegression&lt; NumericType &gt;</a></td></tr>
+<tr class="memitem:a06472680af51d0aa2dac5ffb4100628a inherit pub_methods_class_cosan_1_1_cosan_linear_regression"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_regression.html#a06472680af51d0aa2dac5ffb4100628a">CosanLinearRegression</a> ()</td></tr>
+<tr class="separator:a06472680af51d0aa2dac5ffb4100628a inherit pub_methods_class_cosan_1_1_cosan_linear_regression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8418d3d62f085bdfb85802cd46c79b0 inherit pub_methods_class_cosan_1_1_cosan_linear_regression"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_regression.html#ae8418d3d62f085bdfb85802cd46c79b0">CosanLinearRegression</a> (<a class="el" href="classbool.html">bool</a> Bias)</td></tr>
+<tr class="separator:ae8418d3d62f085bdfb85802cd46c79b0 inherit pub_methods_class_cosan_1_1_cosan_linear_regression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7cdfa021f9f9cb8b3ccc594ef028623 inherit pub_methods_class_cosan_1_1_cosan_linear_regression"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_cosan.html#ac4565f65322db2c53ef57bb2e6f3f883">EProblemType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_regression.html#af7cdfa021f9f9cb8b3ccc594ef028623">GetProblemType</a> () override</td></tr>
+<tr class="separator:af7cdfa021f9f9cb8b3ccc594ef028623 inherit pub_methods_class_cosan_1_1_cosan_linear_regression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a6bbd4b5b622cda9b836d76a6fe2a5f inherit pub_methods_class_cosan_1_1_cosan_linear_regression"><td class="memItemLeft" align="right" valign="top">virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_regression.html#a9a6bbd4b5b622cda9b836d76a6fe2a5f">GetName</a> () const override</td></tr>
+<tr class="separator:a9a6bbd4b5b622cda9b836d76a6fe2a5f inherit pub_methods_class_cosan_1_1_cosan_linear_regression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbb251c21418770243fb5a7a2cc90c44 inherit pub_methods_class_cosan_1_1_cosan_linear_regression"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_regression.html#afbb251c21418770243fb5a7a2cc90c44">fit</a> (<a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;X, const <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;Y) override</td></tr>
+<tr class="separator:afbb251c21418770243fb5a7a2cc90c44 inherit pub_methods_class_cosan_1_1_cosan_linear_regression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68a41990eb94bb4214bbc3506fd40974 inherit pub_methods_class_cosan_1_1_cosan_linear_regression"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_regression.html#a68a41990eb94bb4214bbc3506fd40974">predict</a> (const <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;X) override</td></tr>
+<tr class="separator:a68a41990eb94bb4214bbc3506fd40974 inherit pub_methods_class_cosan_1_1_cosan_linear_regression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_cosan_1_1_cosan_linear_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_cosan_1_1_cosan_linear_model')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_cosan_1_1_cosan_linear_model.html">Cosan::CosanLinearModel&lt; NumericType &gt;</a></td></tr>
+<tr class="memitem:a6409fb39185354bab681be59ac0454ca inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_model.html#a6409fb39185354bab681be59ac0454ca">CosanLinearModel</a> ()=delete</td></tr>
+<tr class="separator:a6409fb39185354bab681be59ac0454ca inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a511763fdac5d78fad8caae9b0096aa49 inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_model.html#a511763fdac5d78fad8caae9b0096aa49">CosanLinearModel</a> (<a class="el" href="classbool.html">bool</a> Bias)</td></tr>
+<tr class="separator:a511763fdac5d78fad8caae9b0096aa49 inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8ea38a247eafcf6611da486ba54ebc7 inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_model.html#ae8ea38a247eafcf6611da486ba54ebc7">SetBias</a> (const <a class="el" href="classbool.html">bool</a> NewBias)</td></tr>
+<tr class="separator:ae8ea38a247eafcf6611da486ba54ebc7 inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9e4c4b80f09d7ab6682646796284c7b inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_model.html#af9e4c4b80f09d7ab6682646796284c7b">SetBeta</a> (const <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a> &amp;InitBeta)</td></tr>
+<tr class="separator:af9e4c4b80f09d7ab6682646796284c7b inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6882a86860b4e96650e9abf8eb284efe inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_model.html#a6882a86860b4e96650e9abf8eb284efe">GetBeta</a> ()</td></tr>
+<tr class="separator:a6882a86860b4e96650e9abf8eb284efe inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace9cbea049a690e4554fded00fef72c3 inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_model.html#ace9cbea049a690e4554fded00fef72c3">GetBias</a> () const</td></tr>
+<tr class="separator:ace9cbea049a690e4554fded00fef72c3 inherit pub_methods_class_cosan_1_1_cosan_linear_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_cosan_1_1_cosan_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_cosan_1_1_cosan_model')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_cosan_1_1_cosan_model.html">Cosan::CosanModel</a></td></tr>
 <tr class="memitem:a7e81ce558bda4f0dfe927159c626048a inherit pub_methods_class_cosan_1_1_cosan_model"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_model.html#a7e81ce558bda4f0dfe927159c626048a">CosanModel</a> ()</td></tr>
 <tr class="separator:a7e81ce558bda4f0dfe927159c626048a inherit pub_methods_class_cosan_1_1_cosan_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,16 +190,16 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a47674ab43c5e00693bca4a5b3f7b474c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#a47674ab43c5e00693bca4a5b3f7b474c">MLambda</a></td></tr>
-<tr class="separator:a47674ab43c5e00693bca4a5b3f7b474c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99074a731a540d1cc97140366dcbd12f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#a99074a731a540d1cc97140366dcbd12f">MLambda</a></td></tr>
+<tr class="separator:a99074a731a540d1cc97140366dcbd12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_attribs_class_cosan_1_1_cosan_linear_model"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_cosan_1_1_cosan_linear_model')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_cosan_1_1_cosan_linear_model.html">Cosan::CosanLinearModel</a></td></tr>
-<tr class="memitem:a0763dc5d657ee8286ac25530b24ee206 inherit pro_attribs_class_cosan_1_1_cosan_linear_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_model.html#a0763dc5d657ee8286ac25530b24ee206">MBeta</a></td></tr>
-<tr class="separator:a0763dc5d657ee8286ac25530b24ee206 inherit pro_attribs_class_cosan_1_1_cosan_linear_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60f7dd86b65538c332dd7f457a033685 inherit pro_attribs_class_cosan_1_1_cosan_linear_model"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_model.html#a60f7dd86b65538c332dd7f457a033685">MBias</a></td></tr>
-<tr class="separator:a60f7dd86b65538c332dd7f457a033685 inherit pro_attribs_class_cosan_1_1_cosan_linear_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_cosan_1_1_cosan_linear_model"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_cosan_1_1_cosan_linear_model')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_cosan_1_1_cosan_linear_model.html">Cosan::CosanLinearModel&lt; NumericType &gt;</a></td></tr>
+<tr class="memitem:a0c52f59d11c36bec2f4fa0deb933fd5c inherit pro_attribs_class_cosan_1_1_cosan_linear_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_model.html#a0c52f59d11c36bec2f4fa0deb933fd5c">MBeta</a></td></tr>
+<tr class="separator:a0c52f59d11c36bec2f4fa0deb933fd5c inherit pro_attribs_class_cosan_1_1_cosan_linear_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8c8b571bf7bacf996b918dd58052517 inherit pro_attribs_class_cosan_1_1_cosan_linear_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_linear_model.html#ad8c8b571bf7bacf996b918dd58052517">MBias</a></td></tr>
+<tr class="separator:ad8c8b571bf7bacf996b918dd58052517 inherit pro_attribs_class_cosan_1_1_cosan_linear_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_cosan_1_1_cosan_model"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_cosan_1_1_cosan_model')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_cosan_1_1_cosan_model.html">Cosan::CosanModel</a></td></tr>
 <tr class="memitem:ab0df64fbc6ac35bc4198338705435b76 inherit pro_attribs_class_cosan_1_1_cosan_model"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_model.html#ab0df64fbc6ac35bc4198338705435b76">MaxTrainTime</a></td></tr>
 <tr class="separator:ab0df64fbc6ac35bc4198338705435b76 inherit pro_attribs_class_cosan_1_1_cosan_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -198,20 +207,25 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ac63606d39c558164bebeb5f3866a522f inherit pro_attribs_class_cosan_1_1_cosan_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_cosan_ridge_regression_8h_source.html#l00010">10</a> of file <a class="el" href="_cosan_ridge_regression_8h_source.html">CosanRidgeRegression.h</a>.</p>
+<div class="textblock"><h3>template&lt;typename NumericType, typename = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt;<br />
+class Cosan::CosanRidgeRegression&lt; NumericType, typename &gt;</h3>
+
+
+<p class="definition">Definition at line <a class="el" href="_cosan_ridge_regression_8h_source.html#l00012">12</a> of file <a class="el" href="_cosan_ridge_regression_8h_source.html">CosanRidgeRegression.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aaca59ca8bc2b7667fceb2332bdc711ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaca59ca8bc2b7667fceb2332bdc711ab">&#9670;&nbsp;</a></span>CosanRidgeRegression() <span class="overload">[1/3]</span></h2>
+<a id="aa12c2535075773e53a296c1636c06d9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa12c2535075773e53a296c1636c06d9c">&#9670;&nbsp;</a></span>CosanRidgeRegression() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Cosan::CosanRidgeRegression::CosanRidgeRegression </td>
+          <td class="memname"><a class="el" href="class_cosan_1_1_cosan_ridge_regression.html">Cosan::CosanRidgeRegression</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::<a class="el" href="class_cosan_1_1_cosan_ridge_regression.html">CosanRidgeRegression</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -226,19 +240,21 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ac6019b4e94ea2c532a5b4028d97311c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6019b4e94ea2c532a5b4028d97311c5">&#9670;&nbsp;</a></span>CosanRidgeRegression() <span class="overload">[2/3]</span></h2>
+<a id="a723281d62c751685fc601a1e8299e57a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a723281d62c751685fc601a1e8299e57a">&#9670;&nbsp;</a></span>CosanRidgeRegression() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Cosan::CosanRidgeRegression::CosanRidgeRegression </td>
+          <td class="memname"><a class="el" href="class_cosan_1_1_cosan_ridge_regression.html">Cosan::CosanRidgeRegression</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::<a class="el" href="class_cosan_1_1_cosan_ridge_regression.html">CosanRidgeRegression</a> </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="class_numeric_type.html">NumericType</a>&#160;</td>
           <td class="paramname"><em>Lambda</em></td><td>)</td>
           <td></td>
         </tr>
@@ -250,29 +266,31 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_cosan_ridge_regression_8h_source.html#l00014">14</a> of file <a class="el" href="_cosan_ridge_regression_8h_source.html">CosanRidgeRegression.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cosan_ridge_regression_8h_source.html#l00016">16</a> of file <a class="el" href="_cosan_ridge_regression_8h_source.html">CosanRidgeRegression.h</a>.</p>
 
 </div>
 </div>
-<a id="a3f44e10b2a68aa7e2b71d26d82500223"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f44e10b2a68aa7e2b71d26d82500223">&#9670;&nbsp;</a></span>CosanRidgeRegression() <span class="overload">[3/3]</span></h2>
+<a id="abef34c07b77b1575406b0fb961bdae19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abef34c07b77b1575406b0fb961bdae19">&#9670;&nbsp;</a></span>CosanRidgeRegression() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Cosan::CosanRidgeRegression::CosanRidgeRegression </td>
+          <td class="memname"><a class="el" href="class_cosan_1_1_cosan_ridge_regression.html">Cosan::CosanRidgeRegression</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::<a class="el" href="class_cosan_1_1_cosan_ridge_regression.html">CosanRidgeRegression</a> </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="class_numeric_type.html">NumericType</a>&#160;</td>
           <td class="paramname"><em>Lambda</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
+          <td class="paramtype"><a class="el" href="classbool.html">bool</a>&#160;</td>
           <td class="paramname"><em>Bias</em>&#160;</td>
         </tr>
         <tr>
@@ -288,30 +306,32 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_cosan_ridge_regression_8h_source.html#l00017">17</a> of file <a class="el" href="_cosan_ridge_regression_8h_source.html">CosanRidgeRegression.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cosan_ridge_regression_8h_source.html#l00019">19</a> of file <a class="el" href="_cosan_ridge_regression_8h_source.html">CosanRidgeRegression.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6463db92d1330bcd17aabbaab00332e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6463db92d1330bcd17aabbaab00332e9">&#9670;&nbsp;</a></span>fit()</h2>
+<a id="a8a0b18b54702b6bb37e6b2ff05ab3a2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a0b18b54702b6bb37e6b2ff05ab3a2c">&#9670;&nbsp;</a></span>fit()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Cosan::CosanRidgeRegression::fit </td>
+          <td class="memname"><a class="el" href="classbool.html">bool</a> <a class="el" href="class_cosan_1_1_cosan_ridge_regression.html">Cosan::CosanRidgeRegression</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::fit </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;&#160;</td>
           <td class="paramname"><em>X</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_cosan.html#a83993da17d233b6628a4e1afdf790a15">CosanMatrix</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">CosanMatrix</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>Y</em>&#160;</td>
         </tr>
         <tr>
@@ -327,30 +347,41 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_cosan_ridge_regression_8h_source.html#l00029">29</a> of file <a class="el" href="_cosan_ridge_regression_8h_source.html">CosanRidgeRegression.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cosan_ridge_regression_8h_source.html#l00031">31</a> of file <a class="el" href="_cosan_ridge_regression_8h_source.html">CosanRidgeRegression.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_cosan_1_1_cosan_ridge_regression_a6463db92d1330bcd17aabbaab00332e9_cgraph.png" border="0" usemap="#aclass_cosan_1_1_cosan_ridge_regression_a6463db92d1330bcd17aabbaab00332e9_cgraph" alt=""/></div>
-<map name="class_cosan_1_1_cosan_ridge_regression_a6463db92d1330bcd17aabbaab00332e9_cgraph" id="class_cosan_1_1_cosan_ridge_regression_a6463db92d1330bcd17aabbaab00332e9_cgraph">
+<div class="center"><img src="class_cosan_1_1_cosan_ridge_regression_a8a0b18b54702b6bb37e6b2ff05ab3a2c_cgraph.png" border="0" usemap="#aclass_cosan_1_1_cosan_ridge_regression_a8a0b18b54702b6bb37e6b2ff05ab3a2c_cgraph" alt=""/></div>
+<map name="class_cosan_1_1_cosan_ridge_regression_a8a0b18b54702b6bb37e6b2ff05ab3a2c_cgraph" id="aclass_cosan_1_1_cosan_ridge_regression_a8a0b18b54702b6bb37e6b2ff05ab3a2c_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,231,32"/>
-<area shape="rect" href="utils_8h.html#a05a555e2f83d10928a5a7202009f4f2f" title=" " alt="" coords="279,5,389,32"/>
+<area shape="rect" href="utils_2utils_8h.html#aae675471018eaa7498b5f325358c08d9" title=" " alt="" coords="279,5,389,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_cosan_1_1_cosan_ridge_regression_a8a0b18b54702b6bb37e6b2ff05ab3a2c_icgraph.png" border="0" usemap="#aclass_cosan_1_1_cosan_ridge_regression_a8a0b18b54702b6bb37e6b2ff05ab3a2c_icgraph" alt=""/></div>
+<map name="class_cosan_1_1_cosan_ridge_regression_a8a0b18b54702b6bb37e6b2ff05ab3a2c_icgraph" id="aclass_cosan_1_1_cosan_ridge_regression_a8a0b18b54702b6bb37e6b2ff05ab3a2c_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,329,32"/>
+<area shape="rect" href="_ridge_regression_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a2513f2a058b11086a677bf155d3897a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2513f2a058b11086a677bf155d3897a2">&#9670;&nbsp;</a></span>GetModelType()</h2>
+<a id="ac47565793e8558a3eac2ad8ad4adca5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac47565793e8558a3eac2ad8ad4adca5d">&#9670;&nbsp;</a></span>GetModelType()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_cosan.html#a2e87a02a9e36d79ab7fd199821292eff">EModelType</a> Cosan::CosanRidgeRegression::GetModelType </td>
+          <td class="memname"><a class="el" href="namespace_cosan.html#a2e87a02a9e36d79ab7fd199821292eff">EModelType</a> <a class="el" href="class_cosan_1_1_cosan_ridge_regression.html">Cosan::CosanRidgeRegression</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::GetModelType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -363,23 +394,25 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="class_cosan_1_1_cosan_linear_regression.html#a56cd2ca62cb2b40fa6a23718bd500f15">Cosan::CosanLinearRegression</a>.</p>
+<p>Reimplemented from <a class="el" href="class_cosan_1_1_cosan_linear_regression.html#a72bd96bc10320d34d0c1a76c82b56909">Cosan::CosanLinearRegression&lt; NumericType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_cosan_ridge_regression_8h_source.html#l00024">24</a> of file <a class="el" href="_cosan_ridge_regression_8h_source.html">CosanRidgeRegression.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cosan_ridge_regression_8h_source.html#l00026">26</a> of file <a class="el" href="_cosan_ridge_regression_8h_source.html">CosanRidgeRegression.h</a>.</p>
 
 </div>
 </div>
-<a id="a0ceeb677959c0219e3be19498b3f55ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ceeb677959c0219e3be19498b3f55ef">&#9670;&nbsp;</a></span>GetName()</h2>
+<a id="aa42c0f4d08605a6f04dc7a85dc7075a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa42c0f4d08605a6f04dc7a85dc7075a2">&#9670;&nbsp;</a></span>GetName()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string Cosan::CosanRidgeRegression::GetName </td>
+          <td class="memname">const std::string <a class="el" href="class_cosan_1_1_cosan_ridge_regression.html">Cosan::CosanRidgeRegression</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::GetName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -392,23 +425,25 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="class_cosan_1_1_cosan_linear_regression.html#ada67c4791b0a113e73d2660556eccf86">Cosan::CosanLinearRegression</a>.</p>
+<p>Reimplemented from <a class="el" href="class_cosan_1_1_cosan_b_o.html#a36a75e161a183482930e5b97151e566f">Cosan::CosanBO</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_cosan_ridge_regression_8h_source.html#l00025">25</a> of file <a class="el" href="_cosan_ridge_regression_8h_source.html">CosanRidgeRegression.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cosan_ridge_regression_8h_source.html#l00027">27</a> of file <a class="el" href="_cosan_ridge_regression_8h_source.html">CosanRidgeRegression.h</a>.</p>
 
 </div>
 </div>
-<a id="aa8a8408d070a97d628c9143ac62f8a26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8a8408d070a97d628c9143ac62f8a26">&#9670;&nbsp;</a></span>GetTau()</h2>
+<a id="aa124aad38808257bd5cd0542cb2b5d0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa124aad38808257bd5cd0542cb2b5d0c">&#9670;&nbsp;</a></span>GetTau()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double Cosan::CosanRidgeRegression::GetTau </td>
+          <td class="memname">double <a class="el" href="class_cosan_1_1_cosan_ridge_regression.html">Cosan::CosanRidgeRegression</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::GetTau </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -421,23 +456,25 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_cosan_ridge_regression_8h_source.html#l00021">21</a> of file <a class="el" href="_cosan_ridge_regression_8h_source.html">CosanRidgeRegression.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cosan_ridge_regression_8h_source.html#l00023">23</a> of file <a class="el" href="_cosan_ridge_regression_8h_source.html">CosanRidgeRegression.h</a>.</p>
 
 </div>
 </div>
-<a id="ab0338256855d26979442b4d7478d8214"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0338256855d26979442b4d7478d8214">&#9670;&nbsp;</a></span>SetTau()</h2>
+<a id="af7b492d0b07bef78121f1aa27c2e8dbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7b492d0b07bef78121f1aa27c2e8dbb">&#9670;&nbsp;</a></span>SetTau()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Cosan::CosanRidgeRegression::SetTau </td>
+          <td class="memname">void <a class="el" href="class_cosan_1_1_cosan_ridge_regression.html">Cosan::CosanRidgeRegression</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::SetTau </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="class_numeric_type.html">NumericType</a>&#160;</td>
           <td class="paramname"><em>Lambda</em></td><td>)</td>
           <td></td>
         </tr>
@@ -449,22 +486,24 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_cosan_ridge_regression_8h_source.html#l00020">20</a> of file <a class="el" href="_cosan_ridge_regression_8h_source.html">CosanRidgeRegression.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cosan_ridge_regression_8h_source.html#l00022">22</a> of file <a class="el" href="_cosan_ridge_regression_8h_source.html">CosanRidgeRegression.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a47674ab43c5e00693bca4a5b3f7b474c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47674ab43c5e00693bca4a5b3f7b474c">&#9670;&nbsp;</a></span>MLambda</h2>
+<a id="a99074a731a540d1cc97140366dcbd12f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99074a731a540d1cc97140366dcbd12f">&#9670;&nbsp;</a></span>MLambda</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double Cosan::CosanRidgeRegression::MLambda</td>
+          <td class="memname">double <a class="el" href="class_cosan_1_1_cosan_ridge_regression.html">Cosan::CosanRidgeRegression</a>&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, typename &gt;::MLambda</td>
         </tr>
       </table>
   </td>
@@ -474,7 +513,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_cosan_ridge_regression_8h_source.html#l00053">53</a> of file <a class="el" href="_cosan_ridge_regression_8h_source.html">CosanRidgeRegression.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cosan_ridge_regression_8h_source.html#l00055">55</a> of file <a class="el" href="_cosan_ridge_regression_8h_source.html">CosanRidgeRegression.h</a>.</p>
 
 </div>
 </div>

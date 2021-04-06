@@ -16,6 +16,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -26,7 +33,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cosan
-   &#160;<span id="projectnumber">0.8</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Data Analytics Library</div>
   </td>
@@ -84,26 +91,26 @@ $(document).ready(function(){initNavTree('class_cosan_1_1_standard_scaler.html',
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Cosan::StandardScaler Member List</div>  </div>
+<div class="title">Cosan::StandardScaler&lt; NumericType, typename &gt; Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a>, including all inherited members.</p>
+<p>This is the complete list of members for <a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler&lt; NumericType, typename &gt;</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_cosan_b_o.html#ade4a14f5f042dfe1cdf79f5183586b4c">CosanBO</a>()</td><td class="entry"><a class="el" href="class_cosan_1_1_cosan_b_o.html">Cosan::CosanBO</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html#a35c7c6a966d2e39560fcf54cc6606d2f">fit</a>(const CosanMatrix &amp;X) override</td><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html#a96c5a98b2c724d2d41f7dcecebab476a">GetMean</a>() const</td><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_cosan_1_1_cosan_b_o.html#a36a75e161a183482930e5b97151e566f">GetName</a>() const</td><td class="entry"><a class="el" href="class_cosan_1_1_cosan_b_o.html">Cosan::CosanBO</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html#a8aec03dc537303b5d1aa65e1d871b88f">GetStd</a>() const</td><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html#a5adad1ac6ce7f3b2ab46d01ca1e7fe19">InvTransform</a>(const CosanMatrix &amp;X)</td><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html#a31130fba42cbdc35d6c3ffbe941ad85d">mean</a></td><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_cosan_1_1_preprocessor.html#a7b93d5b1f0240f02fada0c7d31d3614f">Preprocessor</a>()</td><td class="entry"><a class="el" href="class_cosan_1_1_preprocessor.html">Cosan::Preprocessor</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html#a1fc552f8fd4abdafcc1dda85e4b97cc4">standardize</a>(const CosanMatrix &amp;X)</td><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html#a973609e2f75cd6bcf75b8b1d5499702b">StandardScaler</a>()=default</td><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html#a7dfe85b8a08b76e19e6249c0ac1db3c1">std</a></td><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html#afca15be959647fc81094985b0efa1625">transform</a>(const CosanMatrix &amp;X) override</td><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_preprocessor.html#ac6bbd5d45c43e65dbf1a247f6b2ffdec">~Preprocessor</a>()=default</td><td class="entry"><a class="el" href="class_cosan_1_1_preprocessor.html">Cosan::Preprocessor</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html#aa466106fa416021bbf0025561bd89033">~StandardScaler</a>() override=default</td><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html#a464b57e45c96e72ef2bc990f85bf7905">fit</a>(CosanRawData&lt; NumericType &gt; &amp;RD)</td><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler&lt; NumericType, typename &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html#a398e3925afd41a3467cb6419c200295a">fit</a>(const CosanMatrix&lt; NumericType &gt; &amp;X) override</td><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler&lt; NumericType, typename &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html#a2951b0fff8bb81da10c39928106d9cbd">GetMean</a>() const</td><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler&lt; NumericType, typename &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_cosan_b_o.html#a36a75e161a183482930e5b97151e566f">GetName</a>() const</td><td class="entry"><a class="el" href="class_cosan_1_1_cosan_b_o.html">Cosan::CosanBO</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html#a7b7177b8fa2a322fd1faa8ec6869b14a">GetStd</a>() const</td><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler&lt; NumericType, typename &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html#a29b504f567547fad1c570e94ec7c7eef">InvTransform</a>(const CosanMatrix&lt; NumericType &gt; &amp;X)</td><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler&lt; NumericType, typename &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html#a7edb4cd0dbfea0fa14cda4e861e9824a">mean</a></td><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler&lt; NumericType, typename &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_preprocessor.html#ac92f20517545ac3d014db36b2690de65">Preprocessor</a>()</td><td class="entry"><a class="el" href="class_cosan_1_1_preprocessor.html">Cosan::Preprocessor&lt; NumericType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html#af5c4342a262f6f3228a8d670f6a48cb4">StandardScaler</a>()=default</td><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler&lt; NumericType, typename &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html#a13c4122ec690f5bc97f2528d50a72c6b">StandardScaler</a>(CosanRawData&lt; NumericType &gt; &amp;RD)</td><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler&lt; NumericType, typename &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html#ac7f79aa29eeda12116240f92efe1102e">std</a></td><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler&lt; NumericType, typename &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html#a4ab9f013a210bf257cf79a9f8b14df7b">transform</a>(const CosanMatrix&lt; NumericType &gt; &amp;X) override</td><td class="entry"><a class="el" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler&lt; NumericType, typename &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_cosan_1_1_preprocessor.html#a1a3d607c61c23c5b8c17c2628eba0eca">~Preprocessor</a>()=default</td><td class="entry"><a class="el" href="class_cosan_1_1_preprocessor.html">Cosan::Preprocessor&lt; NumericType &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

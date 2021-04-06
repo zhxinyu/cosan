@@ -7,15 +7,16 @@
 
 // TODO: change after integrate with module
 
-// import from other lib
-#include<string>
-#include<exception>
-#include<Eigen/Dense>
+//import from other libraries
+#include<vector>
+#include<iterator>
 
 // import from Cosan
 #include<ArgCheck.h>
 #include<Exception.h>
 #include<cosan/data/CosanData.h>
+
+using namespace std;
 
 namespace Cosan
 {
@@ -24,12 +25,19 @@ namespace Cosan
 	*/
 	class CosanMetric
 	{
-		CosanMatrix& yTrue;
-		CosanMatrix& yPredict;
+		CosanMatrix& yTrue(1000, 1);
+		CosanMatrix& yPredict(1000, 1);
 
 		public:
+			// Destructor
+			CosanMetric()=delete;
+		 	//Default constructor 
+			CosanMetric()=default;
 			/*
-				Default constructor 
+				constructor with inputs
+				Inputs:
+					y1: the test labels
+					y2: the predicted labels
 			*/
 			CosanMetric(CosanMatrix& y1, CosanMatrix& y2)
 			{
@@ -51,13 +59,34 @@ namespace Cosan
 				yPredict{y2};
 			};
 
+			
 
-			// Destructor
-			CosanMetric()=delete;
+			/*
+				Set the attributes, if use the default constructor
+			*/
+			void setAttr(CosanMatrix& y1, CosanMatrix& y2)
+			{
+				// check if the input matrices have the same size
+				if (!SameSize(yTrue, yPredict))
+				{
+					throw DiffSize;
+				}
+
+				// check the shape of the input
+				if (!LabelShape(yTrue))
+				{
+					throw InvalidLabelShape;
+				}
+
+				// TODO: type check if the input type gets expanded
+
+				yTrue{y1}; 
+				yPredict{y2};
+			};
 
 
-		// returns the error rate
-		virtual double GetError(){}=0;
+			// returns the error rate
+			virtual double GetError(){}=0;
 	};
 
 	/*
@@ -78,6 +107,13 @@ namespace Cosan
 
 		public:
 			NumOfError(CosanMatrix& y1, CosanMatrix& y2, double threshold): CosanMetric(y1, y2)
+			{
+				Mthreshold{threshold};
+			}
+			/*
+				a constructor that only initialize the Mthreshold attribute
+			*/
+			NumOfError(double threshold)
 			{
 				Mthreshold{threshold};
 			}
@@ -149,7 +185,26 @@ namespace Cosan
 			return 1-(yTrue-yPredict).squaredNorm()/(yTrue-yTrueMean).squaredNorm();
 		}
 	};
-	
+
+	/*
+		calculate the mean value of elements in a vector<double>
+		Input:
+			v: reference to a vector<double>
+
+		Output: 
+			result: double
+	*/
+	double getVMean(vector<double>& v)
+	{
+		double total = 0.0;
+		int size = v.size();
+		for (vector<double>::iterator it = v.begin(); it != v.end(); ++it)
+		{
+			total += *it;
+		}
+
+		return total/size; 
+	}	
 }
 
 #endif

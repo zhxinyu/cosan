@@ -1,9 +1,8 @@
 #ifndef Arg_CHECK_H
 #define Arg_CHECK_H
 
-// import from other lib 
-#include<string>
-#include<Eigen/Dense>
+//import from other library
+#include<typeinfo>
 
 // import from Cosan
 #include<cosan/data/CosanData.h>
@@ -47,6 +46,24 @@ namespace Cosan
 		else
 			return false;
 	}
+
+	/*
+		Check whether a givin object is an instance of a class
+		Used in cross validation
+		references:
+			1. http://www.cplusplus.com/forum/general/130864/
+			2. https://en.cppreference.com/w/cpp/language/typeid
+		Example: 
+			CosanMetric m;
+			is<CosanMetric>(m);
+	
+	template<typename Class, typename Object>
+	inline bool is(const Object& given)
+	{
+		if (&given == NULL) return false;
+		return type_index(typeid(given)) == type_index(typeid(Class));
+	}
+	*/
 
 };
 

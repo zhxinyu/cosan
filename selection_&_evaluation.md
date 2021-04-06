@@ -7,9 +7,10 @@
 4. how to tune hyperparameters if a model has multiple hyper-parameters?  
 
 ### things to figure out meeting april 6th
-1. hyperpara_huning, the output and input type, should be a vector, change or not
+1. hyperpara_tuning, the output and input type, should be a vector, change or not
 2. only linear model has the fit function, should be the general model right?
-3. how to find minimim while multi-threading
+3. how to find minimim while multi-threading, use scope lock, 
+4. presentation: introduce into domain, what we actually did (code example of how we implement), results (codes for how we measured the results), future work. 20-25 slides5. 
 
 ### for each metric function
   1. the first step is always check whether the shape of both input matrix are the same. 
@@ -19,7 +20,7 @@
 
 ### Future work:
 1. multi-threading
-2. making passing metrics easier
+
      
 
 ### Model Selection and Evaluation Design

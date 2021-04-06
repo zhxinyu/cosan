@@ -3,16 +3,12 @@
 
 // TODO: change after integrate with module
 
-// import from other lib
-#include<string>
-#include<exception>
-#include<Eigen/Dense>
-
 // import from Cosan
 // TODO #include<> cross validate here
+#include<CrossValidate.h>
 #include<cosan/utils/ArgCheck.h>
 #include<cosan/utils/Exception.h>
-#include<cosan/utils/CosanMetric.h>
+
 
 namespace cosan
 {
@@ -43,14 +39,15 @@ namespace cosan
 			throw InvalidLabelShapeException;
 
 		// iterator thru the paramgrid and do cross-validation on each
-		// TODO: potential error rows() return non int
+
+		// TODO: potential error rows() prob returns a non int
 		int numOfRows = paramGrid.rows();
 		double minError = INFINITY, bestParam = 0.0, curError = 0.0, curParam = 0.0;
 		for (int i = 0; i < numOfRows; ++i)
 		{
 			curParam = paramGrid(i, 1);
 			estimator = estimator.setTau(curParam);
-			curError = crossValidate(estimator, metric, X, Y, fold);
+			curError = crossValidate(estimator, X, Y, metric, fold);
 			if (curError < minError)
 			{
 				minError = curError;

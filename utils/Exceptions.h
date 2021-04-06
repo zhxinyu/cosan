@@ -28,7 +28,7 @@ namespace Cosan
 	{
 		virtual const char* what()
 		{
-			return "The shape of the labels is required to be (n ,1)";
+			return "The shape of the matrix is required to be (n ,1)";
 		};
 	} InvalidLabelShape;
 };

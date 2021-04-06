@@ -9,6 +9,7 @@
 ### things to figure out meeting april 6th
 1. hyperpara_huning, the output and input type, should be a vector, change or not
 2. only linear model has the fit function, should be the general model right?
+3. how to find minimim while multi-threading
 
 ### for each metric function
   1. the first step is always check whether the shape of both input matrix are the same. 
@@ -16,6 +17,9 @@
   2. If the shape of the input label is not (n, 1), an exception will be thrown.
 
 
+### Future work:
+1. multi-threading
+2. making passing metrics easier
      
 
 ### Model Selection and Evaluation Design

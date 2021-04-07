@@ -192,15 +192,28 @@ Model Selection and Evaluation Design</h2>
 <div class="line">  }</div>
 <div class="line">  </div>
 <div class="line">  /* cross validation</div>
-<div class="line">    </div>
-<div class="line">    Output: double, the averaged error from each cv iteration</div>
+<div class="line">        Output: double, the averaged error from each cv iteration</div>
 <div class="line">  */</div>
-<div class="line">  double cv(&lt;model type&gt; model, &lt;T&gt; x, &lt;T&gt; y, int fold){</div>
-<div class="line">    for i in (1: fold):</div>
-<div class="line">        x_train, y_train, x_test, y_test = split_cv(x, y, fold, test_ind)</div>
-<div class="line">        model.fit()</div>
-<div class="line">        </div>
+<div class="line"> </div>
+<div class="line">     double cv(&lt;model type&gt; model, &lt;T&gt; x, &lt;T&gt; y, int fold, &lt;not sure&gt; metric){</div>
+<div class="line">    // potentially replace for loop with parallel processing</div>
+<div class="line">    list&lt;double&gt; or &lt;eigen matrix&gt; errors = []</div>
+<div class="line"> </div>
+<div class="line">    std::vector&lt; std::tuple(std::vector&lt;int&gt;,std::vector&lt;int&gt;) &gt; &gt; train_batch = split_cv(x.rows(), fold);</div>
+<div class="line"> </div>
+<div class="line">    for (auto&amp; [train_idx,test_idx]: train_batch) :</div>
+<div class="line"> </div>
+<div class="line">        x_train, y_train, x_test, y_test = x(train_idx,Eigen::all),y(train_idx,Eigen::all),x(test_idx,Eigen::all),y(test_idx,Eigen::all);</div>
+<div class="line">        model.fit(x_train, y_train)</div>
+<div class="line">        y_predict = model.predict(x_test)</div>
+<div class="line">        error = metric(y_test, y_predict)</div>
+<div class="line">        errors.add(error)</div>
+<div class="line">    return mean(error)</div>
 <div class="line">  }</div>
+<div class="line">  </div>
+<div class="line">};</div>
+<div class="line">};</div>
+<div class="line"> </div>
 <div class="line">  </div>
 <div class="line">};</div>
 </div><!-- fragment --> </div></div><!-- contents -->

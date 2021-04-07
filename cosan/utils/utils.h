@@ -3,6 +3,8 @@
 #include <vector>
 #include <Eigen/Dense>
 #include <gsl/gsl>
+#include <numeric>
+#include <random>
 #define __UTILS_UTILS_H_INCLUDED__
 
 template<typename Matrix>
@@ -35,6 +37,44 @@ void select(std::vector<T>& result, const std::vector<T>& in, const std::vector<
                    [&in](typename std::vector<T>::size_type idx) {
                        return in.at(idx);
                    });
+}
+
+std::tuple<std::vector<gsl::index>,std::vector<gsl::index> > TrainTestSplit(gsl::index nrows,double testRatio=0.3){
+    assert(testRatio>=0 && testRatio<=1);
+    gsl::index ntest = (gsl::index) nrows*(testRatio);
+    gsl::index ntrain = nrows - ntest;
+    std::vector<int> idx(nrows);
+    std::iota(idx.begin(), idx.end(), 0);
+
+    std::vector<gsl::index> trainIdx, testIdx;
+    trainIdx.resize(ntrain);
+    testIdx.resize(ntest);
+    std::sample(idx.begin(), idx.end(), std::back_inserter(testIdx),
+                ntest, std::mt19937{std::random_device{}()});
+    std::sort(testIdx.begin(),testIdx.end());
+    std::set_difference(idx.begin(), idx.end(), trainIdx.begin(), trainIdx.end(),
+                        std::inserter(testIdx, testIdx.begin()));
+    return {trainIdx,testIdx};
+}
+
+std::tuple<std::vector<gsl::index>,std::vector<gsl::index> > TrainTestSplit(std::vector<gsl::index> inputIdx,double testRatio=0.3){
+    assert(testRatio>=0 && testRatio<=1);
+    gsl::index nrows = inputIdx.size();
+    gsl::index ntest = (gsl::index) nrows*(testRatio);
+    gsl::index ntrain = nrows - ntest;
+    std::vector<int> idx(nrows);
+    std::iota(idx.begin(), idx.end(), 0);
+
+    std::vector<gsl::index> trainIdx, testIdx;
+    trainIdx.resize(ntrain);
+    testIdx.resize(ntest);
+    std::sample(inputIdx.begin(), inputIdx.end(), std::back_inserter(testIdx),
+                ntest, std::mt19937{std::random_device{}()});
+    std::sort(testIdx.begin(),testIdx.end());
+    std::sort(inputIdx.begin(),inputIdx.end());
+    std::set_difference(inputIdx.begin(), inputIdx.end(), trainIdx.begin(), trainIdx.end(),
+                        std::inserter(testIdx, testIdx.begin()));
+    return {trainIdx,testIdx};
 }
 
 

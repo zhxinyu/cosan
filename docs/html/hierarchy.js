@@ -30,6 +30,10 @@ var hierarchy =
       ] ],
       [ "Cosan::Selection", "class_cosan_1_1_selection.html", [
         [ "Cosan::RandomGridCV", "class_cosan_1_1_random_grid_c_v.html", null ],
+        [ "Cosan::Splitter", "class_cosan_1_1_splitter.html", [
+          [ "Cosan::KFold", "class_cosan_1_1_k_fold.html", null ],
+          [ "Cosan::RandomKFold", "class_cosan_1_1_random_k_fold.html", null ]
+        ] ],
         [ "Cosan::TrainTestSplit< NumericType, typename >", "class_cosan_1_1_train_test_split.html", null ]
       ] ],
       [ "Cosan::CosanRawData< NumericType >", "class_cosan_1_1_cosan_raw_data.html", [
@@ -50,6 +54,7 @@ var hierarchy =
       [ "Cosan::InvalidLabelShapeException", "class_cosan_1_1_invalid_label_shape_exception.html", null ]
     ] ],
     [ "Cosan::Test< NumericType, typename >", "class_cosan_1_1_test.html", null ],
+    [ "timeseriessplit", "classtimeseriessplit.html", null ],
     [ "bool", "classbool.html", null ],
     [ "CosanMatrix< NumericType >", "class_cosan_matrix_3_01_numeric_type_01_4.html", null ],
     [ "CosanMatrix< NumericType > &", "class_cosan_matrix_3_01_numeric_type_01_4_01_6.html", null ],

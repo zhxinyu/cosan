@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['linearregressiontest_2ecpp_320',['LinearRegressionTest.cpp',['../_linear_regression_test_8cpp.html',1,'']]]
+  ['kfold_2eh_338',['kfold.h',['../kfold_8h.html',1,'']]],
+  ['kfoldtest_2ecpp_339',['KFoldTest.cpp',['../_k_fold_test_8cpp.html',1,'']]]
 ];

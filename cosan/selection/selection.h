@@ -7,9 +7,20 @@
 
 #include <cosan/base/CosanBO.h>
 #include <cosan/data/CosanData.h>
+#include <cosan/utils/Exceptions.h>
+#include <random>
+#include <iterator>
+#include <algorithm>
+#include <numeric>
+
+
+
+//#include <omp.h>
+//#include <mutex>
 namespace Cosan{
     class Selection: public CosanBO {
-        Selection():CosanBO(){}
+        public:
+            Selection():CosanBO(){}
     };
 }
 #endif //COSAN_SELECTION_H

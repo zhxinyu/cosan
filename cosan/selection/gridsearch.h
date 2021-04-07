@@ -15,7 +15,7 @@
 // import from Cosan
 // TODO #include<> cross validate here
 #include<cosan/utils/ArgCheck.h>
-#include<cosan/utils/Exception.h>
+#include<cosan/utils/Exceptions.h>
 #include<cosan/utils/CosanMetric.h>
 
 namespace Cosan

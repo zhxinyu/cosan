@@ -11,7 +11,7 @@ namespace Cosan
 	/*
 		Exception for different input matrix sizes
 	*/
-	class DiffSizeException: public exception
+	class DiffSizeException: public std::exception
 	{
 		virtual const char* what()
 		{
@@ -20,11 +20,19 @@ namespace Cosan
 
 	} DiffSize;
 
+    class TooSmallSizeException: public std::exception
+    {
+        virtual const char* what()
+        {
+            return "The number of rows is too small";
+        };
+
+    } SmallRows;
 
 	/*
 		Exceptin for invalid lable shape
 	*/
-	class InvalidLabelShapeException: public exception
+	class InvalidLabelShapeException: public std::exception
 	{
 		virtual const char* what()
 		{

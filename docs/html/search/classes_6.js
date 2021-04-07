@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['onehotencoding_279',['OnehotEncoding',['../class_cosan_1_1_onehot_encoding.html',1,'Cosan']]],
-  ['overunderflow_280',['OverUnderFlow',['../class_cosan_1_1_over_under_flow.html',1,'Cosan']]]
+  ['normalizer_292',['Normalizer',['../class_cosan_1_1_normalizer.html',1,'Cosan']]],
+  ['numoferror_293',['NumOfError',['../class_cosan_1_1_num_of_error.html',1,'Cosan']]]
 ];

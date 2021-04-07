@@ -1,7 +1,16 @@
 var searchData=
 [
-  ['updatecat_242',['UpdateCat',['../class_cosan_1_1_cosan_raw_data.html#afc5660f7e9937ad8a3c2d12b123d2213',1,'Cosan::CosanRawData::UpdateCat(std::vector&lt; std::string &gt; &amp;inputX)'],['../class_cosan_1_1_cosan_raw_data.html#a3d2557ae5289c5a41f610d868c188f98',1,'Cosan::CosanRawData::UpdateCat(std::vector&lt; std::string &gt; &amp;inputX, std::vector&lt; std::string &gt; &amp;inputY)'],['../class_cosan_1_1_cosan_raw_data.html#afc5660f7e9937ad8a3c2d12b123d2213',1,'Cosan::CosanRawData::UpdateCat(std::vector&lt; std::string &gt; &amp;inputX)'],['../class_cosan_1_1_cosan_raw_data.html#a3d2557ae5289c5a41f610d868c188f98',1,'Cosan::CosanRawData::UpdateCat(std::vector&lt; std::string &gt; &amp;inputX, std::vector&lt; std::string &gt; &amp;inputY)']]],
-  ['updatedata_243',['UpdateData',['../class_cosan_1_1_cosan_raw_data.html#a7714c036ad02f98ee3c664815be8bd29',1,'Cosan::CosanRawData::UpdateData(CosanMatrix&lt; NumericType &gt; inputX)'],['../class_cosan_1_1_cosan_raw_data.html#a10d2c6179b612fbacb1eae037f775233',1,'Cosan::CosanRawData::UpdateData(CosanMatrix&lt; NumericType &gt; inputX, CosanMatrix&lt; NumericType &gt; inputY)'],['../class_cosan_1_1_cosan_raw_data.html#a7a66e6644aded1557dcc1ace479b5a33',1,'Cosan::CosanRawData::UpdateData(CosanMatrix inputX)'],['../class_cosan_1_1_cosan_raw_data.html#abca7d55f8069b7e11d142b43865e512e',1,'Cosan::CosanRawData::UpdateData(CosanMatrix inputX, CosanMatrix inputY)']]],
-  ['updatepolynomialfeatures_244',['UpdatePolynomialFeatures',['../class_cosan_1_1_polynomial_features.html#a43e398a66447386a3439ad512e54c0bb',1,'Cosan::PolynomialFeatures']]],
-  ['utils_2eh_245',['utils.h',['../io_2utils_8h.html',1,'(Global Namespace)'],['../utils_2utils_8h.html',1,'(Global Namespace)']]]
+  ['tutorial_243',['Tutorial',['../md_tutorial_selectionandevaluation.html',1,'']]],
+  ['targetdirectories_2etxt_244',['TargetDirectories.txt',['../_target_directories_8txt.html',1,'']]],
+  ['templatetest_2ecpp_245',['templateTest.cpp',['../template_test_8cpp.html',1,'']]],
+  ['test_246',['Test',['../class_cosan_1_1_test.html',1,'Cosan::Test&lt; NumericType, typename &gt;'],['../class_cosan_1_1_test.html#a6f704b71fa60399277c42a358021f5c0',1,'Cosan::Test::Test()=default'],['../class_cosan_1_1_test.html#a17b85097b8aaf3a129f83c454e3c008f',1,'Cosan::Test::Test(vec&lt; NumericType &gt; &amp;inputX)'],['../class_cosan_1_1_test.html#ac7a42cd35678367ca364e98a54afb961',1,'Cosan::Test::Test(vec&lt; NumericType &gt; inputX)']]],
+  ['test_2ecpp_247',['test.cpp',['../test_8cpp.html',1,'']]],
+  ['test1_2ecpp_248',['test1.cpp',['../test1_8cpp.html',1,'']]],
+  ['test2_2ecpp_249',['test2.cpp',['../test2_8cpp.html',1,'']]],
+  ['test_5fbak_2ecpp_250',['test_bak.cpp',['../test__bak_8cpp.html',1,'']]],
+  ['timeseriessplit_251',['timeseriessplit',['../classtimeseriessplit.html',1,'']]],
+  ['timeseriessplit_2eh_252',['timeseriessplit.h',['../timeseriessplit_8h.html',1,'']]],
+  ['traintestsplit_253',['TrainTestSplit',['../class_cosan_1_1_train_test_split.html',1,'Cosan::TrainTestSplit&lt; NumericType, typename &gt;'],['../class_cosan_1_1_train_test_split.html#ad8c058ab9601a6d2efca89eb57f73048',1,'Cosan::TrainTestSplit::TrainTestSplit()']]],
+  ['traintestsplit_2eh_254',['traintestsplit.h',['../traintestsplit_8h.html',1,'']]],
+  ['transform_255',['transform',['../class_cosan_1_1_normalizer.html#a01d43af5e76016f92412a19581b4d235',1,'Cosan::Normalizer::transform()'],['../class_cosan_1_1_preprocessor.html#a3dc738458247240f5567870605a70316',1,'Cosan::Preprocessor::transform()'],['../class_cosan_1_1_standard_scaler.html#a4ab9f013a210bf257cf79a9f8b14df7b',1,'Cosan::StandardScaler::transform()'],['../_custom_transform_test_8cpp.html#ac4df9746e406d7f3f388f646a4b02528',1,'transform():&#160;CustomTransformTest.cpp']]]
 ];

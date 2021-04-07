@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['labelshape_135',['LabelShape',['../namespace_cosan.html#a128bd558187aaee1b190ffb8c574d67c',1,'Cosan']]],
-  ['linearregressiontest_2ecpp_136',['LinearRegressionTest.cpp',['../_linear_regression_test_8cpp.html',1,'']]],
-  ['load_5fcsv_137',['load_csv',['../test__bak_8cpp.html#af890b388fd5ecab93d03e7a4095c1766',1,'test_bak.cpp']]],
-  ['load_5fcsv1_138',['load_csv1',['../io_2utils_8h.html#ac5dbff97cc740e6cc442be77308a258a',1,'utils.h']]]
+  ['kfold_137',['KFold',['../class_cosan_1_1_k_fold.html',1,'Cosan::KFold'],['../class_cosan_1_1_k_fold.html#ac51e11e6b84506f2d46b7843facd8d63',1,'Cosan::KFold::KFold()']]],
+  ['kfold_2eh_138',['kfold.h',['../kfold_8h.html',1,'']]],
+  ['kfoldnumber_139',['kfoldnumber',['../class_cosan_1_1_k_fold.html#a615da8edb14eb4bb1223ecf9dbd2607f',1,'Cosan::KFold::kfoldnumber()'],['../class_cosan_1_1_random_k_fold.html#a6c9c5adefeaa412a18f81f2995825235',1,'Cosan::RandomKFold::kfoldnumber()']]],
+  ['kfoldtest_2ecpp_140',['KFoldTest.cpp',['../_k_fold_test_8cpp.html',1,'']]]
 ];

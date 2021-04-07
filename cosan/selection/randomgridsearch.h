@@ -2,8 +2,8 @@
 // Created by Xinyu Zhang on 4/4/21.
 //
 
-#ifndef COSAN_RANDOMGRIDCV_H
-#define COSAN_RANDOMGRIDCV_H
+#ifndef COSAN_RANDOMGRIDSEARCH_H
+#define COSAN_RANDOMGRIDSEARCH_H
 
 #include <cosan/base/CosanBO.h>
 #include <cosan/data/CosanData.h>
@@ -13,4 +13,4 @@ namespace Cosan{
     };
 }
 
-#endif //COSAN_RANDOMGRIDCV_H
+#endif //COSAN_RANDOMGRIDSEARCH_H

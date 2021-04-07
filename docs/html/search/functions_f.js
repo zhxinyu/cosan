@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['_7enormalizer_448',['~Normalizer',['../class_cosan_1_1_normalizer.html#a085ac6fc24a2b191313cdb47adf4f184',1,'Cosan::Normalizer']]],
-  ['_7epreprocessor_449',['~Preprocessor',['../class_cosan_1_1_preprocessor.html#a1a3d607c61c23c5b8c17c2628eba0eca',1,'Cosan::Preprocessor']]]
+  ['what_475',['what',['../class_cosan_1_1_diff_size_exception.html#a66b31d65c86212c7d5c25b9097996ec1',1,'Cosan::DiffSizeException::what()'],['../class_cosan_1_1_invalid_label_shape_exception.html#a0e676ebb997bf1858c9e778b7d2432ac',1,'Cosan::InvalidLabelShapeException::what()']]]
 ];

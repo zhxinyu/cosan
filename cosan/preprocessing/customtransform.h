@@ -18,7 +18,10 @@ namespace Cosan{
 
                 decltype(auto) X = RD.GetInput();
                 __customFeatures = customTransform(X);
-            }
+                fmt::print("*********************************\n");
+                fmt::print("End of generating customized features!!\n");
+
+        }
             decltype(auto) GetCustomFeatures(){return __customFeatures;}
         private:
             decltype(auto) __customFeatures;

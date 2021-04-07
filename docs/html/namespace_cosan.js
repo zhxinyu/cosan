@@ -13,6 +13,7 @@ var namespace_cosan =
     [ "CustomerTransform", "class_cosan_1_1_customer_transform.html", "class_cosan_1_1_customer_transform" ],
     [ "DiffSizeException", "class_cosan_1_1_diff_size_exception.html", "class_cosan_1_1_diff_size_exception" ],
     [ "InvalidLabelShapeException", "class_cosan_1_1_invalid_label_shape_exception.html", "class_cosan_1_1_invalid_label_shape_exception" ],
+    [ "KFold", "class_cosan_1_1_k_fold.html", "class_cosan_1_1_k_fold" ],
     [ "MaxError", "class_cosan_1_1_max_error.html", "class_cosan_1_1_max_error" ],
     [ "MeanAbsError", "class_cosan_1_1_mean_abs_error.html", "class_cosan_1_1_mean_abs_error" ],
     [ "MeanSquareError", "class_cosan_1_1_mean_square_error.html", "class_cosan_1_1_mean_square_error" ],
@@ -27,7 +28,9 @@ var namespace_cosan =
     [ "PrincipalComponentAnalysis", "class_cosan_1_1_principal_component_analysis.html", "class_cosan_1_1_principal_component_analysis" ],
     [ "R2Score", "class_cosan_1_1_r2_score.html", "class_cosan_1_1_r2_score" ],
     [ "RandomGridCV", "class_cosan_1_1_random_grid_c_v.html", null ],
+    [ "RandomKFold", "class_cosan_1_1_random_k_fold.html", "class_cosan_1_1_random_k_fold" ],
     [ "Selection", "class_cosan_1_1_selection.html", "class_cosan_1_1_selection" ],
+    [ "Splitter", "class_cosan_1_1_splitter.html", "class_cosan_1_1_splitter" ],
     [ "StandardScaler", "class_cosan_1_1_standard_scaler.html", "class_cosan_1_1_standard_scaler" ],
     [ "Test", "class_cosan_1_1_test.html", "class_cosan_1_1_test" ],
     [ "TrainTestSplit", "class_cosan_1_1_train_test_split.html", "class_cosan_1_1_train_test_split" ]

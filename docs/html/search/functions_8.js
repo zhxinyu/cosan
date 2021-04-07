@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['overunderflow_417',['OverUnderFlow',['../class_cosan_1_1_over_under_flow.html#a6bfc6f7162314d579fdfda6298e70d75',1,'Cosan::OverUnderFlow::OverUnderFlow()=delete'],['../class_cosan_1_1_over_under_flow.html#a3729d28d4653196cef4d7331a04124ab',1,'Cosan::OverUnderFlow::OverUnderFlow(CosanRawData&lt; NumericType &gt; &amp;RD)']]]
+  ['normalizer_441',['Normalizer',['../class_cosan_1_1_normalizer.html#a7c7fba4544219ddd092ad0d74d217cbc',1,'Cosan::Normalizer::Normalizer(CosanRawData&lt; NumericType &gt; &amp;RD)'],['../class_cosan_1_1_normalizer.html#aa63d628101a728aa4d8ffc304a82a3c1',1,'Cosan::Normalizer::Normalizer(CosanRawData&lt; NumericType &gt; &amp;RD, int new_p)']]],
+  ['numoferror_442',['NumOfError',['../class_cosan_1_1_num_of_error.html#a8619ea879e289d185f8e63569159f49c',1,'Cosan::NumOfError']]]
 ];

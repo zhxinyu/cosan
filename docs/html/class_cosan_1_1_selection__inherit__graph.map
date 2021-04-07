@@ -1,6 +1,9 @@
 <map id="Cosan::Selection" name="Cosan::Selection">
-<area shape="rect" id="node1" title=" " alt="" coords="123,80,245,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="183,80,305,107"/>
 <area shape="rect" id="node3" href="$class_cosan_1_1_random_grid_c_v.html" title=" " alt="" coords="5,162,165,189"/>
-<area shape="rect" id="node4" href="$class_cosan_1_1_train_test_split.html" title=" " alt="" coords="190,155,378,196"/>
-<area shape="rect" id="node2" href="$class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="121,5,247,32"/>
+<area shape="rect" id="node4" href="$class_cosan_1_1_splitter.html" title=" " alt="" coords="189,162,299,189"/>
+<area shape="rect" id="node7" href="$class_cosan_1_1_train_test_split.html" title=" " alt="" coords="323,155,511,196"/>
+<area shape="rect" id="node2" href="$class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="181,5,307,32"/>
+<area shape="rect" id="node5" href="$class_cosan_1_1_k_fold.html" title=" " alt="" coords="118,244,221,271"/>
+<area shape="rect" id="node6" href="$class_cosan_1_1_random_k_fold.html" title=" " alt="" coords="245,244,395,271"/>
 </map>

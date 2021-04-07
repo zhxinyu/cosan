@@ -101,26 +101,13 @@ namespace Cosan
 		result: double; number of mismatch between predicted
 				and real labels
 	*/
-	class NumOfError: public CosanMetric
+	class MaxError: public CosanMetric
 	{
-		double Mthreshold;
-
-		public:
-			NumOfError(CosanMatrix& y1, CosanMatrix& y2, double threshold): CosanMetric(y1, y2)
-			{
-				Mthreshold{threshold};
-			}
-			/*
-				a constructor that only initialize the Mthreshold attribute
-			*/
-			NumOfError(double threshold)
-			{
-				Mthreshold{threshold};
-			}
+		// TODO: might get an error. class ihenritance grammar errors
 
 		double GetError()
 		{
-			return ((yTrue - yPredict) > Mthreshold).count();
+			return (yTrue - yPredict).maxCoeff();
 		}
 	};
 

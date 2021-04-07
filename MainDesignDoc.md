@@ -1,5 +1,5 @@
 
-# Cosan 
+# Cosan Design Doc V0.8
 
 ## Motivation: 
 TODO

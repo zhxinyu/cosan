@@ -2,7 +2,7 @@
 
 ##### Author: Jiahe Chen (jc5348)
 
-### Introduction and Functionalities 
+## Introduction and Functionalities 
 The main purpose of this part is to offer tools to evaluate the linear models with the preprocessed data.
 ##### CosanMetric: 
 A class for error computing. \
@@ -17,7 +17,7 @@ In some models, there are some parameters that can not be directly learnt, such 
 Our goal is to offer an exhaustive grid search + cross validation method to select the hyper-parameter pair that give the best estimation. Given a (n, m), our tuning function will first generate all m^n pairs of parameters. Then we conduct cross validation on each pair to find the pair that produce the lowest error rate.\
 Our current version only offer hyper-parameter tuning for models that only has 1 hyper-parameter.
 
-### Structures
+## Structures
 ##### CosanMetric: 
 Classes & functions related to it:
 1. CosanModels: predicted labels 

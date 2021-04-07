@@ -1,13 +1,12 @@
 
 # Cosan 
 
-## Overview
-Cosan is an open source data analytics and machine learning library written in modern C++.  It implements a selected range of simple and efficient data processing procedures and machine learning algorithms and is designed to interoperate with C++ scientific computing library [Eigen](https://eigen.tuxfamily.org/index.php). There are three main components of Cosan library: data transformation, linear models, and model selection & evaluation. 
-
+## Motivation: 
+TODO
 (Fun fact: why the project is named Cosan - )
 
 
-## Modules
+## Module Introduction 
 
 ### base
 
@@ -73,31 +72,9 @@ Dimensionality reduction by computing the principal components and performing ch
 
 Standardize numerical features in the raw data by removing the mean and scaling to unit variance.
 
+### [linear model](https://github.com/gchenra/cosan/blob/jiahe/ModelDesignDoc.md)
 
-
-### linear model
-
-#### CosanLasso
-
-#### CosanLinearModel
-
-#### CosanLinearRegression
-
-#### CosanModel
-
-The base class for all models that Cosan implements. 
-
-3 problem types are defined: binary classification, univariate regression, or no type.
-
-4 model types are defined: linear regression, ridge regression, kernel regression, or none.
-
-2 solver types are available: SrAuto, or ADMM
-
-#### CosanRidgeRegression
-
-
-
-### model selection & evaluation
+### [model selection & evaluation](https://github.com/gchenra/cosan/blob/jiahe/SelectDesignDoc.md)
 
 
 

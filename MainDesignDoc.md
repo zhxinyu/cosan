@@ -6,7 +6,8 @@ TODO
 (Fun fact: why the project is named Cosan - )
 
 
-## Module Introduction 
+## Module Structure
+TODO: Add the class hierarchy diagram
 
 ### base
 

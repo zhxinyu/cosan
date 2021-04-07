@@ -8,11 +8,11 @@ The main purpose of this part is to offer tools to evaluate the linear models wi
 A class for error computing. \
 We will implement four different metrics to measure the error rates of the predicted labels from linear models. Error rates are computed by comparing the difference between the predicted labels and test labels. Different metrics use different error rate equations. These metrics are [max error](https://scikit-learn.org/stable/modules/model_evaluation.html#max-error), [mean absolute error](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-absolute-error), [mean squared error](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error), and [r2 score](https://scikit-learn.org/stable/modules/model_evaluation.html#r2-score-the-coefficient-of-determination). 
 ##### CrossValidate:
-A function for cross validation. \
+A static function for cross validation. \
 Cross validation is commonly used to avoid model overfitting. Model overfitting happens when a model produces low error rates on seen data but performs poorly on unseen data. \
 We choose to implement k-fold cross validation. This algorithm uses 1/k of the data set as the test set in k runs of training. For details about algorithm and the data set partitioning see [here](https://machinelearningmastery.com/k-fold-cross-validation/). 
 ##### Search:
-A function for hyper-parameter tuning. \
+A static function for hyper-parameter tuning. \
 In some models, there are some parameters that can not be directly learnt, such as the [lambda](https://towardsdatascience.com/ridge-regression-for-better-usage-2f19b3a202db) in ridge regression.\
 Our goal is to offer an exhaustive grid search + cross validation method to select the hyper-parameter pair that give the best estimation. Given a (n, m), our tuning function will first generate all m^n pairs of parameters. Then we conduct cross validation on each pair to find the pair that produce the lowest error rate.\
 Our current version only offer hyper-parameter tuning for models that only has 1 hyper-parameter.

@@ -1,9 +1,9 @@
-# linear Model Design Document
+# linear Model Design Document V0.8
 
 ##### Author: Xinyu Zhang (UNI)
 
 ## Introduction and 
-This part offers classes and functions that fit `CosanData` into linear equations. 
+This part offers classes and functions that fit `CosanData` into linear models.  
 ##### CosanModel
 
 ##### CosanLasso

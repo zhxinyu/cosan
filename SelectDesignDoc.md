@@ -2,7 +2,7 @@
 
 ##### Author: Jiahe Chen (jc5348)
 
-## Introduction and Functionalities 
+## Introduction
 The main purpose of this part is to offer tools to evaluate the linear models with the preprocessed data.
 ##### CosanMetric: 
 A class for error computing. \

@@ -29,7 +29,7 @@ namespace Cosan
         // Delete the default constructor.
             CosanMetric(): CosanBO(){}
             // returns the error rate
-            virtual NumericType GetError(CosanMatrix<NumericType> yPredict, CosanMatrix<NumericType> yTrue)=0;
+            virtual NumericType GetError(CosanMatrix<NumericType>& yPredict, CosanMatrix<NumericType>& yTrue)=0;
 			/*
 				Default constructor 
 			*/
@@ -108,7 +108,7 @@ namespace Cosan
         public:
 	        MeanAbsError():CosanMetric<NumericType>(){}
             MeanAbsError(CosanMatrix<NumericType>& yPredict, CosanMatrix<NumericType>& yTrue): CosanMetric<NumericType>(yPredict, yTrue){}
-            NumericType GetError(CosanMatrix<NumericType> yPredict, CosanMatrix<NumericType> yTrue){
+            NumericType GetError(CosanMatrix<NumericType>& yPredict, CosanMatrix<NumericType>& yTrue){
                 this->error = (yPredict - yTrue).array().abs().sum()/yPredict.rows();
                 return this->error ;
             }
@@ -130,7 +130,7 @@ namespace Cosan
 	    public:
             MeanSquareError():CosanMetric<NumericType>(){}
             MeanSquareError(CosanMatrix<NumericType>& yPredict, CosanMatrix<NumericType>& yTrue): CosanMetric<NumericType>(yPredict, yTrue){}
-            NumericType GetError(CosanMatrix<NumericType> yPredict, CosanMatrix<NumericType> yTrue){
+            NumericType GetError(CosanMatrix<NumericType>& yPredict, CosanMatrix<NumericType>& yTrue){
                 this->error =(yTrue - yPredict).squaredNorm()/yTrue.rows();
                 return this->error;
             }
@@ -153,7 +153,7 @@ namespace Cosan
         public:
             R2Score():CosanMetric<NumericType>(){}
             R2Score(CosanMatrix<NumericType>& yPredict, CosanMatrix<NumericType>& yTrue): CosanMetric<NumericType>(yPredict, yTrue){}
-            NumericType GetError(CosanMatrix<NumericType> yPredict, CosanMatrix<NumericType> yTrue){
+            NumericType GetError(CosanMatrix<NumericType>& yPredict, CosanMatrix<NumericType>& yTrue){
     //			yTrueMean = Constant(yTrue.rows(), yTrue.cols(). yTrue.mean());
                 this->error = 1-(yTrue-yPredict).squaredNorm()/(yTrue.array()-yTrue.mean()).matrix().squaredNorm();
                 return this->error;
@@ -167,7 +167,7 @@ namespace Cosan
         public:
             MaxError():CosanMetric<NumericType>(){}
             MaxError(CosanMatrix<NumericType>& yPredict, CosanMatrix<NumericType>& yTrue): CosanMetric<NumericType>(yPredict, yTrue){}
-        NumericType GetError(CosanMatrix<NumericType> yPredict, CosanMatrix<NumericType> yTrue)
+        NumericType GetError(CosanMatrix<NumericType>& yPredict, CosanMatrix<NumericType>& yTrue)
         {
 //			yTrueMean = Constant(yTrue.rows(), yTrue.cols(). yTrue.mean());
             this->error = (yTrue-yPredict).array().abs().maxCoeff();

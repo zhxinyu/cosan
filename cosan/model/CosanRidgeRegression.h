@@ -7,7 +7,7 @@
 #include <cosan/model/CosanLinearRegression.h>
 
 namespace Cosan{
-    template<typename NumericType,
+    template<typename NumericType =double,
             typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
     class CosanRidgeRegression: public CosanLinearRegression<NumericType>{
         public:
@@ -19,18 +19,23 @@ namespace Cosan{
             CosanRidgeRegression(NumericType Lambda,bool Bias): CosanLinearRegression<NumericType>(Bias){
                 MLambda=Lambda;
             }
-            inline void SetTau(NumericType Lambda) {MLambda = Lambda; };
-            double GetTau() {NumericType MLambda;}
+            CosanRidgeRegression(CosanMatrix<NumericType>& X,const CosanMatrix<NumericType>& Y,
+                                 NumericType Lambda,bool Bias): CosanLinearRegression<NumericType>(Bias){
+                MLambda=Lambda;
+                fit(X,Y);
+            }
+
+            void SetParams(NumericType Lambda) {MLambda = Lambda; };
+            NumericType GetParams() {return MLambda;}
 //            bool Load(const string & path);
 //            bool Save(const string & path);
             EModelType GetModelType() override {return MdRidgeRegression;};
             const std::string  GetName()  const override{ return "Linear Ridge Regression";}
 
 
-
-            bool fit(CosanMatrix<NumericType> X,const CosanMatrix<NumericType>& Y)  {
-                CosanMatrix Identity = MLambda*CosanMatrix<NumericType>::Identity(X.cols(),X.cols());
-                if (MBias==true){
+            void fit(CosanMatrix<NumericType> X,const CosanMatrix<NumericType>& Y)  {
+                CosanMatrix<NumericType> Identity = MLambda*CosanMatrix<NumericType>::Identity(X.cols(),X.cols());
+                if (this->MBias==true){
                     X.conservativeResize(X.rows(), X.cols()+1);
                     X.col(X.cols()-1) = CosanMatrix<NumericType>::Ones(X.rows(),1);
                     Identity.conservativeResize(Identity.rows()+1, Identity.cols()+1);
@@ -42,19 +47,16 @@ namespace Cosan{
 //                const auto r = s.rows();
 //                const auto& D = s.cwiseQuotient((s.array().square() + MLambda).matrix()).asDiagonal();
 //                MBeta = svd.matrixV().leftCols(r) * D * svd.matrixU().transpose().topRows(r) * Y;
-                MBeta = (X.transpose()*X+Identity).ldlt().solve(X.transpose()*Y);
+                this->MBeta = (X.transpose()*X+Identity).ldlt().solve(X.transpose()*Y);
 //                MBeta = (X.transpose()*X+CosanMatrix(MLambda*Eigen::MatrixXd::Identity(X.cols(),X.cols()))).bdcSvd(Eigen::ComputeThinU | Eigen::ComputeThinV).solve(X.transpose()*Y);
 //                MBeta = (X.transpose()*X+CosanMatrix(MLambda*Eigen::MatrixXd::Identity(X.cols(),X.cols()))).colPivHouseholderQr().solve(X.transpose()*Y);
-                if (MBias==true){
+                if (this->MBias==true){
                     removeColumn(X,X.cols()-1);
                 }
-                return true;
             }
 
         private:
-            double MLambda;
-
-
+            NumericType MLambda;
     };
 }
 

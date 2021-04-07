@@ -1,8 +1,0 @@
-/Users/xinyuzhang/Desktop/Spring2021/c++pattern/project/cosan/CMakeFiles/rebuild_cache.dir
-/Users/xinyuzhang/Desktop/Spring2021/c++pattern/project/cosan/CMakeFiles/edit_cache.dir
-/Users/xinyuzhang/Desktop/Spring2021/c++pattern/project/cosan/cosan/CMakeFiles/rebuild_cache.dir
-/Users/xinyuzhang/Desktop/Spring2021/c++pattern/project/cosan/cosan/CMakeFiles/edit_cache.dir
-/Users/xinyuzhang/Desktop/Spring2021/c++pattern/project/cosan/cosan/CMakeFiles/cosan.dir
-/Users/xinyuzhang/Desktop/Spring2021/c++pattern/project/cosan/docs/CMakeFiles/rebuild_cache.dir
-/Users/xinyuzhang/Desktop/Spring2021/c++pattern/project/cosan/docs/CMakeFiles/edit_cache.dir
-/Users/xinyuzhang/Desktop/Spring2021/c++pattern/project/cosan/docs/CMakeFiles/Doxygen.dir

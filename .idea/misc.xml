@@ -4,6 +4,7 @@
   <component name="CidrRootsConfiguration">
     <sourceRoots>
       <file path="$PROJECT_DIR$" />
+      <file path="$PROJECT_DIR$/cosan" />
       <file path="$PROJECT_DIR$/io" />
     </sourceRoots>
   </component>

@@ -5,16 +5,17 @@
 #ifndef COSAN_SELECTION_H
 #define COSAN_SELECTION_H
 
-#include <cosan/base/CosanBO.h>
-#include <cosan/data/CosanData.h>
-#include <cosan/utils/Exceptions.h>
+
 #include <random>
 #include <iterator>
 #include <algorithm>
 #include <numeric>
+#include <variant>
 
-
-
+#include <cosan/base/CosanBO.h>
+#include <cosan/data/CosanData.h>
+#include<cosan/utils/ArgCheck.h>
+#include<cosan/utils/Exceptions.h>
 //#include <omp.h>
 //#include <mutex>
 namespace Cosan{

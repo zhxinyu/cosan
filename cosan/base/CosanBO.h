@@ -1,6 +1,10 @@
 #ifndef __COSANBO_H_INCLUDED__
 #define __COSANBO_H_INCLUDED__
 #include <string>
+#ifndef FMT_HEADER_ONLY
+#define FMT_HEADER_ONLY
+#include <fmt/format.h>
+#endif
 //typedef Eigen::Matrix<float, 1, Eigen::Dynamic, Eigen::RowMajor> EigenVector;
 #include <gsl/gsl>
 #include <type_traits>

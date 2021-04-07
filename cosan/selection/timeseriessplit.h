@@ -10,9 +10,7 @@ namespace Cosan{
     class TimeSeriesSplit: public Splitter {
         public:
             TimeSeriesSplit()=delete;
-            TimeSeriesSplit(gsl::index nrows, gsl::index kfoldnumber =5): Splitter(){
-                if (nrows<=kfoldnumber){
-                    throw SmallRows;}
+            TimeSeriesSplit(gsl::index nrows, gsl::index kfoldnumber =5): Splitter(nrows,kfoldnumber){
                 fmt::print("*********************************\n");
                 fmt::print("Begin Time Series Splitting!!\n");
 
@@ -43,9 +41,7 @@ namespace Cosan{
     class TimeSeriesSplitParallel: public Splitter {
     public:
         TimeSeriesSplitParallel()=delete;
-        TimeSeriesSplitParallel(gsl::index nrows, gsl::index kfoldnumber =5): Splitter(){
-            if (nrows<=kfoldnumber){
-                throw SmallRows;}
+        TimeSeriesSplitParallel(gsl::index nrows, gsl::index kfoldnumber =5): Splitter(nrows,kfoldnumber){
             KFoldNumber = kfoldnumber;
             std::vector <gsl::index> idx(nrows);
             std::iota(idx.begin(), idx.end(), 0);

@@ -28,12 +28,11 @@ namespace Cosan
             typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
 	bool SameSize(const CosanMatrix<NumericType>& m1, const CosanMatrix<NumericType>& m2)
 	{
-		if (m1.rows() == m2.rows) && (m1.cols() == m2.cols())
-			return true;
-		else
-			return false;
+		if ((m1.rows() == m2.rows) && (m1.cols() == m2.cols() ) ){
+			return true;}
+		else{
+			return false;}
 	};
-
 
 	/*
 	Check if the shape of the input matrix is (n, 1)
@@ -46,10 +45,10 @@ namespace Cosan
             typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
 	bool LabelShape(const CosanMatrix<NumericType>& m)
 	{
-		if (m.rows() >= 1) && (m.cols() == 1)
-			return true;
-		else
-			return false;
+		if ((m.rows() >= 1) && (m.cols() == 1)) {
+		    return true;}
+		else{
+			return false;}
 	}
 
 };

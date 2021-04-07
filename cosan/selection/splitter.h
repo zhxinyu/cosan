@@ -10,7 +10,13 @@
 namespace Cosan {
     class Splitter : public Selection {
         public:
-            Splitter() : Selection() {}
+            Splitter() : Selection(){}
+            Splitter (gsl::index nrows,gsl::index kfoldnumber=5) : Selection() {
+                if (nrows<=kfoldnumber){
+                    throw SmallRows;
+                }
+
+            }
     };
 
 }

@@ -8,10 +8,6 @@
 #include <tuple>
 #include <unordered_map>
 #include <vector>
-#ifndef FMT_HEADER_ONLY
-#define FMT_HEADER_ONLY
-#endif
-#include <fmt/format.h>
 //typedef Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor> EigenMatrix;
 namespace Cosan
 {
@@ -32,7 +28,7 @@ namespace Cosan
              typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type> 
     class CosanRawData: public CosanBO{
         public:
-            CosanRawData()=delete;
+            CosanRawData():CosanBO(){}
             CosanRawData(const std::string & srcX):CosanBO(){
                 static_assert(std::is_arithmetic<NumericType>::value, "NumericType must be numeric");
                 if (std::is_same_v<NumericType, bool>){
@@ -334,36 +330,27 @@ namespace Cosan
                 }
 
             };
+
     template<typename NumericType,
-             typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>             
+            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
     class CosanData: public CosanRawData<NumericType>{
         public:
             CosanData()=default;
-            CosanData(CosanMatrix<NumericType>  inputX):CosanBO(){
+            CosanData(CosanMatrix<NumericType>  inputX):CosanRawData<NumericType>(){
                 static_assert(std::is_arithmetic<NumericType>::value, "NumericType must be numeric");
                 this->X = inputX;
             }
-            CosanData(CosanMatrix<NumericType>  inputX,CosanMatrix<NumericType> inputY):CosanBO(){
+            CosanData(CosanMatrix<NumericType>  inputX,CosanMatrix<NumericType> inputY):CosanRawData<NumericType>(){
                 static_assert(std::is_arithmetic<NumericType>::value, "NumericType must be numeric");
                 this->X = inputX;
-                this->Y = inputY;
-            }
-            CosanMatrix<NumericType> GetInput() const{
-                return X;
-            }
-            const CosanMatrix<NumericType> & GetTarget() const{
-                return Y;
-            }
-//            CosanMatrix GetInput() const {
-//                return X;
-//            }
-//            CosanMatrix GetTarget() const{
-//                return Y;
-//            }
+                this->Y = inputY;}
+
+//            CosanMatrix<NumericType>  GetInput() {return X;}
+//            CosanMatrix<NumericType> GetTarget() const{return Y;}
             virtual const std::string  GetName() const {return "Processed Data Object.";}
         private:
-            CosanMatrix<NumericType> X;
-            CosanMatrix<NumericType> Y;
+//            CosanMatrix<NumericType> X;
+//            CosanMatrix<NumericType> Y;
     };
 }
 

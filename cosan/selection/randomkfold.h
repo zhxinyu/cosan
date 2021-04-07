@@ -10,10 +10,9 @@
 namespace Cosan{
     class RandomKFold: public Splitter {
     public:
-        RandomKFold(gsl::index nrows,gsl::index kfoldnumber=5):Splitter(){
-            if (nrows<kfoldnumber){
-                throw SmallRows;
-            }
+        RandomKFold() = delete;
+        RandomKFold(gsl::index nrows,gsl::index kfoldnumber=5):Splitter(nrows,kfoldnumber){
+            KFoldNumber = kfoldnumber;
             std::vector<gsl::index> idx(nrows);
             std::iota(idx.begin(), idx.end(), 0);
             gsl::index foldSize = nrows/kfoldnumber;
@@ -32,16 +31,15 @@ namespace Cosan{
         }
         std::vector< std::tuple<std::vector<gsl::index>,std::vector<gsl::index> > > GetSplit()  {return split_batch;}
     private:
-        gsl::index kfoldnumber;
+        gsl::index KFoldNumber;
         std::vector< std::tuple<std::vector<gsl::index>,std::vector<gsl::index> > > split_batch;
     };
 
     class RandomKFoldParallel: public Splitter {
     public:
-        RandomKFoldParallel(gsl::index nrows,gsl::index kfoldnumber=5):Splitter(){
-            if (nrows<kfoldnumber){
-                throw SmallRows;
-            }
+        RandomKFoldParallel()=delete;
+        RandomKFoldParallel(gsl::index nrows,gsl::index kfoldnumber=5):Splitter(nrows,kfoldnumber){
+            KFoldNumber = kfoldnumber;
             std::vector<gsl::index> idx(nrows);
             std::iota(idx.begin(), idx.end(), 0);
             gsl::index foldSize = nrows/kfoldnumber;
@@ -66,7 +64,7 @@ namespace Cosan{
         }
         std::vector< std::tuple<std::vector<gsl::index>,std::vector<gsl::index> > > GetSplit()  {return split_batch;}
     private:
-        gsl::index kfoldnumber;
+        gsl::index KFoldNumber;
         std::vector< std::tuple<std::vector<gsl::index>,std::vector<gsl::index> > > split_batch;
     };
 }

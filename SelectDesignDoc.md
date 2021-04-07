@@ -1,4 +1,4 @@
-# Model Selection and Evaluation Design Document
+# Model Selection and Evaluation Design Document V0.8
 
 ##### Author: Jiahe Chen (jc5348)
 

@@ -1,6 +1,6 @@
 # Preprocessing Design Doc
 
-##### Author: Zida Zhou (UNI TODO)
+##### Author: Zida Zhou(zz2791)
 
 ## Introduction
 #### CustomerTransform

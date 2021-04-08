@@ -99,6 +99,7 @@ $(document).ready(function(){initNavTree('_grid_search_test_8cpp.html',''); init
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 <code>#include &lt;<a class="el" href="_cosan_data_8h_source.html">cosan/data/CosanData.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_cosan_linear_regression_8h_source.html">cosan/model/CosanLinearRegression.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_cosan_ridge_regression_8h_source.html">cosan/model/CosanRidgeRegression.h</a>&gt;</code><br />
@@ -114,50 +115,51 @@ Include dependency graph for GridSearchTest.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_grid_search_test_8cpp__incl.png" border="0" usemap="#atest_2selection_2_grid_search_test_8cpp" alt=""/></div>
 <map name="test_2selection_2_grid_search_test_8cpp" id="test_2selection_2_grid_search_test_8cpp">
-<area shape="rect" title=" " alt="" coords="714,5,883,47"/>
-<area shape="rect" title=" " alt="" coords="641,736,713,763"/>
-<area shape="rect" title=" " alt="" coords="1527,736,1585,763"/>
-<area shape="rect" href="_cosan_data_8h.html" title=" " alt="" coords="683,512,850,539"/>
-<area shape="rect" href="_cosan_linear_regression_8h.html" title=" " alt="" coords="372,169,623,196"/>
-<area shape="rect" href="_cosan_ridge_regression_8h.html" title=" " alt="" coords="345,95,594,121"/>
-<area shape="rect" href="_cosan_p_c_r_ridge_8h.html" title=" " alt="" coords="90,169,302,196"/>
-<area shape="rect" href="gridsearch_8h.html" title=" " alt="" coords="771,95,959,121"/>
-<area shape="rect" href="_cosan_metric_8h.html" title=" " alt="" coords="1057,341,1266,367"/>
-<area shape="rect" href="randomgridsearch_8h.html" title=" " alt="" coords="983,95,1214,121"/>
-<area shape="rect" href="kfold_8h.html" title=" " alt="" coords="1238,95,1394,121"/>
-<area shape="rect" href="randomkfold_8h.html" title=" " alt="" coords="1339,169,1538,196"/>
-<area shape="rect" href="timeseriessplit_8h.html" title=" " alt="" coords="1470,95,1682,121"/>
-<area shape="rect" title=" " alt="" coords="1291,661,1346,688"/>
-<area shape="rect" title=" " alt="" coords="1315,736,1413,763"/>
-<area shape="rect" title=" " alt="" coords="579,587,666,613"/>
-<area shape="rect" href="io_2utils_8h.html" title=" " alt="" coords="690,587,801,613"/>
-<area shape="rect" title=" " alt="" coords="347,661,397,688"/>
-<area shape="rect" href="_cosan_b_o_8h.html" title=" " alt="" coords="843,587,1005,613"/>
-<area shape="rect" title=" " alt="" coords="445,587,555,613"/>
-<area shape="rect" title=" " alt="" coords="421,661,488,688"/>
-<area shape="rect" title=" " alt="" coords="512,661,552,688"/>
-<area shape="rect" title=" " alt="" coords="577,661,639,688"/>
-<area shape="rect" title=" " alt="" coords="749,736,809,763"/>
-<area shape="rect" title=" " alt="" coords="1067,661,1160,688"/>
-<area shape="rect" title=" " alt="" coords="1184,661,1267,688"/>
-<area shape="rect" href="utils_2utils_8h.html" title=" " alt="" coords="867,661,991,688"/>
-<area shape="rect" title=" " alt="" coords="149,736,217,763"/>
-<area shape="rect" title=" " alt="" coords="1437,736,1502,763"/>
-<area shape="rect" href="_cosan_linear_model_8h.html" title=" " alt="" coords="425,341,644,367"/>
-<area shape="rect" href="_cosan_model_8h.html" title=" " alt="" coords="827,430,1011,457"/>
-<area shape="rect" title=" " alt="" coords="956,512,1017,539"/>
-<area shape="rect" href="_cosan_principal_component_regression_8h.html" title=" " alt="" coords="221,244,409,285"/>
-<area shape="rect" href="principalcomponentanalysis_8h.html" title=" " alt="" coords="201,333,399,375"/>
-<area shape="rect" href="preprocessor_8h.html" title=" " alt="" coords="451,423,594,464"/>
-<area shape="rect" href="crossvalidation_8h.html" title=" " alt="" coords="947,169,1162,196"/>
-<area shape="rect" href="selection_8h.html" title=" " alt="" coords="1213,251,1393,278"/>
-<area shape="rect" title=" " alt="" coords="720,341,781,367"/>
-<area shape="rect" title=" " alt="" coords="1393,341,1455,367"/>
-<area shape="rect" title=" " alt="" coords="1480,341,1555,367"/>
-<area shape="rect" href="_arg_check_8h.html" title=" " alt="" coords="1086,430,1245,457"/>
-<area shape="rect" href="_exceptions_8h.html" title=" " alt="" coords="1421,430,1587,457"/>
-<area shape="rect" title=" " alt="" coords="1579,341,1637,367"/>
-<area shape="rect" title=" " alt="" coords="1442,512,1521,539"/>
+<area shape="rect" title=" " alt="" coords="821,5,991,47"/>
+<area shape="rect" title=" " alt="" coords="834,736,906,763"/>
+<area shape="rect" title=" " alt="" coords="1693,736,1751,763"/>
+<area shape="rect" title=" " alt="" coords="1579,661,1633,688"/>
+<area shape="rect" href="_cosan_data_8h.html" title=" " alt="" coords="1187,512,1353,539"/>
+<area shape="rect" href="_cosan_linear_regression_8h.html" title=" " alt="" coords="242,169,493,196"/>
+<area shape="rect" href="_cosan_ridge_regression_8h.html" title=" " alt="" coords="192,95,441,121"/>
+<area shape="rect" href="_cosan_p_c_r_ridge_8h.html" title=" " alt="" coords="5,169,217,196"/>
+<area shape="rect" href="gridsearch_8h.html" title=" " alt="" coords="1291,95,1479,121"/>
+<area shape="rect" href="_cosan_metric_8h.html" title=" " alt="" coords="1487,341,1696,367"/>
+<area shape="rect" href="randomgridsearch_8h.html" title=" " alt="" coords="1036,95,1267,121"/>
+<area shape="rect" href="kfold_8h.html" title=" " alt="" coords="568,95,724,121"/>
+<area shape="rect" href="randomkfold_8h.html" title=" " alt="" coords="729,169,928,196"/>
+<area shape="rect" href="timeseriessplit_8h.html" title=" " alt="" coords="800,95,1012,121"/>
+<area shape="rect" title=" " alt="" coords="1199,736,1296,763"/>
+<area shape="rect" title=" " alt="" coords="1052,587,1139,613"/>
+<area shape="rect" href="io_2utils_8h.html" title=" " alt="" coords="1215,587,1325,613"/>
+<area shape="rect" title=" " alt="" coords="1007,661,1058,688"/>
+<area shape="rect" href="_cosan_b_o_8h.html" title=" " alt="" coords="815,587,976,613"/>
+<area shape="rect" title=" " alt="" coords="1349,587,1460,613"/>
+<area shape="rect" title=" " alt="" coords="1437,661,1503,688"/>
+<area shape="rect" title=" " alt="" coords="1285,661,1325,688"/>
+<area shape="rect" title=" " alt="" coords="1349,661,1412,688"/>
+<area shape="rect" title=" " alt="" coords="940,736,1000,763"/>
+<area shape="rect" title=" " alt="" coords="690,661,783,688"/>
+<area shape="rect" title=" " alt="" coords="583,661,666,688"/>
+<area shape="rect" href="utils_2utils_8h.html" title=" " alt="" coords="808,661,932,688"/>
+<area shape="rect" href="_exceptions_8h.html" title=" " alt="" coords="1810,661,1975,688"/>
+<area shape="rect" title=" " alt="" coords="268,736,336,763"/>
+<area shape="rect" title=" " alt="" coords="604,736,669,763"/>
+<area shape="rect" title=" " alt="" coords="1964,736,2043,763"/>
+<area shape="rect" href="_cosan_linear_model_8h.html" title=" " alt="" coords="565,341,783,367"/>
+<area shape="rect" href="_cosan_model_8h.html" title=" " alt="" coords="877,430,1061,457"/>
+<area shape="rect" title=" " alt="" coords="870,512,931,539"/>
+<area shape="rect" href="_cosan_principal_component_regression_8h.html" title=" " alt="" coords="201,244,389,285"/>
+<area shape="rect" href="principalcomponentanalysis_8h.html" title=" " alt="" coords="293,333,490,375"/>
+<area shape="rect" href="preprocessor_8h.html" title=" " alt="" coords="709,423,852,464"/>
+<area shape="rect" href="crossvalidation_8h.html" title=" " alt="" coords="1253,169,1468,196"/>
+<area shape="rect" href="selection_8h.html" title=" " alt="" coords="1061,251,1241,278"/>
+<area shape="rect" title=" " alt="" coords="1330,341,1391,367"/>
+<area shape="rect" title=" " alt="" coords="1192,341,1255,367"/>
+<area shape="rect" title=" " alt="" coords="909,341,983,367"/>
+<area shape="rect" href="_arg_check_8h.html" title=" " alt="" coords="1512,430,1671,457"/>
+<area shape="rect" title=" " alt="" coords="1007,341,1066,367"/>
+<area shape="rect" href="evaluation_8h.html" title=" " alt="" coords="1191,430,1386,457"/>
 </map>
 </div>
 </div>
@@ -181,12 +183,12 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef double <a class="el" href="_grid_search_test_8cpp.html#a90f2ea6f94c3ab6f3681721c41a73ec8">db</a></td>
+          <td class="memname">typedef double <a class="el" href="onehotencoding_8cpp.html#a90f2ea6f94c3ab6f3681721c41a73ec8">db</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_grid_search_test_8cpp_source.html#l00019">19</a> of file <a class="el" href="_grid_search_test_8cpp_source.html">GridSearchTest.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_grid_search_test_8cpp_source.html#l00020">20</a> of file <a class="el" href="_grid_search_test_8cpp_source.html">GridSearchTest.cpp</a>.</p>
 
 </div>
 </div>
@@ -206,17 +208,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_grid_search_test_8cpp_source.html#l00021">21</a> of file <a class="el" href="_grid_search_test_8cpp_source.html">GridSearchTest.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="_grid_search_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#a_grid_search_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
-<map name="_grid_search_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="_grid_search_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,46,56,73"/>
-<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html#a6d8c9d1b08c3c1a5430478e066f460f3" title=" " alt="" coords="104,5,265,47"/>
-<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html#ac65e7b82c4109e45c294f6752c491b0b" title=" " alt="" coords="104,71,265,112"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="_grid_search_test_8cpp_source.html#l00022">22</a> of file <a class="el" href="_grid_search_test_8cpp_source.html">GridSearchTest.cpp</a>.</p>
 
 </div>
 </div>

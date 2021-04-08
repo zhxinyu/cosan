@@ -100,17 +100,38 @@ $(document).ready(function(){initNavTree('statistics_8h_source.html',''); initRe
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef COSAN_STATISTICS_H</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define COSAN_STATISTICS_H</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classstatistics.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classstatistics.html">statistics</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;};</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif //COSAN_STATISTICS_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;cosan/evaluation.evaluation.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">template</span>&lt;Numeric NumericType&gt;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_cosan.html">Cosan</a>{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">template</span>&lt;Numeric NumericType&gt;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_cosan_1_1_summary_statistics.html">   11</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_cosan_1_1_summary_statistics.html">SummaryStatistics</a>: <span class="keyword">public</span> <a class="code" href="class_cosan_1_1_evaluation.html">Evaluation</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_cosan_1_1_summary_statistics.html#a43db790279e6a0c46d17900744dbc54c">   13</a></span>&#160;            <a class="code" href="class_cosan_1_1_summary_statistics.html#a43db790279e6a0c46d17900744dbc54c">SummaryStatistics</a>():<a class="code" href="class_cosan_1_1_evaluation.html">Evaluation</a>(){}</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_cosan_1_1_summary_statistics.html#ab12f772452bfd03faed5b910e8410322">   14</a></span>&#160;            <a class="code" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix&lt;NumericType&gt;</a> &amp; <a class="code" href="class_cosan_1_1_summary_statistics.html#ab12f772452bfd03faed5b910e8410322">GetSampleCovariance</a>(<span class="keyword">const</span> <a class="code" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix&lt;NumericType&gt;</a> &amp; X):{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                <span class="keywordflow">if</span> (X.rows()&lt;=1){</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                    fmt::print(<span class="stringliteral">&quot;Input must have more than 1 row!&quot;</span>)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                    <span class="keywordflow">throw</span> <a class="code" href="namespace_cosan.html#a9760ff59644707f4a56c150295bd496c">SmallRows</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                <a class="code" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix&lt;NumericType&gt;</a> centered = X.rowwise() - X.colwise().mean();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                <a class="code" href="class_cosan_1_1_summary_statistics.html#acae42742e3c3701e70d8a204e697d32b">SampleCovariance</a> = (centered.adjoint() * centered) / <span class="keywordtype">double</span>(X.rows() - 1);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="class_cosan_1_1_summary_statistics.html#acae42742e3c3701e70d8a204e697d32b">SampleCovariance</a>}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_cosan_1_1_summary_statistics.html#acae42742e3c3701e70d8a204e697d32b">   23</a></span>&#160;            <a class="code" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix&lt;NumericType&gt;</a> <a class="code" href="class_cosan_1_1_summary_statistics.html#acae42742e3c3701e70d8a204e697d32b">SampleCovariance</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    };</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif //COSAN_STATISTICS_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassstatistics_html"><div class="ttname"><a href="classstatistics.html">statistics</a></div><div class="ttdef"><b>Definition:</b> <a href="statistics_8h_source.html#l00009">statistics.h:9</a></div></div>
+<div class="ttc" id="anamespace_cosan_html"><div class="ttname"><a href="namespace_cosan.html">Cosan</a></div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00018">CosanBO.h:19</a></div></div>
+<div class="ttc" id="anamespace_cosan_html_a9760ff59644707f4a56c150295bd496c"><div class="ttname"><a href="namespace_cosan.html#a9760ff59644707f4a56c150295bd496c">Cosan::SmallRows</a></div><div class="ttdeci">Cosan::TooSmallSizeException SmallRows</div></div>
+<div class="ttc" id="anamespace_cosan_html_a2834817f72f8512e1eb8dec1ba41cf6d"><div class="ttname"><a href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">Cosan::CosanMatrix</a></div><div class="ttdeci">Eigen::Matrix&lt; NumericType, Eigen::Dynamic, Eigen::Dynamic &gt; CosanMatrix</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00027">CosanBO.h:27</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_evaluation_html"><div class="ttname"><a href="class_cosan_1_1_evaluation.html">Cosan::Evaluation</a></div><div class="ttdef"><b>Definition:</b> <a href="evaluation_8h_source.html#l00011">evaluation.h:11</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_summary_statistics_html_a43db790279e6a0c46d17900744dbc54c"><div class="ttname"><a href="class_cosan_1_1_summary_statistics.html#a43db790279e6a0c46d17900744dbc54c">Cosan::SummaryStatistics::SummaryStatistics</a></div><div class="ttdeci">SummaryStatistics()</div><div class="ttdef"><b>Definition:</b> <a href="statistics_8h_source.html#l00013">statistics.h:13</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_summary_statistics_html_acae42742e3c3701e70d8a204e697d32b"><div class="ttname"><a href="class_cosan_1_1_summary_statistics.html#acae42742e3c3701e70d8a204e697d32b">Cosan::SummaryStatistics::SampleCovariance</a></div><div class="ttdeci">CosanMatrix&lt; NumericType &gt; SampleCovariance</div><div class="ttdef"><b>Definition:</b> <a href="statistics_8h_source.html#l00023">statistics.h:23</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_summary_statistics_html"><div class="ttname"><a href="class_cosan_1_1_summary_statistics.html">Cosan::SummaryStatistics</a></div><div class="ttdef"><b>Definition:</b> <a href="statistics_8h_source.html#l00011">statistics.h:11</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_summary_statistics_html_ab12f772452bfd03faed5b910e8410322"><div class="ttname"><a href="class_cosan_1_1_summary_statistics.html#ab12f772452bfd03faed5b910e8410322">Cosan::SummaryStatistics::GetSampleCovariance</a></div><div class="ttdeci">CosanMatrix&lt; NumericType &gt; &amp; GetSampleCovariance(const CosanMatrix&lt; NumericType &gt; &amp;X)</div><div class="ttdef"><b>Definition:</b> <a href="statistics_8h_source.html#l00014">statistics.h:14</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

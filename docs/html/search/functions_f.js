@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['what_540',['what',['../class_cosan_1_1_diff_size_exception.html#a66b31d65c86212c7d5c25b9097996ec1',1,'Cosan::DiffSizeException::what()'],['../class_cosan_1_1_too_small_size_exception.html#a9a0283ec303758acfad2c804eb9c1754',1,'Cosan::TooSmallSizeException::what()'],['../class_cosan_1_1_invalid_label_shape_exception.html#a0e676ebb997bf1858c9e778b7d2432ac',1,'Cosan::InvalidLabelShapeException::what()']]]
+  ['updatecat_552',['UpdateCat',['../class_cosan_1_1_cosan_raw_data.html#a3d55f032b46b4ee412973b3f9d328475',1,'Cosan::CosanRawData::UpdateCat(const std::vector&lt; std::string &gt; &amp;inputX)'],['../class_cosan_1_1_cosan_raw_data.html#ac93039a1ef61ba97d7851083da85a144',1,'Cosan::CosanRawData::UpdateCat(const std::vector&lt; std::string &gt; &amp;inputX, const std::vector&lt; std::string &gt; &amp;inputY)']]],
+  ['updatedata_553',['UpdateData',['../class_cosan_1_1_cosan_raw_data.html#a7ecaa3f312d171fa77567870c1740ca1',1,'Cosan::CosanRawData::UpdateData(const CosanMatrix&lt; NumericType &gt; &amp;inputX)'],['../class_cosan_1_1_cosan_raw_data.html#a087a53ffece7348c50ef313c6a15cf94',1,'Cosan::CosanRawData::UpdateData(const CosanMatrix&lt; NumericType &gt; &amp;inputX, const CosanMatrix&lt; NumericType &gt; &amp;inputY)']]],
+  ['updatepolynomialfeatures_554',['UpdatePolynomialFeatures',['../class_cosan_1_1_polynomial_features.html#a43e398a66447386a3439ad512e54c0bb',1,'Cosan::PolynomialFeatures']]]
 ];

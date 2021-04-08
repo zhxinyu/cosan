@@ -1,6 +1,8 @@
 <map id="cosan/selection/crossvalidation.h" name="cosan/selection/crossvalidation.h">
-<area shape="rect" id="node1" title=" " alt="" coords="108,5,323,32"/>
-<area shape="rect" id="node2" href="$gridsearch_8h.html" title=" " alt="" coords="5,80,193,107"/>
-<area shape="rect" id="node4" href="$randomgridsearch_8h.html" title=" " alt="" coords="217,80,448,107"/>
-<area shape="rect" id="node3" href="$_grid_search_test_8cpp.html" title=" " alt="" coords="131,155,300,196"/>
+<area shape="rect" id="node1" title=" " alt="" coords="266,5,481,32"/>
+<area shape="rect" id="node2" href="$gridsearch_8h.html" title=" " alt="" coords="163,80,351,107"/>
+<area shape="rect" id="node6" href="$randomgridsearch_8h.html" title=" " alt="" coords="375,80,606,107"/>
+<area shape="rect" id="node3" href="$onehotencoding_8cpp.html" title=" " alt="" coords="5,162,248,189"/>
+<area shape="rect" id="node4" href="$onehotencoding_test_8cpp.html" title=" " alt="" coords="272,155,491,196"/>
+<area shape="rect" id="node5" href="$_grid_search_test_8cpp.html" title=" " alt="" coords="515,155,685,196"/>
 </map>

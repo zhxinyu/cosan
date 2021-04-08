@@ -3,6 +3,9 @@ var dir_5740687ef8ea856445352e4ed3d52992 =
     [ "customtransform.h", "customtransform_8h.html", [
       [ "CustomerTransform", "class_cosan_1_1_customer_transform.html", "class_cosan_1_1_customer_transform" ]
     ] ],
+    [ "encoder.h", "encoder_8h.html", [
+      [ "Encoder", "class_cosan_1_1_encoder.html", "class_cosan_1_1_encoder" ]
+    ] ],
     [ "minmaxscaler.h", "minmaxscaler_8h.html", [
       [ "MinmaxScaler", "class_cosan_1_1_minmax_scaler.html", "class_cosan_1_1_minmax_scaler" ]
     ] ],
@@ -12,8 +15,11 @@ var dir_5740687ef8ea856445352e4ed3d52992 =
     [ "normalizer.h", "normalizer_8h.html", [
       [ "Normalizer", "class_cosan_1_1_normalizer.html", "class_cosan_1_1_normalizer" ]
     ] ],
-    [ "onehotencoding.h", "onehotencoding_8h.html", [
-      [ "OnehotEncoding", "class_cosan_1_1_onehot_encoding.html", null ]
+    [ "onehotEncoder.h", "onehot_encoder_8h.html", [
+      [ "OnehotEncoder", "class_cosan_1_1_onehot_encoder.html", "class_cosan_1_1_onehot_encoder" ]
+    ] ],
+    [ "ordinalEncoder.h", "ordinal_encoder_8h.html", [
+      [ "OrdinalEncoder", "class_cosan_1_1_ordinal_encoder.html", "class_cosan_1_1_ordinal_encoder" ]
     ] ],
     [ "overunderflow.h", "overunderflow_8h.html", [
       [ "OverUnderFlow", "class_cosan_1_1_over_under_flow.html", "class_cosan_1_1_over_under_flow" ]

@@ -16,22 +16,23 @@
 #include <cosan/utils/ArgCheck.h>
 #include <cosan/utils/Exceptions.h>
 #include <cosan/data/CosanData.h>
-
+#include <cosan/evaluation/evaluation.h>
 namespace Cosan
 {
 	/*
 		Base class for metric function
 	*/
-    template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
-	class CosanMetric: public CosanBO{
+//    template<typename NumericType,
+//            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    template<Numeric NumericType>
+	class CosanMetric: public Evaluation{
 		public:
         // Delete the default constructor.
-            CosanMetric(): CosanBO(){}
+            CosanMetric(): Evaluation(){}
 			/*
 				Default constructor 
 			*/
-			CosanMetric(const CosanMatrix<NumericType>& yPredict, const CosanMatrix<NumericType>& yTrue):CosanBO()
+			CosanMetric(const CosanMatrix<NumericType>& yPredict, const CosanMatrix<NumericType>& yTrue):Evaluation()
 			{
                 setAttr(yPredict,yTrue);
 			};

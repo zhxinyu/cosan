@@ -4,11 +4,14 @@
 
 #ifndef COSAN_EVALUATION_H
 #define COSAN_EVALUATION_H
+#include <cosan/base/CosanBO.h>
+#include <cosan/data/CosanData.h>
 
+namespace Cosan{
+    class Evaluation: public CosanBO {
+        public:
+            Evaluation():CosanBO(){}
+    };
 
-class evaluation {
-
-};
-
-
+}
 #endif //COSAN_EVALUATION_H

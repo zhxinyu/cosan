@@ -1,13 +1,12 @@
 <map id="Cosan::CosanPCRRidge&lt; NumericType, typename &gt;" name="Cosan::CosanPCRRidge&lt; NumericType, typename &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="446,392,634,433"/>
-<area shape="rect" id="node2" href="$class_cosan_1_1_cosan_principal_component_regression.html" title=" " alt="" coords="337,288,559,329"/>
-<area shape="rect" id="node3" href="$class_cosan_1_1_cosan_linear_model.html" title=" " alt="" coords="221,184,397,225"/>
-<area shape="rect" id="node4" href="$class_cosan_1_1_cosan_model.html" title=" " alt="" coords="115,95,256,121"/>
-<area shape="rect" id="node5" href="$class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="5,5,131,32"/>
-<area shape="rect" id="node6" title=" " alt="" coords="155,5,215,32"/>
-<area shape="rect" id="node7" title=" " alt="" coords="256,5,352,32"/>
-<area shape="rect" id="node8" title=" " alt="" coords="281,95,327,121"/>
-<area shape="rect" id="node9" title=" " alt="" coords="352,95,549,121"/>
-<area shape="rect" id="node10" title=" " alt="" coords="589,191,643,218"/>
-<area shape="rect" id="node11" href="$class_numeric_type.html" title=" " alt="" coords="584,295,683,322"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,379,193,420"/>
+<area shape="rect" id="node2" href="$class_cosan_1_1_cosan_principal_component_regression.html" title=" " alt="" coords="127,288,349,329"/>
+<area shape="rect" id="node3" href="$class_cosan_1_1_cosan_linear_model.html" title=" " alt="" coords="350,184,526,225"/>
+<area shape="rect" id="node4" href="$class_cosan_1_1_cosan_model.html" title=" " alt="" coords="281,95,422,121"/>
+<area shape="rect" id="node5" href="$class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="355,5,481,32"/>
+<area shape="rect" id="node6" title=" " alt="" coords="89,5,149,32"/>
+<area shape="rect" id="node7" title=" " alt="" coords="235,5,331,32"/>
+<area shape="rect" id="node8" title=" " alt="" coords="447,95,493,121"/>
+<area shape="rect" id="node9" title=" " alt="" coords="59,95,257,121"/>
+<area shape="rect" id="node10" title=" " alt="" coords="273,191,326,218"/>
 </map>

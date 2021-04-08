@@ -9,7 +9,7 @@
 #include <gsl/gsl>
 #include <type_traits>
 #include <cosan/utils/utils.h>
-
+#include <cosan/utils/Exceptions.h>
 template<typename NumericType>
 concept Numeric = std::is_arithmetic<NumericType>::value ;
 template <class T, class U>

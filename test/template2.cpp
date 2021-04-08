@@ -46,6 +46,7 @@ void f(NumericType a){
 
 int main(){
 	f<std::string>(3);
+	Cosan::CosanMatrix<double> M(5,4);
 	return 0;
 }
 

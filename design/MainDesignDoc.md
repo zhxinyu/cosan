@@ -7,12 +7,15 @@ TODO
 (Fun fact: why the project is named Cosan - )
 
 ## Type Template
-The arithmetic data type stored in our iterable data containor is defined as 
+We make use of template and concept to define a numerical type(an integral type or a floating-point). \
+This type is widely used throughout our library in `CosanData`, `CosanMatrix`, `CosanModel`, etc.
+It implementation is as follow.
 ```
 template<typename NumericType,
 concept Numeric = std::is_arithmetic<NumericType>::value;
 ``` 
-That is, an integral type or a floating-point.
+We also define another template to restrict type of objects we can use.
+The implementaion is as follow.
 ```
 template <class T, class U>
 concept Derived = std::is_base_of<U, T>::value;
@@ -33,11 +36,13 @@ This is to restrict U to be the base of T.
 ### Base Classes
 
 ##### CosanBO
+Location: `cosan\base\CosanBO.h` \
 Cosan Base Objects. 
 
 This class is the base that is inherited by all classes and models. 
 
 ##### CosanData
+Location: `cosan\data\CosanData.h` \
 
 In machine learning, input and output data are presented in the form of matrices or vectors (which is essentially a matrix with its row or its column of length 1). There could be numerical data and categorical data. Raw data by nature are very noisy - there could be infinite numbers and even missing data. 
 
@@ -56,6 +61,9 @@ Location: `cosan\utils\ArgCheck.h`
 
 ##### Exception
 Location: `cosan\utils\Exception.h`
+
+##### io
+
 
 ##### Other Utility fuctions
 Location: `cosan\utils\utils.h`

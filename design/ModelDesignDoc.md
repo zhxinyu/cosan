@@ -1,6 +1,6 @@
 # Linear Model Design Document V0.8
 
-##### Author: Xinyu Zhang (UNI TODO)
+##### Author: Xinyu Zhang (xz2691)
 
 ## Introduction
 This part implements classes and functions that fit `CosanData` into linear models. In 0.8 version, we will offer two linear models(Linear Regression and Ridge Regression). 

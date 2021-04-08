@@ -6,6 +6,14 @@
 TODO
 (Fun fact: why the project is named Cosan - )
 
+## Type
+The arithmetic data type stored in our iterable data containor is defined as 
+```
+template<typename NumericType,
+typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+``` 
+That is, an integral type or a floating-point.
+
 ## Module Structure
 TODO: Add the class hierarchy diagram
 

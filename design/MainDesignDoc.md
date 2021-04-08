@@ -50,33 +50,56 @@ We design CosanData class as a wrapper to handle a mixture of all of the use cas
 
 ### Utility Classes
 
-##### Time Series Spliter 
-Location: `cosan\selection\timeseriessplit.h`
-
 ##### Kfold & Random Kfold
+A class to split give data set for kflod cross validation. \
+Given a kfold number k, the class's `setSplit` function will generate k groups of data set. In each group, k-1/k part of data set will be used for training and the rest 1/k for testing. In all k groups, the testing data sets are different. We achieve this by using the ith 1/k of the data set in the ith group.
+We will also implement a splitter using parallelism. 
+
 Location: `cosan\selection\kfold.h` & `cosan\selection\randomkfold.h`
 
+##### Time Series Splitter 
+A class to split give data set for time series cross validation. It's variation of kfold. \
+For more detial about the theory of time series cross validation, check this [link](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html). 
+
+Location: `cosan\selection\timeseriessplit.h` 
+
 ##### ArgCheck
+A collective of functions to check the data size or shape. \
+
 Location: `cosan\utils\ArgCheck.h`
 
 ##### Exception
+A collection of self-defined exception classes to warn users for inappropriate data size or shape. \
+
 Location: `cosan\utils\Exception.h`
 
 ##### io
+A collection of functions to read data from csv files and write back to csv files. \
 
+Location: `cosan\io\utils.h`
 
 ##### Other Utility fuctions
 Location: `cosan\utils\utils.h`
 
 
-## General Topics
+## Modern C++ feature used
+1. constexpr
+2. template & concept
+3. concurrency
+4. static_assert
+5. enable_if
+6. gsl:: index
+7. chrono
 
 ## Used Open Resource Libraries 
 ##### Eigen
 ##### gsl
-##### Multithreading
 
 ## Future work and extensibility
+1. Improve code readability. Add detialed comments in the code base.
+2. Add more metrics 
+3. Add non-linear models
+4.  
 
 ## Appendix
 
@@ -93,4 +116,4 @@ R
 ----
 
 
-*Last updated: April 06, 2021*
+*Last updated: April 08, 2021*

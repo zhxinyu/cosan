@@ -6,13 +6,18 @@
 TODO
 (Fun fact: why the project is named Cosan - )
 
-## Type
+## Type Template
 The arithmetic data type stored in our iterable data containor is defined as 
 ```
 template<typename NumericType,
-typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+concept Numeric = std::is_arithmetic<NumericType>::value;
 ``` 
 That is, an integral type or a floating-point.
+```
+template <class T, class U>
+concept Derived = std::is_base_of<U, T>::value;
+```
+This is to restrict U to be the base of T.
 
 ## Module Structure
 TODO: Add the class hierarchy diagram

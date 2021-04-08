@@ -32,9 +32,20 @@ We design CosanData class as a wrapper to handle a mixture of all of the use cas
 
 ### Utility Classes
 
+##### Time Series Spliter 
+Location: `cosan\selection\timeseriessplit.h`
+
+##### Kfold & Random Kfold
+Location: `cosan\selection\kfold.h` & `cosan\selection\randomkfold.h`
+
 ##### ArgCheck
+Location: `cosan\utils\ArgCheck.h`
 
 ##### Exception
+Location: `cosan\utils\Exception.h`
+
+##### Other Utility fuctions
+Location: `cosan\utils\utils.h`
 
 
 ## General Topics

@@ -92,16 +92,14 @@ Location: `cosan\utils\utils.h`
 7. chrono
 
 ## Used Open Resource Libraries 
-##### Eigen
-##### gsl
+### [Eigen](https://eigen.tuxfamily.org/index.php?title=Main_Page)
+### [gsl]()
 
 ## Future work and extensibility
 1. Improve code readability. Add detialed comments in the code base.
 2. Add more metrics 
 3. Add non-linear models
 4.  
-
-## Appendix
 
 ### Other open source alternatives
 

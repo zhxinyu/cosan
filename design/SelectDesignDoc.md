@@ -20,7 +20,7 @@ Random grid search:\
 Given a (n, m), our tuning function will first generate all m^n pairs of parameters. Then we randomly select k number of pairs and conduct cross validation on them. Finally, we return the best pair of parameters.\
 
 ## Structures
-##### CosanMetric: 
+### CosanMetric: 
 Classes & functions related to it:
 1. CosanModels: predicted labels as one of the input
 2. CosanBO: parent class
@@ -43,7 +43,7 @@ class CosanMetric
 ```
 Currently, the children classes only modify the `GetError` function of their base class (check our code base for details). The computations are powered by [Eigen matrix arithmetic](https://eigen.tuxfamily.org/dox/group__TutorialMatrixArithmetic.html).
 
-##### Cross Validation:
+### Cross Validation:
 Classes & functions related to it:
 1. CosanModel: an instance of the model to be evaluated
 2. CosanData & CosanMatrix: two of cv's inputs. The preprocess data
@@ -79,7 +79,7 @@ CrossValidateScore()
 	return errors.mean()
 ```
 
-##### Hyper-parameter Tuning:
+### Hyper-parameter Tuning:
 Classes & functions related to it:
 1. CrossValidate: use to evaluate each parameter pair
 2. CosanModel: an instance of the model to be evaluated

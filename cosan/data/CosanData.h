@@ -63,20 +63,19 @@ namespace Cosan
                 }
             }
 
-            void UpdateData(CosanMatrix<NumericType> inputX){
+            void UpdateData(const CosanMatrix<NumericType>& inputX){
                 X = inputX;
             }
-            void UpdateData(CosanMatrix<NumericType> inputX,CosanMatrix<NumericType> inputY){
+            void UpdateData(const CosanMatrix<NumericType>& inputX,const CosanMatrix<NumericType>  &inputY){
                 X = inputX;
                 Y = inputY;
             }
 
 
-
-            void UpdateCat(std::vector<std::string>  & inputX){
+            void UpdateCat(const std::vector<std::string>  & inputX){
                 svaluesX = inputX;
             }
-            void UpdateCat(std::vector<std::string>  & inputX,std::vector<std::string>  & inputY){
+            void UpdateCat(const std::vector<std::string>  & inputX,const std::vector<std::string>  & inputY){
                 svaluesX = inputX;
                 svaluesY = inputY;
             }
@@ -89,8 +88,15 @@ namespace Cosan
                 return Y;
             }
 
+            const CosanMatrix<NumericType>&  GetInput()  const {
+                return X;
+            }
+            const CosanMatrix<NumericType>&  GetTarget()  const {
+                return Y;
+            }
+
             std::tuple<gsl::index,gsl::index> GetMissingNumber(){
-                return {X.array().isNaN().sum(),Y.array().isNaN().sum()};
+                return {X.array().isNaN().template cast<NumericType>().sum(),Y.array().isNaN().template cast<NumericType>().sum()};
             }
 
             //        virtual CosanBO *Shallow_copy() const;
@@ -103,8 +109,8 @@ namespace Cosan
             //        void PrintModel();
             //        virtual bool Equals(CosanBO* other, float accuracy = 0.0);
             //        virtual CosanBO* Clone();
-            const std::string  GetSummaryMessageX() const {return SummaryMessageX;}
-            const std::string  GetSummaryMessageY() const {return SummaryMessageY;}
+            const std::string&  GetSummaryMessageX() const {return SummaryMessageX;}
+            const std::string&  GetSummaryMessageY() const {return SummaryMessageY;}
             std::unordered_map<gsl::index,gsl::index> & GetRawToNumIdx(){return _raw2numIdx;}
             std::unordered_map<gsl::index,gsl::index> & GetRawToCatIdx(){return _raw2catIdx;}
             std::vector<std::vector<gsl::index>>   GetIdxpinfX() const {return IdxpinfX;}
@@ -119,16 +125,20 @@ namespace Cosan
             bool GetcatY() const {return catY;}
             gsl::index GetrowsX()  {
                 rowsX=X.rows();
-                return rowsX;}
+                return rowsX;
+            }
             gsl::index GetrowsY()  {
                 rowsY=Y.rows();
-                return rowsY;}
+                return rowsY;
+            }
             gsl::index GetcolsX() {
                 colsX = X.cols();
-                return colsX;}
+                return colsX;
+            }
             gsl::index GetcolsY()  {
                 colsY = Y.cols();
-                return colsY;}
+                return colsY;
+            }
 
             std::vector<std::string>  GetsvaluesX()  const {return svaluesX;}
             std::vector<std::string>  GetsvaluesY()  const {return svaluesY;}
@@ -336,21 +346,17 @@ namespace Cosan
     class CosanData: public CosanRawData<NumericType>{
         public:
             CosanData()=default;
-            CosanData(CosanMatrix<NumericType>  inputX):CosanRawData<NumericType>(){
+            CosanData(const CosanMatrix<NumericType> & inputX):CosanRawData<NumericType>(){
                 static_assert(std::is_arithmetic<NumericType>::value, "NumericType must be numeric");
                 this->X = inputX;
             }
-            CosanData(CosanMatrix<NumericType>  inputX,CosanMatrix<NumericType> inputY):CosanRawData<NumericType>(){
+            CosanData(const CosanMatrix<NumericType>&  inputX,const CosanMatrix<NumericType>& inputY):CosanRawData<NumericType>(){
                 static_assert(std::is_arithmetic<NumericType>::value, "NumericType must be numeric");
                 this->X = inputX;
                 this->Y = inputY;}
 
-//            CosanMatrix<NumericType>  GetInput() {return X;}
-//            CosanMatrix<NumericType> GetTarget() const{return Y;}
             virtual const std::string  GetName() const {return "Processed Data Object.";}
         private:
-//            CosanMatrix<NumericType> X;
-//            CosanMatrix<NumericType> Y;
     };
 }
 

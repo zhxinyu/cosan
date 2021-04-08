@@ -21,28 +21,21 @@ namespace Cosan{
                 Init();
                 MBias=Bias;
             }
-//            CosanLinearModel(bool Bias): CosanModel(){
-//                Init();
-//                MBias=Bias;
-//            };
-
-    //        CosanLinearModel(CosanLinearModel* Model);
-
         //  Coefficients
             void SetBias(const bool NewBias){MBias = NewBias;}
-            virtual void SetBeta(const CosanMatrix<NumericType>& InitBeta){MBeta=InitBeta;}
+            virtual void SetBeta(CosanMatrix<NumericType> InitBeta){MBeta=InitBeta;}
 
-            CosanMatrix<NumericType>& GetBeta() {return MBeta;}
+            const CosanMatrix<NumericType>& GetBeta() const {return MBeta;}
             bool GetBias() const {return MBias;}
-
-
     //        virtual void SetFeatures(InputFeatures* X){MInputX=X;}
 
-            virtual void fit( CosanMatrix<NumericType>& X ,const CosanMatrix<NumericType>& Y)=0;
-            virtual CosanMatrix<NumericType> predict(const CosanMatrix<NumericType>& X )=0;//fixed later
+//            template<class T,
+//                     std::enable_if_t<std::is_same_v<std::decay_t<T>,std::vector<NumericType>>,bool> =true>
+//            virtual void fit( T && X , CosanMatrix<NumericType>& Y){}
+
+            virtual CosanMatrix<NumericType> predict(const CosanMatrix<NumericType>& X )=0;
         //  Utils
             virtual const std::string  GetName() const {return "LinearModel";}
-
             protected:
                 CosanMatrix<NumericType> MBeta;
                 bool MBias;
@@ -50,8 +43,6 @@ namespace Cosan{
                 void Init(){
             }
         };
-
-
 
 }
 

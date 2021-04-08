@@ -11,6 +11,9 @@
 #include <cosan/utils/utils.h>
 namespace Cosan
 {
+    template <class T, class U>
+    concept Derived = std::is_base_of<U, T>::value;
+
     template<typename NumericType,
             typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type
     >

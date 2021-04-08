@@ -15,15 +15,25 @@ namespace Cosan{
             PrincipalComponentAnalysis()=delete;
             PrincipalComponentAnalysis(CosanRawData<NumericType>& RD,gsl::index ncom = 3):Preprocessor<NumericType>(){
                 ncom = std::min(ncom,RD.GetcolsX());
+                this->fit(RD.GetInput(),ncom);
+            }
+            PrincipalComponentAnalysis(CosanData<NumericType>& RD,gsl::index ncom = 3):Preprocessor<NumericType>(){
+                ncom = std::min(ncom,RD.GetcolsX());
+                this->fit(RD.GetInput(),ncom);
+            }
+
+            PrincipalComponentAnalysis(const CosanMatrix<NumericType>& RD,gsl::index ncom = 3):Preprocessor<NumericType>(){
+                ncom = std::min(ncom,RD.cols());
                 this->fit(RD,ncom);
             }
-            CosanMatrix<NumericType> GetPC(){return PrincipalComponent;}
+
+
+            CosanMatrix<NumericType>& GetPC(){return PrincipalComponent;}
         private:
-            CosanMatrix<NumericType> PrincipalComponent;
-            void fit(CosanRawData<NumericType>& RD,gsl::index ncom){
+            CosanMatrix<NumericType> PrincipalComponent,FullComponent;
+            void fit(const CosanMatrix<NumericType>& X,gsl::index ncom){
                 fmt::print("*********************************\n");
                 fmt::print("Begin PCA on Input Data X. Select the first {:} principal components\n",ncom);
-                CosanMatrix<NumericType> X = RD.GetInput();
                 CosanMatrix<NumericType> centered = X.rowwise() - X.colwise().mean();
                 CosanMatrix<NumericType> cov = centered.adjoint() * centered;
 

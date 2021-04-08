@@ -19,7 +19,10 @@ namespace Cosan{
             CosanRidgeRegression(NumericType Lambda,bool Bias): CosanLinearRegression<NumericType>(Bias){
                 MLambda=Lambda;
             }
-            CosanRidgeRegression(CosanMatrix<NumericType>& X,const CosanMatrix<NumericType>& Y,
+            template<class T,
+                    std::enable_if_t<std::is_same_v<std::decay_t<T>,CosanMatrix<NumericType>>,bool> =true
+            >
+            CosanRidgeRegression(T&& X,const CosanMatrix<NumericType>& Y,
                                  NumericType Lambda,bool Bias): CosanLinearRegression<NumericType>(Bias){
                 MLambda=Lambda;
                 fit(X,Y);
@@ -32,8 +35,9 @@ namespace Cosan{
             EModelType GetModelType() override {return MdRidgeRegression;};
             const std::string  GetName()  const override{ return "Linear Ridge Regression";}
 
-
-            void fit(CosanMatrix<NumericType> X,const CosanMatrix<NumericType>& Y)  {
+            template<class T,
+                    std::enable_if_t<std::is_same_v<std::decay_t<T>,CosanMatrix<NumericType>>,bool > = true >
+            void fit(T && X,const CosanMatrix<NumericType>& Y)  {
                 CosanMatrix<NumericType> Identity = MLambda*CosanMatrix<NumericType>::Identity(X.cols(),X.cols());
                 if (this->MBias==true){
                     X.conservativeResize(X.rows(), X.cols()+1);

@@ -19,10 +19,14 @@ namespace Cosan
         Ouput: call .GetBestParams() to get the best hyperparameters combination.
             the choice of the hyper-parameter in paramGrid that forms the most accurate model
     */
-    template<typename NumericType,class Model,
-            class Metric, class Split,
-                    typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
-    class GridSearch: public Selection{
+
+
+    template<typename NumericType,
+             Derived<CosanModel> Model,
+             Derived<CosanMetric<NumericType>> Metric,
+             Derived<Splitter> Split,
+             typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    class GridSearch: public Search{
             public:
                 GridSearch() = delete;
 //                GridSearch(const std::variant<CosanRawData<NumericType>,CosanData<NumericType>> &CRD,
@@ -30,28 +34,147 @@ namespace Cosan
 //                           Metric & metric,
 //                           Split & split,
 //                           const std::vector<std::variant<NumericType,std::vector<NumericType>>> & paramGrid): Selection() {
-            GridSearch(  CosanData<NumericType> &CRD,
-                       Model & estimator,
-                       Metric & metric,
-                       Split & split,
-                       const std::vector<NumericType> & paramGrid): Selection() {
-                    NumericType minError = std::numeric_limits<NumericType>::infinity();
-                    NumericType currError;
-                    decltype(bestParam) currParam;
-                    for (gsl::index i = 0; i < paramGrid.size(); ++i){
-                        currParam = paramGrid[i];
-                        estimator.SetParams(paramGrid[i]);
-                        currError = crossValidation(CRD, estimator, metric, split);
-                        if (currError < minError)
-                        {
-                            minError = currError;
-                            bestParam = currParam;
+                GridSearch(  CosanData<NumericType> &CRD,
+                           Model & estimator,
+                           Metric & metric,
+                           Split & split,
+                           const std::vector<NumericType> & paramGrid): Search() {
+                        NumericType minError = std::numeric_limits<NumericType>::infinity();
+                        NumericType currError;
+                        decltype(bestParam) currParam;
+                        for (gsl::index i = 0; i < paramGrid.size(); ++i){
+                            currParam = paramGrid[i];
+                            estimator.SetParams(paramGrid[i]);
+                            currError = crossValidation(CRD, estimator, metric, split);
+                            if (currError < minError)
+                            {
+                                minError = currError;
+                                bestParam = currParam;
+                            }
                         }
                     }
-                }
                 auto GetBestParams(){return bestParam;}
 
             private:
                 NumericType bestParam;};
+
+    template<typename NumericType,
+            Derived<CosanModel> Model,
+            Derived<CosanMetric<NumericType>> Metric,
+            Derived<Splitter> Split,
+            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    class GridSearchParallel: public Search{
+    public:
+        GridSearchParallel() = delete;
+//                GridSearch(const std::variant<CosanRawData<NumericType>,CosanData<NumericType>> &CRD,
+//                           Model & estimator,
+//                           Metric & metric,
+//                           Split & split,
+//                           const std::vector<std::variant<NumericType,std::vector<NumericType>>> & paramGrid): Selection() {
+        GridSearchParallel(  CosanData<NumericType> &CRD,
+                     Model & estimator,
+                     Metric & metric,
+                     Split & split,
+                     const std::vector<NumericType> & paramGrid, int nthreads = -1): Search() {
+            NumericType minError = std::numeric_limits<NumericType>::infinity();
+            std::vector<NumericType> allError(paramGrid.size());
+            if (nthreads == -1){
+                omp_set_num_threads(omp_get_max_threads());
+            }
+            else{
+                omp_set_num_threads(nthreads);
+            }
+            #pragma omp parallel for
+            for (gsl::index i = 0; i < paramGrid.size(); ++i){
+                estimator.SetParams(paramGrid[i]);
+                allError[i] = crossValidation(CRD, estimator, metric, split);
+            }
+            bestParam =paramGrid[std::distance(allError.begin(), std::min_element(allError.begin(), allError.end()))];
+        }
+        auto GetBestParams(){return bestParam;}
+
+    private:
+        NumericType bestParam;};
+
+
+    template<typename NumericType,
+            Derived<CosanModel> Model,
+            Derived<CosanMetric<NumericType>> Metric,
+            Derived<Splitter> Split,
+            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    class GridSearchMulti: public Search{
+    public:
+        GridSearchMulti() = delete;
+//                GridSearch(const std::variant<CosanRawData<NumericType>,CosanData<NumericType>> &CRD,
+//                           Model & estimator,
+//                           Metric & metric,
+//                           Split & split,
+//                           const std::vector<std::variant<NumericType,std::vector<NumericType>>> & paramGrid): Selection() {
+        GridSearchMulti(  CosanData<NumericType> &CRD,
+                     Model & estimator,
+                     Metric & metric,
+                     Split & split,
+                     const std::vector<std::vector<NumericType>> & paramGrid): Search() {
+            NumericType minError = std::numeric_limits<NumericType>::infinity();
+            NumericType currError;
+            decltype(bestParam) currParam;
+
+            for (gsl::index i = 0; i < paramGrid.size(); ++i){
+                currParam = paramGrid[i];
+                estimator.SetParams(paramGrid[i]);
+                currError = crossValidation(CRD, estimator, metric, split);
+                if (currError < minError)
+                {
+                    minError = currError;
+                    bestParam = currParam;
+                }
+            }
+       }
+        auto GetBestParams(){return bestParam;}
+
+    private:
+        std::vector<NumericType> bestParam;};
+
+    template<typename NumericType,
+            Derived<CosanModel> Model,
+            Derived<CosanMetric<NumericType>> Metric,
+            Derived<Splitter> Split,
+            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    class GridSearchMultiParallel: public Search{
+    public:
+        GridSearchMultiParallel() = delete;
+//                GridSearch(const std::variant<CosanRawData<NumericType>,CosanData<NumericType>> &CRD,
+//                           Model & estimator,
+//                           Metric & metric,
+//                           Split & split,
+//                           const std::vector<std::variant<NumericType,std::vector<NumericType>>> & paramGrid): Selection() {
+        GridSearchMultiParallel(  CosanData<NumericType> &CRD,
+                          Model & estimator,
+                          Metric & metric,
+                          Split & split,
+                          const std::vector<std::vector<NumericType>> & paramGrid,
+                          int nthreads = -1): Search() {
+            NumericType minError = std::numeric_limits<NumericType>::infinity();
+            std::vector<NumericType> allError(paramGrid.size());
+            if (nthreads == -1){
+                omp_set_num_threads(omp_get_max_threads());
+            }
+            else{
+                omp_set_num_threads(nthreads);
+            }
+            #pragma omp parallel for
+            for (gsl::index i = 0; i < paramGrid.size(); ++i){
+                estimator.SetParams(paramGrid[i]);
+                allError[i] = crossValidation(CRD, estimator, metric, split);
+            }
+            bestParam =paramGrid[std::distance(allError.begin(), std::min_element(allError.begin(), allError.end()))];
+
+
+        }
+        auto GetBestParams(){return bestParam;}
+
+    private:
+        std::vector<NumericType> bestParam;};
+
 }
 #endif

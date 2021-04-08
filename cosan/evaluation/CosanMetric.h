@@ -28,8 +28,6 @@ namespace Cosan
 		public:
         // Delete the default constructor.
             CosanMetric(): CosanBO(){}
-            // returns the error rate
-            virtual NumericType GetError(CosanMatrix<NumericType> yPredict, CosanMatrix<NumericType> yTrue)=0;
 			/*
 				Default constructor 
 			*/
@@ -37,10 +35,14 @@ namespace Cosan
 			{
                 setAttr(yPredict,yTrue);
 			};
+            // returns the error rate
+            virtual NumericType GetError(const CosanMatrix<NumericType>& yPredict,const  CosanMatrix<NumericType> & yTrue){
+                return 0;
+            };
             /*
                 Set the attributes, if use the default constructor
             */
-            void setAttr(CosanMatrix<NumericType> yPredict, CosanMatrix<NumericType> yTrue)
+            void setAttr(const CosanMatrix<NumericType> & yPredict, const CosanMatrix<NumericType> & yTrue)
             {
                 // check if the input matrices have the same size
                 if (!SameSize(yPredict, yTrue))
@@ -52,7 +54,7 @@ namespace Cosan
                 {
                     throw InvalidLabelShape;
                 }
-                GetError();
+                GetError(yPredict,yTrue);
             }
 
         protected:
@@ -107,8 +109,8 @@ namespace Cosan
 	{
         public:
 	        MeanAbsError():CosanMetric<NumericType>(){}
-            MeanAbsError(CosanMatrix<NumericType>& yPredict, CosanMatrix<NumericType>& yTrue): CosanMetric<NumericType>(yPredict, yTrue){}
-            NumericType GetError(CosanMatrix<NumericType> yPredict, CosanMatrix<NumericType> yTrue){
+            MeanAbsError(const CosanMatrix<NumericType>& yPredict, const CosanMatrix<NumericType>& yTrue): CosanMetric<NumericType>(yPredict, yTrue){}
+            NumericType GetError(const CosanMatrix<NumericType>& yPredict,const CosanMatrix<NumericType>&  yTrue) override {
                 this->error = (yPredict - yTrue).array().abs().sum()/yPredict.rows();
                 return this->error ;
             }
@@ -129,8 +131,8 @@ namespace Cosan
 	{
 	    public:
             MeanSquareError():CosanMetric<NumericType>(){}
-            MeanSquareError(CosanMatrix<NumericType>& yPredict, CosanMatrix<NumericType>& yTrue): CosanMetric<NumericType>(yPredict, yTrue){}
-            NumericType GetError(CosanMatrix<NumericType> yPredict, CosanMatrix<NumericType> yTrue){
+            MeanSquareError(const CosanMatrix<NumericType>& yPredict,const  CosanMatrix<NumericType>& yTrue): CosanMetric<NumericType>(yPredict, yTrue){}
+            NumericType GetError(const CosanMatrix<NumericType>& yPredict, const CosanMatrix<NumericType>& yTrue) override {
                 this->error =(yTrue - yPredict).squaredNorm()/yTrue.rows();
                 return this->error;
             }
@@ -152,8 +154,8 @@ namespace Cosan
 	{
         public:
             R2Score():CosanMetric<NumericType>(){}
-            R2Score(CosanMatrix<NumericType>& yPredict, CosanMatrix<NumericType>& yTrue): CosanMetric<NumericType>(yPredict, yTrue){}
-            NumericType GetError(CosanMatrix<NumericType> yPredict, CosanMatrix<NumericType> yTrue){
+            R2Score( const CosanMatrix<NumericType>& yPredict, const CosanMatrix<NumericType>& yTrue): CosanMetric<NumericType>(yPredict, yTrue){}
+            NumericType GetError(const CosanMatrix<NumericType>& yPredict, const CosanMatrix<NumericType>& yTrue) override {
     //			yTrueMean = Constant(yTrue.rows(), yTrue.cols(). yTrue.mean());
                 this->error = 1-(yTrue-yPredict).squaredNorm()/(yTrue.array()-yTrue.mean()).matrix().squaredNorm();
                 return this->error;
@@ -166,8 +168,8 @@ namespace Cosan
     {
         public:
             MaxError():CosanMetric<NumericType>(){}
-            MaxError(CosanMatrix<NumericType>& yPredict, CosanMatrix<NumericType>& yTrue): CosanMetric<NumericType>(yPredict, yTrue){}
-        NumericType GetError(CosanMatrix<NumericType> yPredict, CosanMatrix<NumericType> yTrue)
+            MaxError(const CosanMatrix<NumericType>& yPredict,const  CosanMatrix<NumericType>& yTrue): CosanMetric<NumericType>(yPredict, yTrue){}
+            NumericType GetError(const CosanMatrix<NumericType>& yPredict,const  CosanMatrix<NumericType>& yTrue) override
         {
 //			yTrueMean = Constant(yTrue.rows(), yTrue.cols(). yTrue.mean());
             this->error = (yTrue-yPredict).array().abs().maxCoeff();
@@ -180,23 +182,34 @@ namespace Cosan
 //    class LpNormError: public CosanMetric<NumericType>
 //    {
 //        public:
-//            LpNormError()=delete;
-//            LpNormError(gsl::index inputp ):CosanMetric<NumericType>(){ p = inputp;}
-//            LpNormError(CosanMatrix<NumericType>& yPredict, CosanMatrix<NumericType>& yTrue): CosanMetric<NumericType>(yPredict, yTrue){}
-//            NumericType GetError(CosanMatrix<NumericType>& yPredict, CosanMatrix<NumericType>& yTrue)
+//            LpNormError()=delete;s
+//            LpNormError(NumericType inputp ):CosanMetric<NumericType>(){ p = inputp;}
+//            LpNormError(const CosanMatrix<NumericType>& yPredict,const  CosanMatrix<NumericType>& yTrue): CosanMetric<NumericType>(yPredict, yTrue){}
+//            NumericType GetError(const CosanMatrix<NumericType>& yPredict,const CosanMatrix<NumericType>& yTrue) override
 //            {
-//                this->error = (yTrue-yPredict).rowwise().template lpNorm<this->p>();
+//                switch(p){
+//                    case (NumericType) 1:
+//                        this->error = (yTrue-yPredict).template lpNorm<1>();
+//                        break;
+//                    case (NumericType) 2:
+//                        this->error = (yTrue-yPredict).template lpNorm<2>();
+//                        break;
+//                    case std::numeric_limits<NumericType>::max():
+//                        this->error = (yTrue-yPredict).template lpNorm<Eigen::Infinity>();
+//                        break;
+//                    default:
+//                        this->error = std::pow((yTrue-yPredict).cwiseAbs().array().pow(p).sum(), 1.0/p);
+//                }
 //                return this->error;
 //            }
-//            gsl::index Getp(){return p;}
+//            NumericType Getp(){return p;}
 //        private:
-//            gsl::index p;
-//
+//            NumericType p;
 //    };
 
     template<typename NumericType,
             typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
-    NumericType getVMean(std::vector<NumericType>& v){
+    NumericType getVMean(const std::vector<NumericType>& v){
         return std::accumulate(v.begin(), v.end(), 0)/v.size();
 //        NumericType total = 0;
 //        int size = v.size();

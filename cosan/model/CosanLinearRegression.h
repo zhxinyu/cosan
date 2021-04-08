@@ -30,8 +30,11 @@ namespace Cosan
                 return PdUnivariateRegression;}
             virtual const std::string GetName()  const override {
                 return "Linear Regression/ Ordinary Least Square";}
-            void fit(CosanMatrix<NumericType>& X,const CosanMatrix<NumericType>& Y) override{
 
+            template<class T,
+                      std::enable_if_t<std::is_same_v<std::decay_t<T>,CosanMatrix<NumericType>>,bool> =true
+                              >
+            void fit(T&& X,const CosanMatrix<NumericType>& Y) {
                 if (this->MBias==true){
                     X.conservativeResize(X.rows(), X.cols()+1);
                     X.col(X.cols()-1) = CosanMatrix<NumericType>::Ones(X.rows(),1);
@@ -41,6 +44,16 @@ namespace Cosan
                     removeColumn(X,X.cols()-1);
                 }
             }
+//            void fit(CosanMatrix<NumericType>&& X,const CosanMatrix<NumericType>& Y) override{
+//                if (this->MBias==true){
+//                    X.conservativeResize(X.rows(), X.cols()+1);
+//                    X.col(X.cols()-1) = CosanMatrix<NumericType>::Ones(X.rows(),1);
+//                }
+//                this->MBeta = (X.transpose()*X).ldlt().solve(X.transpose()*Y);
+//                if (this->MBias==true){
+//                    removeColumn(X,X.cols()-1);
+//                }
+//            }
             virtual CosanMatrix<NumericType> predict(const CosanMatrix<NumericType>& X) override {
                 if (this->MBias==true){
 //                    std::vector<int> idx(X.cols()-1);

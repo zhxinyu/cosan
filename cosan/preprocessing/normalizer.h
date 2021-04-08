@@ -61,7 +61,7 @@ namespace Cosan {
         bool exist_zero;
         CosanColVector<NumericType> SampleNorm;
         std::set<int> plist = {1,2,std::numeric_limits<int>::max()};
-    };
+    }
 
 }
 

@@ -16,7 +16,8 @@ namespace Cosan{
         MdNone = 0,
         MdLinearRegression=1,
         MdRidgeRegression=2,
-        MdKernelRegression=3
+        MdPrincipalComponentRegression=3,
+        MdRidgePrincipalComponentRegression=4
     };
     enum ESolverType{
         SrAuto = 0,

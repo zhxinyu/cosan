@@ -20,7 +20,7 @@ concept Derived = std::is_base_of<U, T>::value;
 This is to restrict U to be the base of T.
 
 ## Module Structure
-TODO: Add the class hierarchy diagram
+<img src="class_hierarchy.jpg" alt="class hierarchy chart" width="800"/>
 
 ### Key Classes
 

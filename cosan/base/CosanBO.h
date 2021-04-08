@@ -9,10 +9,17 @@
 #include <gsl/gsl>
 #include <type_traits>
 #include <cosan/utils/utils.h>
+
+template<typename NumericType>
+concept Numeric = std::is_arithmetic<NumericType>::value ;
+template <class T, class U>
+concept Derived = std::is_base_of<U, T>::value;
+
 namespace Cosan
 {
-    template <class T, class U>
-    concept Derived = std::is_base_of<U, T>::value;
+
+
+
 
     template<typename NumericType,
             typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type

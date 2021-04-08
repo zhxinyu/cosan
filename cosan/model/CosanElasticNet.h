@@ -7,7 +7,9 @@
 #include <cosan/model/CosanLinearRegression.h>
 
 namespace Cosan{
-    class CosanElasticNet: public CosanLinearRegression {
+    template<typename NumericType,
+            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    class CosanElasticNet: public CosanLinearRegression<NumericType> {
 
     };
 }

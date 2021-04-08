@@ -5,7 +5,8 @@ var _cosan_model_8h =
       [ "MdNone", "_cosan_model_8h.html#a2e87a02a9e36d79ab7fd199821292effa1b89d9778bf7f08876ce02d48ec718a3", null ],
       [ "MdLinearRegression", "_cosan_model_8h.html#a2e87a02a9e36d79ab7fd199821292effa4e31fbcde2be3ed1cf82cac7df93cf0d", null ],
       [ "MdRidgeRegression", "_cosan_model_8h.html#a2e87a02a9e36d79ab7fd199821292effad2e56403bdf7bbbd138458fad2b33f9d", null ],
-      [ "MdKernelRegression", "_cosan_model_8h.html#a2e87a02a9e36d79ab7fd199821292effa2f1f0e7daf84d66d1b38d073e858cde8", null ]
+      [ "MdPrincipalComponentRegression", "_cosan_model_8h.html#a2e87a02a9e36d79ab7fd199821292effa4f4cb3b14b0ef4a42251ffeca2bc4266", null ],
+      [ "MdRidgePrincipalComponentRegression", "_cosan_model_8h.html#a2e87a02a9e36d79ab7fd199821292effaec8e59cd18b50be51273a577a5c04198", null ]
     ] ],
     [ "EProblemType", "_cosan_model_8h.html#ac4565f65322db2c53ef57bb2e6f3f883", [
       [ "PdNone", "_cosan_model_8h.html#ac4565f65322db2c53ef57bb2e6f3f883a95e80e947436c79a740f42ec236daab2", null ],

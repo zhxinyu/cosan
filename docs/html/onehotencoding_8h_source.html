@@ -104,20 +104,23 @@ $(document).ready(function(){initNavTree('onehotencoding_8h_source.html',''); in
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="preprocessor_8h.html">cosan/preprocessing/preprocessor.h</a>&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_cosan.html">Cosan</a>{</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_cosan_1_1_onehot_encoding.html">   11</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_cosan_1_1_onehot_encoding.html">OnehotEncoding</a>: <span class="keyword">public</span> <a class="code" href="class_cosan_1_1_preprocessor.html">Preprocessor</a>  {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    };</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif //COSAN_ONEHOTENCODING_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> <a class="code" href="class_numeric_type.html">NumericType</a>,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <span class="keyword">typename</span> = <span class="keyword">typename</span> std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,<a class="code" href="class_numeric_type.html">NumericType</a>&gt;::type&gt;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_cosan_1_1_onehot_encoding.html">   13</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_cosan_1_1_onehot_encoding.html">OnehotEncoding</a>: <span class="keyword">public</span> <a class="code" href="class_cosan_1_1_preprocessor.html">Preprocessor</a>&lt;NumericType&gt;  {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    };</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif //COSAN_ONEHOTENCODING_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespace_cosan_html"><div class="ttname"><a href="namespace_cosan.html">Cosan</a></div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00008">CosanBO.h:9</a></div></div>
-<div class="ttc" id="aclass_cosan_1_1_preprocessor_html"><div class="ttname"><a href="class_cosan_1_1_preprocessor.html">Cosan::Preprocessor</a></div><div class="ttdef"><b>Definition:</b> <a href="preprocessor_8h_source.html#l00009">preprocessor.h:9</a></div></div>
+<div class="ttc" id="anamespace_cosan_html"><div class="ttname"><a href="namespace_cosan.html">Cosan</a></div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00018">CosanBO.h:19</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_preprocessor_html"><div class="ttname"><a href="class_cosan_1_1_preprocessor.html">Cosan::Preprocessor</a></div><div class="ttdef"><b>Definition:</b> <a href="preprocessor_8h_source.html#l00010">preprocessor.h:10</a></div></div>
+<div class="ttc" id="aclass_numeric_type_html"><div class="ttname"><a href="class_numeric_type.html">NumericType</a></div></div>
 <div class="ttc" id="apreprocessor_8h_html"><div class="ttname"><a href="preprocessor_8h.html">preprocessor.h</a></div></div>
-<div class="ttc" id="aclass_cosan_1_1_onehot_encoding_html"><div class="ttname"><a href="class_cosan_1_1_onehot_encoding.html">Cosan::OnehotEncoding</a></div><div class="ttdef"><b>Definition:</b> <a href="onehotencoding_8h_source.html#l00011">onehotencoding.h:11</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_onehot_encoding_html"><div class="ttname"><a href="class_cosan_1_1_onehot_encoding.html">Cosan::OnehotEncoding</a></div><div class="ttdef"><b>Definition:</b> <a href="onehotencoding_8h_source.html#l00013">onehotencoding.h:13</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

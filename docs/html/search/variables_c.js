@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['p_518',['p',['../class_cosan_1_1_normalizer.html#a1785b71e41174c22b952ef9d0f397279',1,'Cosan::Normalizer']]],
-  ['plist_519',['plist',['../class_cosan_1_1_normalizer.html#a75d19930cd1450691f638d709fbeebc6',1,'Cosan::Normalizer']]],
-  ['principalcomponent_520',['PrincipalComponent',['../class_cosan_1_1_principal_component_analysis.html#a6d379ff1fc56ff6675572bc69f806598',1,'Cosan::PrincipalComponentAnalysis']]]
+  ['rowsx_586',['rowsX',['../class_cosan_1_1_cosan_raw_data.html#a7fd896584f5d618d9d3ba3eb5cf128d2',1,'Cosan::CosanRawData']]],
+  ['rowsy_587',['rowsY',['../class_cosan_1_1_cosan_raw_data.html#a594ad18720de18726c412e3184e5eb58',1,'Cosan::CosanRawData']]]
 ];

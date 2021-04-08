@@ -24,8 +24,9 @@ namespace Cosan
 //            return *this;
 //        }
 //
-    template<typename NumericType,
-             typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type> 
+//    template<typename NumericType,
+//             typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    template<Numeric NumericType>
     class CosanRawData: public CosanBO{
         public:
             CosanRawData():CosanBO(){}
@@ -341,8 +342,9 @@ namespace Cosan
 
             };
 
-    template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+//    template<typename NumericType,
+//            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    template<Numeric NumericType>
     class CosanData: public CosanRawData<NumericType>{
         public:
             CosanData()=default;

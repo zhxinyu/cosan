@@ -11,8 +11,7 @@ namespace Cosan{
 //    class Parameter;
 //    class Feature;
 //    class Response;
-    template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    template<Numeric NumericType>
     class CosanLinearModel: public CosanModel {
     //  Initialization
         public:

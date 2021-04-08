@@ -7,7 +7,7 @@
 #include <cosan/model/CosanLinearRegression.h>
 
 namespace Cosan{
-    template<typename NumericType =double,
+    template<typename NumericType,
             typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
     class CosanRidgeRegression: public CosanLinearRegression<NumericType>{
         public:

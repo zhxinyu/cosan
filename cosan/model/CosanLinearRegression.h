@@ -8,8 +8,9 @@
 #include <numeric>
 namespace Cosan
 {
-    template<typename NumericType= double,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+//    template<typename NumericType,
+//            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    template<Numeric NumericType>
     class CosanLinearRegression: public CosanLinearModel<NumericType> {
         public:
 //          Initialization

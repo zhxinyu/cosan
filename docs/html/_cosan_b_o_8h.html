@@ -93,12 +93,15 @@ $(document).ready(function(){initNavTree('_cosan_b_o_8h.html',''); initResizable
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">CosanBO.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;fmt/format.h&gt;</code><br />
 <code>#include &lt;gsl/gsl&gt;</code><br />
 <code>#include &lt;type_traits&gt;</code><br />
 <code>#include &lt;<a class="el" href="utils_2utils_8h_source.html">cosan/utils/utils.h</a>&gt;</code><br />
@@ -107,70 +110,79 @@ Include dependency graph for CosanBO.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="_cosan_b_o_8h__incl.png" border="0" usemap="#acosan_2base_2_cosan_b_o_8h" alt=""/></div>
 <map name="cosan_2base_2_cosan_b_o_8h" id="cosan_2base_2_cosan_b_o_8h">
-<area shape="rect" title=" " alt="" coords="56,5,217,32"/>
+<area shape="rect" title=" " alt="" coords="135,5,296,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,60,107"/>
-<area shape="rect" title=" " alt="" coords="81,155,141,181"/>
-<area shape="rect" title=" " alt="" coords="135,80,218,107"/>
-<area shape="rect" href="utils_2utils_8h.html" title=" " alt="" coords="243,80,367,107"/>
-<area shape="rect" title=" " alt="" coords="179,155,251,181"/>
-<area shape="rect" title=" " alt="" coords="275,155,334,181"/>
-<area shape="rect" title=" " alt="" coords="359,155,456,181"/>
+<area shape="rect" title=" " alt="" coords="85,80,178,107"/>
+<area shape="rect" title=" " alt="" coords="185,155,245,181"/>
+<area shape="rect" title=" " alt="" coords="253,80,335,107"/>
+<area shape="rect" href="utils_2utils_8h.html" title=" " alt="" coords="360,80,484,107"/>
+<area shape="rect" title=" " alt="" coords="270,155,342,181"/>
+<area shape="rect" title=" " alt="" coords="366,155,425,181"/>
+<area shape="rect" title=" " alt="" coords="449,155,547,181"/>
+<area shape="rect" title=" " alt="" coords="571,155,639,181"/>
+<area shape="rect" title=" " alt="" coords="663,155,728,181"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_cosan_b_o_8h__dep__incl.png" border="0" usemap="#acosan_2base_2_cosan_b_o_8hdep" alt=""/></div>
-<map name="cosan_2base_2_cosan_b_o_8hdep" id="acosan_2base_2_cosan_b_o_8hdep">
-<area shape="rect" title=" " alt="" coords="3677,5,3839,32"/>
-<area shape="rect" href="_cosan_data_8h.html" title=" " alt="" coords="2952,87,3119,114"/>
-<area shape="rect" href="preprocessor_8h.html" title=" " alt="" coords="1768,169,1911,211"/>
-<area shape="rect" href="gridsearch_8h.html" title=" " alt="" coords="3337,355,3525,382"/>
-<area shape="rect" href="randomgridcv_8h.html" title=" " alt="" coords="3587,177,3791,203"/>
-<area shape="rect" href="selection_8h.html" title=" " alt="" coords="4089,177,4269,203"/>
-<area shape="rect" href="traintestsplit_8h.html" title=" " alt="" coords="3815,177,4013,203"/>
-<area shape="rect" href="_cosan_data__copy_8h.html" title=" " alt="" coords="4140,80,4296,121"/>
-<area shape="rect" href="_cosan_model_8h.html" title=" " alt="" coords="297,87,481,114"/>
-<area shape="rect" href="_cosan_linear_model_8h.html" title=" " alt="" coords="279,177,498,203"/>
-<area shape="rect" href="_cosan__load__csv_8cpp.html" title=" " alt="" coords="1117,437,1247,479"/>
-<area shape="rect" href="_cosan__load__csv_test_8cpp.html" title=" " alt="" coords="1271,437,1402,479"/>
-<area shape="rect" href="_linear_regression_test_8cpp.html" title=" " alt="" coords="1427,437,1615,479"/>
-<area shape="rect" href="_ridge_regression_test_8cpp.html" title=" " alt="" coords="711,437,898,479"/>
-<area shape="rect" href="_normalizer_test_01copy_8cpp.html" title=" " alt="" coords="490,437,626,479"/>
-<area shape="rect" href="_normalizer_test_8cpp.html" title=" " alt="" coords="931,445,1092,471"/>
-<area shape="rect" href="_itemplate_test_8cpp.html" title=" " alt="" coords="1789,355,1941,382"/>
-<area shape="rect" href="_min_max_scaler_test_8cpp.html" title=" " alt="" coords="2623,348,2797,389"/>
-<area shape="rect" href="_p_c_a_test_8cpp.html" title=" " alt="" coords="2395,355,2599,382"/>
-<area shape="rect" href="_polynomial_features_test_01copy_8cpp.html" title=" " alt="" coords="1965,348,2156,389"/>
-<area shape="rect" href="_polynomial_features_test_8cpp.html" title=" " alt="" coords="2180,348,2371,389"/>
-<area shape="rect" href="_missing_values_test_8cpp.html" title=" " alt="" coords="2821,348,2993,389"/>
-<area shape="rect" href="_over_under_flow_test_8cpp.html" title=" " alt="" coords="3017,348,3208,389"/>
-<area shape="rect" href="_arg_check_8h.html" title=" " alt="" coords="3251,177,3409,203"/>
-<area shape="rect" href="_cosan_metric_8h.html" title=" " alt="" coords="3301,266,3476,293"/>
-<area shape="rect" href="_custom_transform_test_8cpp.html" title=" " alt="" coords="2706,169,2879,211"/>
-<area shape="rect" href="test_8cpp.html" title=" " alt="" coords="2903,177,2973,203"/>
-<area shape="rect" href="_cosan_linear_regression_8h.html" title=" " alt="" coords="705,266,955,293"/>
-<area shape="rect" href="_cosan_elastic_net_8h.html" title=" " alt="" coords="589,348,767,389"/>
-<area shape="rect" href="_cosan_lasso_8h.html" title=" " alt="" coords="279,355,463,382"/>
-<area shape="rect" href="_cosan_ridge_regression_8h.html" title=" " alt="" coords="893,355,1143,382"/>
-<area shape="rect" href="_cosan_lasso_8cpp.html" title=" " alt="" coords="267,445,465,471"/>
-<area shape="rect" href="customtransform_8h.html" title=" " alt="" coords="1097,259,1240,300"/>
-<area shape="rect" href="minmaxscaler_8h.html" title=" " alt="" coords="2259,259,2401,300"/>
-<area shape="rect" href="missingvalues_8h.html" title=" " alt="" coords="2425,259,2568,300"/>
-<area shape="rect" href="normalizer_8h.html" title=" " alt="" coords="1431,259,1573,300"/>
-<area shape="rect" href="onehotencoding_8h.html" title=" " alt="" coords="1264,259,1407,300"/>
-<area shape="rect" href="overunderflow_8h.html" title=" " alt="" coords="2644,259,2787,300"/>
-<area shape="rect" href="polynomialfeatures_8h.html" title=" " alt="" coords="1765,259,1911,300"/>
-<area shape="rect" href="principalcomponentanalysis_8h.html" title=" " alt="" coords="1986,259,2183,300"/>
-<area shape="rect" href="standard_scaler_8h.html" title=" " alt="" coords="1597,259,1740,300"/>
-<area shape="rect" href="preprocessor_2_normalizer_test_8cpp.html" title=" " alt="" coords="1371,348,1561,389"/>
-<area shape="rect" href="_standard_scaler_test_8cpp.html" title=" " alt="" coords="1586,348,1765,389"/>
-<area shape="rect" href="splitter_8h.html" title=" " alt="" coords="4096,266,4263,293"/>
-<area shape="rect" href="kfold_8h.html" title=" " alt="" coords="3997,355,4153,382"/>
-<area shape="rect" href="randomkfold_8h.html" title=" " alt="" coords="4183,355,4381,382"/>
-<area shape="rect" href="_k_fold_test_8cpp.html" title=" " alt="" coords="3979,445,4167,471"/>
-<area shape="rect" href="_random_k_fold_test_8cpp.html" title=" " alt="" coords="4191,437,4378,479"/>
-<area shape="rect" href="_cosan_model_8cpp.html" title=" " alt="" coords="5,177,204,203"/>
+<map name="cosan_2base_2_cosan_b_o_8hdep" id="cosan_2base_2_cosan_b_o_8hdep">
+<area shape="rect" title=" " alt="" coords="1930,5,2091,32"/>
+<area shape="rect" href="_cosan_data_8h.html" title=" " alt="" coords="2903,80,3070,107"/>
+<area shape="rect" href="preprocessor_8h.html" title=" " alt="" coords="1939,155,2082,196"/>
+<area shape="rect" href="_cosan_model_8h.html" title=" " alt="" coords="1340,80,1524,107"/>
+<area shape="rect" href="_cosan_metric_8h.html" title=" " alt="" coords="3647,251,3857,278"/>
+<area shape="rect" href="selection_8h.html" title=" " alt="" coords="3751,341,3931,367"/>
+<area shape="rect" href="_grid_search_test_8cpp.html" title=" " alt="" coords="3434,601,3603,643"/>
+<area shape="rect" href="_cosan_linear_model_8h.html" title=" " alt="" coords="873,162,1092,189"/>
+<area shape="rect" href="_cosan__load__csv_8cpp.html" title=" " alt="" coords="1232,423,1363,464"/>
+<area shape="rect" href="_cosan__load__csv_test_8cpp.html" title=" " alt="" coords="197,423,328,464"/>
+<area shape="rect" href="_linear_regression_test_8cpp.html" title=" " alt="" coords="1387,423,1575,464"/>
+<area shape="rect" href="_ridge_regression_test_8cpp.html" title=" " alt="" coords="624,423,811,464"/>
+<area shape="rect" href="_normalizer_test_01copy_8cpp.html" title=" " alt="" coords="885,423,1021,464"/>
+<area shape="rect" href="_normalizer_test_8cpp.html" title=" " alt="" coords="1046,430,1207,457"/>
+<area shape="rect" href="_itemplate_test_8cpp.html" title=" " alt="" coords="2051,341,2203,367"/>
+<area shape="rect" href="_min_max_scaler_test_8cpp.html" title=" " alt="" coords="2936,333,3109,375"/>
+<area shape="rect" href="_p_c_a_test_8cpp.html" title=" " alt="" coords="2278,341,2482,367"/>
+<area shape="rect" href="_polynomial_features_test_01copy_8cpp.html" title=" " alt="" coords="2506,333,2697,375"/>
+<area shape="rect" href="_polynomial_features_test_8cpp.html" title=" " alt="" coords="2721,333,2911,375"/>
+<area shape="rect" href="_missing_values_test_8cpp.html" title=" " alt="" coords="3134,333,3306,375"/>
+<area shape="rect" href="_over_under_flow_test_8cpp.html" title=" " alt="" coords="3330,333,3521,375"/>
+<area shape="rect" href="_arg_check_8h.html" title=" " alt="" coords="3781,162,3939,189"/>
+<area shape="rect" href="_cosan_metric_01copy_8h.html" title=" " alt="" coords="3932,244,4095,285"/>
+<area shape="rect" href="_custom_transform_test_8cpp.html" title=" " alt="" coords="3049,155,3223,196"/>
+<area shape="rect" href="template2_8cpp.html" title=" " alt="" coords="3247,162,3377,189"/>
+<area shape="rect" href="test_8cpp.html" title=" " alt="" coords="3401,162,3471,189"/>
+<area shape="rect" href="crossvalidation_8h.html" title=" " alt="" coords="3519,430,3734,457"/>
+<area shape="rect" href="gridsearch_8h.html" title=" " alt="" coords="3542,519,3730,546"/>
+<area shape="rect" href="randomgridsearch_8h.html" title=" " alt="" coords="3287,519,3518,546"/>
+<area shape="rect" href="kfold_8h.html" title=" " alt="" coords="4443,430,4599,457"/>
+<area shape="rect" href="randomkfold_8h.html" title=" " alt="" coords="3810,430,4009,457"/>
+<area shape="rect" href="timeseriessplit_8h.html" title=" " alt="" coords="4059,430,4271,457"/>
+<area shape="rect" href="_paralleltest_8cpp.html" title=" " alt="" coords="4016,519,4155,546"/>
+<area shape="rect" href="_k_fold_test_8cpp.html" title=" " alt="" coords="4643,519,4831,546"/>
+<area shape="rect" href="selection_2_paralleltest_8cpp.html" title=" " alt="" coords="4424,519,4619,546"/>
+<area shape="rect" href="_random_k_fold_test_8cpp.html" title=" " alt="" coords="3805,512,3992,553"/>
+<area shape="rect" href="_time_series_split_test_8cpp.html" title=" " alt="" coords="4229,512,4400,553"/>
+<area shape="rect" href="_all_models_8h.html" title=" " alt="" coords="5,430,173,457"/>
+<area shape="rect" href="_cosan_linear_regression_8h.html" title=" " alt="" coords="816,251,1067,278"/>
+<area shape="rect" href="_cosan_principal_component_regression_8h.html" title=" " alt="" coords="1421,333,1609,375"/>
+<area shape="rect" href="_cosan_elastic_net_8h.html" title=" " alt="" coords="329,333,508,375"/>
+<area shape="rect" href="_cosan_lasso_8h.html" title=" " alt="" coords="532,341,716,367"/>
+<area shape="rect" href="_cosan_ridge_regression_8h.html" title=" " alt="" coords="791,341,1041,367"/>
+<area shape="rect" href="_cosan_p_c_r_ridge_8h.html" title=" " alt="" coords="2134,430,2346,457"/>
+<area shape="rect" href="customtransform_8h.html" title=" " alt="" coords="1769,244,1911,285"/>
+<area shape="rect" href="minmaxscaler_8h.html" title=" " alt="" coords="2430,244,2573,285"/>
+<area shape="rect" href="missingvalues_8h.html" title=" " alt="" coords="2597,244,2739,285"/>
+<area shape="rect" href="normalizer_8h.html" title=" " alt="" coords="1269,244,1411,285"/>
+<area shape="rect" href="onehotencoding_8h.html" title=" " alt="" coords="1435,244,1578,285"/>
+<area shape="rect" href="overunderflow_8h.html" title=" " alt="" coords="2815,244,2958,285"/>
+<area shape="rect" href="polynomialfeatures_8h.html" title=" " alt="" coords="1936,244,2083,285"/>
+<area shape="rect" href="principalcomponentanalysis_8h.html" title=" " alt="" coords="2157,244,2355,285"/>
+<area shape="rect" href="standard_scaler_8h.html" title=" " alt="" coords="1602,244,1745,285"/>
+<area shape="rect" href="preprocessor_2_normalizer_test_8cpp.html" title=" " alt="" coords="1633,333,1823,375"/>
+<area shape="rect" href="_standard_scaler_test_8cpp.html" title=" " alt="" coords="1848,333,2027,375"/>
 </map>
 </div>
 </div>
@@ -186,18 +198,86 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespace_cosan"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_cosan.html">Cosan</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a27b3249db8d77bd236109bda307bc263"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_cosan_b_o_8h.html#a27b3249db8d77bd236109bda307bc263">FMT_HEADER_ONLY</a></td></tr>
+<tr class="separator:a27b3249db8d77bd236109bda307bc263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a75b716a4a4a14d8d6679a152c0a054b1"><td class="memTemplParams" colspan="2">template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </td></tr>
-<tr class="memitem:a75b716a4a4a14d8d6679a152c0a054b1"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a75b716a4a4a14d8d6679a152c0a054b1">Cosan::CosanMatrix</a> = Eigen::Matrix&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, Eigen::Dynamic, Eigen::Dynamic &gt;</td></tr>
-<tr class="separator:a75b716a4a4a14d8d6679a152c0a054b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab16c0eeeb31f616c25331418b611f08a"><td class="memTemplParams" colspan="2">template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </td></tr>
-<tr class="memitem:ab16c0eeeb31f616c25331418b611f08a"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#ab16c0eeeb31f616c25331418b611f08a">Cosan::CosanColVector</a> = Eigen::Matrix&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, Eigen::Dynamic, 1 &gt;</td></tr>
-<tr class="separator:ab16c0eeeb31f616c25331418b611f08a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a086156060ec06f02404563451d420df8"><td class="memTemplParams" colspan="2">template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </td></tr>
-<tr class="memitem:a086156060ec06f02404563451d420df8"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a086156060ec06f02404563451d420df8">Cosan::CosanRowVector</a> = Eigen::Matrix&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, 1, Eigen::Dynamic &gt;</td></tr>
-<tr class="separator:a086156060ec06f02404563451d420df8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2834817f72f8512e1eb8dec1ba41cf6d"><td class="memTemplParams" colspan="2">template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </td></tr>
+<tr class="memitem:a2834817f72f8512e1eb8dec1ba41cf6d"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">Cosan::CosanMatrix</a> = Eigen::Matrix&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, Eigen::Dynamic, Eigen::Dynamic &gt;</td></tr>
+<tr class="separator:a2834817f72f8512e1eb8dec1ba41cf6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20fc59e75fcf829c843b0d4efd4ffe23"><td class="memTemplParams" colspan="2">template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </td></tr>
+<tr class="memitem:a20fc59e75fcf829c843b0d4efd4ffe23"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a20fc59e75fcf829c843b0d4efd4ffe23">Cosan::CosanColVector</a> = Eigen::Matrix&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, Eigen::Dynamic, 1 &gt;</td></tr>
+<tr class="separator:a20fc59e75fcf829c843b0d4efd4ffe23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e5c02380f875dff3dd3b3952573f82f"><td class="memTemplParams" colspan="2">template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </td></tr>
+<tr class="memitem:a2e5c02380f875dff3dd3b3952573f82f"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a2e5c02380f875dff3dd3b3952573f82f">Cosan::CosanRowVector</a> = Eigen::Matrix&lt; <a class="el" href="class_numeric_type.html">NumericType</a>, 1, Eigen::Dynamic &gt;</td></tr>
+<tr class="separator:a2e5c02380f875dff3dd3b3952573f82f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a7e6d7bd19c16f4ea66b58035be347b23"><td class="memTemplParams" colspan="2">template&lt;typename NumericType &gt; </td></tr>
+<tr class="memitem:a7e6d7bd19c16f4ea66b58035be347b23"><td class="memTemplItemLeft" align="right" valign="top">concept&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_cosan_b_o_8h.html#a7e6d7bd19c16f4ea66b58035be347b23">Numeric</a> = std::is_arithmetic&lt;<a class="el" href="class_numeric_type.html">NumericType</a>&gt;::value</td></tr>
+<tr class="separator:a7e6d7bd19c16f4ea66b58035be347b23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0954b510a5a33ae5174f117f51a4d50e"><td class="memTemplParams" colspan="2">template&lt;class T , class U &gt; </td></tr>
+<tr class="memitem:a0954b510a5a33ae5174f117f51a4d50e"><td class="memTemplItemLeft" align="right" valign="top">concept&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_cosan_b_o_8h.html#a0954b510a5a33ae5174f117f51a4d50e">Derived</a> = std::is_base_of&lt;U, T&gt;::value</td></tr>
+<tr class="separator:a0954b510a5a33ae5174f117f51a4d50e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a27b3249db8d77bd236109bda307bc263"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27b3249db8d77bd236109bda307bc263">&#9670;&nbsp;</a></span>FMT_HEADER_ONLY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FMT_HEADER_ONLY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_cosan_b_o_8h_source.html#l00005">5</a> of file <a class="el" href="_cosan_b_o_8h_source.html">CosanBO.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a0954b510a5a33ae5174f117f51a4d50e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0954b510a5a33ae5174f117f51a4d50e">&#9670;&nbsp;</a></span>Derived</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class U &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">concept Derived = std::is_base_of&lt;U, T&gt;::value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_cosan_b_o_8h_source.html#l00016">16</a> of file <a class="el" href="_cosan_b_o_8h_source.html">CosanBO.h</a>.</p>
+
+</div>
+</div>
+<a id="a7e6d7bd19c16f4ea66b58035be347b23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e6d7bd19c16f4ea66b58035be347b23">&#9670;&nbsp;</a></span>Numeric</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumericType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">concept Numeric = std::is_arithmetic&lt;<a class="el" href="class_numeric_type.html">NumericType</a>&gt;::value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_cosan_b_o_8h_source.html#l00014">14</a> of file <a class="el" href="_cosan_b_o_8h_source.html">CosanBO.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

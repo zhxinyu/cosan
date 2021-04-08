@@ -1,6 +1,8 @@
 var annotated_dup =
 [
     [ "Cosan", "namespace_cosan.html", "namespace_cosan" ],
-    [ "exception", "classexception.html", null ],
-    [ "timeseriessplit", "classtimeseriessplit.html", null ]
+    [ "correlation", "classcorrelation.html", null ],
+    [ "evaluation", "classevaluation.html", null ],
+    [ "metric", "classmetric.html", null ],
+    [ "statistics", "classstatistics.html", null ]
 ];

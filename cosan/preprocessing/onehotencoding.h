@@ -8,7 +8,9 @@
 #include <cosan/preprocessing/preprocessor.h>
 
 namespace Cosan{
-    class OnehotEncoding: public Preprocessor  {
+    template<typename NumericType,
+            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    class OnehotEncoding: public Preprocessor<NumericType>  {
 
 
     };

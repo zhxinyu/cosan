@@ -9,7 +9,7 @@
 namespace Cosan{
     template<typename NumericType,
             typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
-    class CustomerTransform: public Preprocesso<NumericType>r  {
+    class CustomerTransform: public Preprocessor<NumericType>  {
         public:
             CustomerTransform()=delete;
             CustomerTransform(CosanRawData<NumericType>& RD,decltype(RD.GetType()) customTransform(decltype(RD.GetType())) ):Preprocessor<NumericType>() {

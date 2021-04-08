@@ -4,8 +4,9 @@
 #include <cosan/base/CosanBO.h>
 #include <cosan/data/CosanData.h>
 namespace Cosan {
-    template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+//    template<typename NumericType,
+//            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    template<Numeric NumericType>
     class Preprocessor: public CosanBO{
     public:
         Preprocessor():CosanBO() {};

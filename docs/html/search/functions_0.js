@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_5fload_5fcsv_376',['_load_csv',['../class_cosan_1_1_cosan_raw_data.html#a732884353f2bb5391fcfa112ab5f7751',1,'Cosan::CosanRawData::_load_csv(const std::string &amp;path, CosanMatrix&lt; NumericType &gt; &amp;X, std::vector&lt; std::vector&lt; gsl::index &gt;&gt; &amp;Idxpinf, std::vector&lt; std::vector&lt; gsl::index &gt;&gt; &amp;Idxminf, std::vector&lt; std::vector&lt; gsl::index &gt;&gt; &amp;Idxmissing, std::vector&lt; std::string &gt; &amp;svalues, std::set&lt; gsl::index &gt; &amp;colCat)'],['../class_cosan_1_1_cosan_raw_data.html#a5d502c68f1704166f02faf1f2e106106',1,'Cosan::CosanRawData::_load_csv(const std::string &amp;path, CosanMatrix &amp;X, std::vector&lt; std::vector&lt; gsl::index &gt;&gt; &amp;Idxpinf, std::vector&lt; std::vector&lt; gsl::index &gt;&gt; &amp;Idxminf, std::vector&lt; std::vector&lt; gsl::index &gt;&gt; &amp;Idxmissing, std::vector&lt; std::string &gt; &amp;svalues, std::set&lt; gsl::index &gt; &amp;colCat)']]]
+  ['_5fload_5fcsv_421',['_load_csv',['../class_cosan_1_1_cosan_raw_data.html#af1d24606c748857fbe9ae565a2e48c1d',1,'Cosan::CosanRawData']]]
 ];

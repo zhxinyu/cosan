@@ -6,9 +6,10 @@
 #define COSAN_COSANLASSO_H
 #include <cosan/model/CosanLinearRegression.h>
 namespace Cosan{
-    class CosanLasso: public CosanLinearRegression {
 
-    };
+    template<typename NumericType,
+            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    class CosanLasso: public CosanLinearRegression<NumericType> {};
 }
 
 #endif //COSAN_COSANLASSO_H

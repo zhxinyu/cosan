@@ -10,7 +10,7 @@
 #include <numeric>
 namespace Cosan
 {
-    template<typename NumericType= double,
+    template<typename NumericType,
             typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
     class CosanPCRRidge: public CosanPrincipalComponentRegression<NumericType>  {
         public:

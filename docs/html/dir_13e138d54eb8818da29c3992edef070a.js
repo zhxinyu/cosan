@@ -8,5 +8,7 @@ var dir_13e138d54eb8818da29c3992edef070a =
     [ "ItemplateTest.cpp", "_itemplate_test_8cpp.html", "_itemplate_test_8cpp" ],
     [ "NormalizerTest copy.cpp", "_normalizer_test_01copy_8cpp.html", "_normalizer_test_01copy_8cpp" ],
     [ "NormalizerTest.cpp", "_normalizer_test_8cpp.html", "_normalizer_test_8cpp" ],
+    [ "Paralleltest.cpp", "_paralleltest_8cpp.html", "_paralleltest_8cpp" ],
+    [ "template2.cpp", "template2_8cpp.html", "template2_8cpp" ],
     [ "templateTest.cpp", "template_test_8cpp.html", "template_test_8cpp" ]
 ];

@@ -14,9 +14,6 @@
 #include <cosan/selection/kfold.h>
 #include <cosan/selection/randomkfold.h>
 #include <cosan/selection/timeseriessplit.h>
-
-
-
 typedef double db;
 int main(){
 	int x = 5;
@@ -25,16 +22,31 @@ int main(){
 	// std::cout<<X_input.rows()<<std::endl;
 	// X_input.setZero();
 	std::cout<<X_input<<std::endl;	
-	Cosan::CosanMatrix<db> Y_input;	
+
+
 	constexpr gsl::index nrows = 10000;
 	constexpr gsl::index ncols = 5;
+    Cosan::CosanMatrix<NumericType> X_input
+    Cosan::CosanMatrix<NumericType> Y_input;
 	X_input.resize(nrows,ncols);
 	Y_input.resize(nrows,1);
-	// X_input = Eigen::Matrix<decltype(X_input)::Scalar,nrows,ncols>::Random();
+    X_input = Eigen::Matrix<decltype(X_input)::Scalar,nrows,ncols>::Random();
+    Y_input = Eigen::Matrix<decltype(X_input)::Scalar,nrows,1>::Random();
+    Cosan::CosanData<NumericType>  CD(X_input,Y_input);
+    Cosan::CosanPCRRidge<decltype(X_input)::Scalar> CRRwbias;
+    Cosan::MeanSquareError<decltype(X_input)::Scalar> mse;
+    NumericType a = 0.05;
+    std::vector<NumericType> v(10);
+    std::generate(v.begin(), v.end(), [n = 1, &a]() mutable { return n++ * a; });
+    Cosan::KFold kf(5);
+    Cosan::RandomGridSearch GDS(CD,CRRwbias,mse,kf,v);
+//
+//    Cosan::CosanLinearRegression<decltype(X_input)::Scalar> CRRwbias(true);
+//	// X_input = Eigen::Matrix<decltype(X_input)::Scalar,nrows,ncols>::Random();
 	// Y_input = Eigen::Matrix<decltype(X_input)::Scalar,nrows,1>::Random();
 	// std::cout<<X_input <<std::endl;
 	// std::cout<<Y_input <<std::endl;
-	// X_input = Eigen::Matrix<X_input::Scalr,X_input.rows(),X_input.cols()>::Random();	
+//	 X_input = Eigen::Matrix<X_input::Scalr,X_input.rows(),X_input.cols()>::Random();
 	Cosan::CosanData<db>  CRD(X_input,Y_input);
 	// Cosan::CosanData<db>  CRD(Eigen::Matrix<decltype(X_input)::Scalar,nrows,ncols>::Random()
 	// 							,Eigen::Matrix<decltype(X_input)::Scalar,nrows,1>::Random());
@@ -51,14 +63,10 @@ int main(){
 	// Cosan::R2Score<decltype(X_input)::Scalar> r2;
 	// Cosan::MaxError<decltype(X_input)::Scalar> me;
 
- //    db a = 0.05;
- //    std::vector<db> v(10);
- //    std::generate(v.begin(), v.end(), [n = 1, &a]() mutable { return n++ * a; });
- //    Cosan::RandomKFold kf(5);
  //    for (auto & each : v){
  //    	std::cout<<each<<std::endl;
  //    }
-
+//    auto a = Cosan::KFoldParallel(11).GetSplit();
  //    // KFoldParallel
  //    // TimeSeriesSplitParallel
  //    // TimeSeriesSplit

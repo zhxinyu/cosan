@@ -1,8 +1,9 @@
 var class_cosan_1_1_cosan_ridge_regression =
 [
-    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#aa12c2535075773e53a296c1636c06d9c", null ],
-    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#a723281d62c751685fc601a1e8299e57a", null ],
-    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#abef34c07b77b1575406b0fb961bdae19", null ],
+    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#abd2ab4febe669257acd6f99159a0f554", null ],
+    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#ac1727c15c1562c848a9f21326db1b4da", null ],
+    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#a55ae6a12fda4f344a4730be4e93829f6", null ],
+    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#a5bdc3de6a8c75fbb3c6eac68fa1432b5", null ],
     [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#a316363b64801562dde0216690e836370", null ],
     [ "fit", "class_cosan_1_1_cosan_ridge_regression.html#ae26ec8a69e040ba52a2aad921b34809f", null ],
     [ "GetModelType", "class_cosan_1_1_cosan_ridge_regression.html#ac47565793e8558a3eac2ad8ad4adca5d", null ],

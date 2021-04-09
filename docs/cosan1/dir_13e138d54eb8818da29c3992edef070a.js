@@ -7,9 +7,8 @@ var dir_13e138d54eb8818da29c3992edef070a =
     [ "selection", "dir_8b42ac76623c9e307ab5816ede028066.html", "dir_8b42ac76623c9e307ab5816ede028066" ],
     [ "tutorial_codeexamples", "dir_cfe8db870dfef5453eae7db34ed6d08a.html", "dir_cfe8db870dfef5453eae7db34ed6d08a" ],
     [ "ItemplateTest.cpp", "_itemplate_test_8cpp.html", "_itemplate_test_8cpp" ],
-    [ "NormalizerTest copy.cpp", "_normalizer_test_01copy_8cpp.html", "_normalizer_test_01copy_8cpp" ],
-    [ "NormalizerTest.cpp", "_normalizer_test_8cpp.html", "_normalizer_test_8cpp" ],
     [ "Paralleltest.cpp", "_paralleltest_8cpp.html", "_paralleltest_8cpp" ],
     [ "template2.cpp", "template2_8cpp.html", "template2_8cpp" ],
-    [ "templateTest.cpp", "template_test_8cpp.html", "template_test_8cpp" ]
+    [ "templateTest.cpp", "template_test_8cpp.html", "template_test_8cpp" ],
+    [ "test.cpp", "test_8cpp.html", "test_8cpp" ]
 ];

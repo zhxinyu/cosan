@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['pc_570',['PC',['../class_cosan_1_1_cosan_principal_component_regression.html#abc572006e850decbb2c70a2ca50014b8',1,'Cosan::CosanPrincipalComponentRegression']]]
+  ['rowsx_555',['rowsX',['../class_cosan_1_1_cosan_raw_data.html#a7fd896584f5d618d9d3ba3eb5cf128d2',1,'Cosan::CosanRawData']]],
+  ['rowsy_556',['rowsY',['../class_cosan_1_1_cosan_raw_data.html#a594ad18720de18726c412e3184e5eb58',1,'Cosan::CosanRawData']]]
 ];

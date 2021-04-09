@@ -14,9 +14,6 @@
 template<typename NumericType>
 concept Numeric = std::is_arithmetic<NumericType>::value ;
 
-//template<typename NumericType,
-//        typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
-
 template <class T, class U>
 concept Derived = std::is_base_of<U, T>::value;
 

@@ -19,22 +19,22 @@ namespace Cosan
 
         CosanPrincipalComponentRegression(): CosanLinearModel<NumericType>(false){
             __ncomp = 3;}
-        CosanPrincipalComponentRegression(gsl::index ncomp ,bool bias = false): CosanLinearModel<NumericType>(false){
+        CosanPrincipalComponentRegression(NumericType ncomp ,bool bias = false): CosanLinearModel<NumericType>(false){
             __ncomp = ncomp;}
-        CosanPrincipalComponentRegression(CosanRawData<NumericType>& RD,gsl::index ncomp ,bool bias = false): CosanLinearModel<NumericType>(Bias=false){
+        CosanPrincipalComponentRegression(CosanRawData<NumericType>& RD,NumericType ncomp ,bool bias = false): CosanLinearModel<NumericType>(bias=false){
                 __ncomp = ncomp;
                 fit(RD.GetInput(),RD.GetTarget());
         }
-        CosanPrincipalComponentRegression(CosanData<NumericType>& CD,gsl::index ncomp,bool bias = false ): CosanLinearModel<NumericType>(Bias=false){
+        CosanPrincipalComponentRegression(CosanData<NumericType>& CD,NumericType ncomp,bool bias = false ): CosanLinearModel<NumericType>(bias=false){
                 __ncomp = ncomp;
                 fit(CD.GetInput(),CD.GetTarget());
         }
 
         template<class T,
                 std::enable_if_t<std::is_same_v<std::decay_t<T>,CosanMatrix<NumericType>>,bool> = true >
-        CosanPrincipalComponentRegression(T&& X,const CosanMatrix<NumericType>& Y,gsl::index ncomp,bool bias = false): CosanLinearModel<NumericType>(false){
+        CosanPrincipalComponentRegression(T&& X,const CosanMatrix<NumericType>& Y,NumericType ncomp,bool bias = false): CosanLinearModel<NumericType>(false){
             __ncomp = ncomp;
-            PC = PrincipalComponentAnalysis(X,ncomp).GetPC();
+            PC = PrincipalComponentAnalysis(X,(gsl::index) ncomp).GetPC();
             DerivatedCovariate = X*PC;
             this->MBeta = (DerivatedCovariate.transpose()*DerivatedCovariate).ldlt().solve(DerivatedCovariate.transpose()*Y);
         }
@@ -61,8 +61,12 @@ namespace Cosan
             return X*PC*(this->MBeta);
         }
         CosanMatrix<NumericType> &GetPC() {return PC;}
+
+        void SetParams(NumericType ncomp) {__ncomp = ncomp; };
+        NumericType GetParams() {return __ncomp;}
+
     protected:
-        gsl::index __ncomp ;
+        NumericType __ncomp ;
         CosanMatrix<NumericType> PC;
         CosanMatrix<NumericType> DerivatedCovariate;
     };

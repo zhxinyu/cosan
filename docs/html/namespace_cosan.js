@@ -1,6 +1,6 @@
 var namespace_cosan =
 [
-    [ "Team member: Jiahe Chen (jc5348), Xinyu Zhang (xz2691), Zida Zhou (zz2791)", "index.html#autotoc_md61", null ],
+    [ "Team member: Jiahe Chen (jc5348), Xinyu Zhang (xz2691), Zida Zhou (zz2791)", "index.html#autotoc_md63", null ],
     [ "CosanBO", "class_cosan_1_1_cosan_b_o.html", "class_cosan_1_1_cosan_b_o" ],
     [ "CosanData", "class_cosan_1_1_cosan_data.html", "class_cosan_1_1_cosan_data" ],
     [ "CosanElasticNet", "class_cosan_1_1_cosan_elastic_net.html", null ],

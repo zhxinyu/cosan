@@ -1,12 +1,12 @@
-Welcome to the Tutorial! For a first contact with [Cosan](http://www.columbia.edu/~xz2691/cosan/), it is recommended to take a first look at the [quick start]() page that guides you to write and compile first program with [Cosan](http://www.columbia.edu/~xz2691/cosan/).
+Welcome to the Tutorial! For a first contact with Cosan, it is recommended to take a first look at the [Getting Started](./index.html) page that guides you to write and compile first program with [Cosan](http://www.columbia.edu/~xz2691/cosan/).
 
-Then the [reference pages]() gives you a complete description of the API in a compact format which helps recall the syntax of some particular feature, or to have a quick look at the API.
+Then the [reference pages](./annotated.html) gives you a complete description of the API in a compact format which helps recall the syntax of some particular feature, or to have a quick look at the API.
 
 The **main documentation** is organized into chapters covering data processing procedures in different stages. They are also composed of manual pages describing comprehensively different features and _reference_ pages to look up to the API documentation through the related [Cosan](http://www.columbia.edu/~xz2691/cosan/) classes.  
 
 # Tutorial
 
-This article will discuss in details on how to use [Cosan](http://www.columbia.edu/~xz2691/cosan/) as a tools for data analytics. It concludes the following three parts: 
+This article will discuss in details on how to use Cosan as a tools for data analytics. It concludes the following three parts: 
 
 <ol>
 <li>Library Overview</li>
@@ -15,7 +15,7 @@ This article will discuss in details on how to use [Cosan](http://www.columbia.e
 </ol>
 
 ## Library Overview
-[Cosan](http://www.columbia.edu/~xz2691/cosan/) aims to provides an end-to-end data mining and data analytics toolkits. The data processing procedures are composed of the following six parts:
+Cosan aims to provides an end-to-end data mining and data analytics toolkits. The data processing procedures are composed of the following six parts:
 <ul>
 <li>Data Reading</li>
 <li>Data Preprocessing</li>
@@ -39,11 +39,11 @@ __Evaluation:__ We provide several metric functions including \f$\ell_{\infty}\f
 
 ## Installation
 
-[Cosan](http://www.colum:bia.edu/~xz2691/cosan/) is a [header-only](https://en.wikipedia.org/wiki/Header-only#:~:text=In%20the%20context%20of%20the,in%20a%20header%20file%20form.) library such that full definitions of all functions, classes comprising the library are visible to the compiler in a header file form. In order to use [Cosan](http://www.columbia.edu/~xz2691/cosan/), all you need is to download and extract [Cosan](http://www.columbia.edu/~xz2691/cosan/) 's source code. One can check out the Cosan repository using [Git](https://git-scm.com/), use 
+Cosan is a [header-only](https://en.wikipedia.org/wiki/Header-only#:~:text=In%20the%20context%20of%20the,in%20a%20header%20file%20form.) library such that full definitions of all functions, classes comprising the library are visible to the compiler in a header file form. In order to use [Cosan](http://www.columbia.edu/~xz2691/cosan/), all you need is to download and extract [Cosan](http://www.columbia.edu/~xz2691/cosan/) 's source code. One can check out the Cosan repository using [Git](https://git-scm.com/), use 
 ```
 git clone https://github.com/gchenra/cosan.git
 ```  
-As a matter of fact, the header files in the [cosan](http://www.columbia.edu/~xz2691/cosan/namespace_cosan.html) subdirectory are the only files needed to compile programs using Cosan. The header files are the same for all platforms and it is not necessary to use CMake. 
+As a matter of fact, the header files in the Cosan subdirectory are the only files needed to compile programs using Cosan. The header files are the same for all platforms and it is not necessary to use CMake. 
 
 The library includes several external header-only library for full functionality. They are [fmt](https://fmt.dev/latest/index.html) ,[Eigen](http://eigen.tuxfamily.org/) ,[gsl](https://github.com/microsoft/GSL). They can be downloaded via
 ```
@@ -123,7 +123,7 @@ We accept both numerical and string data written in a `csv` file as well as data
 
 #### 1.a Read from csv file
 
-We accept data file in `csv` format where each data is of dimension \f$n\times p\f$ where `n` (the number of rows) is number of samples and `p` (the number of columns) denotes number of features. Each data entry is separated by "," and allows for positive/negative infinity (user-specific `NumericType` is `float`,`double` or `long double`), missing values (either emptry entry between two contiguous comma "," or NAN expression ) and non-number string. If user-specific `NumericType` is `float`,`double` or `long double`, acceptable numeric expressions also include hexadecimal and variants of decimal float-poing expression (see [this](https://en.cppreference.com/w/cpp/string/basic_string/stof) for more details). It will throw ``std::invalid_argument`` if the the entry read is not-a-number expression except this entry is of categorical type.
+We accept data file in `csv` format where each data is of dimension \f$n\times p\f$  where `n` (the number of rows) is number of samples and `p` (the number of columns) denotes number of features. Each data entry is separated by "," and allows for positive/negative infinity (user-specific `NumericType` is `float`,`double` or `long double`), missing values (either emptry entry between two contiguous comma "," or NAN expression ) and non-number string. If user-specific `NumericType` is `float`,`double` or `long double`, acceptable numeric expressions also include hexadecimal and variants of decimal float-poing expression (see [this](https://en.cppreference.com/w/cpp/string/basic_string/stof) for more details). It will throw ``std::invalid_argument`` if the the entry read is not-a-number expression except this entry is of categorical type.
 
 We determine each column's data type (either numeric or categorical) by the first row. We treat every entry as numeric if it is a number (whether it is ordinal or numerical) and treat every entry that does not start with a numeric as categorical (also called nominal data specifically). For those starting with a numeric but containing non-numeric character, ```std::invalid_argument``` will be thrown.
 
@@ -141,7 +141,7 @@ The repository includes some example datasets in `example_data` folder. For the 
 ```
 where the last column (as determined from the above discussion) is a categorical data. It contains a missing value at row 0 (index starting from 0) and col 2. For the rest of the tutorial, we use (row,col)=(0,2) to indicate entry position for simplicity. There are two positive/negative infinity at (1,2) and (2,2) respectively.
 
-An example code to read the csv file into a data container [CosanRawData](TBD):
+An example code to read the csv file into a data container `Cosan::CosanRawData`:
 
 ~~~~~~~~~~~~~~~{.cpp}
 #include <iostream>
@@ -168,9 +168,9 @@ To read two separate datasets, one can do
 Cosan::CosanRawData<NumericType> CRD(targetPath1,targetPath2);
 ~~~~~~~~~~~~~~~
 
-#### 1.b Read data from ```CosanMatrix<NumericType>```
+#### 1.b Read data from CosanMatrix<NumericType>
 
-One can also generate numeric-only data container [CosanData](TBD) by initialization `CosanMatrix<NumericType>` which is a wrapper for [Eigen]((http://eigen.tuxfamily.org/)) object, further tutorial for initialization can be found [here](https://eigen.tuxfamily.org/dox/group__TutorialAdvancedInitialization.html).
+One can also generate numeric-only data container `Cosan::CosanData` by initialization `CosanMatrix<NumericType>` which is a wrapper for [Eigen]((http://eigen.tuxfamily.org/)) object, further tutorial for initialization can be found [here](https://eigen.tuxfamily.org/dox/group__TutorialAdvancedInitialization.html).
 ~~~~~~~~~~~~~~~{.cpp}
  Cosan::CosanMatrix<NumericType> CM;
  CM.resize(nrows,ncols);
@@ -180,12 +180,12 @@ One can also generate numeric-only data container [CosanData](TBD) by initializa
  Cosan::CosanData<NumericType>  CD(CM);
 ~~~~~~~~~~~~~~~
 
-To read two separate ```CosanMatrix<NumericType>``` objects into [CosanData](TBD), one can do 
+To read two separate `CosanMatrix<NumericType>` objects into Cosan::CosanData, one can do 
 ~~~~~~~~~~~~~~~{.cpp}
 Cosan::CosanData<NumericType>  CD(CM1,CM2);
 ~~~~~~~~~~~~~~~
 
-#### 1.c Read data from ```std::vector<NumericType>```
+#### 1.c Read data from std::vector<NumericType>
 ~~~~~~~~~~~~~~~{.cpp}
 gsl::index nrows =2;
 std::vector<NumericType> inputX({1,2,3,4,5,6});
@@ -393,206 +393,187 @@ To initialize model object, one can do
 ~~~~~~~~~~~~~~~{.cpp}
 model(); // The default constructor where the model is without intercept. 
 model(bool bias);
-model(NumericType param, bool bias);//for model with only one hyper-parameter. Ridge regression and PCR are the cases.
-model(std::vector<NumericType> params, bool bias);//for model with more than one hyper-parameter. Each hyper-parameter is the enry of params. PCR with L2 square norm is the case. 
+model(NumericType param, bool bias);//for model with only one parameter. Ridge regression and PCR are the cases.
+model(std::vector<NumericType> params, bool bias);//for model with more than one parameter. Each parameter is the enry of params. PCR with L2 square norm is the case. 
 ~~~~~~~~~~~~~~~
 
 To initialize model object and run model fitting automatically, one can do 
 ~~~~~~~~~~~~~~~{.cpp}
 model(CosanRawData<NumericType> RD,NumericType param ,bool bias = false)
 model(CosanData<NumericType> CD,NumericType param ,bool bias = false)
-model(CosanRawData<NumericType> RD,NumericType param ,bool bias = false)
-(CosanMatrix<NumericType> X,CosanMatrix<NumericType> Y,NumericType param,bool bias = false)
+model(CosanMatrix<NumericType> X,CosanMatrix<NumericType> Y,NumericType param,bool bias = false)
 ~~~~~~~~~~~~~~~
-For model with more than 1 hyperparameter, one should replace `NumericType param` by `std::vector<NumericType> params`.
+For model with more than 1 parameter, one should replace `NumericType param` by `std::vector<NumericType> params`.
 
-To call fit function specificall, one can do 
+To call fit model in specific and use fitted model for prediction, one can do 
+~~~~~~~~~~~~~~~{.cpp}
+model.fit(CosanMatrix<NumericType> X,CosanMatrix<NumericType> Y)
+model.predict(CosanMatrix<NumericType> X)
+~~~~~~~~~~~~~~~
+
+To set new params and get current params, one can do
+~~~~~~~~~~~~~~~{.cpp}
+model.SetParams(NumericType param); //for model with more than 1 parameter, input should be std::vecotr<NumericType> params  
+model.GetParams();
+~~~~~~~~~~~~~~~
+
+To obtain the coefficient for the model (\f$\beta\f$), one can use 
+~~~~~~~~~~~~~~~{.cpp}
+model.GetBeta();
+~~~~~~~~~~~~~~~
 
 #### 4.a Ordinary least square (linear regression)
 ~~~~~~~~~~~~~~~{.cpp}
 #include <cosan/model/CosanLinearRegression.h>
-Cosan::CosanLinearRegression CLR(bias);
-//or 
-Cosan::CosanLinearRegression CLR(bias);
 ~~~~~~~~~~~~~~~
-and the output reads
-```
-*********************************
-Begin encoding categorical data !
-Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()
-*********************************
-Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.
-```
+
 #### 4.b Ordinary least square with L2-squared norm penalty (ridge regression)
 ~~~~~~~~~~~~~~~{.cpp}
-#include <cosan/preprocessing/encoder.h>
-Cosan::Encoder ED(CRD,true);//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    
+#include <cosan/model/CosanRidgeRegression.h>
 ~~~~~~~~~~~~~~~
-and the output reads
-```
-*********************************
-Begin encoding categorical data !
-Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()
-*********************************
-Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.
-```
+
 #### 4.c Principal component regression (PCR) 
 ~~~~~~~~~~~~~~~{.cpp}
-#include <cosan/preprocessing/encoder.h>
-Cosan::Encoder ED(CRD,true);//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    
+#include <cosan/model/CosanPrincipalComponentRegression.h>
 ~~~~~~~~~~~~~~~
-and the output reads
-```
-*********************************
-Begin encoding categorical data !
-Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()
-*********************************
-Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.
-```
+
 #### 4.d Principal component regressionw with \f$\ell_2\f$-squared norm penalty ( ridge PCR)
 ~~~~~~~~~~~~~~~{.cpp}
-#include <cosan/preprocessing/encoder.h>
-Cosan::Encoder ED(CRD,true);//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    
+#include <cosan/model/CosanPCRRidge.h>
 ~~~~~~~~~~~~~~~
-and the output reads
-```
-*********************************
-Begin encoding categorical data !
-Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()
-*********************************
-Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.
-```
+
 ### 5. Model Selection 
+
+Model selection module includes two main parts: splitter method and search method. Three splitter methods are included as well as the corresponding parallel-computing version: kfold, random kfold and timeseries kfold. Two search methods: grid search and random grid search.
+~~~~~~~~~~~~~~~{.cpp}
+Cosan::KFold
+Cosan::KFoldParallel
+Cosan::RandomKFold
+Cosan::RandomKFoldParallel
+Cosan::TimeSeriesSplit
+Cosan::TimeSeriesSplitParallel
+~~~~~~~~~~~~~~~
+To initialize splitter object, the following syntax can be used
+~~~~~~~~~~~~~~~{.cpp}
+splitter(gsl::index kfoldnumber);
+splitter(gsl::index nrows, gsl::index kfoldnumber) 
+~~~~~~~~~~~~~~~
+The above second constructor will generate a private member function split_batch which can be get accessed via GetSplit() fnuction.
+To call splitting function specifically, one should do 
+~~~~~~~~~~~~~~~{.cpp}
+splitter.SetSplit()
+~~~~~~~~~~~~~~~
+To call parallel version, one should call the corresponding class for parallel computing and the remainder is the same.
 
 #### 5.a k-fold cross-validation
 ~~~~~~~~~~~~~~~{.cpp}
-#include <cosan/preprocessing/encoder.h>
-Cosan::Encoder ED(CRD,true);//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    
+#include <cosan/selection/kfold.h>
 ~~~~~~~~~~~~~~~
-and the output reads
-```
-*********************************
-Begin encoding categorical data !
-Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()
-*********************************
-Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.
-```
 #### 5.b random k-fold cross-validation
 ~~~~~~~~~~~~~~~{.cpp}
-#include <cosan/preprocessing/encoder.h>
-Cosan::Encoder ED(CRD,true);//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    
+#include <cosan/selection/randomkfold.h>
 ~~~~~~~~~~~~~~~
-and the output reads
-```
-*********************************
-Begin encoding categorical data !
-Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()
-*********************************
-Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.
-```
 #### 5.c timeseries k-fold cross-validation
 ~~~~~~~~~~~~~~~{.cpp}
-#include <cosan/preprocessing/encoder.h>
-Cosan::Encoder ED(CRD,true);//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    
+#include <cosan/selection/timeseriessplit.h>
 ~~~~~~~~~~~~~~~
-and the output reads
-```
-*********************************
-Begin encoding categorical data !
-Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()
-*********************************
-Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.
-```
+One should initialize search method via 
+~~~~~~~~~~~~~~~{.cpp}
+Search(CosanData<NumericType> CRD, Model estimator,Metric & metric,Splitter & split, std::vector<NumericType> paramGrid)
+~~~~~~~~~~~~~~~
+where `Model` is an inherited class of `CosanModel` class, `Metric` is an inherited class of `CosanMetric` class (which will be discussed in the next section), Splitter is the aforementioned splitter class and `std::vector<NumericType> paramGrid` is the list of parameters to selected from.
+
+For multi-parameters version of search method, one should replace by [SearchName]+'Multi'. For instance,for `GridSearch`, one should call `GridSearchMulti` instead and replace `std::vector<NumericType> paramGrid` by `std::vector<std::vector<NumericType>> paramGrid`. For parallel computing version, one should append 'Parallel' as well. Additional input argument `int nthreads` (with default `-1`) is added to set the number of threads to be used. `-1` means uses all available threads. For instance, for `GridSearch` in both multi-parameters and parallel computing version, one should use `GridSearchMultiParallel`.    
+#### 5.d grid search
+~~~~~~~~~~~~~~~{.cpp}
+#include <cosan/selection/gridsearch.h>
+~~~~~~~~~~~~~~~
+
+#### 5.e random grid search
+~~~~~~~~~~~~~~~{.cpp}
+#include <cosan/selection/randomgridsearch.h>
+~~~~~~~~~~~~~~~
+
+The following snippet gives one concrete example for cross-validation process,
+~~~~~~~~~~~~~~~{.cpp}
+constexpr gsl::index nrows = 10000;
+constexpr gsl::index ncols = 5;
+Cosan::CosanMatrix<NumericType> X_input
+Cosan::CosanMatrix<NumericType> Y_input;    
+X_input.resize(nrows,ncols);
+Y_input.resize(nrows,1);
+X_input = Eigen::Matrix<decltype(X_input)::Scalar,nrows,ncols>::Random();
+Y_input = Eigen::Matrix<decltype(X_input)::Scalar,nrows,1>::Random();
+Cosan::CosanData<NumericType>  CD(X_input,Y_input);
+Cosan::CosanPCRRidge<decltype(X_input)::Scalar> CRRwbias;
+Cosan::MeanSquareError<decltype(X_input)::Scalar> mse;
+NumericType a = 0.05;
+std::vector<NumericType> v(10);
+std::generate(v.begin(), v.end(), [n = 1, &a]() mutable { return n++ * a; });
+Cosan::KFold kf(5);
+Cosan::RandomGridSearch GDS(CD,CRRwbias,mse,kf,v);
+~~~~~~~~~~~~~~~
+
 ### 6. Evaluation
 
-#### 6.a Maximum error
+#### 6.1 Metric Class
+Metric is critical for cross-validation as it provides a venue to evaluate the performance of model and the best parameters to be chosen is based on the metric values. Four metrics are implemented in our library `maximum error`, `mean absolute error`,`mean square error`, `coefficient of determination`. The class names are
+
 ~~~~~~~~~~~~~~~{.cpp}
-#include <cosan/preprocessing/encoder.h>
-Cosan::Encoder ED(CRD,true);//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    
+Cosan::MeanAbsError
+Cosan::MeanSquareError
+Cosan::R2Score
+Cosan::MaxError
 ~~~~~~~~~~~~~~~
-and the output reads
-```
-*********************************
-Begin encoding categorical data !
-Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()
-*********************************
-Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.
-```
-#### 6.b mean absolute error 
+
+To call each individual metric class and calculate the corresponding metric one can do
+Initialize metric object
 ~~~~~~~~~~~~~~~{.cpp}
-#include <cosan/preprocessing/encoder.h>
-Cosan::Encoder ED(CRD,true);//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    
+Metric();
+Metric(CosanMatrix<NumericType> yPredict,CosanMatrix<NumericType> yTrue);//will calculate error metric and store as a public member variable error. 
 ~~~~~~~~~~~~~~~
-and the output reads
-```
-*********************************
-Begin encoding categorical data !
-Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()
-*********************************
-Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.
-```
-#### 6.c mean square error
+To Calculate the error specifically, one should call 
 ~~~~~~~~~~~~~~~{.cpp}
-#include <cosan/preprocessing/encoder.h>
-Cosan::Encoder ED(CRD,true);//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    
+model.GetError(CosanMatrix<NumericType>yPredict,CosanMatrix<NumericType> yTrue);
 ~~~~~~~~~~~~~~~
-and the output reads
-```
-*********************************
-Begin encoding categorical data !
-Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()
-*********************************
-Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.
-```
-#### 6.d coefficient of determination
+
+All metric class is stored at `./cosan/evaluation/CosanMetric.h`. `#include <cosan/evaluation/CosanMetric.h>` should suffice to call metric class.
+
+__Note__: the order of input argument `yPredict` and `yTrue` matters for `Cosan::R2Score`
+
+#### 6.2 Basic statistics functions
+
+Those functions are defined in `./cosan/evaluation/statistics.h`. One can use the following snippet to calculate basic summary statistics. The calculation will also store the corresponding value in the public member variables `SampleCovariance`, `mean`,`variance`,`median`,`maxNum`,`minNum`.
 ~~~~~~~~~~~~~~~{.cpp}
-#include <cosan/preprocessing/encoder.h>
-Cosan::Encoder ED(CRD,true);//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    
+Cosan::SummaryStatistics().GetSampleCovariance(CosanMatrix<NumericType> X);
+Cosan::SummaryStatistics().GetMean(CosanMatrix<NumericType> X);
+Cosan::SummaryStatistics().GetVar(CosanMatrix<NumericType> X);
+Cosan::SummaryStatistics().GetMedian(CosanMatrix<NumericType> X);
+Cosan::SummaryStatistics().GetMax(CosanMatrix<NumericType> X);
+Cosan::SummaryStatistics().GetMin(CosanMatrix<NumericType> X);
 ~~~~~~~~~~~~~~~
-and the output reads
-```
-*********************************
-Begin encoding categorical data !
-Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()
-*********************************
-Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.
-```
-#### 6.e vector mean
+
+7. Useful matrix manipulation snippets
+
+Some useful matrix operation on `ConsanMatrix` 
+
+Generate all zero matrix of size `n` by `m`
 ~~~~~~~~~~~~~~~{.cpp}
-#include <cosan/preprocessing/encoder.h>
-Cosan::Encoder ED(CRD,true);//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    
+Cosan::CosanMatrix<NumericType>::Zero(n,m);
 ~~~~~~~~~~~~~~~
-and the output reads
-```
-*********************************
-Begin encoding categorical data !
-Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()
-*********************************
-Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.
-```
-#### 6.e vector variance
+Generate an identity matrix of size `n`
 ~~~~~~~~~~~~~~~{.cpp}
-#include <cosan/preprocessing/encoder.h>
-Cosan::Encoder ED(CRD,true);//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    
+Cosan::CosanMatrix<NumericType>::Identity(n,n);
 ~~~~~~~~~~~~~~~
-and the output reads
-```
-*********************************
-Begin encoding categorical data !
-Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()
-*********************************
-Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.
-```
-#### correlation matrix for p features
+
+Generate all one matrix of size `n` by `m`
 ~~~~~~~~~~~~~~~{.cpp}
-#include <cosan/preprocessing/encoder.h>
-Cosan::Encoder ED(CRD,true);//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    
+CosanMatrix<NumericType>::Ones(n,m);
 ~~~~~~~~~~~~~~~
-and the output reads
-```
-*********************************
-Begin encoding categorical data !
-Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()
-*********************************
-Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.
-```
+
+File `cosan/utils/utils.h` contains useful functions including `removeRow` and `removeColumn`. 
+To remove \f$k\f$th row from `CosanMatrix` X or to remove the \f$k\f$th column, one can do 
+~~~~~~~~~~~~~~~{.cpp}
+removeRow(X,k);
+removeColumn(X,k);
+~~~~~~~~~~~~~~~

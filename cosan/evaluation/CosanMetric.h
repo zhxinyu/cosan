@@ -17,50 +17,48 @@
 #include <cosan/utils/Exceptions.h>
 #include <cosan/data/CosanData.h>
 #include <cosan/evaluation/evaluation.h>
-namespace Cosan
-{
-	/*
-		Base class for metric function
-	*/
+namespace Cosan {
+    /*
+        Base class for metric function
+    */
 //    template<typename NumericType,
 //            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
     template<Numeric NumericType>
-	class CosanMetric: public Evaluation{
-		public:
+    class CosanMetric : public Evaluation {
+    public:
         // Delete the default constructor.
-            CosanMetric(): Evaluation(){}
-			/*
-				Default constructor 
-			*/
-			CosanMetric(const CosanMatrix<NumericType>& yPredict, const CosanMatrix<NumericType>& yTrue):Evaluation()
-			{
-                setAttr(yPredict,yTrue);
-			};
-            // returns the error rate
-            virtual NumericType GetError(const CosanMatrix<NumericType>& yPredict,const  CosanMatrix<NumericType> & yTrue){
-                return 0;
-            };
-            /*
-                Set the attributes, if use the default constructor
-            */
-            void setAttr(const CosanMatrix<NumericType> & yPredict, const CosanMatrix<NumericType> & yTrue)
-            {
-                // check if the input matrices have the same size
-                if (!SameSize(yPredict, yTrue))
-                {
-                    throw DiffSize;
-                }
-                // check the shape of the input
-                if (!LabelShape(yPredict))
-                {
-                    throw InvalidLabelShape;
-                }
-                GetError(yPredict,yTrue);
-            }
+        CosanMetric() : Evaluation() {}
 
-        protected:
-            NumericType error;
-            };
+        /*
+            Default constructor
+        */
+        CosanMetric(const CosanMatrix <NumericType> &yPredict, const CosanMatrix <NumericType> &yTrue) : Evaluation() {
+            setAttr(yPredict, yTrue);
+        };
+
+        // returns the error rate
+        virtual NumericType
+        GetError(const CosanMatrix <NumericType> &yPredict, const CosanMatrix <NumericType> &yTrue) {
+            return 0;
+        };
+
+        /*
+            Set the attributes, if use the default constructor
+        */
+        void setAttr(const CosanMatrix <NumericType> &yPredict, const CosanMatrix <NumericType> &yTrue) {
+            // check if the input matrices have the same size
+            if (!SameSize(yPredict, yTrue)) {
+                throw DiffSize;
+            }
+            // check the shape of the input
+            if (!LabelShape(yPredict)) {
+                throw InvalidLabelShape;
+            }
+            GetError(yPredict, yTrue);
+        }
+
+        NumericType error;
+    };
 
 
 //	/*
@@ -94,86 +92,97 @@ namespace Cosan
 //		}
 //	};
 
-	
-	/*
-	Mean absolute error
-	Parameters:
-		yTrue: see in error_num cooments
-		yPredict: see in error_num cooments
-	Output of GetError:
-		result: double; refer to 
-				https://scikit-learn.org/stable/modules/model_evaluation.html#mean-absolute-error
-	*/
-    template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
-	class MeanAbsError: public CosanMetric<NumericType>
-	{
-        public:
-	        MeanAbsError():CosanMetric<NumericType>(){}
-            MeanAbsError(const CosanMatrix<NumericType>& yPredict, const CosanMatrix<NumericType>& yTrue): CosanMetric<NumericType>(yPredict, yTrue){}
-            NumericType GetError(const CosanMatrix<NumericType>& yPredict,const CosanMatrix<NumericType>&  yTrue) override {
-                this->error = (yPredict - yTrue).array().abs().sum()/yPredict.rows();
-                return this->error ;
-            }
-	};
 
-	/*
-	Mean squared error
-	Input:
-		yTrue: see in error_num cooments
-		yPredict: see in error_num cooments
-	Output:
-		result: double; refer to
-				https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error
-	*/
+    /*
+    Mean absolute error
+    Parameters:
+        yTrue: see in error_num cooments
+        yPredict: see in error_num cooments
+    Output of GetError:
+        result: double; refer to
+                https://scikit-learn.org/stable/modules/model_evaluation.html#mean-absolute-error
+    */
     template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
-	class MeanSquareError: public CosanMetric<NumericType>
-	{
-	    public:
-            MeanSquareError():CosanMetric<NumericType>(){}
-            MeanSquareError(const CosanMatrix<NumericType>& yPredict,const  CosanMatrix<NumericType>& yTrue): CosanMetric<NumericType>(yPredict, yTrue){}
-            NumericType GetError(const CosanMatrix<NumericType>& yPredict, const CosanMatrix<NumericType>& yTrue) override {
-                this->error =(yTrue - yPredict).squaredNorm()/yTrue.rows();
-                return this->error;
-            }
-	};
-	
+            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value, NumericType>::type>
+    class MeanAbsError : public CosanMetric<NumericType> {
+    public:
+        MeanAbsError() : CosanMetric<NumericType>() {}
 
-	/*
-	R2 score, computes the coefficient of determination
-	Input:
-		yTrue: see in error_num cooments
-		yPredict: see in error_num cooments
-	Output:
-		result: double; refer to
-				https://scikit-learn.org/stable/modules/model_evaluation.html#r2-score-the-coefficient-of-determination
-	*/
+        MeanAbsError(const CosanMatrix <NumericType> &yPredict, const CosanMatrix <NumericType> &yTrue)
+                : CosanMetric<NumericType>(yPredict, yTrue) {}
+
+        NumericType
+        GetError(const CosanMatrix <NumericType> &yPredict, const CosanMatrix <NumericType> &yTrue) override {
+            this->error = (yPredict - yTrue).array().abs().sum() / yPredict.rows();
+            return this->error;
+        }
+    };
+
+    /*
+    Mean squared error
+    Input:
+        yTrue: see in error_num cooments
+        yPredict: see in error_num cooments
+    Output:
+        result: double; refer to
+                https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error
+    */
     template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
-	class R2Score: public CosanMetric<NumericType>
-	{
-        public:
-            R2Score():CosanMetric<NumericType>(){}
-            R2Score( const CosanMatrix<NumericType>& yPredict, const CosanMatrix<NumericType>& yTrue): CosanMetric<NumericType>(yPredict, yTrue){}
-            NumericType GetError(const CosanMatrix<NumericType>& yPredict, const CosanMatrix<NumericType>& yTrue) override {
-    //			yTrueMean = Constant(yTrue.rows(), yTrue.cols(). yTrue.mean());
-                this->error = 1-(yTrue-yPredict).squaredNorm()/(yTrue.array()-yTrue.mean()).matrix().squaredNorm();
-                return this->error;
-            }
-	};
+            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value, NumericType>::type>
+    class MeanSquareError : public CosanMetric<NumericType> {
+    public:
+        MeanSquareError() : CosanMetric<NumericType>() {}
+
+        MeanSquareError(const CosanMatrix <NumericType> &yPredict, const CosanMatrix <NumericType> &yTrue)
+                : CosanMetric<NumericType>(yPredict, yTrue) {}
+
+        NumericType
+        GetError(const CosanMatrix <NumericType> &yPredict, const CosanMatrix <NumericType> &yTrue) override {
+            this->error = (yTrue - yPredict).squaredNorm() / yTrue.rows();
+            return this->error;
+        }
+    };
+
+
+    /*
+    R2 score, computes the coefficient of determination
+    Input:
+        yTrue: see in error_num cooments
+        yPredict: see in error_num cooments
+    Output:
+        result: double; refer to
+                https://scikit-learn.org/stable/modules/model_evaluation.html#r2-score-the-coefficient-of-determination
+    */
+    template<typename NumericType,
+            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value, NumericType>::type>
+    class R2Score : public CosanMetric<NumericType> {
+    public:
+        R2Score() : CosanMetric<NumericType>() {}
+
+        R2Score(const CosanMatrix <NumericType> &yPredict, const CosanMatrix <NumericType> &yTrue)
+                : CosanMetric<NumericType>(yPredict, yTrue) {}
+
+        NumericType
+        GetError(const CosanMatrix <NumericType> &yPredict, const CosanMatrix <NumericType> &yTrue) override {
+            //			yTrueMean = Constant(yTrue.rows(), yTrue.cols(). yTrue.mean());
+            this->error = 1 - (yTrue - yPredict).squaredNorm() / (yTrue.array() - yTrue.mean()).matrix().squaredNorm();
+            return this->error;
+        }
+    };
 
     template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
-    class MaxError: public CosanMetric<NumericType>
-    {
-        public:
-            MaxError():CosanMetric<NumericType>(){}
-            MaxError(const CosanMatrix<NumericType>& yPredict,const  CosanMatrix<NumericType>& yTrue): CosanMetric<NumericType>(yPredict, yTrue){}
-            NumericType GetError(const CosanMatrix<NumericType>& yPredict,const  CosanMatrix<NumericType>& yTrue) override
-        {
+            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value, NumericType>::type>
+    class MaxError : public CosanMetric<NumericType> {
+    public:
+        MaxError() : CosanMetric<NumericType>() {}
+
+        MaxError(const CosanMatrix <NumericType> &yPredict, const CosanMatrix <NumericType> &yTrue)
+                : CosanMetric<NumericType>(yPredict, yTrue) {}
+
+        NumericType
+        GetError(const CosanMatrix <NumericType> &yPredict, const CosanMatrix <NumericType> &yTrue) override {
 //			yTrueMean = Constant(yTrue.rows(), yTrue.cols(). yTrue.mean());
-            this->error = (yTrue-yPredict).array().abs().maxCoeff();
+            this->error = (yTrue - yPredict).array().abs().maxCoeff();
             return this->error;
         }
     };
@@ -208,21 +217,6 @@ namespace Cosan
 //            NumericType p;
 //    };
 
-    template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
-    NumericType getVMean(const std::vector<NumericType>& v){
-        return std::accumulate(v.begin(), v.end(), 0)/v.size();
-//        NumericType total = 0;
-//        int size = v.size();
-//        std::accumulate(v.begin(), v.end(), 0)/v.size();
-//
-//        for (vector<double>::iterator it = v.begin(); it != v.end(); ++it)
-//        {
-//            total += *it;
-//        }
-//
-//        return total/size;
-    }
-}
 
+}
 #endif

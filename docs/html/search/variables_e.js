@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_600',['X',['../class_cosan_1_1_cosan_raw_data.html#a5c39ed5a092ed8b45df0a951cb971cd4',1,'Cosan::CosanRawData']]]
+  ['variance_585',['variance',['../class_cosan_1_1_summary_statistics.html#a75cbc1d9576d33f5d1990d96aef52f8e',1,'Cosan::SummaryStatistics']]]
 ];

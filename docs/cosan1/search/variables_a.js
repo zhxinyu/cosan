@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['numeric_569',['Numeric',['../_cosan_b_o_8h.html#a7e6d7bd19c16f4ea66b58035be347b23',1,'Numeric():&#160;CosanBO.h'],['../template2_8cpp.html#a7e6d7bd19c16f4ea66b58035be347b23',1,'Numeric():&#160;template2.cpp']]]
+  ['pc_554',['PC',['../class_cosan_1_1_cosan_principal_component_regression.html#abc572006e850decbb2c70a2ca50014b8',1,'Cosan::CosanPrincipalComponentRegression']]]
 ];

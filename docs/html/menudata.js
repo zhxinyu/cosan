@@ -37,7 +37,7 @@ var menudata={children:[
 {text:"Classes",url:"annotated.html",children:[
 {text:"Class List",url:"annotated.html"},
 {text:"Class Index",url:"classes.html"},
-{text:"Class Hierarchy",url:"hierarchy.html"},
+{text:"Class Hierarchy",url:"inherits.html"},
 {text:"Class Members",url:"functions.html",children:[
 {text:"All",url:"functions.html",children:[
 {text:"_",url:"functions.html#index__5F"},
@@ -58,6 +58,7 @@ var menudata={children:[
 {text:"s",url:"functions_s.html#index_s"},
 {text:"t",url:"functions_t.html#index_t"},
 {text:"u",url:"functions_u.html#index_u"},
+{text:"v",url:"functions_v.html#index_v"},
 {text:"x",url:"functions_x.html#index_x"},
 {text:"y",url:"functions_y.html#index_y"},
 {text:"~",url:"functions_~.html#index__7E"}]},
@@ -91,18 +92,15 @@ var menudata={children:[
 {text:"p",url:"functions_vars.html#index_p"},
 {text:"r",url:"functions_vars.html#index_r"},
 {text:"s",url:"functions_vars.html#index_s"},
+{text:"v",url:"functions_vars.html#index_v"},
 {text:"x",url:"functions_vars.html#index_x"},
 {text:"y",url:"functions_vars.html#index_y"}]}]}]},
 {text:"Files",url:"files.html",children:[
 {text:"File List",url:"files.html"},
 {text:"File Members",url:"globals.html",children:[
 {text:"All",url:"globals.html",children:[
-{text:"a",url:"globals.html#index_a"},
-{text:"c",url:"globals.html#index_c"},
 {text:"d",url:"globals.html#index_d"},
 {text:"f",url:"globals.html#index_f"},
-{text:"h",url:"globals.html#index_h"},
-{text:"i",url:"globals.html#index_i"},
 {text:"l",url:"globals.html#index_l"},
 {text:"m",url:"globals.html#index_m"},
 {text:"n",url:"globals.html#index_n"},
@@ -120,12 +118,5 @@ var menudata={children:[
 {text:"t",url:"globals_func.html#index_t"}]},
 {text:"Variables",url:"globals_vars.html"},
 {text:"Typedefs",url:"globals_type.html"},
-{text:"Macros",url:"globals_defs.html",children:[
-{text:"a",url:"globals_defs.html#index_a"},
-{text:"c",url:"globals_defs.html#index_c"},
-{text:"d",url:"globals_defs.html#index_d"},
-{text:"f",url:"globals_defs.html#index_f"},
-{text:"h",url:"globals_defs.html#index_h"},
-{text:"p",url:"globals_defs.html#index_p"},
-{text:"s",url:"globals_defs.html#index_s"}]}]}]},
+{text:"Macros",url:"globals_defs.html"}]}]},
 {text:"Tutorial",url:"md__tutorial__tutorial.html"}]}

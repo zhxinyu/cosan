@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: cosan/selection/randomgridsearch.h Source File</title>
+<title>Cosan: cosan/selection/randomgridsearch.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -33,7 +33,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Cosan
    &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Data Analytics Library</div>
@@ -129,7 +129,7 @@ $(document).ready(function(){initNavTree('randomgridsearch_8h_source.html',''); 
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">for</span> (gsl::index i = 0; i &lt; RandomChoice.size(); ++i){</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                currParam = paramGrid[i];</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                estimator.SetParams(paramGrid[i]);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                currError = <a class="code" href="namespace_cosan.html#a897204fb394a09a87e227ceb40b54310">crossValidation</a>(CRD, estimator, metric, split);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                currError = <a class="code" href="namespace_cosan.html#a556f807b75703a53f8748f9b18463a2d">crossValidation</a>(CRD, estimator, metric, split);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordflow">if</span> (currError &lt; minError)</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    minError = currError;</div>
@@ -173,7 +173,7 @@ $(document).ready(function(){initNavTree('randomgridsearch_8h_source.html',''); 
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">            #pragma omp parallel for</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">for</span> (gsl::index i = 0; i &lt; RandomChoice.size(); ++i){</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                estimator.SetParams(RandomChoice[i]);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                allError[i] = <a class="code" href="namespace_cosan.html#a897204fb394a09a87e227ceb40b54310">crossValidation</a>(CRD, estimator, metric, split);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                allError[i] = <a class="code" href="namespace_cosan.html#a556f807b75703a53f8748f9b18463a2d">crossValidation</a>(CRD, estimator, metric, split);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            }</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            bestParam =RandomChoice[std::distance(allError.begin(), std::min_element(allError.begin(), allError.end()))];</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
@@ -209,7 +209,7 @@ $(document).ready(function(){initNavTree('randomgridsearch_8h_source.html',''); 
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">for</span> (gsl::index i = 0; i &lt; RandomChoice.size(); ++i){</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                currParam = paramGrid[i];</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                estimator.SetParams(paramGrid[i]);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                currError = <a class="code" href="namespace_cosan.html#a897204fb394a09a87e227ceb40b54310">crossValidation</a>(CRD, estimator, metric, split);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                currError = <a class="code" href="namespace_cosan.html#a556f807b75703a53f8748f9b18463a2d">crossValidation</a>(CRD, estimator, metric, split);</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <span class="keywordflow">if</span> (currError &lt; minError)</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                {</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                    minError = currError;</div>
@@ -252,7 +252,7 @@ $(document).ready(function(){initNavTree('randomgridsearch_8h_source.html',''); 
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="preprocessor">            #pragma omp parallel for</span></div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="keywordflow">for</span> (gsl::index i = 0; i &lt; paramGrid.size(); ++i){</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                estimator.SetParams(paramGrid[i]);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                allError[i] = <a class="code" href="namespace_cosan.html#a897204fb394a09a87e227ceb40b54310">crossValidation</a>(CRD, estimator, metric, split);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                allError[i] = <a class="code" href="namespace_cosan.html#a556f807b75703a53f8748f9b18463a2d">crossValidation</a>(CRD, estimator, metric, split);</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            }</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            bestParam =paramGrid[std::distance(allError.begin(), std::min_element(allError.begin(), allError.end()))];</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        }</div>
@@ -266,17 +266,17 @@ $(document).ready(function(){initNavTree('randomgridsearch_8h_source.html',''); 
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aselection_8h_html"><div class="ttname"><a href="selection_8h.html">selection.h</a></div></div>
-<div class="ttc" id="anamespace_cosan_html"><div class="ttname"><a href="namespace_cosan.html">Cosan</a></div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00023">CosanBO.h:24</a></div></div>
+<div class="ttc" id="anamespace_cosan_html"><div class="ttname"><a href="namespace_cosan.html">Cosan</a></div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00020">CosanBO.h:21</a></div></div>
 <div class="ttc" id="aclass_cosan_1_1_random_grid_search_parallel_html_a112ae20fa9fea49f2943a92bf8bfa473"><div class="ttname"><a href="class_cosan_1_1_random_grid_search_parallel.html#a112ae20fa9fea49f2943a92bf8bfa473">Cosan::RandomGridSearchParallel::RandomGridSearchParallel</a></div><div class="ttdeci">RandomGridSearchParallel(CosanData&lt; NumericType &gt; &amp;CRD, Model &amp;estimator, Metric &amp;metric, Split &amp;split, const std::vector&lt; NumericType &gt; &amp;paramGrid, long unsigned int nsamples=100, int nthreads=-1)</div><div class="ttdef"><b>Definition:</b> <a href="randomgridsearch_8h_source.html#l00057">randomgridsearch.h:57</a></div></div>
 <div class="ttc" id="aclass_cosan_1_1_random_grid_search_html"><div class="ttname"><a href="class_cosan_1_1_random_grid_search.html">Cosan::RandomGridSearch</a></div><div class="ttdef"><b>Definition:</b> <a href="randomgridsearch_8h_source.html#l00016">randomgridsearch.h:16</a></div></div>
 <div class="ttc" id="aclass_cosan_1_1_random_grid_search_multi_parallel_html_ab1ca2976eff2663aa64beecaf3ce522f"><div class="ttname"><a href="class_cosan_1_1_random_grid_search_multi_parallel.html#ab1ca2976eff2663aa64beecaf3ce522f">Cosan::RandomGridSearchMultiParallel::RandomGridSearchMultiParallel</a></div><div class="ttdeci">RandomGridSearchMultiParallel(CosanData&lt; NumericType &gt; &amp;CRD, Model &amp;estimator, Metric &amp;metric, Split &amp;split, const std::vector&lt; std::vector&lt; NumericType &gt;&gt; &amp;paramGrid, long unsigned int nsamples=100, int nthreads=-1)</div><div class="ttdef"><b>Definition:</b> <a href="randomgridsearch_8h_source.html#l00137">randomgridsearch.h:137</a></div></div>
+<div class="ttc" id="anamespace_cosan_html_a556f807b75703a53f8748f9b18463a2d"><div class="ttname"><a href="namespace_cosan.html#a556f807b75703a53f8748f9b18463a2d">Cosan::crossValidation</a></div><div class="ttdeci">NumericType crossValidation(CosanData&lt; NumericType &gt; &amp;CRD, Model &amp;estimator, Metric &amp;metric, Split &amp;split)</div><div class="ttdef"><b>Definition:</b> <a href="crossvalidation_8h_source.html#l00032">crossvalidation.h:32</a></div></div>
 <div class="ttc" id="aclass_cosan_1_1_random_grid_search_multi_html_ac85dc0b3b1a85ab09ebee3c6856f9a1d"><div class="ttname"><a href="class_cosan_1_1_random_grid_search_multi.html#ac85dc0b3b1a85ab09ebee3c6856f9a1d">Cosan::RandomGridSearchMulti::RandomGridSearchMulti</a></div><div class="ttdeci">RandomGridSearchMulti()=delete</div></div>
 <div class="ttc" id="aclass_cosan_1_1_random_grid_search_multi_parallel_html"><div class="ttname"><a href="class_cosan_1_1_random_grid_search_multi_parallel.html">Cosan::RandomGridSearchMultiParallel</a></div><div class="ttdef"><b>Definition:</b> <a href="randomgridsearch_8h_source.html#l00134">randomgridsearch.h:134</a></div></div>
 <div class="ttc" id="aclass_cosan_1_1_random_grid_search_html_a09505a7de1338aa4d5224a5f8796d609"><div class="ttname"><a href="class_cosan_1_1_random_grid_search.html#a09505a7de1338aa4d5224a5f8796d609">Cosan::RandomGridSearch::GetBestParams</a></div><div class="ttdeci">auto GetBestParams()</div><div class="ttdef"><b>Definition:</b> <a href="randomgridsearch_8h_source.html#l00043">randomgridsearch.h:43</a></div></div>
 <div class="ttc" id="aclass_cosan_1_1_cosan_data_html"><div class="ttname"><a href="class_cosan_1_1_cosan_data.html">Cosan::CosanData</a></div><div class="ttdef"><b>Definition:</b> <a href="_cosan_data_8h_source.html#l00359">CosanData.h:359</a></div></div>
 <div class="ttc" id="aclass_cosan_1_1_random_grid_search_multi_parallel_html_a8ffae2b95b12c3954dc1452df95c5f8b"><div class="ttname"><a href="class_cosan_1_1_random_grid_search_multi_parallel.html#a8ffae2b95b12c3954dc1452df95c5f8b">Cosan::RandomGridSearchMultiParallel::RandomGridSearchMultiParallel</a></div><div class="ttdeci">RandomGridSearchMultiParallel()=delete</div></div>
 <div class="ttc" id="aclass_cosan_1_1_search_html"><div class="ttname"><a href="class_cosan_1_1_search.html">Cosan::Search</a></div><div class="ttdef"><b>Definition:</b> <a href="selection_8h_source.html#l00027">selection.h:27</a></div></div>
-<div class="ttc" id="anamespace_cosan_html_a897204fb394a09a87e227ceb40b54310"><div class="ttname"><a href="namespace_cosan.html#a897204fb394a09a87e227ceb40b54310">Cosan::crossValidation</a></div><div class="ttdeci">NumericType crossValidation(CosanData&lt; NumericType &gt; &amp;CRD, Model &amp;estimator, Metric &amp;metric, Split &amp;split, int nthread=-1)</div><div class="ttdef"><b>Definition:</b> <a href="crossvalidation_8h_source.html#l00028">crossvalidation.h:28</a></div></div>
 <div class="ttc" id="acrossvalidation_8h_html"><div class="ttname"><a href="crossvalidation_8h.html">crossvalidation.h</a></div></div>
 <div class="ttc" id="aclass_cosan_1_1_random_grid_search_multi_html_a583abbb32ce2d4b0ba8cd21298959331"><div class="ttname"><a href="class_cosan_1_1_random_grid_search_multi.html#a583abbb32ce2d4b0ba8cd21298959331">Cosan::RandomGridSearchMulti::GetBestParams</a></div><div class="ttdeci">auto GetBestParams()</div><div class="ttdef"><b>Definition:</b> <a href="randomgridsearch_8h_source.html#l00123">randomgridsearch.h:123</a></div></div>
 <div class="ttc" id="a_load_csv_test_8cpp_html_aa28a5c88ac75442a7ecebdd88be79a45"><div class="ttname"><a href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a></div><div class="ttdeci">double NumericType</div><div class="ttdef"><b>Definition:</b> <a href="_load_csv_test_8cpp_source.html#l00006">LoadCsvTest.cpp:6</a></div></div>

@@ -13,10 +13,10 @@
 //using namespace Eigen;
 //using namespace std;
 
-
+typedef double NumericType;
 int main() {
 
-	Cosan::CosanRawData CRD("./example_data/toy2/X_.csv","./example_data/toy2/Y_.csv");
+	Cosan::CosanRawData<NumericType> CRD("./example_data/toy2/X_.csv","./example_data/toy2/Y_.csv");
 //	std::cout<<CRD.GetSummaryMessageX()<<CRD.GetSummaryMessageY()<<std::endl;
 	Cosan::OverUnderFlow ouf(CRD);
 

@@ -25,30 +25,31 @@
 var NAVTREE =
 [
   [ "Cosan", "index.html", [
-    [ "Overview:", "index.html#autotoc_md62", null ],
-    [ "Getting started", "index.html#autotoc_md63", [
-      [ "How to install Cosan", "index.html#autotoc_md64", null ],
-      [ "How to compile and run Cosan", "index.html#autotoc_md65", null ],
-      [ "Hello World programs", "index.html#autotoc_md66", [
-        [ "Data input", "index.html#autotoc_md67", null ],
-        [ "Preprocessing", "index.html#autotoc_md68", null ],
-        [ "Linear Models", "index.html#autotoc_md69", null ],
-        [ "Model selection", "index.html#autotoc_md70", null ]
+    [ "Overview:", "index.html#autotoc_md64", null ],
+    [ "Getting started", "index.html#autotoc_md65", [
+      [ "How to install Cosan", "index.html#autotoc_md66", null ],
+      [ "How to compile and run Cosan", "index.html#autotoc_md67", null ],
+      [ "Hello World programs", "index.html#autotoc_md68", [
+        [ "Data input", "index.html#autotoc_md69", null ],
+        [ "Preprocessing", "index.html#autotoc_md70", null ],
+        [ "Linear Models", "index.html#autotoc_md71", null ],
+        [ "Model selection", "index.html#autotoc_md72", null ]
       ] ]
     ] ],
-    [ "Cosan Design Doc v1.0", "index.html#autotoc_md71", [
-      [ "Motivation:", "index.html#autotoc_md72", null ],
-      [ "Type Template", "index.html#autotoc_md73", null ],
-      [ "Module Structure", "index.html#autotoc_md74", [
-        [ "Key Classes", "index.html#autotoc_md75", null ],
-        [ "Base Classes", "index.html#autotoc_md79", null ],
-        [ "Utility Classes", "index.html#autotoc_md82", null ]
+    [ "Cosan Design Doc v1.0", "index.html#autotoc_md73", [
+      [ "Introduction", "index.html#autotoc_md74", null ],
+      [ "Motivation and domain knowledge background", "index.html#autotoc_md75", null ],
+      [ "Module Structure", "index.html#autotoc_md76", null ],
+      [ "Template& concept for class and type", "index.html#autotoc_md77", null ],
+      [ "Template for functions", "index.html#autotoc_md78", null ],
+      [ "constexpr", "index.html#autotoc_md79", [
+        [ "Key Classes", "index.html#autotoc_md80", null ],
+        [ "Base Classes", "index.html#autotoc_md84", null ],
+        [ "Utility Classes", "index.html#autotoc_md87", null ]
       ] ],
-      [ "Modern C++ feature used", "index.html#autotoc_md89", null ],
-      [ "Used Open Resource Libraries", "index.html#autotoc_md90", null ],
-      [ "Future work and extensibility", "index.html#autotoc_md91", [
-        [ "Other open source alternatives", "index.html#autotoc_md92", null ]
-      ] ]
+      [ "Additional Modern C++ features or API used", "index.html#autotoc_md94", null ],
+      [ "Used Open Resource Libraries", "index.html#autotoc_md95", null ],
+      [ "Future work and extensibility", "index.html#autotoc_md96", null ]
     ] ],
     [ "Design Documentation", "md_design__main_design_doc.html", null ],
     [ "Namespaces", "namespaces.html", [
@@ -88,9 +89,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"3_817_85_2_compiler_id_c_2_c_make_c_compiler_id_8c.html",
-"class_cosan_1_1_cosan_principal_component_regression.html#aaafaa31fb088933fe8272cf258df62d6",
-"crossvalidation_8h.html"
+"_all_models_8h.html",
+"class_cosan_1_1_cosan_raw_data.html#ac4a9b3f498a60061427cc0bee2ae3f8d",
+"fmt_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

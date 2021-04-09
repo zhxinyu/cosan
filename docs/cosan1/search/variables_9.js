@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['maxtraintime_566',['MaxTrainTime',['../class_cosan_1_1_cosan_model.html#ab0df64fbc6ac35bc4198338705435b76',1,'Cosan::CosanModel']]],
-  ['mbeta_567',['MBeta',['../class_cosan_1_1_cosan_linear_model.html#aface7c74f7f6a6feb03f01b333f9b326',1,'Cosan::CosanLinearModel']]],
-  ['mbias_568',['MBias',['../class_cosan_1_1_cosan_linear_model.html#aaf93baaadf8bd32a5326a063716a2cac',1,'Cosan::CosanLinearModel']]]
+  ['numeric_553',['Numeric',['../_cosan_b_o_8h.html#a7e6d7bd19c16f4ea66b58035be347b23',1,'Numeric():&#160;CosanBO.h'],['../template2_8cpp.html#a7e6d7bd19c16f4ea66b58035be347b23',1,'Numeric():&#160;template2.cpp']]]
 ];

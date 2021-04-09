@@ -11,13 +11,13 @@
 #define __UTILS_H_INCLUDED__
 
 namespace Cosan{
-        template <typename NumericType=std::string,
+    template <typename NumericType,
                   typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
     NumericType StringToNum(const std::string& arg, std::size_t* pos = 0) {
         static_assert(std::is_arithmetic<NumericType>::value, "NumericType must be numeric");
         if constexpr (std::is_same_v<NumericType, unsigned long>) {
             return std::stoul(arg,pos);
-        } 
+        }
         else if constexpr (std::is_same_v<NumericType, unsigned long long>){
             return std::stoull(arg,pos);
         }
@@ -38,7 +38,7 @@ namespace Cosan{
         }
         else{
             return std::stold(arg,pos);
-        }       
+        }
     }
 }
 

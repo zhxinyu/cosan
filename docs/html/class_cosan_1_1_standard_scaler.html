@@ -103,13 +103,23 @@ $(document).ready(function(){initNavTree('class_cosan_1_1_standard_scaler.html',
 <div class="dynheader">
 Inheritance diagram for Cosan::StandardScaler&lt; NumericType, typename &gt;:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_cosan_1_1_standard_scaler.png" usemap="#Cosan::StandardScaler_3C_20NumericType_2C_20typename_20_3E_map" alt=""/>
-  <map id="Cosan::StandardScaler_3C_20NumericType_2C_20typename_20_3E_map" name="Cosan::StandardScaler_3C_20NumericType_2C_20typename_20_3E_map">
-<area href="class_cosan_1_1_preprocessor.html" alt="Cosan::Preprocessor&lt; NumericType &gt;" shape="rect" coords="0,56,304,80"/>
-<area href="class_cosan_1_1_cosan_b_o.html" alt="Cosan::CosanBO" shape="rect" coords="0,0,304,24"/>
-  </map>
-</div></div>
+<div class="center"><img src="class_cosan_1_1_standard_scaler__inherit__graph.png" border="0" usemap="#a_cosan_1_1_standard_scaler_3_01_numeric_type_00_01typename_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="_cosan_1_1_standard_scaler_3_01_numeric_type_00_01typename_01_4_inherit__map" id="_cosan_1_1_standard_scaler_3_01_numeric_type_00_01typename_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,169,193,211"/>
+<area shape="rect" href="class_cosan_1_1_preprocessor.html" title=" " alt="" coords="27,80,172,121"/>
+<area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="37,5,162,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Cosan::StandardScaler&lt; NumericType, typename &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_cosan_1_1_standard_scaler__coll__graph.png" border="0" usemap="#a_cosan_1_1_standard_scaler_3_01_numeric_type_00_01typename_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="_cosan_1_1_standard_scaler_3_01_numeric_type_00_01typename_01_4_coll__map" id="_cosan_1_1_standard_scaler_3_01_numeric_type_00_01typename_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="5,169,193,211"/>
+<area shape="rect" href="class_cosan_1_1_preprocessor.html" title=" " alt="" coords="27,80,172,121"/>
+<area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="37,5,162,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -204,7 +214,19 @@ template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::i
 <div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                                                     :Preprocessor&lt;NumericType&gt;(){</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            this-&gt;<a class="code" href="class_cosan_1_1_standard_scaler.html#a464b57e45c96e72ef2bc990f85bf7905">fit</a>(RD);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div>
-</div><!-- fragment -->
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_cosan_1_1_standard_scaler_a13c4122ec690f5bc97f2528d50a72c6b_cgraph.png" border="0" usemap="#aclass_cosan_1_1_standard_scaler_a13c4122ec690f5bc97f2528d50a72c6b_cgraph" alt=""/></div>
+<map name="class_cosan_1_1_standard_scaler_a13c4122ec690f5bc97f2528d50a72c6b_cgraph" id="class_cosan_1_1_standard_scaler_a13c4122ec690f5bc97f2528d50a72c6b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,71,163,112"/>
+<area shape="rect" href="class_cosan_1_1_standard_scaler.html#a464b57e45c96e72ef2bc990f85bf7905" title=" " alt="" coords="211,78,387,105"/>
+<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html#a6d8c9d1b08c3c1a5430478e066f460f3" title=" " alt="" coords="435,5,596,47"/>
+<area shape="rect" href="class_cosan_1_1_standard_scaler.html#a4ab9f013a210bf257cf79a9f8b14df7b" title=" " alt="" coords="437,71,594,112"/>
+<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html#a7ecaa3f312d171fa77567870c1740ca1" title=" " alt="" coords="435,136,596,177"/>
+</map>
+</div>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -291,7 +313,28 @@ template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::i
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <a class="code" href="class_cosan_1_1_standard_scaler.html#a464b57e45c96e72ef2bc990f85bf7905">fit</a>(RD.GetInput());</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            RD.UpdateData(<a class="code" href="class_cosan_1_1_standard_scaler.html#a4ab9f013a210bf257cf79a9f8b14df7b">transform</a>(RD.GetInput()));</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
-</div><!-- fragment -->
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_cosan_1_1_standard_scaler_a464b57e45c96e72ef2bc990f85bf7905_cgraph.png" border="0" usemap="#aclass_cosan_1_1_standard_scaler_a464b57e45c96e72ef2bc990f85bf7905_cgraph" alt=""/></div>
+<map name="class_cosan_1_1_standard_scaler_a464b57e45c96e72ef2bc990f85bf7905_cgraph" id="class_cosan_1_1_standard_scaler_a464b57e45c96e72ef2bc990f85bf7905_cgraph">
+<area shape="rect" title=" " alt="" coords="5,78,181,105"/>
+<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html#a6d8c9d1b08c3c1a5430478e066f460f3" title=" " alt="" coords="229,5,391,47"/>
+<area shape="rect" href="class_cosan_1_1_standard_scaler.html#a4ab9f013a210bf257cf79a9f8b14df7b" title=" " alt="" coords="231,71,389,112"/>
+<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html#a7ecaa3f312d171fa77567870c1740ca1" title=" " alt="" coords="229,136,391,177"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_cosan_1_1_standard_scaler_a464b57e45c96e72ef2bc990f85bf7905_icgraph.png" border="0" usemap="#aclass_cosan_1_1_standard_scaler_a464b57e45c96e72ef2bc990f85bf7905_icgraph" alt=""/></div>
+<map name="class_cosan_1_1_standard_scaler_a464b57e45c96e72ef2bc990f85bf7905_icgraph" id="class_cosan_1_1_standard_scaler_a464b57e45c96e72ef2bc990f85bf7905_icgraph">
+<area shape="rect" title=" " alt="" coords="211,35,387,61"/>
+<area shape="rect" href="_standard_scaler_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="59,5,109,32"/>
+<area shape="rect" href="class_cosan_1_1_standard_scaler.html#a13c4122ec690f5bc97f2528d50a72c6b" title=" " alt="" coords="5,57,163,98"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a2951b0fff8bb81da10c39928106d9cbd"></a>
@@ -419,7 +462,18 @@ template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::i
 <div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                                                                       {</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">return</span> (X.rowwise() - this-&gt;mean).array().rowwise() / this-&gt;std.array();</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        };</div>
-</div><!-- fragment -->
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_cosan_1_1_standard_scaler_a4ab9f013a210bf257cf79a9f8b14df7b_icgraph.png" border="0" usemap="#aclass_cosan_1_1_standard_scaler_a4ab9f013a210bf257cf79a9f8b14df7b_icgraph" alt=""/></div>
+<map name="class_cosan_1_1_standard_scaler_a4ab9f013a210bf257cf79a9f8b14df7b_icgraph" id="class_cosan_1_1_standard_scaler_a4ab9f013a210bf257cf79a9f8b14df7b_icgraph">
+<area shape="rect" title=" " alt="" coords="435,27,592,69"/>
+<area shape="rect" href="class_cosan_1_1_standard_scaler.html#a464b57e45c96e72ef2bc990f85bf7905" title=" " alt="" coords="211,35,387,61"/>
+<area shape="rect" href="_standard_scaler_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="59,5,109,32"/>
+<area shape="rect" href="class_cosan_1_1_standard_scaler.html#a13c4122ec690f5bc97f2528d50a72c6b" title=" " alt="" coords="5,57,163,98"/>
+</map>
+</div>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

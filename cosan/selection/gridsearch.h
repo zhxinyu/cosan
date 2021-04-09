@@ -21,19 +21,20 @@ namespace Cosan
     */
 
 
-    template<typename NumericType,
-             Derived<CosanModel> Model,
-             Derived<CosanMetric<NumericType>> Metric,
-             Derived<Splitter> Split,
-             typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+//    template<typename NumericType,
+//             Derived<CosanModel> Model,
+//             Derived<CosanMetric<NumericType>> Metric,
+//             Derived<Splitter> Split,
+//             typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+
+
+    template<Numeric NumericType,
+            Derived<CosanModel> Model,
+            Derived<CosanMetric<NumericType>> Metric,
+            Derived<Splitter> Split>
     class GridSearch: public Search{
             public:
                 GridSearch() = delete;
-//                GridSearch(const std::variant<CosanRawData<NumericType>,CosanData<NumericType>> &CRD,
-//                           Model & estimator,
-//                           Metric & metric,
-//                           Split & split,
-//                           const std::vector<std::variant<NumericType,std::vector<NumericType>>> & paramGrid): Selection() {
                 GridSearch(  CosanData<NumericType> &CRD,
                            Model & estimator,
                            Metric & metric,
@@ -58,11 +59,15 @@ namespace Cosan
             private:
                 NumericType bestParam;};
 
-    template<typename NumericType,
+//    template<typename NumericType,
+//            Derived<CosanModel> Model,
+//            Derived<CosanMetric<NumericType>> Metric,
+//            Derived<Splitter> Split,
+//            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    template<Numeric NumericType,
             Derived<CosanModel> Model,
             Derived<CosanMetric<NumericType>> Metric,
-            Derived<Splitter> Split,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+            Derived<Splitter> Split>
     class GridSearchParallel: public Search{
     public:
         GridSearchParallel() = delete;
@@ -97,11 +102,15 @@ namespace Cosan
         NumericType bestParam;};
 
 
-    template<typename NumericType,
+//    template<typename NumericType,
+//            Derived<CosanModel> Model,
+//            Derived<CosanMetric<NumericType>> Metric,
+//            Derived<Splitter> Split,
+//            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    template<Numeric NumericType,
             Derived<CosanModel> Model,
             Derived<CosanMetric<NumericType>> Metric,
-            Derived<Splitter> Split,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+            Derived<Splitter> Split>
     class GridSearchMulti: public Search{
     public:
         GridSearchMulti() = delete;
@@ -135,11 +144,15 @@ namespace Cosan
     private:
         std::vector<NumericType> bestParam;};
 
-    template<typename NumericType,
+//    template<typename NumericType,
+//            Derived<CosanModel> Model,
+//            Derived<CosanMetric<NumericType>> Metric,
+//            Derived<Splitter> Split,
+//            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    template<Numeric NumericType,
             Derived<CosanModel> Model,
             Derived<CosanMetric<NumericType>> Metric,
-            Derived<Splitter> Split,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+            Derived<Splitter> Split>
     class GridSearchMultiParallel: public Search{
     public:
         GridSearchMultiParallel() = delete;
@@ -168,8 +181,6 @@ namespace Cosan
                 allError[i] = crossValidation(CRD, estimator, metric, split);
             }
             bestParam =paramGrid[std::distance(allError.begin(), std::min_element(allError.begin(), allError.end()))];
-
-
         }
         auto GetBestParams(){return bestParam;}
 

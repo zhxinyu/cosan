@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Tutorial</title>
+<title>Cosan: Tutorial</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -33,7 +33,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Cosan
    &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Data Analytics Library</div>
@@ -95,13 +95,13 @@ $(document).ready(function(){initNavTree('md__tutorial__tutorial.html',''); init
 <div class="title">Tutorial </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Welcome to the Tutorial! For a first contact with <a href="http://www.columbia.edu/~xz2691/cosan/">Cosan</a>, it is recommended to take a first look at the [quick start]() page that guides you to write and compile first program with <a href="http://www.columbia.edu/~xz2691/cosan/">Cosan</a>.</p>
-<p>Then the [reference pages]() gives you a complete description of the API in a compact format which helps recall the syntax of some particular feature, or to have a quick look at the API.</p>
+<div class="textblock"><p>Welcome to the Tutorial! For a first contact with <a class="el" href="namespace_cosan.html">Cosan</a>, it is recommended to take a first look at the <a href="./index.html">Getting Started</a> page that guides you to write and compile first program with <a href="http://www.columbia.edu/~xz2691/cosan/">Cosan</a>.</p>
+<p>Then the <a href="./annotated.html">reference pages</a> gives you a complete description of the API in a compact format which helps recall the syntax of some particular feature, or to have a quick look at the API.</p>
 <p>The <b>main documentation</b> is organized into chapters covering data processing procedures in different stages. They are also composed of manual pages describing comprehensively different features and <em>reference</em> pages to look up to the API documentation through the related <a href="http://www.columbia.edu/~xz2691/cosan/">Cosan</a> classes. <br  />
 </p>
-<h1><a class="anchor" id="autotoc_md7"></a>
+<h1><a class="anchor" id="autotoc_md97"></a>
 Tutorial</h1>
-<p>This article will discuss in details on how to use <a href="http://www.columbia.edu/~xz2691/cosan/">Cosan</a> as a tools for data analytics. It concludes the following three parts:</p>
+<p>This article will discuss in details on how to use <a class="el" href="namespace_cosan.html">Cosan</a> as a tools for data analytics. It concludes the following three parts:</p>
 <ol>
 <li>
 Library Overview </li>
@@ -110,9 +110,9 @@ Installation: It will show you how to "install" <a class="el" href="namespace_co
 <li>
 Instructions by code examples </li>
 </ol>
-<h2><a class="anchor" id="autotoc_md8"></a>
+<h2><a class="anchor" id="autotoc_md98"></a>
 Library Overview</h2>
-<p><a href="http://www.columbia.edu/~xz2691/cosan/">Cosan</a> aims to provides an end-to-end data mining and data analytics toolkits. The data processing procedures are composed of the following six parts: </p><ul>
+<p><a class="el" href="namespace_cosan.html">Cosan</a> aims to provides an end-to-end data mining and data analytics toolkits. The data processing procedures are composed of the following six parts: </p><ul>
 <li>
 Data Reading </li>
 <li>
@@ -132,10 +132,10 @@ Evaluation </li>
 <p><b>Model Fitting:</b> Linear models of various types are implemented in the library, including ordinary least square, ridge regression, principal component regression and principal component regression with \(\ell_2\)-norm regularization.</p>
 <p><b>Model Selection:</b> Cross-validation is used in the model selection. The choices of splitter includes plain k-fold, random k-fold and time-series k-fold. The corresponding parallel-computing version of splitters are also provided. A simple train-test split utility function is also provided. For selection procedure, both grid search and random grid search are implemented. Like splitter, we include the parallel-computing version as well.</p>
 <p><b>Evaluation:</b> We provide several metric functions including \(\ell_{\infty}\)-norm (maximum error), mean absolute error (MAE), mean square error (MSE) and coefficient of determination ( \(R^2\)). The correlation matrix as well as some basic summary statistics (e.g. mean,variance, median) functions are also included.</p>
-<h2><a class="anchor" id="autotoc_md9"></a>
+<h2><a class="anchor" id="autotoc_md99"></a>
 Installation</h2>
-<p><a href="http://www.colum:bia.edu/~xz2691/cosan/">Cosan</a> is a <a href="https://en.wikipedia.org/wiki/Header-only#:~:text=In%20the%20context%20of%20the,in%20a%20header%20file%20form.">header-only</a> library such that full definitions of all functions, classes comprising the library are visible to the compiler in a header file form. In order to use <a href="http://www.columbia.edu/~xz2691/cosan/">Cosan</a>, all you need is to download and extract <a href="http://www.columbia.edu/~xz2691/cosan/">Cosan</a> 's source code. One can check out the <a class="el" href="namespace_cosan.html">Cosan</a> repository using <a href="https://git-scm.com/">Git</a>, use </p><div class="fragment"><div class="line">git clone https://github.com/gchenra/cosan.git</div>
-</div><!-- fragment --><p>As a matter of fact, the header files in the <a href="http://www.columbia.edu/~xz2691/cosan/namespace_cosan.html">cosan</a> subdirectory are the only files needed to compile programs using <a class="el" href="namespace_cosan.html">Cosan</a>. The header files are the same for all platforms and it is not necessary to use CMake.</p>
+<p><a class="el" href="namespace_cosan.html">Cosan</a> is a <a href="https://en.wikipedia.org/wiki/Header-only#:~:text=In%20the%20context%20of%20the,in%20a%20header%20file%20form.">header-only</a> library such that full definitions of all functions, classes comprising the library are visible to the compiler in a header file form. In order to use <a href="http://www.columbia.edu/~xz2691/cosan/">Cosan</a>, all you need is to download and extract <a href="http://www.columbia.edu/~xz2691/cosan/">Cosan</a> 's source code. One can check out the <a class="el" href="namespace_cosan.html">Cosan</a> repository using <a href="https://git-scm.com/">Git</a>, use </p><div class="fragment"><div class="line">git clone https://github.com/gchenra/cosan.git</div>
+</div><!-- fragment --><p>As a matter of fact, the header files in the <a class="el" href="namespace_cosan.html">Cosan</a> subdirectory are the only files needed to compile programs using <a class="el" href="namespace_cosan.html">Cosan</a>. The header files are the same for all platforms and it is not necessary to use CMake.</p>
 <p>The library includes several external header-only library for full functionality. They are <a href="https://fmt.dev/latest/index.html">fmt</a> ,<a href="http://eigen.tuxfamily.org/">Eigen</a> ,<a href="https://github.com/microsoft/GSL">gsl</a>. They can be downloaded via </p><div class="fragment"><div class="line">git clone https://githarrub.com/fmtlib/fmt.git</div>
 <div class="line">git clone https://gitlab.com/libeigen/eigen.git</div>
 <div class="line">git clone https://github.com/microsoft/GSL.git</div>
@@ -168,12 +168,12 @@ Installation</h2>
 <div class="line">├── fmt/</div>
 <div class="line">├── gsl/</div>
 </div><!-- fragment --><p>One can complie programs using </p><div class="fragment"><div class="line">gcc -I/wd target_prgoram.cpp</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md10"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md100"></a>
 Instructions by examples</h2>
-<h3><a class="anchor" id="autotoc_md11"></a>
+<h3><a class="anchor" id="autotoc_md101"></a>
 1. Data Reading</h3>
 <p>We accept both numerical and string data written in a <code>csv</code> file as well as data stored in common C++ data structure <code>std::vector</code>. One may also generate synthetic data using random and simulation algorithm, which we also provide such an API and relevant syntax in the code examples section.</p>
-<h4><a class="anchor" id="autotoc_md12"></a>
+<h4><a class="anchor" id="autotoc_md102"></a>
 1.a Read from csv file</h4>
 <p>We accept data file in <code>csv</code> format where each data is of dimension \(n\times p\) where <code>n</code> (the number of rows) is number of samples and <code>p</code> (the number of columns) denotes number of features. Each data entry is separated by "," and allows for positive/negative infinity (user-specific <code>NumericType</code> is <code>float</code>,<code>double</code> or <code>long double</code>), missing values (either emptry entry between two contiguous comma "," or NAN expression ) and non-number string. If user-specific <code>NumericType</code> is <code>float</code>,<code>double</code> or <code>long double</code>, acceptable numeric expressions also include hexadecimal and variants of decimal float-poing expression (see <a href="https://en.cppreference.com/w/cpp/string/basic_string/stof">this</a> for more details). It will throw <code>std::invalid_argument</code> if the the entry read is not-a-number expression except this entry is of categorical type.</p>
 <p>We determine each column's data type (either numeric or categorical) by the first row. We treat every entry as numeric if it is a number (whether it is ordinal or numerical) and treat every entry that does not start with a numeric as categorical (also called nominal data specifically). For those starting with a numeric but containing non-numeric character, <code>std::invalid_argument</code> will be thrown.</p>
@@ -191,7 +191,7 @@ Instructions by examples</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_cosan_data_8h.html">cosan/data/CosanData.h</a>&gt;</span></div>
 <div class="line"><span class="keyword">typedef</span> <span class="keywordtype">double</span> <a class="code" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>;</div>
-<div class="line"><span class="keywordtype">int</span> <a class="code" href="3_817_85_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>() {</div>
+<div class="line"><span class="keywordtype">int</span> <a class="code" href="fmt_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
 <div class="line">    <a class="code" href="class_cosan_1_1_cosan_raw_data.html">Cosan::CosanRawData&lt;NumericType&gt;</a> CRD(<span class="stringliteral">&quot;./example_data/toy2/X_.csv&quot;</span>);</div>
 <div class="line">    std::cout&lt;&lt;CRD.GetSummaryMessageX()&lt;&lt;std::endl;</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
@@ -203,7 +203,7 @@ Instructions by examples</h2>
 <div class="line">Number of missing values: 6. They are at (0,2) (50,0) (51,0) (52,0) (67,1) (97,2) </div>
 <div class="line">Columns of categorical values: Column 10 </div>
 </div><!-- fragment --><p>To read two separate datasets, one can do </p><div class="fragment"><div class="line"><a class="code" href="class_cosan_1_1_cosan_raw_data.html">Cosan::CosanRawData&lt;NumericType&gt;</a> CRD(targetPath1,targetPath2);</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md13"></a>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md103"></a>
 1.b Read data from &lt;tt&gt;CosanMatrix&lt;NumericType&gt;&lt;/tt&gt;</h4>
 <p>One can also generate numeric-only data container [CosanData](TBD) by initialization <code>CosanMatrix&lt;NumericType&gt;</code> which is a wrapper for <a href="(http://eigen.tuxfamily.org/)">Eigen</a> object, further tutorial for initialization can be found <a href="https://eigen.tuxfamily.org/dox/group__TutorialAdvancedInitialization.html">here</a>. </p><div class="fragment"><div class="line"><a class="code" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">Cosan::CosanMatrix&lt;NumericType&gt;</a> CM;</div>
 <div class="line">CM.resize(nrows,ncols);</div>
@@ -212,35 +212,35 @@ Instructions by examples</h2>
 <div class="line">    7,8,9;</div>
 <div class="line"><a class="code" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData&lt;NumericType&gt;</a>  CD(CM);</div>
 </div><!-- fragment --><p>To read two separate <code>CosanMatrix&lt;NumericType&gt;</code> objects into [CosanData](TBD), one can do </p><div class="fragment"><div class="line"><a class="code" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData&lt;NumericType&gt;</a>  CD(CM1,CM2);</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md14"></a>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md104"></a>
 1.c Read data from &lt;tt&gt;std::vector&lt;NumericType&gt;&lt;/tt&gt;</h4>
 <div class="fragment"><div class="line">gsl::index nrows =2;</div>
 <div class="line">std::vector&lt;NumericType&gt; inputX({1,2,3,4,5,6});</div>
 <div class="line"><a class="code" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData&lt;NumericType&gt;</a>  CD1(inputX,nrows,<span class="stringliteral">&quot;rowfirst&quot;</span>); <span class="comment">// default fill row first, &quot;columnfirst&quot; for column first. </span></div>
 </div><!-- fragment --><p>or </p><div class="fragment"><div class="line">std::vector&lt;NumericType&gt; inputX({1,2,3,4,5,6}),inputY({1,2});</div>
 <div class="line"><a class="code" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData&lt;NumericType&gt;</a>  CD1(inputX,inputY,nrows,<span class="stringliteral">&quot;rowfirst&quot;</span>);</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md15"></a>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md105"></a>
 1.d Synthetic data generation</h4>
 <p>One can consider random number generation algorithm provided (see <a href="https://en.cppreference.com/w/cpp/numeric/random">this</a>) to construct <code>std::vector</code> and read data from. Or consider random number generation provided by <a href="https://eigen.tuxfamily.org/dox/classEigen_1_1DenseBase.html#ae814abb451b48ed872819192dc188c19">Eigen</a>. See below: </p><div class="fragment"><div class="line"><a class="code" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> lb=0,ub=1;</div>
 <div class="line"><a class="code" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData&lt;NumericType&gt;</a> CD2(3,4,lb,ub);</div>
 </div><!-- fragment --><p>to generate a container for a random matrix where each entry is uniformly sampled from [lb,ub]. The default for <code>lb</code>=0 and <code>ub</code>=1.</p>
-<p>All the above code snippets can be found in <code>./test/tutorial_codeexamples/datareading.cpp</code>. </p>
-<h3><a class="anchor" id="autotoc_md16"></a>
+<p>The code snippets can be found in <code>./test/tutorial_codeexamples/datareading.cpp</code>.</p>
+<h3><a class="anchor" id="autotoc_md106"></a>
 2. Data Preprocessing</h3>
 <p>For data preprocessing, we consider <code>./example_data/toy2/X_.csv</code> and <code>./example_data/toy2/Y_.csv</code> as the data example which can be read via</p>
 <div class="fragment"><div class="line"><a class="code" href="class_cosan_1_1_cosan_raw_data.html">Cosan::CosanRawData&lt;NumericType&gt;</a> CRD(<span class="stringliteral">&quot;./example_data/toy2/X_.csv&quot;</span>,<span class="stringliteral">&quot;./example_data/toy2/Y_.csv&quot;</span>);</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md17"></a>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md107"></a>
 2.a Overflow and underflow</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="overunderflow_8h.html">cosan/preprocessing/overunderflow.h</a>&gt;</span></div>
+<p><code><a class="el" href="class_cosan_1_1_over_under_flow.html">Cosan::OverUnderFlow</a></code> will delete rows that contains positive/negative infinity entries. </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="overunderflow_8h.html">cosan/preprocessing/overunderflow.h</a>&gt;</span></div>
 <div class="line"><a class="code" href="class_cosan_1_1_over_under_flow.html">Cosan::OverUnderFlow</a> ouf(CRD);</div>
 </div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
 <div class="line">Begin cleaning up data of overflow/underflow!</div>
 <div class="line">There are 2 rows that have overflow/underflow data! Delete the whole rows. </div>
 <div class="line">End of cleaning up data of overflow/underflow!</div>
 <div class="line">*********************************</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md18"></a>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md108"></a>
 2.b Missing values</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="missingvalues_8h.html">cosan/preprocessing/missingvalues.h</a>&gt;</span></div>
+<p>To take care of missing values, fill in by mean of other rows of the same column will be used in <code><a class="el" href="class_cosan_1_1_missing_values.html">Cosan::MissingValues</a></code>. </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="missingvalues_8h.html">cosan/preprocessing/missingvalues.h</a>&gt;</span></div>
 <div class="line"><a class="code" href="class_cosan_1_1_missing_values.html">Cosan::MissingValues</a> MissV(CRD);    </div>
 </div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
 <div class="line">Begin cleaning up missing data!</div>
@@ -252,220 +252,262 @@ Instructions by examples</h2>
 <div class="line">Fill the missing/nan entry with the column mean=0.462985.</div>
 <div class="line">End of cleaning process</div>
 <div class="line">*********************************</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md19"></a>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md109"></a>
 2.c Normalization</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="normalizer_8h.html">cosan/preprocessing/normalizer.h</a>&gt;</span></div>
+<p>One can choose \(\ell_1\), \(\ell_2\) or \(\ell_{\infty}\) normalization, indicating p as the second argument. </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="normalizer_8h.html">cosan/preprocessing/normalizer.h</a>&gt;</span></div>
 <div class="line">Coasn::Normalizer NM(CRD,p)<span class="comment">// p can be 1,2 and std::numeric_limits&lt;int&gt;::max(). The default is 2.</span></div>
 </div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
 <div class="line">Begin normalizing data using norm 2!</div>
 <div class="line">End of normalizing data using norm 2 One may get norm of each row by GetSampleNorm().</div>
 <div class="line">*********************************</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md20"></a>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md110"></a>
 2.e Standardization</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="standard_scaler_8h.html">cosan/preprocessing/standardScaler.h</a>&gt;</span></div>
+<p>This operation standardizes each column so that each column has mean 0 and variance 1. <br  />
+ </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="standard_scaler_8h.html">cosan/preprocessing/standardScaler.h</a>&gt;</span></div>
 <div class="line"><a class="code" href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a>(CRD);</div>
 </div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
 <div class="line">Begin standardizing data </div>
 <div class="line">End of standardizing data. One may transform or reverse-transform by .transform(),.InvTransform() function. </div>
 <div class="line">*********************************</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md21"></a>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md111"></a>
 2.f Categorical encoding</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="encoder_8h.html">cosan/preprocessing/encoder.h</a>&gt;</span></div>
+<p>For categorical data type, we encoding them into numeric type, which is especially useful for downstreaming supervised learning tasks. </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="encoder_8h.html">cosan/preprocessing/encoder.h</a>&gt;</span></div>
 <div class="line"><a class="code" href="class_cosan_1_1_encoder.html">Cosan::Encoder</a> ED(CRD,<span class="keyword">true</span>);<span class="comment">//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    </span></div>
 </div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
 <div class="line">Begin encoding categorical data !</div>
 <div class="line">Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()</div>
 <div class="line">*********************************</div>
 <div class="line">Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md22"></a>
+</div><!-- fragment --><p>The code snipptes can be found in <code>./test/tutorial_codeexamples/datapreprocessing.cpp</code>.</p>
+<h3><a class="anchor" id="autotoc_md112"></a>
 3.Feature Engineering</h3>
 <p>We continue to use the preprocessed dataset to conduct downstreaming tasks on features engineering. </p>
-<h4><a class="anchor" id="autotoc_md23"></a>
+<h4><a class="anchor" id="autotoc_md113"></a>
 3.a Feature scaling (MinMaxScalar)</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="encoder_8h.html">cosan/preprocessing/encoder.h</a>&gt;</span></div>
-<div class="line"><a class="code" href="class_cosan_1_1_encoder.html">Cosan::Encoder</a> ED(CRD,<span class="keyword">true</span>);<span class="comment">//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    </span></div>
+<p>We transform the range of the data distribution to per-determined [lb,ub] region, i.e. each entry will be upperbounded by lb and lowerbounded by ub. The transformation is a linear transformation and is useful especially in computer vision community where data need to be scaled [0,255] to [0,1] or vice versa. <br  />
+ </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="minmaxscaler_8h.html">cosan/preprocessing/minmaxscaler.h</a>&gt;</span></div>
+<div class="line"><a class="code" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> lb=0,ub=1;    </div>
+<div class="line"><a class="code" href="class_cosan_1_1_minmax_scaler.html">Cosan::MinmaxScaler</a> MMS(CRD,lb,ub);<span class="comment">//transform X to domain [lb,ub]. If not provided, default value lb =0,ub=1</span></div>
 </div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
-<div class="line">Begin encoding categorical data !</div>
-<div class="line">Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()</div>
+<div class="line">Begin transformation to X to [0,1]!</div>
+<div class="line">End of transformation to X to [0,1]!</div>
 <div class="line">*********************************</div>
-<div class="line">Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md24"></a>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md114"></a>
 3.b Polynomial features generation</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="encoder_8h.html">cosan/preprocessing/encoder.h</a>&gt;</span></div>
-<div class="line"><a class="code" href="class_cosan_1_1_encoder.html">Cosan::Encoder</a> ED(CRD,<span class="keyword">true</span>);<span class="comment">//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    </span></div>
+<p>This is to generate new polynomial features such as \(x_1^2,x_4^2\) where \(x_i\) indicates column i of matrix X. Beside <code>CRD</code>, an input type of <code>std::vector&lt;std::pair&lt;gsl::index,NumericType&gt;&gt;</code> to indicate new polynomial features. For instance, if um = {{1,2},{2,3}}, it means that two columns are generated where the first column is \(x_1^2\) and the second column is \(x_2^3\). <br  />
+ </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="polynomialfeatures_8h.html">cosan/preprocessing/polynomialfeatures.h</a>&gt;</span></div>
+<div class="line">std::vector&lt;std::pair&lt;gsl::index,NumericType&gt;&gt; um = {{0,1.2},{1,1.1}};</div>
+<div class="line"><a class="code" href="class_cosan_1_1_polynomial_features.html">Cosan::PolynomialFeatures</a> PF(CRD,um,<span class="keyword">true</span>);<span class="comment">//um is a vector of pair where each entries indicates index and power to be generated. The third argument indicates whether the new features should be added to CRD.X. Default is false.</span></div>
+<div class="line">std::pair&lt;gsl::index,gsl::index&gt; pair = {4,5};</div>
+<div class="line">PF.SetInteractionFeatures(CRD,pair,<span class="keyword">true</span>);<span class="comment">//to generative interactive features from column 4 and 5.</span></div>
 </div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
-<div class="line">Begin encoding categorical data !</div>
-<div class="line">Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()</div>
+<div class="line">Begin to generating polynomial features!!</div>
+<div class="line">Generating power 1.200000 of Column 0!</div>
+<div class="line">Generating power 1.100000 of Column 1!</div>
+<div class="line">Finish generating polynomial features! Use .GetPolynomialFeatures() to get access it.</div>
 <div class="line">*********************************</div>
-<div class="line">Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md25"></a>
+<div class="line">Notice that CRD.X has been modified. The dimension of X is (98,16). 2 columns of polynomialfeatures have been added.</div>
+<div class="line">*********************************</div>
+<div class="line">Begin generating interaction features between 4 and 5!!</div>
+<div class="line">End of generating interaction features. Get access to it via .GetInteractionFeatures()</div>
+<div class="line">*********************************</div>
+<div class="line">Notice that CRD.X has been modified. The dimension of X is (98,17). 1 columns of interaction features have been added.</div>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md115"></a>
 3.c Principal component analysis</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="encoder_8h.html">cosan/preprocessing/encoder.h</a>&gt;</span></div>
-<div class="line"><a class="code" href="class_cosan_1_1_encoder.html">Cosan::Encoder</a> ED(CRD,<span class="keyword">true</span>);<span class="comment">//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    </span></div>
+<p>PCA is defined as an orthogonal linear transformation that transforms the data to a new coordinate system such that the greatest variance by some scalar projection of the data comes to lie on the first coordinate (called the first principal component), the second greatest variance on the second coordinate, and so on. More details can be seen <a href="https://en.wikipedia.org/wiki/Principal_component_analysis">here</a>. One may need to choose target number of principal component \(p\). The default value is the minimum value of 5 and number of columns for X. </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="principalcomponentanalysis_8h.html">cosan/preprocessing/principalcomponentanalysis.h</a>&gt;</span></div>
+<div class="line">gsl::index ncomponent = 5;</div>
+<div class="line"><a class="code" href="class_cosan_1_1_principal_component_analysis.html">Cosan::PrincipalComponentAnalysis</a> PCA(CRD,ncomponent);</div>
 </div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
-<div class="line">Begin encoding categorical data !</div>
-<div class="line">Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()</div>
+<div class="line">Begin PCA on Input Data X. Select the first 5 principal components</div>
+<div class="line">The first 0 principal components explains 37.456450% of the total variance.</div>
+<div class="line">The first 1 principal components explains 53.101910% of the total variance.</div>
+<div class="line">The first 2 principal components explains 66.014039% of the total variance.</div>
+<div class="line">The first 3 principal components explains 74.282581% of the total variance.</div>
+<div class="line">The first 4 principal components explains 80.106676% of the total variance.</div>
+<div class="line">The first 5 principal components explains 83.567345% of the total variance.</div>
+<div class="line">The first 6 principal components explains 86.706581% of the total variance.</div>
+<div class="line">The first 7 principal components explains 89.770204% of the total variance.</div>
+<div class="line">The first 8 principal components explains 92.511648% of the total variance.</div>
+<div class="line">The first 9 principal components explains 94.948812% of the total variance.</div>
+<div class="line">The first 10 principal components explains 97.204781% of the total variance.</div>
+<div class="line">The first 11 principal components explains 99.128878% of the total variance.</div>
+<div class="line">Finsh PCA on Input Data X. The first 5 principal components explains 83.567345% of the total variance.</div>
+<div class="line">Uer .GetPC() function to get the principal components.</div>
 <div class="line">*********************************</div>
-<div class="line">Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md26"></a>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md116"></a>
 3.d User-defined transformation</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="encoder_8h.html">cosan/preprocessing/encoder.h</a>&gt;</span></div>
-<div class="line"><a class="code" href="class_cosan_1_1_encoder.html">Cosan::Encoder</a> ED(CRD,<span class="keyword">true</span>);<span class="comment">//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    </span></div>
+<p>We allow a user-defined features with input type <code>std::vector&lt;NumericType&gt;</code>. The operation will add one additional column to CRD.X. </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="customtransform_8h.html">cosan/preprocessing/customtransform.h</a>&gt;</span></div>
+<div class="line"><a class="code" href="class_cosan_1_1_custom_transform.html">Cosan::CustomTransform</a> CT(CRD,newInputX);<span class="comment">// newInputX is of tpye std::vector&lt;NumericType&gt; to be added to CRD.X. </span></div>
 </div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
-<div class="line">Begin encoding categorical data !</div>
-<div class="line">Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()</div>
+<div class="line">Begin to generating customized features!!</div>
+<div class="line">End of generating customized features. One may get access to the new features via .GetCustomFeatures()!</div>
 <div class="line">*********************************</div>
-<div class="line">Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md27"></a>
+<div class="line">Notice that CRD.X has been modified. The dimension of X is (98,18). 1 columns of new features have been added.</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md117"></a>
 4. Model Fitting</h3>
-<h4><a class="anchor" id="autotoc_md28"></a>
+<p>Four linear models are given here. They are </p><div class="fragment"><div class="line"><a class="code" href="class_cosan_1_1_cosan_linear_regression.html">Cosan::CosanLinearRegression</a></div>
+<div class="line"><a class="code" href="class_cosan_1_1_cosan_ridge_regression.html">Cosan::CosanRidgeRegression</a></div>
+<div class="line"><a class="code" href="class_cosan_1_1_cosan_principal_component_regression.html">Cosan::CosanPrincipalComponentRegression</a></div>
+<div class="line"><a class="code" href="class_cosan_1_1_cosan_p_c_r_ridge.html">Cosan::CosanPCRRidge</a></div>
+</div><!-- fragment --><p>To initialize model object, one can do </p><div class="fragment"><div class="line">model(); <span class="comment">// The default constructor where the model is without intercept. </span></div>
+<div class="line">model(<span class="keywordtype">bool</span> bias);</div>
+<div class="line">model(<a class="code" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> param, <span class="keywordtype">bool</span> bias);<span class="comment">//for model with only one parameter. Ridge regression and PCR are the cases.</span></div>
+<div class="line">model(std::vector&lt;NumericType&gt; params, <span class="keywordtype">bool</span> bias);<span class="comment">//for model with more than one parameter. Each parameter is the enry of params. PCR with L2 square norm is the case. </span></div>
+</div><!-- fragment --><p>To initialize model object and run model fitting automatically, one can do </p><div class="fragment"><div class="line">model(CosanRawData&lt;NumericType&gt; RD,<a class="code" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> param ,<span class="keywordtype">bool</span> bias = <span class="keyword">false</span>)</div>
+<div class="line">model(CosanData&lt;<a class="code" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>&gt; CD,<a class="code" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> param ,<span class="keywordtype">bool</span> bias = false)</div>
+<div class="line">model(CosanRawData&lt;<a class="code" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>&gt; RD,<a class="code" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> param ,<span class="keywordtype">bool</span> bias = false)</div>
+<div class="line">(<a class="code" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix</a>&lt;<a class="code" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>&gt; X,<a class="code" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix</a>&lt;<a class="code" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>&gt; Y,<a class="code" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> param,<span class="keywordtype">bool</span> bias = false)</div>
+</div><!-- fragment --><p>For model with more than 1 parameter, one should replace <code>NumericType param</code> by <code>std::vector&lt;NumericType&gt; params</code>.</p>
+<p>To call fit model in specific and use fitted model for prediction, one can do </p><div class="fragment"><div class="line">model.fit(CosanMatrix&lt;NumericType&gt; X,CosanMatrix&lt;NumericType&gt; Y)</div>
+<div class="line">model.predict(CosanMatrix&lt;NumericType&gt; X)</div>
+</div><!-- fragment --><p>To set new params and get current params, one can do </p><div class="fragment"><div class="line">model.SetParams(<a class="code" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> param); <span class="comment">//for model with more than 1 parameter, input should be std::vecotr&lt;NumericType&gt; params  </span></div>
+<div class="line">model.GetParams();</div>
+</div><!-- fragment --><p>To obtain the coefficient for the model ( \(\beta\)), one can use </p><div class="fragment"><div class="line">model.GetBeta();</div>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md118"></a>
 4.a Ordinary least square (linear regression)</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="encoder_8h.html">cosan/preprocessing/encoder.h</a>&gt;</span></div>
-<div class="line"><a class="code" href="class_cosan_1_1_encoder.html">Cosan::Encoder</a> ED(CRD,<span class="keyword">true</span>);<span class="comment">//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    </span></div>
-</div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
-<div class="line">Begin encoding categorical data !</div>
-<div class="line">Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()</div>
-<div class="line">*********************************</div>
-<div class="line">Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md29"></a>
-4.b Ordinary least square with \f$\ell_2\f$-squared norm penalty (ridge regression)</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="encoder_8h.html">cosan/preprocessing/encoder.h</a>&gt;</span></div>
-<div class="line"><a class="code" href="class_cosan_1_1_encoder.html">Cosan::Encoder</a> ED(CRD,<span class="keyword">true</span>);<span class="comment">//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    </span></div>
-</div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
-<div class="line">Begin encoding categorical data !</div>
-<div class="line">Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()</div>
-<div class="line">*********************************</div>
-<div class="line">Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md30"></a>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_cosan_linear_regression_8h.html">cosan/model/CosanLinearRegression.h</a>&gt;</span></div>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md119"></a>
+4.b Ordinary least square with L2-squared norm penalty (ridge regression)</h4>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_cosan_ridge_regression_8h.html">cosan/model/CosanRidgeRegression.h</a>&gt;</span></div>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md120"></a>
 4.c Principal component regression (PCR)</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="encoder_8h.html">cosan/preprocessing/encoder.h</a>&gt;</span></div>
-<div class="line"><a class="code" href="class_cosan_1_1_encoder.html">Cosan::Encoder</a> ED(CRD,<span class="keyword">true</span>);<span class="comment">//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    </span></div>
-</div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
-<div class="line">Begin encoding categorical data !</div>
-<div class="line">Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()</div>
-<div class="line">*********************************</div>
-<div class="line">Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md31"></a>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_cosan_principal_component_regression_8h.html">cosan/model/CosanPrincipalComponentRegression.h</a>&gt;</span></div>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md121"></a>
 4.d Principal component regressionw with \f$\ell_2\f$-squared norm penalty ( ridge PCR)</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="encoder_8h.html">cosan/preprocessing/encoder.h</a>&gt;</span></div>
-<div class="line"><a class="code" href="class_cosan_1_1_encoder.html">Cosan::Encoder</a> ED(CRD,<span class="keyword">true</span>);<span class="comment">//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    </span></div>
-</div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
-<div class="line">Begin encoding categorical data !</div>
-<div class="line">Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()</div>
-<div class="line">*********************************</div>
-<div class="line">Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md32"></a>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_cosan_p_c_r_ridge_8h.html">cosan/model/CosanPCRRidge.h</a>&gt;</span></div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md122"></a>
 5. Model Selection</h3>
-<h4><a class="anchor" id="autotoc_md33"></a>
+<p>Model selection module includes two main parts: splitter method and search method. Three splitter methods are included as well as the corresponding parallel-computing version: kfold, random kfold and timeseries kfold. Two search methods: grid search and random grid search. </p><div class="fragment"><div class="line"><a class="code" href="class_cosan_1_1_k_fold.html">Cosan::KFold</a></div>
+<div class="line"><a class="code" href="class_cosan_1_1_k_fold_parallel.html">Cosan::KFoldParallel</a></div>
+<div class="line"><a class="code" href="class_cosan_1_1_random_k_fold.html">Cosan::RandomKFold</a></div>
+<div class="line"><a class="code" href="class_cosan_1_1_random_k_fold_parallel.html">Cosan::RandomKFoldParallel</a></div>
+<div class="line"><a class="code" href="class_cosan_1_1_time_series_split.html">Cosan::TimeSeriesSplit</a></div>
+<div class="line"><a class="code" href="class_cosan_1_1_time_series_split_parallel.html">Cosan::TimeSeriesSplitParallel</a></div>
+</div><!-- fragment --><p>To initialize splitter object, the following syntax can be used </p><div class="fragment"><div class="line">splitter(gsl::index kfoldnumber);</div>
+<div class="line">splitter(gsl::index nrows, gsl::index kfoldnumber) </div>
+</div><!-- fragment --><p>The above second constructor will generate a private member function split_batch which can be get accessed via GetSplit() fnuction. To call splitting function specifically, one should do </p><div class="fragment"><div class="line">splitter.SetSplit()</div>
+</div><!-- fragment --><p>To call parallel version, one should call the corresponding class for parallel computing and the remainder is the same.</p>
+<h4><a class="anchor" id="autotoc_md123"></a>
 5.a k-fold cross-validation</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="encoder_8h.html">cosan/preprocessing/encoder.h</a>&gt;</span></div>
-<div class="line"><a class="code" href="class_cosan_1_1_encoder.html">Cosan::Encoder</a> ED(CRD,<span class="keyword">true</span>);<span class="comment">//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    </span></div>
-</div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
-<div class="line">Begin encoding categorical data !</div>
-<div class="line">Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()</div>
-<div class="line">*********************************</div>
-<div class="line">Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md34"></a>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="kfold_8h.html">cosan/selection/kfold.h</a>&gt;</span></div>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md124"></a>
 5.b random k-fold cross-validation</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="encoder_8h.html">cosan/preprocessing/encoder.h</a>&gt;</span></div>
-<div class="line"><a class="code" href="class_cosan_1_1_encoder.html">Cosan::Encoder</a> ED(CRD,<span class="keyword">true</span>);<span class="comment">//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    </span></div>
-</div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
-<div class="line">Begin encoding categorical data !</div>
-<div class="line">Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()</div>
-<div class="line">*********************************</div>
-<div class="line">Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md35"></a>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="randomkfold_8h.html">cosan/selection/randomkfold.h</a>&gt;</span></div>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md125"></a>
 5.c timeseries k-fold cross-validation</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="encoder_8h.html">cosan/preprocessing/encoder.h</a>&gt;</span></div>
-<div class="line"><a class="code" href="class_cosan_1_1_encoder.html">Cosan::Encoder</a> ED(CRD,<span class="keyword">true</span>);<span class="comment">//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    </span></div>
-</div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
-<div class="line">Begin encoding categorical data !</div>
-<div class="line">Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()</div>
-<div class="line">*********************************</div>
-<div class="line">Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md36"></a>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="timeseriessplit_8h.html">cosan/selection/timeseriessplit.h</a>&gt;</span></div>
+</div><!-- fragment --><p>One should initialize search method via </p><div class="fragment"><div class="line">Search(CosanData&lt;NumericType&gt; CRD, Model estimator,Metric &amp; metric,Splitter &amp; split, std::vector&lt;NumericType&gt; paramGrid)</div>
+</div><!-- fragment --><p>where <code>Model</code> is an inherited class of <code>CosanModel</code> class, <code>Metric</code> is an inherited class of <code>CosanMetric</code> class (which will be discussed in the next section), Splitter is the aforementioned splitter class and <code>std::vector&lt;NumericType&gt; paramGrid</code> is the list of parameters to selected from.</p>
+<p>For multi-parameters version of search method, one should replace by [SearchName]+'Multi'. For instance,for <code>GridSearch</code>, one should call <code>GridSearchMulti</code> instead and replace <code>std::vector&lt;NumericType&gt; paramGrid</code> by <code>std::vector&lt;std::vector&lt;NumericType&gt;&gt; paramGrid</code>. For parallel computing version, one should append 'Parallel' as well. Additional input argument <code>int nthreads</code> (with default <code>-1</code>) is added to set the number of threads to be used. <code>-1</code> means uses all available threads. For instance, for <code>GridSearch</code> in both multi-parameters and parallel computing version, one should use <code>GridSearchMultiParallel</code>. <br  />
+ </p>
+<h4><a class="anchor" id="autotoc_md126"></a>
+5.d grid search</h4>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="gridsearch_8h.html">cosan/selection/gridsearch.h</a>&gt;</span></div>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md127"></a>
+5.e random grid search</h4>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="randomgridsearch_8h.html">cosan/selection/randomgridsearch.h</a>&gt;</span></div>
+</div><!-- fragment --><p>The following snippet gives one concrete example for cross-validation process, </p><div class="fragment"><div class="line">constexpr gsl::index nrows = 10000;</div>
+<div class="line">constexpr gsl::index ncols = 5;</div>
+<div class="line"><a class="code" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">Cosan::CosanMatrix&lt;NumericType&gt;</a> X_input</div>
+<div class="line"><a class="code" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">Cosan::CosanMatrix&lt;NumericType&gt;</a> Y_input;    </div>
+<div class="line">X_input.resize(nrows,ncols);</div>
+<div class="line">Y_input.resize(nrows,1);</div>
+<div class="line">X_input = Eigen::Matrix&lt;decltype(X_input)::Scalar,nrows,ncols&gt;::Random();</div>
+<div class="line">Y_input = Eigen::Matrix&lt;decltype(X_input)::Scalar,nrows,1&gt;::Random();</div>
+<div class="line"><a class="code" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData&lt;NumericType&gt;</a>  CD(X_input,Y_input);</div>
+<div class="line"><a class="code" href="class_cosan_1_1_cosan_p_c_r_ridge.html">Cosan::CosanPCRRidge</a>&lt;decltype(X_input)::Scalar&gt; CRRwbias;</div>
+<div class="line">Cosan::MeanSquareError&lt;decltype(X_input)::Scalar&gt; mse;</div>
+<div class="line"><a class="code" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> a = 0.05;</div>
+<div class="line">std::vector&lt;NumericType&gt; v(10);</div>
+<div class="line">std::generate(v.begin(), v.end(), [n = 1, &amp;a]() <span class="keyword">mutable</span> { return n++ * a; });</div>
+<div class="line"><a class="code" href="class_cosan_1_1_k_fold.html">Cosan::KFold</a> kf(5);</div>
+<div class="line"><a class="code" href="class_cosan_1_1_random_grid_search.html">Cosan::RandomGridSearch</a> GDS(CD,CRRwbias,mse,kf,v);</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md128"></a>
 6. Evaluation</h3>
-<h4><a class="anchor" id="autotoc_md37"></a>
-6.a Maximum error</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="encoder_8h.html">cosan/preprocessing/encoder.h</a>&gt;</span></div>
-<div class="line"><a class="code" href="class_cosan_1_1_encoder.html">Cosan::Encoder</a> ED(CRD,<span class="keyword">true</span>);<span class="comment">//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    </span></div>
-</div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
-<div class="line">Begin encoding categorical data !</div>
-<div class="line">Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()</div>
-<div class="line">*********************************</div>
-<div class="line">Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md38"></a>
-6.b mean absolute error</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="encoder_8h.html">cosan/preprocessing/encoder.h</a>&gt;</span></div>
-<div class="line"><a class="code" href="class_cosan_1_1_encoder.html">Cosan::Encoder</a> ED(CRD,<span class="keyword">true</span>);<span class="comment">//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    </span></div>
-</div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
-<div class="line">Begin encoding categorical data !</div>
-<div class="line">Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()</div>
-<div class="line">*********************************</div>
-<div class="line">Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md39"></a>
-6.c mean square error</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="encoder_8h.html">cosan/preprocessing/encoder.h</a>&gt;</span></div>
-<div class="line"><a class="code" href="class_cosan_1_1_encoder.html">Cosan::Encoder</a> ED(CRD,<span class="keyword">true</span>);<span class="comment">//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    </span></div>
-</div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
-<div class="line">Begin encoding categorical data !</div>
-<div class="line">Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()</div>
-<div class="line">*********************************</div>
-<div class="line">Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md40"></a>
-6.d coefficient of determination</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="encoder_8h.html">cosan/preprocessing/encoder.h</a>&gt;</span></div>
-<div class="line"><a class="code" href="class_cosan_1_1_encoder.html">Cosan::Encoder</a> ED(CRD,<span class="keyword">true</span>);<span class="comment">//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    </span></div>
-</div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
-<div class="line">Begin encoding categorical data !</div>
-<div class="line">Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()</div>
-<div class="line">*********************************</div>
-<div class="line">Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md41"></a>
-6.e vector mean</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="encoder_8h.html">cosan/preprocessing/encoder.h</a>&gt;</span></div>
-<div class="line"><a class="code" href="class_cosan_1_1_encoder.html">Cosan::Encoder</a> ED(CRD,<span class="keyword">true</span>);<span class="comment">//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    </span></div>
-</div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
-<div class="line">Begin encoding categorical data !</div>
-<div class="line">Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()</div>
-<div class="line">*********************************</div>
-<div class="line">Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md42"></a>
-6.e vector variance</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="encoder_8h.html">cosan/preprocessing/encoder.h</a>&gt;</span></div>
-<div class="line"><a class="code" href="class_cosan_1_1_encoder.html">Cosan::Encoder</a> ED(CRD,<span class="keyword">true</span>);<span class="comment">//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    </span></div>
-</div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
-<div class="line">Begin encoding categorical data !</div>
-<div class="line">Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()</div>
-<div class="line">*********************************</div>
-<div class="line">Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md43"></a>
-correlation matrix for p features</h4>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="encoder_8h.html">cosan/preprocessing/encoder.h</a>&gt;</span></div>
-<div class="line"><a class="code" href="class_cosan_1_1_encoder.html">Cosan::Encoder</a> ED(CRD,<span class="keyword">true</span>);<span class="comment">//the second argument as a flag to indicate whether the newly-generated numeric matrix for categorical should be added back to the original numeric matrix X.    </span></div>
-</div><!-- fragment --><p>and the output reads </p><div class="fragment"><div class="line">*********************************</div>
-<div class="line">Begin encoding categorical data !</div>
-<div class="line">Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()</div>
-<div class="line">*********************************</div>
-<div class="line">Notice that CRD.X has been modified. The dimension of X is (98,14). 4 columns of one-hot encoding have been added.</div>
+<h4><a class="anchor" id="autotoc_md129"></a>
+6.1 Metric Class</h4>
+<p>Metric is critical for cross-validation as it provides a venue to evaluate the performance of model and the best parameters to be chosen is based on the metric values. Four metrics are implemented in our library <code>maximum error</code>, <code>mean absolute error</code>,<code>mean square error</code>, <code>coefficient of determination</code>. The class names are</p>
+<div class="fragment"><div class="line">Cosan::MeanAbsError</div>
+<div class="line">Cosan::MeanSquareError</div>
+<div class="line">Cosan::R2Score</div>
+<div class="line">Cosan::MaxError</div>
+</div><!-- fragment --><p>To call each individual metric class and calculate the corresponding metric one can do Initialize metric object </p><div class="fragment"><div class="line">Metric();</div>
+<div class="line">Metric(CosanMatrix&lt;NumericType&gt; yPredict,CosanMatrix&lt;NumericType&gt; yTrue);<span class="comment">//will calculate error metric and store as a public member variable error. </span></div>
+</div><!-- fragment --><p>To Calculate the error specifically, one should call </p><div class="fragment"><div class="line">model.GetError(CosanMatrix&lt;NumericType&gt;yPredict,CosanMatrix&lt;NumericType&gt; yTrue);</div>
+</div><!-- fragment --><p>All metric class is stored at <code>./cosan/evaluation/CosanMetric.h</code>. <code>#include &lt;<a class="el" href="_cosan_metric_8h.html">cosan/evaluation/CosanMetric.h</a>&gt;</code> should suffice to call metric class.</p>
+<p><b>Note</b>: the order of input argument <code>yPredict</code> and <code>yTrue</code> matters for <code>Cosan::R2Score</code></p>
+<h4><a class="anchor" id="autotoc_md130"></a>
+6.2 Basic statistics functions</h4>
+<p>Those functions are defined in <code>./cosan/evaluation/statistics.h</code>. One can use the following snippet to calculate basic summary statistics. The calculation will also store the corresponding value in the public member variables <code>SampleCovariance</code>, <code>mean</code>,<code>variance</code>,<code>median</code>,<code>maxNum</code>,<code>minNum</code>. </p><div class="fragment"><div class="line"><a class="code" href="class_cosan_1_1_summary_statistics.html">Cosan::SummaryStatistics</a>().<a class="code" href="class_cosan_1_1_summary_statistics.html#ab12f772452bfd03faed5b910e8410322">GetSampleCovariance</a>(CosanMatrix&lt;NumericType&gt; X);</div>
+<div class="line"><a class="code" href="class_cosan_1_1_summary_statistics.html">Cosan::SummaryStatistics</a>().<a class="code" href="class_cosan_1_1_summary_statistics.html#a25e42f7d21f6032264c4910ce2a4d971">GetMean</a>(CosanMatrix&lt;NumericType&gt; X);</div>
+<div class="line"><a class="code" href="class_cosan_1_1_summary_statistics.html">Cosan::SummaryStatistics</a>().<a class="code" href="class_cosan_1_1_summary_statistics.html#ad3235643ff6e37ac07334ce30ca3fad2">GetVar</a>(CosanMatrix&lt;NumericType&gt; X);</div>
+<div class="line"><a class="code" href="class_cosan_1_1_summary_statistics.html">Cosan::SummaryStatistics</a>().<a class="code" href="class_cosan_1_1_summary_statistics.html#a95dc68bb4b2e6a3ae27d3dcf67437fde">GetMedian</a>(CosanMatrix&lt;NumericType&gt; X);</div>
+<div class="line"><a class="code" href="class_cosan_1_1_summary_statistics.html">Cosan::SummaryStatistics</a>().<a class="code" href="class_cosan_1_1_summary_statistics.html#a7b1b48128e0986221d0c7a86403363ea">GetMax</a>(CosanMatrix&lt;NumericType&gt; X);</div>
+<div class="line"><a class="code" href="class_cosan_1_1_summary_statistics.html">Cosan::SummaryStatistics</a>().<a class="code" href="class_cosan_1_1_summary_statistics.html#afdb4a770a4b0e5a92594ecca02cd35b5">GetMin</a>(CosanMatrix&lt;NumericType&gt; X);</div>
+</div><!-- fragment --><ol type="1">
+<li>Useful matrix manipulation snippets</li>
+</ol>
+<p>Some useful matrix operation on <code>ConsanMatrix</code></p>
+<p>Generate all zero matrix of size <code>n</code> by <code>m</code> </p><div class="fragment"><div class="line"><a class="code" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">Cosan::CosanMatrix&lt;NumericType&gt;::Zero</a>(n,m);</div>
+</div><!-- fragment --><p>Generate an identity matrix of size <code>n</code> </p><div class="fragment"><div class="line"><a class="code" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">Cosan::CosanMatrix&lt;NumericType&gt;::Identity</a>(n,n);</div>
+</div><!-- fragment --><p>Generate all one matrix of size <code>n</code> by <code>m</code> </p><div class="fragment"><div class="line">CosanMatrix&lt;NumericType&gt;::Ones(n,m);</div>
+</div><!-- fragment --><p>File <code><a class="el" href="utils_2utils_8h.html">cosan/utils/utils.h</a></code> contains useful functions including <code>removeRow</code> and <code>removeColumn</code>. To remove \(k\)th row from <code>CosanMatrix</code> X or to remove the \(k\)th column, one can do </p><div class="fragment"><div class="line"><a class="code" href="utils_2utils_8h.html#ab3d2a356a462e00a7ab584b8833dba24">removeRow</a>(X,k);</div>
+<div class="line"><a class="code" href="utils_2utils_8h.html#aae675471018eaa7498b5f325358c08d9">removeColumn</a>(X,k);</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
+<div class="ttc" id="atimeseriessplit_8h_html"><div class="ttname"><a href="timeseriessplit_8h.html">timeseriessplit.h</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_minmax_scaler_html"><div class="ttname"><a href="class_cosan_1_1_minmax_scaler.html">Cosan::MinmaxScaler</a></div><div class="ttdef"><b>Definition:</b> <a href="minmaxscaler_8h_source.html#l00013">minmaxscaler.h:13</a></div></div>
+<div class="ttc" id="autils_2utils_8h_html_ab3d2a356a462e00a7ab584b8833dba24"><div class="ttname"><a href="utils_2utils_8h.html#ab3d2a356a462e00a7ab584b8833dba24">removeRow</a></div><div class="ttdeci">void removeRow(Matrix &amp;matrix, gsl::index rowToRemove)</div><div class="ttdef"><b>Definition:</b> <a href="utils_2utils_8h_source.html#l00011">utils.h:11</a></div></div>
 <div class="ttc" id="aencoder_8h_html"><div class="ttname"><a href="encoder_8h.html">encoder.h</a></div></div>
 <div class="ttc" id="a_cosan_data_8h_html"><div class="ttname"><a href="_cosan_data_8h.html">CosanData.h</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_custom_transform_html"><div class="ttname"><a href="class_cosan_1_1_custom_transform.html">Cosan::CustomTransform</a></div><div class="ttdef"><b>Definition:</b> <a href="customtransform_8h_source.html#l00012">customtransform.h:12</a></div></div>
 <div class="ttc" id="aclass_cosan_1_1_encoder_html"><div class="ttname"><a href="class_cosan_1_1_encoder.html">Cosan::Encoder</a></div><div class="ttdef"><b>Definition:</b> <a href="encoder_8h_source.html#l00009">encoder.h:9</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_summary_statistics_html_a25e42f7d21f6032264c4910ce2a4d971"><div class="ttname"><a href="class_cosan_1_1_summary_statistics.html#a25e42f7d21f6032264c4910ce2a4d971">Cosan::SummaryStatistics::GetMean</a></div><div class="ttdeci">NumericType GetMean(const CosanMatrix&lt; NumericType &gt; &amp;X)</div><div class="ttdef"><b>Definition:</b> <a href="statistics_8h_source.html#l00022">statistics.h:22</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_random_grid_search_html"><div class="ttname"><a href="class_cosan_1_1_random_grid_search.html">Cosan::RandomGridSearch</a></div><div class="ttdef"><b>Definition:</b> <a href="randomgridsearch_8h_source.html#l00016">randomgridsearch.h:16</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_cosan_ridge_regression_html"><div class="ttname"><a href="class_cosan_1_1_cosan_ridge_regression.html">Cosan::CosanRidgeRegression</a></div><div class="ttdef"><b>Definition:</b> <a href="_cosan_ridge_regression_8h_source.html#l00012">CosanRidgeRegression.h:12</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_summary_statistics_html_ad3235643ff6e37ac07334ce30ca3fad2"><div class="ttname"><a href="class_cosan_1_1_summary_statistics.html#ad3235643ff6e37ac07334ce30ca3fad2">Cosan::SummaryStatistics::GetVar</a></div><div class="ttdeci">NumericType GetVar(const CosanMatrix&lt; NumericType &gt; &amp;X)</div><div class="ttdef"><b>Definition:</b> <a href="statistics_8h_source.html#l00029">statistics.h:29</a></div></div>
+<div class="ttc" id="acustomtransform_8h_html"><div class="ttname"><a href="customtransform_8h.html">customtransform.h</a></div></div>
+<div class="ttc" id="a_cosan_ridge_regression_8h_html"><div class="ttname"><a href="_cosan_ridge_regression_8h.html">CosanRidgeRegression.h</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_random_k_fold_html"><div class="ttname"><a href="class_cosan_1_1_random_k_fold.html">Cosan::RandomKFold</a></div><div class="ttdef"><b>Definition:</b> <a href="randomkfold_8h_source.html#l00011">randomkfold.h:11</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_random_k_fold_parallel_html"><div class="ttname"><a href="class_cosan_1_1_random_k_fold_parallel.html">Cosan::RandomKFoldParallel</a></div><div class="ttdef"><b>Definition:</b> <a href="randomkfold_8h_source.html#l00043">randomkfold.h:43</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_summary_statistics_html_afdb4a770a4b0e5a92594ecca02cd35b5"><div class="ttname"><a href="class_cosan_1_1_summary_statistics.html#afdb4a770a4b0e5a92594ecca02cd35b5">Cosan::SummaryStatistics::GetMin</a></div><div class="ttdeci">NumericType GetMin(const CosanMatrix&lt; NumericType &gt; &amp;X)</div><div class="ttdef"><b>Definition:</b> <a href="statistics_8h_source.html#l00061">statistics.h:61</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_k_fold_parallel_html"><div class="ttname"><a href="class_cosan_1_1_k_fold_parallel.html">Cosan::KFoldParallel</a></div><div class="ttdef"><b>Definition:</b> <a href="kfold_8h_source.html#l00140">kfold.h:140</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_cosan_principal_component_regression_html"><div class="ttname"><a href="class_cosan_1_1_cosan_principal_component_regression.html">Cosan::CosanPrincipalComponentRegression</a></div><div class="ttdef"><b>Definition:</b> <a href="_cosan_principal_component_regression_8h_source.html#l00016">CosanPrincipalComponentRegression.h:16</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_k_fold_html"><div class="ttname"><a href="class_cosan_1_1_k_fold.html">Cosan::KFold</a></div><div class="ttdef"><b>Definition:</b> <a href="kfold_8h_source.html#l00009">kfold.h:9</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_polynomial_features_html"><div class="ttname"><a href="class_cosan_1_1_polynomial_features.html">Cosan::PolynomialFeatures</a></div><div class="ttdef"><b>Definition:</b> <a href="polynomialfeatures_8h_source.html#l00012">polynomialfeatures.h:12</a></div></div>
 <div class="ttc" id="aclass_cosan_1_1_over_under_flow_html"><div class="ttname"><a href="class_cosan_1_1_over_under_flow.html">Cosan::OverUnderFlow</a></div><div class="ttdef"><b>Definition:</b> <a href="overunderflow_8h_source.html#l00011">overunderflow.h:11</a></div></div>
-<div class="ttc" id="anamespace_cosan_html_a2834817f72f8512e1eb8dec1ba41cf6d"><div class="ttname"><a href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">Cosan::CosanMatrix</a></div><div class="ttdeci">Eigen::Matrix&lt; NumericType, Eigen::Dynamic, Eigen::Dynamic &gt; CosanMatrix</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00032">CosanBO.h:32</a></div></div>
+<div class="ttc" id="anamespace_cosan_html_a2834817f72f8512e1eb8dec1ba41cf6d"><div class="ttname"><a href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">Cosan::CosanMatrix</a></div><div class="ttdeci">Eigen::Matrix&lt; NumericType, Eigen::Dynamic, Eigen::Dynamic &gt; CosanMatrix</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00029">CosanBO.h:29</a></div></div>
 <div class="ttc" id="anormalizer_8h_html"><div class="ttname"><a href="normalizer_8h.html">normalizer.h</a></div></div>
+<div class="ttc" id="agridsearch_8h_html"><div class="ttname"><a href="gridsearch_8h.html">gridsearch.h</a></div></div>
+<div class="ttc" id="arandomkfold_8h_html"><div class="ttname"><a href="randomkfold_8h.html">randomkfold.h</a></div></div>
 <div class="ttc" id="astandard_scaler_8h_html"><div class="ttname"><a href="standard_scaler_8h.html">standardScaler.h</a></div></div>
+<div class="ttc" id="arandomgridsearch_8h_html"><div class="ttname"><a href="randomgridsearch_8h.html">randomgridsearch.h</a></div></div>
+<div class="ttc" id="aminmaxscaler_8h_html"><div class="ttname"><a href="minmaxscaler_8h.html">minmaxscaler.h</a></div></div>
 <div class="ttc" id="aclass_cosan_1_1_cosan_data_html"><div class="ttname"><a href="class_cosan_1_1_cosan_data.html">Cosan::CosanData</a></div><div class="ttdef"><b>Definition:</b> <a href="_cosan_data_8h_source.html#l00359">CosanData.h:359</a></div></div>
-<div class="ttc" id="a3_817_85_2_compiler_id_c_2_c_make_c_compiler_id_8c_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="3_817_85_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="3_817_85_2_compiler_id_c_2_c_make_c_compiler_id_8c_source.html#l00645">CMakeCCompilerId.c:645</a></div></div>
+<div class="ttc" id="a_cosan_p_c_r_ridge_8h_html"><div class="ttname"><a href="_cosan_p_c_r_ridge_8h.html">CosanPCRRidge.h</a></div></div>
+<div class="ttc" id="a_cosan_linear_regression_8h_html"><div class="ttname"><a href="_cosan_linear_regression_8h.html">CosanLinearRegression.h</a></div></div>
+<div class="ttc" id="aprincipalcomponentanalysis_8h_html"><div class="ttname"><a href="principalcomponentanalysis_8h.html">principalcomponentanalysis.h</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_principal_component_analysis_html"><div class="ttname"><a href="class_cosan_1_1_principal_component_analysis.html">Cosan::PrincipalComponentAnalysis</a></div><div class="ttdef"><b>Definition:</b> <a href="principalcomponentanalysis_8h_source.html#l00013">principalcomponentanalysis.h:13</a></div></div>
+<div class="ttc" id="apolynomialfeatures_8h_html"><div class="ttname"><a href="polynomialfeatures_8h.html">polynomialfeatures.h</a></div></div>
 <div class="ttc" id="aclass_cosan_1_1_cosan_raw_data_html"><div class="ttname"><a href="class_cosan_1_1_cosan_raw_data.html">Cosan::CosanRawData</a></div><div class="ttdef"><b>Definition:</b> <a href="_cosan_data_8h_source.html#l00030">CosanData.h:30</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_summary_statistics_html_a95dc68bb4b2e6a3ae27d3dcf67437fde"><div class="ttname"><a href="class_cosan_1_1_summary_statistics.html#a95dc68bb4b2e6a3ae27d3dcf67437fde">Cosan::SummaryStatistics::GetMedian</a></div><div class="ttdeci">NumericType GetMedian(const CosanMatrix&lt; NumericType &gt; &amp;X)</div><div class="ttdef"><b>Definition:</b> <a href="statistics_8h_source.html#l00037">statistics.h:37</a></div></div>
 <div class="ttc" id="aoverunderflow_8h_html"><div class="ttname"><a href="overunderflow_8h.html">overunderflow.h</a></div></div>
 <div class="ttc" id="a_load_csv_test_8cpp_html_aa28a5c88ac75442a7ecebdd88be79a45"><div class="ttname"><a href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a></div><div class="ttdeci">double NumericType</div><div class="ttdef"><b>Definition:</b> <a href="_load_csv_test_8cpp_source.html#l00006">LoadCsvTest.cpp:6</a></div></div>
 <div class="ttc" id="aclass_cosan_1_1_missing_values_html"><div class="ttname"><a href="class_cosan_1_1_missing_values.html">Cosan::MissingValues</a></div><div class="ttdef"><b>Definition:</b> <a href="missingvalues_8h_source.html#l00014">missingvalues.h:14</a></div></div>
+<div class="ttc" id="afmt_test_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="fmt_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="fmt_test_8cpp_source.html#l00006">fmtTest.cpp:6</a></div></div>
+<div class="ttc" id="a_cosan_principal_component_regression_8h_html"><div class="ttname"><a href="_cosan_principal_component_regression_8h.html">CosanPrincipalComponentRegression.h</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_summary_statistics_html"><div class="ttname"><a href="class_cosan_1_1_summary_statistics.html">Cosan::SummaryStatistics</a></div><div class="ttdef"><b>Definition:</b> <a href="statistics_8h_source.html#l00011">statistics.h:11</a></div></div>
 <div class="ttc" id="aclass_cosan_1_1_standard_scaler_html"><div class="ttname"><a href="class_cosan_1_1_standard_scaler.html">Cosan::StandardScaler</a></div><div class="ttdef"><b>Definition:</b> <a href="standard_scaler_8h_source.html#l00009">standardScaler.h:9</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_time_series_split_parallel_html"><div class="ttname"><a href="class_cosan_1_1_time_series_split_parallel.html">Cosan::TimeSeriesSplitParallel</a></div><div class="ttdef"><b>Definition:</b> <a href="timeseriessplit_8h_source.html#l00045">timeseriessplit.h:45</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_summary_statistics_html_a7b1b48128e0986221d0c7a86403363ea"><div class="ttname"><a href="class_cosan_1_1_summary_statistics.html#a7b1b48128e0986221d0c7a86403363ea">Cosan::SummaryStatistics::GetMax</a></div><div class="ttdeci">NumericType GetMax(const CosanMatrix&lt; NumericType &gt; &amp;X)</div><div class="ttdef"><b>Definition:</b> <a href="statistics_8h_source.html#l00054">statistics.h:54</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_cosan_p_c_r_ridge_html"><div class="ttname"><a href="class_cosan_1_1_cosan_p_c_r_ridge.html">Cosan::CosanPCRRidge</a></div><div class="ttdef"><b>Definition:</b> <a href="_cosan_p_c_r_ridge_8h_source.html#l00015">CosanPCRRidge.h:15</a></div></div>
+<div class="ttc" id="autils_2utils_8h_html_aae675471018eaa7498b5f325358c08d9"><div class="ttname"><a href="utils_2utils_8h.html#aae675471018eaa7498b5f325358c08d9">removeColumn</a></div><div class="ttdeci">void removeColumn(Matrix &amp;matrix, gsl::index colToRemove)</div><div class="ttdef"><b>Definition:</b> <a href="utils_2utils_8h_source.html#l00022">utils.h:22</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_summary_statistics_html_ab12f772452bfd03faed5b910e8410322"><div class="ttname"><a href="class_cosan_1_1_summary_statistics.html#ab12f772452bfd03faed5b910e8410322">Cosan::SummaryStatistics::GetSampleCovariance</a></div><div class="ttdeci">CosanMatrix&lt; NumericType &gt; &amp; GetSampleCovariance(const CosanMatrix&lt; NumericType &gt; &amp;X)</div><div class="ttdef"><b>Definition:</b> <a href="statistics_8h_source.html#l00014">statistics.h:14</a></div></div>
+<div class="ttc" id="akfold_8h_html"><div class="ttname"><a href="kfold_8h.html">kfold.h</a></div></div>
 <div class="ttc" id="amissingvalues_8h_html"><div class="ttname"><a href="missingvalues_8h.html">missingvalues.h</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_cosan_linear_regression_html"><div class="ttname"><a href="class_cosan_1_1_cosan_linear_regression.html">Cosan::CosanLinearRegression</a></div><div class="ttdef"><b>Definition:</b> <a href="_cosan_linear_regression_8h_source.html#l00014">CosanLinearRegression.h:14</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_time_series_split_html"><div class="ttname"><a href="class_cosan_1_1_time_series_split.html">Cosan::TimeSeriesSplit</a></div><div class="ttdef"><b>Definition:</b> <a href="timeseriessplit_8h_source.html#l00010">timeseriessplit.h:10</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

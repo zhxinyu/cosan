@@ -16,9 +16,7 @@ namespace Cosan{
 //            CosanRidgeRegression(NumericType Lambda):CosanLinearRegression<NumericType>(false){
 //                MLambda=Lambda;
 //            }
-            CosanRidgeRegression(bool bias=false): CosanLinearRegression<NumericType>(bias){
-                MLambda=Lambda;
-            }
+            CosanRidgeRegression(bool bias=false): CosanLinearRegression<NumericType>(bias){}
             CosanRidgeRegression(NumericType Lambda,bool bias=false): CosanLinearRegression<NumericType>(bias){
                 MLambda=Lambda;
             }

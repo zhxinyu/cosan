@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: test/preprocessor/OverUnderFlowTest.cpp File Reference</title>
+<title>Cosan: test/preprocessor/OverUnderFlowTest.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -33,7 +33,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Cosan
    &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Data Analytics Library</div>
@@ -92,6 +92,7 @@ $(document).ready(function(){initNavTree('_over_under_flow_test_8cpp.html',''); 
 
 <div class="header">
   <div class="summary">
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">OverUnderFlowTest.cpp File Reference</div>  </div>
@@ -107,11 +108,33 @@ $(document).ready(function(){initNavTree('_over_under_flow_test_8cpp.html',''); 
 </div>
 <p><a href="_over_under_flow_test_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:aa28a5c88ac75442a7ecebdd88be79a45"><td class="memItemLeft" align="right" valign="top">typedef double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_over_under_flow_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a></td></tr>
+<tr class="separator:aa28a5c88ac75442a7ecebdd88be79a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_over_under_flow_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="aa28a5c88ac75442a7ecebdd88be79a45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa28a5c88ac75442a7ecebdd88be79a45">&#9670;&nbsp;</a></span>NumericType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef double <a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_over_under_flow_test_8cpp_source.html#l00016">16</a> of file <a class="el" href="_over_under_flow_test_8cpp_source.html">OverUnderFlowTest.cpp</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
@@ -131,7 +154,7 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_over_under_flow_test_8cpp_source.html#l00017">17</a> of file <a class="el" href="_over_under_flow_test_8cpp_source.html">OverUnderFlowTest.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;           {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_cosan_1_1_cosan_raw_data.html">Cosan::CosanRawData</a> CRD(<span class="stringliteral">&quot;./example_data/toy2/X_.csv&quot;</span>,<span class="stringliteral">&quot;./example_data/toy2/Y_.csv&quot;</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_cosan_1_1_cosan_raw_data.html">Cosan::CosanRawData&lt;NumericType&gt;</a> CRD(<span class="stringliteral">&quot;./example_data/toy2/X_.csv&quot;</span>,<span class="stringliteral">&quot;./example_data/toy2/Y_.csv&quot;</span>);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//  std::cout&lt;&lt;CRD.GetSummaryMessageX()&lt;&lt;CRD.GetSummaryMessageY()&lt;&lt;std::endl;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_cosan_1_1_over_under_flow.html">Cosan::OverUnderFlow</a> ouf(CRD);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>

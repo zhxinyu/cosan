@@ -8,6 +8,8 @@ var class_cosan_1_1_cosan_p_c_r_ridge =
     [ "fit", "class_cosan_1_1_cosan_p_c_r_ridge.html#af1d69f666f951938fedea68fb72fe663", null ],
     [ "GetModelType", "class_cosan_1_1_cosan_p_c_r_ridge.html#ac539589ff9b38cf20a58923e18742170", null ],
     [ "GetName", "class_cosan_1_1_cosan_p_c_r_ridge.html#abe8dfb5d1317b3005abc075e4dcba193", null ],
+    [ "GetParams", "class_cosan_1_1_cosan_p_c_r_ridge.html#a5682c8e923781472afa73dd5c11b3b9c", null ],
     [ "GetPC", "class_cosan_1_1_cosan_p_c_r_ridge.html#aa350c884bd7e44761f1c6c4d4e57a86a", null ],
-    [ "GetProblemType", "class_cosan_1_1_cosan_p_c_r_ridge.html#a253055f9b07c8356ad58369553d08e7d", null ]
+    [ "GetProblemType", "class_cosan_1_1_cosan_p_c_r_ridge.html#a253055f9b07c8356ad58369553d08e7d", null ],
+    [ "SetParams", "class_cosan_1_1_cosan_p_c_r_ridge.html#ad8cf46020730eb17a771cf01c7c669e6", null ]
 ];

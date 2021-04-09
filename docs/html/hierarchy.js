@@ -41,10 +41,10 @@ var hierarchy =
       ] ],
       [ "Cosan::Selection", "class_cosan_1_1_selection.html", [
         [ "Cosan::Search", "class_cosan_1_1_search.html", [
-          [ "Cosan::GridSearch< NumericType, Model, Metric, Split, typename >", "class_cosan_1_1_grid_search.html", null ],
-          [ "Cosan::GridSearchMulti< NumericType, Model, Metric, Split, typename >", "class_cosan_1_1_grid_search_multi.html", null ],
-          [ "Cosan::GridSearchMultiParallel< NumericType, Model, Metric, Split, typename >", "class_cosan_1_1_grid_search_multi_parallel.html", null ],
-          [ "Cosan::GridSearchParallel< NumericType, Model, Metric, Split, typename >", "class_cosan_1_1_grid_search_parallel.html", null ],
+          [ "Cosan::GridSearch< NumericType, Model, Metric, Split >", "class_cosan_1_1_grid_search.html", null ],
+          [ "Cosan::GridSearchMulti< NumericType, Model, Metric, Split >", "class_cosan_1_1_grid_search_multi.html", null ],
+          [ "Cosan::GridSearchMultiParallel< NumericType, Model, Metric, Split >", "class_cosan_1_1_grid_search_multi_parallel.html", null ],
+          [ "Cosan::GridSearchParallel< NumericType, Model, Metric, Split >", "class_cosan_1_1_grid_search_parallel.html", null ],
           [ "Cosan::RandomGridSearch< NumericType, Model, Metric, Split, typename >", "class_cosan_1_1_random_grid_search.html", null ],
           [ "Cosan::RandomGridSearchMulti< NumericType, Model, Metric, Split, typename >", "class_cosan_1_1_random_grid_search_multi.html", null ],
           [ "Cosan::RandomGridSearchMultiParallel< NumericType, Model, Metric, Split, typename >", "class_cosan_1_1_random_grid_search_multi_parallel.html", null ],

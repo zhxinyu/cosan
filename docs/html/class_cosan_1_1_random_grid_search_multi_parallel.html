@@ -103,14 +103,25 @@ $(document).ready(function(){initNavTree('class_cosan_1_1_random_grid_search_mul
 <div class="dynheader">
 Inheritance diagram for Cosan::RandomGridSearchMultiParallel&lt; NumericType, Model, Metric, Split, typename &gt;:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_cosan_1_1_random_grid_search_multi_parallel.png" usemap="#Cosan::RandomGridSearchMultiParallel_3C_20NumericType_2C_20Model_2C_20Metric_2C_20Split_2C_20typename_20_3E_map" alt=""/>
-  <map id="Cosan::RandomGridSearchMultiParallel_3C_20NumericType_2C_20Model_2C_20Metric_2C_20Split_2C_20typename_20_3E_map" name="Cosan::RandomGridSearchMultiParallel_3C_20NumericType_2C_20Model_2C_20Metric_2C_20Split_2C_20typename_20_3E_map">
-<area href="class_cosan_1_1_search.html" alt="Cosan::Search" shape="rect" coords="0,112,518,136"/>
-<area href="class_cosan_1_1_selection.html" alt="Cosan::Selection" shape="rect" coords="0,56,518,80"/>
-<area href="class_cosan_1_1_cosan_b_o.html" alt="Cosan::CosanBO" shape="rect" coords="0,0,518,24"/>
-  </map>
-</div></div>
+<div class="center"><img src="class_cosan_1_1_random_grid_search_multi_parallel__inherit__graph.png" border="0" usemap="#a_cosan_1_1_random_grid_search_multi_parallel_3_01_numeric_type_00_01_model_00_01_metric_00_01_split_00_01typename_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="_cosan_1_1_random_grid_search_multi_parallel_3_01_numeric_type_00_01_model_00_01_metric_00_01_split_00_01typename_01_4_inherit__map" id="_cosan_1_1_random_grid_search_multi_parallel_3_01_numeric_type_00_01_model_00_01_metric_00_01_split_00_01typename_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,229,216,285"/>
+<area shape="rect" href="class_cosan_1_1_search.html" title=" " alt="" coords="56,155,165,181"/>
+<area shape="rect" href="class_cosan_1_1_selection.html" title=" " alt="" coords="49,80,172,107"/>
+<area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="48,5,173,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Cosan::RandomGridSearchMultiParallel&lt; NumericType, Model, Metric, Split, typename &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_cosan_1_1_random_grid_search_multi_parallel__coll__graph.png" border="0" usemap="#a_cosan_1_1_random_grid_search_multi_parallel_3_01_numeric_type_00_01_model_00_01_metric_00_01_split_00_01typename_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="_cosan_1_1_random_grid_search_multi_parallel_3_01_numeric_type_00_01_model_00_01_metric_00_01_split_00_01typename_01_4_coll__map" id="_cosan_1_1_random_grid_search_multi_parallel_3_01_numeric_type_00_01_model_00_01_metric_00_01_split_00_01typename_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="5,229,216,285"/>
+<area shape="rect" href="class_cosan_1_1_search.html" title=" " alt="" coords="56,155,165,181"/>
+<area shape="rect" href="class_cosan_1_1_selection.html" title=" " alt="" coords="49,80,172,107"/>
+<area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="48,5,173,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -249,7 +260,7 @@ template&lt;typename NumericType , Derived&lt; CosanModel &gt; Model, Derived&lt
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="preprocessor">            #pragma omp parallel for</span></div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="keywordflow">for</span> (gsl::index i = 0; i &lt; paramGrid.size(); ++i){</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                estimator.SetParams(paramGrid[i]);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                allError[i] = <a class="code" href="namespace_cosan.html#a897204fb394a09a87e227ceb40b54310">crossValidation</a>(CRD, estimator, metric, split);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                allError[i] = <a class="code" href="namespace_cosan.html#a556f807b75703a53f8748f9b18463a2d">crossValidation</a>(CRD, estimator, metric, split);</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            }</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            bestParam =paramGrid[std::distance(allError.begin(), std::min_element(allError.begin(), allError.end()))];</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        }</div>
@@ -292,7 +303,7 @@ template&lt;typename NumericType , Derived&lt; CosanModel &gt; Model, Derived&lt
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespace_cosan_html_a897204fb394a09a87e227ceb40b54310"><div class="ttname"><a href="namespace_cosan.html#a897204fb394a09a87e227ceb40b54310">Cosan::crossValidation</a></div><div class="ttdeci">NumericType crossValidation(CosanData&lt; NumericType &gt; &amp;CRD, Model &amp;estimator, Metric &amp;metric, Split &amp;split, int nthread=-1)</div><div class="ttdef"><b>Definition:</b> <a href="crossvalidation_8h_source.html#l00028">crossvalidation.h:28</a></div></div>
+<div class="ttc" id="anamespace_cosan_html_a556f807b75703a53f8748f9b18463a2d"><div class="ttname"><a href="namespace_cosan.html#a556f807b75703a53f8748f9b18463a2d">Cosan::crossValidation</a></div><div class="ttdeci">NumericType crossValidation(CosanData&lt; NumericType &gt; &amp;CRD, Model &amp;estimator, Metric &amp;metric, Split &amp;split)</div><div class="ttdef"><b>Definition:</b> <a href="crossvalidation_8h_source.html#l00032">crossvalidation.h:32</a></div></div>
 <div class="ttc" id="aclass_cosan_1_1_search_html_a7c1cdaf7351bd0e9e019025c3cd39940"><div class="ttname"><a href="class_cosan_1_1_search.html#a7c1cdaf7351bd0e9e019025c3cd39940">Cosan::Search::Search</a></div><div class="ttdeci">Search()</div><div class="ttdef"><b>Definition:</b> <a href="selection_8h_source.html#l00029">selection.h:29</a></div></div>
 <div class="ttc" id="a_load_csv_test_8cpp_html_aa28a5c88ac75442a7ecebdd88be79a45"><div class="ttname"><a href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a></div><div class="ttdeci">double NumericType</div><div class="ttdef"><b>Definition:</b> <a href="_load_csv_test_8cpp_source.html#l00006">LoadCsvTest.cpp:6</a></div></div>
 <!-- start footer part -->

@@ -27,9 +27,6 @@ namespace Cosan
                     MLambda = params[1];
                     fit(CD.GetInput(),CD.GetTarget());
                 }
-
-
-
             template<class T,
                 std::enable_if_t<std::is_same_v<std::decay_t<T>,CosanMatrix<NumericType>>,bool> = true >
             CosanPCRRidge(T&& X,const CosanMatrix<NumericType>& Y,std::vector<NumericType> params,bool bias = false): CosanPrincipalComponentRegression<NumericType>(params[0]){
@@ -58,7 +55,10 @@ namespace Cosan
                 CosanMatrix<NumericType> Identity = MLambda*CosanMatrix<NumericType>::Identity((this->PC).cols(),(this->PC).cols());
                 this->MBeta = ((this->DerivatedCovariate).transpose()*(this->DerivatedCovariate)+Identity).ldlt().solve((this->DerivatedCovariate).transpose()*Y);
             }
-
+            void SetParams(std::vector<NumericType> params) {
+                this->__ncomp = params[0];
+                MLambda = params[1]; };
+            NumericType GetParams() {return {this->__ncomp ,MLambda};}
             CosanMatrix<NumericType> &GetPC() {return this->PC;}
         private:
             NumericType MLambda;

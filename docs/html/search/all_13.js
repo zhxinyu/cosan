@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['updatecat_288',['UpdateCat',['../class_cosan_1_1_cosan_raw_data.html#a3d55f032b46b4ee412973b3f9d328475',1,'Cosan::CosanRawData::UpdateCat(const std::vector&lt; std::string &gt; &amp;inputX)'],['../class_cosan_1_1_cosan_raw_data.html#ac93039a1ef61ba97d7851083da85a144',1,'Cosan::CosanRawData::UpdateCat(const std::vector&lt; std::string &gt; &amp;inputX, const std::vector&lt; std::string &gt; &amp;inputY)']]],
-  ['updatedata_289',['UpdateData',['../class_cosan_1_1_cosan_raw_data.html#a7ecaa3f312d171fa77567870c1740ca1',1,'Cosan::CosanRawData::UpdateData(const CosanMatrix&lt; NumericType &gt; &amp;inputX)'],['../class_cosan_1_1_cosan_raw_data.html#a087a53ffece7348c50ef313c6a15cf94',1,'Cosan::CosanRawData::UpdateData(const CosanMatrix&lt; NumericType &gt; &amp;inputX, const CosanMatrix&lt; NumericType &gt; &amp;inputY)']]],
-  ['updatepolynomialfeatures_290',['UpdatePolynomialFeatures',['../class_cosan_1_1_polynomial_features.html#a43e398a66447386a3439ad512e54c0bb',1,'Cosan::PolynomialFeatures']]],
-  ['utils_2eh_291',['utils.h',['../io_2utils_8h.html',1,'(Global Namespace)'],['../utils_2utils_8h.html',1,'(Global Namespace)']]]
+  ['variance_279',['variance',['../class_cosan_1_1_summary_statistics.html#a75cbc1d9576d33f5d1990d96aef52f8e',1,'Cosan::SummaryStatistics']]],
+  ['vec_280',['vec',['../namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd',1,'Cosan']]]
 ];

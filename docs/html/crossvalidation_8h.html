@@ -101,6 +101,59 @@ $(document).ready(function(){initNavTree('crossvalidation_8h.html',''); initResi
 <div class="textblock"><code>#include &lt;variant&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;<a class="el" href="selection_8h_source.html">cosan/selection/selection.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for crossvalidation.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="crossvalidation_8h__incl.png" border="0" usemap="#acosan_2selection_2crossvalidation_8h" alt=""/></div>
+<map name="cosan_2selection_2crossvalidation_8h" id="cosan_2selection_2crossvalidation_8h">
+<area shape="rect" title=" " alt="" coords="481,5,695,32"/>
+<area shape="rect" title=" " alt="" coords="5,155,67,181"/>
+<area shape="rect" title=" " alt="" coords="1605,528,1664,555"/>
+<area shape="rect" href="selection_8h.html" title=" " alt="" coords="498,80,678,107"/>
+<area shape="rect" title=" " alt="" coords="1187,528,1253,555"/>
+<area shape="rect" title=" " alt="" coords="1689,155,1751,181"/>
+<area shape="rect" title=" " alt="" coords="141,155,216,181"/>
+<area shape="rect" title=" " alt="" coords="377,528,445,555"/>
+<area shape="rect" href="_cosan_data_8h.html" title=" " alt="" coords="750,304,917,331"/>
+<area shape="rect" href="_exceptions_8h.html" title=" " alt="" coords="141,453,307,480"/>
+<area shape="rect" href="_cosan_model_8h.html" title=" " alt="" coords="987,155,1171,181"/>
+<area shape="rect" href="_cosan_metric_8h.html" title=" " alt="" coords="341,155,550,181"/>
+<area shape="rect" href="_arg_check_8h.html" title=" " alt="" coords="483,229,642,256"/>
+<area shape="rect" title=" " alt="" coords="1195,155,1253,181"/>
+<area shape="rect" title=" " alt="" coords="585,453,639,480"/>
+<area shape="rect" title=" " alt="" coords="498,528,595,555"/>
+<area shape="rect" title=" " alt="" coords="686,379,773,405"/>
+<area shape="rect" href="io_2utils_8h.html" title=" " alt="" coords="1251,379,1362,405"/>
+<area shape="rect" title=" " alt="" coords="1584,453,1635,480"/>
+<area shape="rect" href="_cosan_b_o_8h.html" title=" " alt="" coords="931,379,1093,405"/>
+<area shape="rect" title=" " alt="" coords="797,379,907,405"/>
+<area shape="rect" title=" " alt="" coords="1091,528,1163,555"/>
+<area shape="rect" title=" " alt="" coords="1379,453,1445,480"/>
+<area shape="rect" title=" " alt="" coords="1469,453,1509,480"/>
+<area shape="rect" title=" " alt="" coords="1241,453,1303,480"/>
+<area shape="rect" title=" " alt="" coords="1006,528,1066,555"/>
+<area shape="rect" title=" " alt="" coords="715,453,808,480"/>
+<area shape="rect" title=" " alt="" coords="832,453,915,480"/>
+<area shape="rect" href="utils_2utils_8h.html" title=" " alt="" coords="990,453,1114,480"/>
+<area shape="rect" title=" " alt="" coords="215,528,294,555"/>
+<area shape="rect" title=" " alt="" coords="987,229,1048,256"/>
+<area shape="rect" href="evaluation_8h.html" title=" " alt="" coords="717,229,912,256"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="crossvalidation_8h__dep__incl.png" border="0" usemap="#acosan_2selection_2crossvalidation_8hdep" alt=""/></div>
+<map name="cosan_2selection_2crossvalidation_8hdep" id="acosan_2selection_2crossvalidation_8hdep">
+<area shape="rect" title=" " alt="" coords="240,5,455,32"/>
+<area shape="rect" href="gridsearch_8h.html" title=" " alt="" coords="137,80,325,107"/>
+<area shape="rect" href="randomgridsearch_8h.html" title=" " alt="" coords="349,80,580,107"/>
+<area shape="rect" href="onehotencoding_8cpp.html" title=" " alt="" coords="326,162,569,189"/>
+<area shape="rect" href="onehotencoding_test_8cpp.html" title=" " alt="" coords="593,155,811,196"/>
+<area shape="rect" href="_grid_search_test_8cpp.html" title=" " alt="" coords="5,155,175,196"/>
+<area shape="rect" href="test1_8cpp.html" title=" " alt="" coords="199,162,301,189"/>
+</map>
+</div>
 </div>
 <p><a href="crossvalidation_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -111,9 +164,12 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a897204fb394a09a87e227ceb40b54310"><td class="memTemplParams" colspan="2">template&lt;typename NumericType , Derived&lt; CosanModel &gt; Model, Derived&lt; CosanMetric&lt; NumericType &gt;&gt; Metric, Derived&lt; Splitter &gt; Split, typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </td></tr>
-<tr class="memitem:a897204fb394a09a87e227ceb40b54310"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a897204fb394a09a87e227ceb40b54310">Cosan::crossValidation</a> (CosanData&lt; <a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;CRD, Model &amp;estimator, Metric &amp;metric, Split &amp;split, int nthread=-1)</td></tr>
-<tr class="separator:a897204fb394a09a87e227ceb40b54310"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a556f807b75703a53f8748f9b18463a2d"><td class="memTemplParams" colspan="2">template&lt;Numeric NumericType, Derived&lt; CosanModel &gt; Model, Derived&lt; CosanMetric&lt; NumericType &gt;&gt; Metric, Derived&lt; Splitter &gt; Split&gt; </td></tr>
+<tr class="memitem:a556f807b75703a53f8748f9b18463a2d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a556f807b75703a53f8748f9b18463a2d">Cosan::crossValidation</a> (CosanData&lt; <a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;CRD, Model &amp;estimator, Metric &amp;metric, Split &amp;split)</td></tr>
+<tr class="separator:a556f807b75703a53f8748f9b18463a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0280e424b936ed30c03c8f919f2830b7"><td class="memTemplParams" colspan="2">template&lt;Numeric NumericType, Derived&lt; CosanModel &gt; Model, Derived&lt; CosanMetric&lt; NumericType &gt;&gt; Metric, Derived&lt; Splitter &gt; Split&gt; </td></tr>
+<tr class="memitem:a0280e424b936ed30c03c8f919f2830b7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a0280e424b936ed30c03c8f919f2830b7">Cosan::crossValidationParallel</a> (CosanData&lt; <a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;CRD, Model &amp;estimator, Metric &amp;metric, Split &amp;split, int nthreads=-1)</td></tr>
+<tr class="separator:a0280e424b936ed30c03c8f919f2830b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

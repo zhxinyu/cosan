@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: cosan/preprocessing/principalcomponentanalysis.h Source File</title>
+<title>Cosan: cosan/preprocessing/principalcomponentanalysis.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -33,7 +33,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Cosan
    &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Data Analytics Library</div>
@@ -141,7 +141,7 @@ $(document).ready(function(){initNavTree('principalcomponentanalysis_8h_source.h
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                std::vector&lt;NumericType&gt; <a class="code" href="namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd">vec</a>(eigensolver.eigenvalues().data(), eigensolver.eigenvalues().data() + eigensolver.eigenvalues().size());</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                std::reverse(<a class="code" href="namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd">vec</a>.begin(),<a class="code" href="namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd">vec</a>.end());</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                std::vector&lt;NumericType&gt; runningSum(<a class="code" href="namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd">vec</a>.size());</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                std::partial_sum(<a class="code" href="namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd">vec</a>.begin(), <a class="code" href="namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd">vec</a>.end(), runningSum.begin(), std::plus&lt;NumericType&gt;());</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                std::partial_sum(<a class="code" href="namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd">vec</a>.begin(), <a class="code" href="namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd">vec</a>.end(), runningSum.begin());</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordflow">for</span> (gsl::index i =0;i&lt;runningSum.size();i++){</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    fmt::print(<span class="stringliteral">&quot;The first {:} principal components explains {:f}% of the total variance.\n&quot;</span>,i,runningSum[i]/runningSum.back()*100);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    <span class="keywordflow">if</span> (runningSum[i]/runningSum.back()&gt;0.98 and i&gt;=8){</div>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['tutorial_612',['Tutorial',['../md__tutorial_selectionandevaluation.html',1,'']]],
-  ['tutorial_613',['Tutorial',['../md__tutorial__tutorial.html',1,'']]]
+  ['linear_20model_20design_20document_20v1_2e0_633',['Linear Model Design Document V1.0',['../md_design__model_design_doc.html',1,'']]]
 ];

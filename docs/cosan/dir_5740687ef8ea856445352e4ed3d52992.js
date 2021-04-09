@@ -1,7 +1,7 @@
 var dir_5740687ef8ea856445352e4ed3d52992 =
 [
     [ "customtransform.h", "customtransform_8h.html", [
-      [ "CustomerTransform", "class_cosan_1_1_customer_transform.html", "class_cosan_1_1_customer_transform" ]
+      [ "CustomTransform", "class_cosan_1_1_custom_transform.html", "class_cosan_1_1_custom_transform" ]
     ] ],
     [ "encoder.h", "encoder_8h.html", [
       [ "Encoder", "class_cosan_1_1_encoder.html", "class_cosan_1_1_encoder" ]

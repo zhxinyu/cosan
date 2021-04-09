@@ -12,7 +12,9 @@ To use Cosan, you just need to download Cosan source code and include the header
 
 ### How to compile and run Cosan
 
-```g++ -I /path/to/cosan/ your_program.cpp -o your_program && ./your_program```
+~~~~~~~~~~~~~~~
+g++ -I /path/to/cosan/ your_program.cpp -o your_program && ./your_program
+~~~~~~~~~~~~~~~
 
 
 ### Hello World programs
@@ -26,66 +28,79 @@ Cosan::CosanRawData CD("./path/to/example.csv");
 
 You can also choose to create your own dataset when initializing the object.
 
-```
+~~~~~~~~~~~~~~~{.cpp}
 Cosan::CosanMatrix X{3,3};
     X << 1, -1, 2,
          2, 0, 0,
          0, 1, -1;
-```
+~~~~~~~~~~~~~~~
 
 CosanRawData will fulfill your needs with different kinds of data types and all sorts of operations.
 
 #### Preprocessing
 Usually the first step when doing data analytics is dataset transformation and preprocessing. 
 
-```
+~~~~~~~~~~~~~~~{.cpp}
     Cosan::standardScaler ss{};
     std::cout << ss.standardize(CD) << std::endl;
-```
+~~~~~~~~~~~~~~~
 
 #### Linear Models
 
-```
+~~~~~~~~~~~~~~~{.cpp}
 Cosan::CosanRawData CD("./example_data/X.csv","./example_data/y.csv");
 Cosan::CosanLinearRegression CLR()
 CLRwbias.fit(CD.GetInput(),CD.GetTarget());
 std::cout<<CLRwbias.GetBeta()<<std::endl;
-```
+~~~~~~~~~~~~~~~
 
 #### Model selection
 
-# Cosan Design Doc V1.0
+
+# Cosan Design Doc v1.0
 
 ## Motivation: 
 TODO
-(Fun fact: why the project is named Cosan - )
+(Fun fact: why the project is named Cosan: C(Chen)Z(Zhang)Z(Zhou)->CZZ->Cosan (CZZ used to be stock code for Cosan, a public listed company on energy.))
 
 ## Type Template
 We make use of template and concept to define a numerical type(an integral type or a floating-point). \
 This type is widely used throughout our library in `CosanData`, `CosanMatrix`, `CosanModel`, etc.
 It implementation is as follow.
-```
+~~~~~~~~~~~~~~~{.cpp}
 template<typename NumericType,
 concept Numeric = std::is_arithmetic<NumericType>::value;
-``` 
+~~~~~~~~~~~~~~~
+
 We also define another template to restrict type of objects we can use.
 The implementaion is as follow.
-```
+~~~~~~~~~~~~~~~{.cpp}
 template <class T, class U>
 concept Derived = std::is_base_of<U, T>::value;
-```
+~~~~~~~~~~~~~~~
 This is to restrict U to be the base of T.
 
 ## Module Structure
-<img src="https://github.com/gchenra/cosan/blob/xinyu/design/class_hierarchy.png" alt="class hierarchy chart" width="800"/>
+<!-- <img src="./design/class_hierarchy.png" alt="class hierarchy chart" width="800"/> -->
+
+@image html ./design/class_hierarchy.png width=1200
 
 ### Key Classes
 
-##### [Data Preprocessing](https://github.com/gchenra/cosan/blob/xinyu/design/PreprocessDesignDoc.md)
+##### Data Preprocessing
+In any Machine Learning process, data dreprocessing is that step in which the data gets transformed, or Encoded, to bring it to such a state that now the machine can easily parse it. In other words, the features of the data can now be easily interpreted by the algorithm.
 
-##### [Linear Model](https://github.com/gchenra/cosan/blob/xinyu/design/ModelDesignDoc.md)
+[Design doc](./design/PreprocessDesignDoc.md) for preprocessing
 
-##### [Model Selection & Evaluation](https://github.com/gchenra/cosan/blob/xinyu/design/SelectDesignDoc.md)
+##### Model Object
+This part implements classes and functions that fit `CosanData` into linear models. In 1.0 version, we offer linear models of different variants (Linear Regression, Ridge Regression, Principal Component Regression and Principal Component Regression with L2 square norm penalty). 
+
+[Design doc](./design/ModelDesignDoc.md) for model objects
+
+##### Model Selection & Evaluation
+The main purpose of this part is to offer tools to evaluate the linear models with the preprocessed data.
+
+[Design doc](./design/SelectDesignDoc.md) for selection and evaluation
 
 ### Base Classes
 
@@ -146,9 +161,9 @@ Location: `cosan\utils\utils.h`
 7. chrono
 
 ## Used Open Resource Libraries 
-### [Eigen](https://eigen.tuxfamily.org/index.php?title=Main_Page)
-### [gsl](https://github.com/microsoft/GSL)
-### [fmt](http://fmt.dev/)
+1. [Eigen](https://eigen.tuxfamily.org/index.php?title=Main_Page)
+2. [gsl](https://github.com/microsoft/GSL)
+3. [fmt](http://fmt.dev/)
 
 ## Future work and extensibility
 1. Improve code readability. Add detialed comments in the code base.

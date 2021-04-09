@@ -340,7 +340,7 @@ Notice that CRD.X has been modified. The dimension of X is (98,17). 1 columns of
 ```
 #### 3.c Principal component analysis
 PCA is defined as an orthogonal linear transformation that transforms the data to a new coordinate system such that the greatest variance by some scalar projection of the data comes to lie on the first coordinate (called the first principal component), the second greatest variance on the second coordinate, and so on. More details can be seen [here](https://en.wikipedia.org/wiki/Principal_component_analysis).
-One may need to choose target number of principal component \f$p\f. The default value is the minimum value of 5 and number of columns for X. 
+One may need to choose target number of principal component \f$p\f$. The default value is the minimum value of 5 and number of columns for X. 
 ~~~~~~~~~~~~~~~{.cpp}
 #include <cosan/preprocessing/principalcomponentanalysis.h>
 gsl::index ncomponent = 5;
@@ -367,6 +367,7 @@ Uer .GetPC() function to get the principal components.
 *********************************
 ```
 #### 3.d User-defined transformation
+We allow a user-defined features with input type `std::vector<NumericType>`. The operation will add one additional column to CRD.X.
 ~~~~~~~~~~~~~~~{.cpp}
 #include <cosan/preprocessing/customtransform.h>
 Cosan::CustomTransform CT(CRD,newInputX);// newInputX is of tpye std::vector<NumericType> to be added to CRD.X. 
@@ -396,7 +397,17 @@ model(NumericType param, bool bias);//for model with only one hyper-parameter. R
 model(std::vector<NumericType> params, bool bias);//for model with more than one hyper-parameter. Each hyper-parameter is the enry of params. PCR with L2 square norm is the case. 
 ~~~~~~~~~~~~~~~
 
-To initialize model object and run 
+To initialize model object and run model fitting automatically, one can do 
+~~~~~~~~~~~~~~~{.cpp}
+model(CosanRawData<NumericType> RD,NumericType param ,bool bias = false)
+model(CosanData<NumericType> CD,NumericType param ,bool bias = false)
+model(CosanRawData<NumericType> RD,NumericType param ,bool bias = false)
+(CosanMatrix<NumericType> X,CosanMatrix<NumericType> Y,NumericType param,bool bias = false)
+~~~~~~~~~~~~~~~
+For model with more than 1 hyperparameter, one should replace `NumericType param` by `std::vector<NumericType> params`.
+
+To call fit function specificall, one can do 
+
 #### 4.a Ordinary least square (linear regression)
 ~~~~~~~~~~~~~~~{.cpp}
 #include <cosan/model/CosanLinearRegression.h>

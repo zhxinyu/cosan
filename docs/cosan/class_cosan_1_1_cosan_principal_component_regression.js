@@ -1,8 +1,10 @@
 var class_cosan_1_1_cosan_principal_component_regression =
 [
     [ "CosanPrincipalComponentRegression", "class_cosan_1_1_cosan_principal_component_regression.html#a1be689efe7efd24c7be6c2668a295cf7", null ],
-    [ "CosanPrincipalComponentRegression", "class_cosan_1_1_cosan_principal_component_regression.html#a598ea5e8f908ed47ebeb365cff8f0e99", null ],
-    [ "CosanPrincipalComponentRegression", "class_cosan_1_1_cosan_principal_component_regression.html#a1d84ad2728e04876ba2220376394a762", null ],
+    [ "CosanPrincipalComponentRegression", "class_cosan_1_1_cosan_principal_component_regression.html#aba84b7601e30d229ea2d762a9c7e2ff9", null ],
+    [ "CosanPrincipalComponentRegression", "class_cosan_1_1_cosan_principal_component_regression.html#a21bb60744b5116f79fc14591a2b41cbd", null ],
+    [ "CosanPrincipalComponentRegression", "class_cosan_1_1_cosan_principal_component_regression.html#a608b751f2bef42c068a6a05b743c1d9d", null ],
+    [ "CosanPrincipalComponentRegression", "class_cosan_1_1_cosan_principal_component_regression.html#ae49168bd2e9aae5e34d967ac444b8084", null ],
     [ "fit", "class_cosan_1_1_cosan_principal_component_regression.html#ac66a33375de914c347ba0ef187ad4397", null ],
     [ "GetModelType", "class_cosan_1_1_cosan_principal_component_regression.html#aae926c7195875df747da78afedeab73e", null ],
     [ "GetName", "class_cosan_1_1_cosan_principal_component_regression.html#ade0c9575662c87d1b6510b4425845fca", null ],

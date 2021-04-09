@@ -1,6 +1,9 @@
 # Preprocessing Design Doc
 
 ## Introduction
+
+In any Machine Learning process, data dreprocessing is that step in which the data gets transformed, or Encoded, to bring it to such a state that now the machine can easily parse it. In other words, the features of the data can now be easily interpreted by the algorithm.
+
 #### CustomerTransform
 
 Provide users with the ability to specify customized functions as a transformer. 

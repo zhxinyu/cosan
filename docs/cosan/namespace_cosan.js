@@ -1,5 +1,6 @@
 var namespace_cosan =
 [
+    [ "Team member: Jiahe Chen (jc5348), Xinyu Zhang (xz2691), Zida Zhou (zz2791)", "index.html#autotoc_md64", null ],
     [ "CosanBO", "class_cosan_1_1_cosan_b_o.html", "class_cosan_1_1_cosan_b_o" ],
     [ "CosanData", "class_cosan_1_1_cosan_data.html", "class_cosan_1_1_cosan_data" ],
     [ "CosanElasticNet", "class_cosan_1_1_cosan_elastic_net.html", null ],
@@ -12,7 +13,7 @@ var namespace_cosan =
     [ "CosanPrincipalComponentRegression", "class_cosan_1_1_cosan_principal_component_regression.html", "class_cosan_1_1_cosan_principal_component_regression" ],
     [ "CosanRawData", "class_cosan_1_1_cosan_raw_data.html", "class_cosan_1_1_cosan_raw_data" ],
     [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html", "class_cosan_1_1_cosan_ridge_regression" ],
-    [ "CustomerTransform", "class_cosan_1_1_customer_transform.html", "class_cosan_1_1_customer_transform" ],
+    [ "CustomTransform", "class_cosan_1_1_custom_transform.html", "class_cosan_1_1_custom_transform" ],
     [ "DiffSizeException", "class_cosan_1_1_diff_size_exception.html", null ],
     [ "Encoder", "class_cosan_1_1_encoder.html", "class_cosan_1_1_encoder" ],
     [ "Evaluation", "class_cosan_1_1_evaluation.html", "class_cosan_1_1_evaluation" ],

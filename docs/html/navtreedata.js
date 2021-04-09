@@ -25,61 +25,32 @@
 var NAVTREE =
 [
   [ "Cosan", "index.html", [
-    [ "Tutorial", "md__tutorial_selectionandevaluation.html", [
-      [ "Overview:", "index.html#autotoc_md1", null ],
-      [ "Introduction:", "index.html#autotoc_md2", null ],
-      [ "Design:", "index.html#autotoc_md3", [
-        [ "Things to fig", "md__tutorial_selectionandevaluation.html#autotoc_md5", null ],
-        [ "Model Selection and Evaluation Design", "md__tutorial_selectionandevaluation.html#autotoc_md6", null ]
+    [ "Overview:", "index.html#autotoc_md62", null ],
+    [ "Getting started", "index.html#autotoc_md63", [
+      [ "How to install Cosan", "index.html#autotoc_md64", null ],
+      [ "How to compile and run Cosan", "index.html#autotoc_md65", null ],
+      [ "Hello World programs", "index.html#autotoc_md66", [
+        [ "Data input", "index.html#autotoc_md67", null ],
+        [ "Preprocessing", "index.html#autotoc_md68", null ],
+        [ "Linear Models", "index.html#autotoc_md69", null ],
+        [ "Model selection", "index.html#autotoc_md70", null ]
       ] ]
     ] ],
-    [ "Tutorial", "md__tutorial__tutorial.html", [
-      [ "Tutorial", "md__tutorial__tutorial.html#autotoc_md7", [
-        [ "Library Overview", "md__tutorial__tutorial.html#autotoc_md8", null ],
-        [ "Installation", "md__tutorial__tutorial.html#autotoc_md9", null ],
-        [ "Instructions by examples", "md__tutorial__tutorial.html#autotoc_md10", [
-          [ "1. Data Reading", "md__tutorial__tutorial.html#autotoc_md11", [
-            [ "1.a Read from csv file", "md__tutorial__tutorial.html#autotoc_md12", null ],
-            [ "1.b Read data from <tt>CosanMatrix<NumericType></tt>", "md__tutorial__tutorial.html#autotoc_md13", null ],
-            [ "1.c Read data from <tt>std::vector<NumericType></tt>", "md__tutorial__tutorial.html#autotoc_md14", null ],
-            [ "1.d Synthetic data generation", "md__tutorial__tutorial.html#autotoc_md15", null ]
-          ] ],
-          [ "2. Data Preprocessing", "md__tutorial__tutorial.html#autotoc_md16", [
-            [ "2.a Overflow and underflow", "md__tutorial__tutorial.html#autotoc_md17", null ],
-            [ "2.b Missing values", "md__tutorial__tutorial.html#autotoc_md18", null ],
-            [ "2.c Normalization", "md__tutorial__tutorial.html#autotoc_md19", null ],
-            [ "2.e Standardization", "md__tutorial__tutorial.html#autotoc_md20", null ],
-            [ "2.f Categorical encoding", "md__tutorial__tutorial.html#autotoc_md21", null ]
-          ] ],
-          [ "3.Feature Engineering", "md__tutorial__tutorial.html#autotoc_md22", [
-            [ "3.a Feature scaling (MinMaxScalar)", "md__tutorial__tutorial.html#autotoc_md23", null ],
-            [ "3.b Polynomial features generation", "md__tutorial__tutorial.html#autotoc_md24", null ],
-            [ "3.c Principal component analysis", "md__tutorial__tutorial.html#autotoc_md25", null ],
-            [ "3.d User-defined transformation", "md__tutorial__tutorial.html#autotoc_md26", null ]
-          ] ],
-          [ "4. Model Fitting", "md__tutorial__tutorial.html#autotoc_md27", [
-            [ "4.a Ordinary least square (linear regression)", "md__tutorial__tutorial.html#autotoc_md28", null ],
-            [ "4.b Ordinary least square with L2-squared norm penalty (ridge regression)", "md__tutorial__tutorial.html#autotoc_md29", null ],
-            [ "4.c Principal component regression (PCR)", "md__tutorial__tutorial.html#autotoc_md30", null ],
-            [ "4.d Principal component regressionw with \\f$\\ell_2\\f$-squared norm penalty ( ridge PCR)", "md__tutorial__tutorial.html#autotoc_md31", null ]
-          ] ],
-          [ "5. Model Selection", "md__tutorial__tutorial.html#autotoc_md32", [
-            [ "5.a k-fold cross-validation", "md__tutorial__tutorial.html#autotoc_md33", null ],
-            [ "5.b random k-fold cross-validation", "md__tutorial__tutorial.html#autotoc_md34", null ],
-            [ "5.c timeseries k-fold cross-validation", "md__tutorial__tutorial.html#autotoc_md35", null ]
-          ] ],
-          [ "6. Evaluation", "md__tutorial__tutorial.html#autotoc_md36", [
-            [ "6.a Maximum error", "md__tutorial__tutorial.html#autotoc_md37", null ],
-            [ "6.b mean absolute error", "md__tutorial__tutorial.html#autotoc_md38", null ],
-            [ "6.c mean square error", "md__tutorial__tutorial.html#autotoc_md39", null ],
-            [ "6.d coefficient of determination", "md__tutorial__tutorial.html#autotoc_md40", null ],
-            [ "6.e vector mean", "md__tutorial__tutorial.html#autotoc_md41", null ],
-            [ "6.e vector variance", "md__tutorial__tutorial.html#autotoc_md42", null ],
-            [ "correlation matrix for p features", "md__tutorial__tutorial.html#autotoc_md43", null ]
-          ] ]
-        ] ]
+    [ "Cosan Design Doc v1.0", "index.html#autotoc_md71", [
+      [ "Motivation:", "index.html#autotoc_md72", null ],
+      [ "Type Template", "index.html#autotoc_md73", null ],
+      [ "Module Structure", "index.html#autotoc_md74", [
+        [ "Key Classes", "index.html#autotoc_md75", null ],
+        [ "Base Classes", "index.html#autotoc_md79", null ],
+        [ "Utility Classes", "index.html#autotoc_md82", null ]
+      ] ],
+      [ "Modern C++ feature used", "index.html#autotoc_md89", null ],
+      [ "Used Open Resource Libraries", "index.html#autotoc_md90", null ],
+      [ "Future work and extensibility", "index.html#autotoc_md91", [
+        [ "Other open source alternatives", "index.html#autotoc_md92", null ]
       ] ]
     ] ],
+    [ "Design Documentation", "md_design__main_design_doc.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -118,8 +89,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "3_817_85_2_compiler_id_c_2_c_make_c_compiler_id_8c.html",
-"class_cosan_1_1_cosan_principal_component_regression.html#abc572006e850decbb2c70a2ca50014b8",
-"datapreprocessing_8cpp.html"
+"class_cosan_1_1_cosan_principal_component_regression.html#aaafaa31fb088933fe8272cf258df62d6",
+"crossvalidation_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

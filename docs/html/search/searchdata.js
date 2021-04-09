@@ -10,7 +10,7 @@ var indexSectionsWithContent =
   7: "e",
   8: "amps",
   9: "acdfhps",
-  10: "ct"
+  10: "clmpt"
 };
 
 var indexSectionNames =

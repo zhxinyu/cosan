@@ -1,0 +1,2 @@
+/Users/xinyuzhang/Desktop/Spring2021/c++pattern/project/cosan/CMakeFiles/rebuild_cache.dir
+/Users/xinyuzhang/Desktop/Spring2021/c++pattern/project/cosan/CMakeFiles/edit_cache.dir

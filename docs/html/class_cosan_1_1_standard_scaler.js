@@ -7,7 +7,5 @@ var class_cosan_1_1_standard_scaler =
     [ "GetMean", "class_cosan_1_1_standard_scaler.html#a2951b0fff8bb81da10c39928106d9cbd", null ],
     [ "GetStd", "class_cosan_1_1_standard_scaler.html#a7b7177b8fa2a322fd1faa8ec6869b14a", null ],
     [ "InvTransform", "class_cosan_1_1_standard_scaler.html#a29b504f567547fad1c570e94ec7c7eef", null ],
-    [ "transform", "class_cosan_1_1_standard_scaler.html#a4ab9f013a210bf257cf79a9f8b14df7b", null ],
-    [ "mean", "class_cosan_1_1_standard_scaler.html#a7edb4cd0dbfea0fa14cda4e861e9824a", null ],
-    [ "std", "class_cosan_1_1_standard_scaler.html#ac7f79aa29eeda12116240f92efe1102e", null ]
+    [ "transform", "class_cosan_1_1_standard_scaler.html#a4ab9f013a210bf257cf79a9f8b14df7b", null ]
 ];

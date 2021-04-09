@@ -44,7 +44,7 @@ namespace Cosan{
                 std::vector<NumericType> vec(eigensolver.eigenvalues().data(), eigensolver.eigenvalues().data() + eigensolver.eigenvalues().size());
                 std::reverse(vec.begin(),vec.end());
                 std::vector<NumericType> runningSum(vec.size());
-                std::partial_sum(vec.begin(), vec.end(), runningSum.begin(), std::plus<NumericType>());
+                std::partial_sum(vec.begin(), vec.end(), runningSum.begin());
                 for (gsl::index i =0;i<runningSum.size();i++){
                     fmt::print("The first {:} principal components explains {:f}% of the total variance.\n",i,runningSum[i]/runningSum.back()*100);
                     if (runningSum[i]/runningSum.back()>0.98 and i>=8){

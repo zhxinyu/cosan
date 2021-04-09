@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['kfold_499',['KFold',['../class_cosan_1_1_k_fold.html#ac89e98744a960212b21d4f969e0eab45',1,'Cosan::KFold::KFold()'],['../class_cosan_1_1_k_fold.html#aca996f25c569c0458ebbee7445abe0ed',1,'Cosan::KFold::KFold(gsl::index kfoldnumber)'],['../class_cosan_1_1_k_fold.html#aae8147c80391d187fbd6fa36eb7d0198',1,'Cosan::KFold::KFold(gsl::index nrows, gsl::index kfoldnumber)']]],
-  ['kfoldparallel_500',['KFoldParallel',['../class_cosan_1_1_k_fold_parallel.html#ad78f8fe7e9282c1b1a3bca0728322959',1,'Cosan::KFoldParallel::KFoldParallel()'],['../class_cosan_1_1_k_fold_parallel.html#a9771e423d3f89ca296db5815d4278bd8',1,'Cosan::KFoldParallel::KFoldParallel(gsl::index kfoldnumber)'],['../class_cosan_1_1_k_fold_parallel.html#adae7c1ef95a67316bc01b9c40678f9c6',1,'Cosan::KFoldParallel::KFoldParallel(gsl::index nrows, gsl::index kfoldnumber)']]]
+  ['labelshape_492',['LabelShape',['../namespace_cosan.html#a128bd558187aaee1b190ffb8c574d67c',1,'Cosan']]],
+  ['linspace_493',['linspace',['../utils_2utils_8h.html#a07ae14fba071dfebc92636d92ebe56b3',1,'utils.h']]],
+  ['load_5fcsv_494',['load_csv',['../test__bak_8cpp.html#af890b388fd5ecab93d03e7a4095c1766',1,'test_bak.cpp']]],
+  ['load_5fcsv1_495',['load_csv1',['../io_2utils_8h.html#ac5dbff97cc740e6cc442be77308a258a',1,'utils.h']]]
 ];

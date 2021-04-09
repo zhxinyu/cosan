@@ -24,6 +24,7 @@
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -127,7 +128,7 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_ridge_regression.html">CosanRidgeRegression</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_customer_transform.html">CustomerTransform</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_custom_transform.html">CustomTransform</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_diff_size_exception.html">DiffSizeException</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,16 +210,16 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a2834817f72f8512e1eb8dec1ba41cf6d"><td class="memTemplParams" colspan="2">template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </td></tr>
-<tr class="memitem:a2834817f72f8512e1eb8dec1ba41cf6d"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix</a> = Eigen::Matrix&lt; <a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>, Eigen::Dynamic, Eigen::Dynamic &gt;</td></tr>
+<tr class="memitem:a2834817f72f8512e1eb8dec1ba41cf6d"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix</a> = Eigen::Matrix&lt; <a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>, Eigen::Dynamic, Eigen::Dynamic &gt;</td></tr>
 <tr class="separator:a2834817f72f8512e1eb8dec1ba41cf6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20fc59e75fcf829c843b0d4efd4ffe23"><td class="memTemplParams" colspan="2">template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </td></tr>
-<tr class="memitem:a20fc59e75fcf829c843b0d4efd4ffe23"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a20fc59e75fcf829c843b0d4efd4ffe23">CosanColVector</a> = Eigen::Matrix&lt; <a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>, Eigen::Dynamic, 1 &gt;</td></tr>
+<tr class="memitem:a20fc59e75fcf829c843b0d4efd4ffe23"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a20fc59e75fcf829c843b0d4efd4ffe23">CosanColVector</a> = Eigen::Matrix&lt; <a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>, Eigen::Dynamic, 1 &gt;</td></tr>
 <tr class="separator:a20fc59e75fcf829c843b0d4efd4ffe23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e5c02380f875dff3dd3b3952573f82f"><td class="memTemplParams" colspan="2">template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </td></tr>
-<tr class="memitem:a2e5c02380f875dff3dd3b3952573f82f"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a2e5c02380f875dff3dd3b3952573f82f">CosanRowVector</a> = Eigen::Matrix&lt; <a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>, 1, Eigen::Dynamic &gt;</td></tr>
+<tr class="memitem:a2e5c02380f875dff3dd3b3952573f82f"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a2e5c02380f875dff3dd3b3952573f82f">CosanRowVector</a> = Eigen::Matrix&lt; <a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>, 1, Eigen::Dynamic &gt;</td></tr>
 <tr class="separator:a2e5c02380f875dff3dd3b3952573f82f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a8460659b32d3c54f0f6d8595246dfd"><td class="memTemplParams" colspan="2">template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </td></tr>
-<tr class="memitem:a1a8460659b32d3c54f0f6d8595246dfd"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd">vec</a> = std::vector&lt; <a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt;</td></tr>
+<tr class="memitem:a1a8460659b32d3c54f0f6d8595246dfd"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd">vec</a> = std::vector&lt; <a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt;</td></tr>
 <tr class="separator:a1a8460659b32d3c54f0f6d8595246dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -246,22 +247,22 @@ Enumerations</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:adbdbf79d41ccac57634c77631e2a3813"><td class="memTemplParams" colspan="2">template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </td></tr>
-<tr class="memitem:adbdbf79d41ccac57634c77631e2a3813"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#adbdbf79d41ccac57634c77631e2a3813">getVMean</a> (const std::vector&lt; <a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;v)</td></tr>
+<tr class="memitem:adbdbf79d41ccac57634c77631e2a3813"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#adbdbf79d41ccac57634c77631e2a3813">getVMean</a> (const std::vector&lt; <a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;v)</td></tr>
 <tr class="separator:adbdbf79d41ccac57634c77631e2a3813"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47d14d684b6b493cc4b3e91655e87229"><td class="memTemplParams" colspan="2">template&lt;typename NumericType  = std::string, typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </td></tr>
-<tr class="memitem:a47d14d684b6b493cc4b3e91655e87229"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a47d14d684b6b493cc4b3e91655e87229">StringToNum</a> (const std::string &amp;arg, std::size_t *pos=0)</td></tr>
+<tr class="memitem:a47d14d684b6b493cc4b3e91655e87229"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a47d14d684b6b493cc4b3e91655e87229">StringToNum</a> (const std::string &amp;arg, std::size_t *pos=0)</td></tr>
 <tr class="separator:a47d14d684b6b493cc4b3e91655e87229"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a897204fb394a09a87e227ceb40b54310"><td class="memTemplParams" colspan="2">template&lt;typename NumericType , Derived&lt; CosanModel &gt; Model, Derived&lt; CosanMetric&lt; NumericType &gt;&gt; Metric, Derived&lt; Splitter &gt; Split, typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </td></tr>
-<tr class="memitem:a897204fb394a09a87e227ceb40b54310"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a897204fb394a09a87e227ceb40b54310">crossValidation</a> (<a class="el" href="class_cosan_1_1_cosan_data.html">CosanData</a>&lt; <a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;CRD, Model &amp;estimator, Metric &amp;metric, Split &amp;split, int nthread=-1)</td></tr>
+<tr class="memitem:a897204fb394a09a87e227ceb40b54310"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a897204fb394a09a87e227ceb40b54310">crossValidation</a> (<a class="el" href="class_cosan_1_1_cosan_data.html">CosanData</a>&lt; <a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;CRD, Model &amp;estimator, Metric &amp;metric, Split &amp;split, int nthread=-1)</td></tr>
 <tr class="separator:a897204fb394a09a87e227ceb40b54310"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac42755f87fcc62c74ddab49a9a1c2cf1"><td class="memTemplParams" colspan="2">template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </td></tr>
-<tr class="memitem:ac42755f87fcc62c74ddab49a9a1c2cf1"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#ac42755f87fcc62c74ddab49a9a1c2cf1">SameSize</a> (const <a class="el" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix</a>&lt; <a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;m1, const <a class="el" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix</a>&lt; <a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;m2)</td></tr>
+<tr class="memitem:ac42755f87fcc62c74ddab49a9a1c2cf1"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#ac42755f87fcc62c74ddab49a9a1c2cf1">SameSize</a> (const <a class="el" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix</a>&lt; <a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;m1, const <a class="el" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix</a>&lt; <a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;m2)</td></tr>
 <tr class="separator:ac42755f87fcc62c74ddab49a9a1c2cf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a128bd558187aaee1b190ffb8c574d67c"><td class="memTemplParams" colspan="2">template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </td></tr>
-<tr class="memitem:a128bd558187aaee1b190ffb8c574d67c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a128bd558187aaee1b190ffb8c574d67c">LabelShape</a> (const <a class="el" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix</a>&lt; <a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;m)</td></tr>
+<tr class="memitem:a128bd558187aaee1b190ffb8c574d67c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a128bd558187aaee1b190ffb8c574d67c">LabelShape</a> (const <a class="el" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix</a>&lt; <a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;m)</td></tr>
 <tr class="separator:a128bd558187aaee1b190ffb8c574d67c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d4d11c1bc43a3ee80f25dbb7a4a2025"><td class="memTemplParams" colspan="2">template&lt;typename NumericType  = std::string&gt; </td></tr>
-<tr class="memitem:a5d4d11c1bc43a3ee80f25dbb7a4a2025"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a5d4d11c1bc43a3ee80f25dbb7a4a2025">StringToNum</a> (std::string arg)</td></tr>
+<tr class="memitem:a5d4d11c1bc43a3ee80f25dbb7a4a2025"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a5d4d11c1bc43a3ee80f25dbb7a4a2025">StringToNum</a> (std::string arg)</td></tr>
 <tr class="separator:a5d4d11c1bc43a3ee80f25dbb7a4a2025"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -283,12 +284,12 @@ Variables</h2></td></tr>
 template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespace_cosan.html#a20fc59e75fcf829c843b0d4efd4ffe23">Cosan::CosanColVector</a> = typedef Eigen::Matrix&lt;<a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>, Eigen::Dynamic, 1&gt;</td>
+          <td class="memname">using <a class="el" href="namespace_cosan.html#a20fc59e75fcf829c843b0d4efd4ffe23">Cosan::CosanColVector</a> = typedef Eigen::Matrix&lt;<a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>, Eigen::Dynamic, 1&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_cosan_b_o_8h_source.html#l00031">31</a> of file <a class="el" href="_cosan_b_o_8h_source.html">CosanBO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cosan_b_o_8h_source.html#l00037">37</a> of file <a class="el" href="_cosan_b_o_8h_source.html">CosanBO.h</a>.</p>
 
 </div>
 </div>
@@ -301,12 +302,12 @@ template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::i
 template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">Cosan::CosanMatrix</a> = typedef Eigen::Matrix&lt;<a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>, Eigen::Dynamic, Eigen::Dynamic&gt;</td>
+          <td class="memname">using <a class="el" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">Cosan::CosanMatrix</a> = typedef Eigen::Matrix&lt;<a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>, Eigen::Dynamic, Eigen::Dynamic&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_cosan_b_o_8h_source.html#l00027">27</a> of file <a class="el" href="_cosan_b_o_8h_source.html">CosanBO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cosan_b_o_8h_source.html#l00032">32</a> of file <a class="el" href="_cosan_b_o_8h_source.html">CosanBO.h</a>.</p>
 
 </div>
 </div>
@@ -319,12 +320,12 @@ template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::i
 template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespace_cosan.html#a2e5c02380f875dff3dd3b3952573f82f">Cosan::CosanRowVector</a> = typedef Eigen::Matrix&lt;<a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>, 1, Eigen::Dynamic&gt;</td>
+          <td class="memname">using <a class="el" href="namespace_cosan.html#a2e5c02380f875dff3dd3b3952573f82f">Cosan::CosanRowVector</a> = typedef Eigen::Matrix&lt;<a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>, 1, Eigen::Dynamic&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_cosan_b_o_8h_source.html#l00035">35</a> of file <a class="el" href="_cosan_b_o_8h_source.html">CosanBO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cosan_b_o_8h_source.html#l00042">42</a> of file <a class="el" href="_cosan_b_o_8h_source.html">CosanBO.h</a>.</p>
 
 </div>
 </div>
@@ -337,7 +338,7 @@ template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::i
 template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd">Cosan::vec</a> = typedef std::vector&lt;<a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>&gt;</td>
+          <td class="memname">using <a class="el" href="namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd">Cosan::vec</a> = typedef std::vector&lt;<a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -367,7 +368,14 @@ template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::i
 </table>
 
 <p class="definition">Definition at line <a class="el" href="_cosan_model_8h_source.html#l00015">15</a> of file <a class="el" href="_cosan_model_8h_source.html">CosanModel.h</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                   {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="namespace_cosan.html#a2e87a02a9e36d79ab7fd199821292effa1b89d9778bf7f08876ce02d48ec718a3">MdNone</a> = 0,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="namespace_cosan.html#a2e87a02a9e36d79ab7fd199821292effa4e31fbcde2be3ed1cf82cac7df93cf0d">MdLinearRegression</a>=1,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="namespace_cosan.html#a2e87a02a9e36d79ab7fd199821292effad2e56403bdf7bbbd138458fad2b33f9d">MdRidgeRegression</a>=2,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="namespace_cosan.html#a2e87a02a9e36d79ab7fd199821292effa4f4cb3b14b0ef4a42251ffeca2bc4266">MdPrincipalComponentRegression</a>=3,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="namespace_cosan.html#a2e87a02a9e36d79ab7fd199821292effaec8e59cd18b50be51273a577a5c04198">MdRidgePrincipalComponentRegression</a>=4</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    };</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac4565f65322db2c53ef57bb2e6f3f883"></a>
@@ -388,7 +396,12 @@ template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::i
 </table>
 
 <p class="definition">Definition at line <a class="el" href="_cosan_model_8h_source.html#l00010">10</a> of file <a class="el" href="_cosan_model_8h_source.html">CosanModel.h</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                     {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="namespace_cosan.html#ac4565f65322db2c53ef57bb2e6f3f883a95e80e947436c79a740f42ec236daab2">PdNone</a>   = 0,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="namespace_cosan.html#ac4565f65322db2c53ef57bb2e6f3f883ac01f1ff048b028d77c01742a05c6d0ba">PdBinaryClassification</a> = 1,</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="namespace_cosan.html#ac4565f65322db2c53ef57bb2e6f3f883a52ccb6ef630ceff89c9806ecc71021d7">PdUnivariateRegression</a>=2,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    };</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4344a216eb3571c76e1bf5944f42be2f"></a>
@@ -408,7 +421,12 @@ template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::i
 </table>
 
 <p class="definition">Definition at line <a class="el" href="_cosan_model_8h_source.html#l00022">22</a> of file <a class="el" href="_cosan_model_8h_source.html">CosanModel.h</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                    {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="namespace_cosan.html#a4344a216eb3571c76e1bf5944f42be2fad420d0c3f0f54174562fbad458067941">SrAuto</a> = 0,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="namespace_cosan.html#a4344a216eb3571c76e1bf5944f42be2fa975dc5322515908fcc29bb614ac622ff">ADMM</a> = 1</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    };</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
@@ -421,9 +439,9 @@ template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::i
 template&lt;typename NumericType , Derived&lt; CosanModel &gt; Model, Derived&lt; CosanMetric&lt; NumericType &gt;&gt; Metric, Derived&lt; Splitter &gt; Split, typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> Cosan::crossValidation </td>
+          <td class="memname"><a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> Cosan::crossValidation </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_cosan_1_1_cosan_data.html">CosanData</a>&lt; <a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_cosan_1_1_cosan_data.html">CosanData</a>&lt; <a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>CRD</em>, </td>
         </tr>
         <tr>
@@ -459,30 +477,24 @@ template&lt;typename NumericType , Derived&lt; CosanModel &gt; Model, Derived&lt
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="crossvalidation_8h_source.html#l00028">28</a> of file <a class="el" href="crossvalidation_8h_source.html">crossvalidation.h</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespace_cosan_a897204fb394a09a87e227ceb40b54310_cgraph.png" border="0" usemap="#anamespace_cosan_a897204fb394a09a87e227ceb40b54310_cgraph" alt=""/></div>
-<map name="namespace_cosan_a897204fb394a09a87e227ceb40b54310_cgraph" id="namespace_cosan_a897204fb394a09a87e227ceb40b54310_cgraph">
-<area shape="rect" title=" " alt="" coords="5,78,161,105"/>
-<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html#a6d8c9d1b08c3c1a5430478e066f460f3" title=" " alt="" coords="209,5,371,47"/>
-<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html#ac54b109a0bab76a3fe685fb8ded25339" title=" " alt="" coords="209,71,371,112"/>
-<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html#ac65e7b82c4109e45c294f6752c491b0b" title=" " alt="" coords="209,136,371,177"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespace_cosan_a897204fb394a09a87e227ceb40b54310_icgraph.png" border="0" usemap="#anamespace_cosan_a897204fb394a09a87e227ceb40b54310_icgraph" alt=""/></div>
-<map name="namespace_cosan_a897204fb394a09a87e227ceb40b54310_icgraph" id="namespace_cosan_a897204fb394a09a87e227ceb40b54310_icgraph">
-<area shape="rect" title=" " alt="" coords="257,111,413,138"/>
-<area shape="rect" href="class_cosan_1_1_grid_search.html#a3681dc84afb69be3724980de4d7f5d0e" title=" " alt="" coords="37,5,178,47"/>
-<area shape="rect" href="class_cosan_1_1_grid_search_multi.html#a702aa09f2487f9ad6deaaa40bbe8d6bb" title=" " alt="" coords="27,71,188,112"/>
-<area shape="rect" href="class_cosan_1_1_grid_search_multi_parallel.html#ad8726850b6f8e5925cbe1bdf4cbb83da" title=" " alt="" coords="5,136,209,177"/>
-<area shape="rect" href="class_cosan_1_1_grid_search_parallel.html#af9529818f2b31a640679a4558ad3c6d2" title=" " alt="" coords="19,201,195,243"/>
-</map>
-</div>
-
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                                                   {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            split.SetSplit(CRD.GetrowsX());</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            CosanMatrix&lt;NumericType&gt; X = CRD.GetInput();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            CosanMatrix&lt;NumericType&gt; Y = CRD.GetTarget();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            std::vector&lt;NumericType&gt; errors;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            errors.resize(split.GetKFoldNumber());</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            std::vector&lt; std::tuple&lt;std::vector&lt;gsl::index&gt;,std::vector&lt;gsl::index&gt; &gt; &gt; split_idx = split.GetSplit();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">//            #pragma omp parallel for</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">for</span> (gsl::index i =0;i&lt;split.GetKFoldNumber();i++){</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    <span class="keyword">auto</span> &amp; each = split_idx[i];</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    CosanMatrix&lt;NumericType&gt;  X_train = X(std::get&lt;0&gt;(each),Eigen::all),Y_train = Y(std::get&lt;0&gt;(each),Eigen::all);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                    CosanMatrix&lt;NumericType&gt;  X_test =  X(std::get&lt;1&gt;(each),Eigen::all),Y_test =  Y(std::get&lt;1&gt;(each),Eigen::all);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                    estimator.fit(X_train, Y_train);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                    errors[i] = metric.GetError(estimator.predict(X_test ),Y_test);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">return</span> std::accumulate(errors.begin(), errors.end(), 0)/errors.size();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    };</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adbdbf79d41ccac57634c77631e2a3813"></a>
@@ -494,9 +506,9 @@ Here is the caller graph for this function:</div>
 template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> Cosan::getVMean </td>
+          <td class="memname"><a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> Cosan::getVMean </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>v</em></td><td>)</td>
           <td></td>
         </tr>
@@ -504,7 +516,20 @@ template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::i
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_cosan_metric_8h_source.html#l00213">213</a> of file <a class="el" href="_cosan_metric_8h_source.html">CosanMetric.h</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                                                         {</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keywordflow">return</span> std::accumulate(v.begin(), v.end(), 0)/v.size();</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="comment">//        NumericType total = 0;</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="comment">//        int size = v.size();</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment">//        std::accumulate(v.begin(), v.end(), 0)/v.size();</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment">//        for (vector&lt;double&gt;::iterator it = v.begin(); it != v.end(); ++it)</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="comment">//        {</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="comment">//            total += *it;</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment">//        }</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="comment">//        return total/size;</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a128bd558187aaee1b190ffb8c574d67c"></a>
@@ -518,7 +543,7 @@ template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::i
         <tr>
           <td class="memname">bool Cosan::LabelShape </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix</a>&lt; <a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix</a>&lt; <a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
           <td></td>
         </tr>
@@ -526,17 +551,13 @@ template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::i
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_arg_check_8h_source.html#l00046">46</a> of file <a class="el" href="_arg_check_8h_source.html">ArgCheck.h</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespace_cosan_a128bd558187aaee1b190ffb8c574d67c_icgraph.png" border="0" usemap="#anamespace_cosan_a128bd558187aaee1b190ffb8c574d67c_icgraph" alt=""/></div>
-<map name="namespace_cosan_a128bd558187aaee1b190ffb8c574d67c_icgraph" id="namespace_cosan_a128bd558187aaee1b190ffb8c574d67c_icgraph">
-<area shape="rect" title=" " alt="" coords="387,13,523,39"/>
-<area shape="rect" href="class_cosan_1_1_cosan_metric.html#a217c7d645778f7eb3b271fb6beb2ad1a" title=" " alt="" coords="196,5,339,47"/>
-<area shape="rect" href="class_cosan_1_1_cosan_metric.html#aa2b450e2840ff03f0d3bb4f589982d16" title=" " alt="" coords="5,5,148,47"/>
-</map>
-</div>
-
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">if</span> ((m.rows() &gt;= 1) &amp;&amp; (m.cols() == 1)) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac42755f87fcc62c74ddab49a9a1c2cf1"></a>
@@ -550,13 +571,13 @@ template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::i
         <tr>
           <td class="memname">bool Cosan::SameSize </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix</a>&lt; <a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix</a>&lt; <a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>m1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix</a>&lt; <a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix</a>&lt; <a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>m2</em>&#160;</td>
         </tr>
         <tr>
@@ -568,17 +589,13 @@ template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::i
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_arg_check_8h_source.html#l00029">29</a> of file <a class="el" href="_arg_check_8h_source.html">ArgCheck.h</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespace_cosan_ac42755f87fcc62c74ddab49a9a1c2cf1_icgraph.png" border="0" usemap="#anamespace_cosan_ac42755f87fcc62c74ddab49a9a1c2cf1_icgraph" alt=""/></div>
-<map name="namespace_cosan_ac42755f87fcc62c74ddab49a9a1c2cf1_icgraph" id="namespace_cosan_ac42755f87fcc62c74ddab49a9a1c2cf1_icgraph">
-<area shape="rect" title=" " alt="" coords="387,13,515,39"/>
-<area shape="rect" href="class_cosan_1_1_cosan_metric.html#a217c7d645778f7eb3b271fb6beb2ad1a" title=" " alt="" coords="196,5,339,47"/>
-<area shape="rect" href="class_cosan_1_1_cosan_metric.html#aa2b450e2840ff03f0d3bb4f589982d16" title=" " alt="" coords="5,5,148,47"/>
-</map>
-</div>
-
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">if</span> ((m1.rows() == m2.rows) &amp;&amp; (m1.cols() == m2.cols() ) ){</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    };</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a47d14d684b6b493cc4b3e91655e87229"></a>
@@ -590,7 +607,7 @@ Here is the caller graph for this function:</div>
 template&lt;typename NumericType  = std::string, typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> Cosan::StringToNum </td>
+          <td class="memname"><a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> Cosan::StringToNum </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>arg</em>, </td>
@@ -610,7 +627,34 @@ template&lt;typename NumericType  = std::string, typename  = typename std::enabl
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="io_2utils_8h_source.html#l00016">16</a> of file <a class="el" href="io_2utils_8h_source.html">utils.h</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                                                                      {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        static_assert(std::is_arithmetic&lt;NumericType&gt;::value, <span class="stringliteral">&quot;NumericType must be numeric&quot;</span>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">if</span> constexpr (std::is_same_v&lt;NumericType, unsigned long&gt;) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keywordflow">return</span> std::stoul(arg,pos);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        } </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr (std::is_same_v&lt;NumericType, unsigned long long&gt;){</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">return</span> std::stoull(arg,pos);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr (std::is_same_v&lt;NumericType, int&gt;){</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordflow">return</span> std::stoi(arg,pos);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr (std::is_same_v&lt;NumericType, long&gt;){</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">return</span> std::stol(arg,pos);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr (std::is_same_v&lt;NumericType, long long&gt;){</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">return</span> std::stoll(arg,pos);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr (std::is_same_v&lt;NumericType, float&gt;){</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">return</span> std::stof(arg,pos);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr (std::is_same_v&lt;NumericType, double&gt;){</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">return</span> std::stod(arg,pos);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">return</span> std::stold(arg,pos);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }       </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5d4d11c1bc43a3ee80f25dbb7a4a2025"></a>
@@ -622,7 +666,7 @@ template&lt;typename NumericType  = std::string, typename  = typename std::enabl
 template&lt;typename NumericType  = std::string&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> Cosan::StringToNum </td>
+          <td class="memname"><a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> Cosan::StringToNum </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>arg</em></td><td>)</td>
@@ -632,7 +676,33 @@ template&lt;typename NumericType  = std::string&gt; </div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="template_test_8cpp_source.html#l00022">22</a> of file <a class="el" href="template_test_8cpp_source.html">templateTest.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                                           {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">if</span> constexpr (std::is_same_v&lt;NumericType, unsigned long&gt;) {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">return</span> std::stoul(arg);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        } </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr (std::is_same_v&lt;NumericType, unsigned long long&gt;){</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">return</span> std::stoull(arg);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr (std::is_same_v&lt;NumericType, int&gt;){</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">return</span> std::stoi(arg);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr (std::is_same_v&lt;NumericType, long&gt;){</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">return</span> std::stol(arg);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr (std::is_same_v&lt;NumericType, long long&gt;){</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">return</span> std::stoll(arg);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr (std::is_same_v&lt;NumericType, float&gt;){</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">return</span> std::stof(arg);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr (std::is_same_v&lt;NumericType, double&gt;){</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">return</span> std::stod(arg);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">return</span> std::stold(arg);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }       </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -680,6 +750,16 @@ template&lt;typename NumericType  = std::string&gt; </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="anamespace_cosan_html_a4344a216eb3571c76e1bf5944f42be2fad420d0c3f0f54174562fbad458067941"><div class="ttname"><a href="namespace_cosan.html#a4344a216eb3571c76e1bf5944f42be2fad420d0c3f0f54174562fbad458067941">Cosan::SrAuto</a></div><div class="ttdeci">@ SrAuto</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_model_8h_source.html#l00023">CosanModel.h:23</a></div></div>
+<div class="ttc" id="anamespace_cosan_html_a2e87a02a9e36d79ab7fd199821292effad2e56403bdf7bbbd138458fad2b33f9d"><div class="ttname"><a href="namespace_cosan.html#a2e87a02a9e36d79ab7fd199821292effad2e56403bdf7bbbd138458fad2b33f9d">Cosan::MdRidgeRegression</a></div><div class="ttdeci">@ MdRidgeRegression</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_model_8h_source.html#l00018">CosanModel.h:18</a></div></div>
+<div class="ttc" id="anamespace_cosan_html_ac4565f65322db2c53ef57bb2e6f3f883ac01f1ff048b028d77c01742a05c6d0ba"><div class="ttname"><a href="namespace_cosan.html#ac4565f65322db2c53ef57bb2e6f3f883ac01f1ff048b028d77c01742a05c6d0ba">Cosan::PdBinaryClassification</a></div><div class="ttdeci">@ PdBinaryClassification</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_model_8h_source.html#l00012">CosanModel.h:12</a></div></div>
+<div class="ttc" id="anamespace_cosan_html_a2e87a02a9e36d79ab7fd199821292effaec8e59cd18b50be51273a577a5c04198"><div class="ttname"><a href="namespace_cosan.html#a2e87a02a9e36d79ab7fd199821292effaec8e59cd18b50be51273a577a5c04198">Cosan::MdRidgePrincipalComponentRegression</a></div><div class="ttdeci">@ MdRidgePrincipalComponentRegression</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_model_8h_source.html#l00021">CosanModel.h:20</a></div></div>
+<div class="ttc" id="anamespace_cosan_html_a4344a216eb3571c76e1bf5944f42be2fa975dc5322515908fcc29bb614ac622ff"><div class="ttname"><a href="namespace_cosan.html#a4344a216eb3571c76e1bf5944f42be2fa975dc5322515908fcc29bb614ac622ff">Cosan::ADMM</a></div><div class="ttdeci">@ ADMM</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_model_8h_source.html#l00026">CosanModel.h:24</a></div></div>
+<div class="ttc" id="anamespace_cosan_html_ac4565f65322db2c53ef57bb2e6f3f883a95e80e947436c79a740f42ec236daab2"><div class="ttname"><a href="namespace_cosan.html#ac4565f65322db2c53ef57bb2e6f3f883a95e80e947436c79a740f42ec236daab2">Cosan::PdNone</a></div><div class="ttdeci">@ PdNone</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_model_8h_source.html#l00011">CosanModel.h:11</a></div></div>
+<div class="ttc" id="anamespace_cosan_html_a2e87a02a9e36d79ab7fd199821292effa1b89d9778bf7f08876ce02d48ec718a3"><div class="ttname"><a href="namespace_cosan.html#a2e87a02a9e36d79ab7fd199821292effa1b89d9778bf7f08876ce02d48ec718a3">Cosan::MdNone</a></div><div class="ttdeci">@ MdNone</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_model_8h_source.html#l00016">CosanModel.h:16</a></div></div>
+<div class="ttc" id="anamespace_cosan_html_a2e87a02a9e36d79ab7fd199821292effa4e31fbcde2be3ed1cf82cac7df93cf0d"><div class="ttname"><a href="namespace_cosan.html#a2e87a02a9e36d79ab7fd199821292effa4e31fbcde2be3ed1cf82cac7df93cf0d">Cosan::MdLinearRegression</a></div><div class="ttdeci">@ MdLinearRegression</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_model_8h_source.html#l00017">CosanModel.h:17</a></div></div>
+<div class="ttc" id="anamespace_cosan_html_ac4565f65322db2c53ef57bb2e6f3f883a52ccb6ef630ceff89c9806ecc71021d7"><div class="ttname"><a href="namespace_cosan.html#ac4565f65322db2c53ef57bb2e6f3f883a52ccb6ef630ceff89c9806ecc71021d7">Cosan::PdUnivariateRegression</a></div><div class="ttdeci">@ PdUnivariateRegression</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_model_8h_source.html#l00013">CosanModel.h:13</a></div></div>
+<div class="ttc" id="anamespace_cosan_html_a2e87a02a9e36d79ab7fd199821292effa4f4cb3b14b0ef4a42251ffeca2bc4266"><div class="ttname"><a href="namespace_cosan.html#a2e87a02a9e36d79ab7fd199821292effa4f4cb3b14b0ef4a42251ffeca2bc4266">Cosan::MdPrincipalComponentRegression</a></div><div class="ttdeci">@ MdPrincipalComponentRegression</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_model_8h_source.html#l00019">CosanModel.h:19</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

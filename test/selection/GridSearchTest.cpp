@@ -18,61 +18,24 @@
 
 
 typedef double db;
-
 int main(){
-
-    std::vector<std::string>  svaluesX = std::vector<std::string>({"a","b","c","b","a","c"});
-    gsl::index colCat = 2;
-    std::vector<std::unordered_map<std::string, gsl::index>> categories;
-    std::vector<std::vector<std::string>> svalues;
-    svalues = std::vector<std::vector<std::string>>(colCat,std::vector<std::string>(svaluesX.size()/colCat,"") );
-    Cosan::CosanMatrix<double> OneHotMatrixi;
-    Cosan::CosanMatrix<double> newMatrix;
-    for (gsl::index col = 0;col<colCat;col++){
-        std::unordered_map<std::string, gsl::index> categoryToOrdinal{};
-        for (gsl::index row = 0;row<svaluesX.size()/colCat;row++){
-            svalues[col][row] = svaluesX[row*colCat+col];
-            if (categoryToOrdinal.find(svalues[col][row]) == categoryToOrdinal.end()) {
-                categoryToOrdinal.insert({svalues[col][row], categoryToOrdinal.size()});
-            }
-        }
-        categories.push_back(categoryToOrdinal);
-        OneHotMatrixi = Cosan::CosanMatrix<double>::Zero(svaluesX.size()/colCat,categoryToOrdinal.size());
-
-        for (gsl::index row = 0;row<svaluesX.size()/colCat;row++){
-            OneHotMatrixi(row,categoryToOrdinal[svalues[col][row]]) = 1;
-        }
-        if (col ==0){
-            newMatrix =OneHotMatrixi;
-        }
-        else{
-            for (gsl::index i = 0;i<OneHotMatrixi.cols();i++){
-                newMatrix.conservativeResize(newMatrix.rows(), newMatrix.cols()+1);
-                newMatrix.col(newMatrix.cols()-1) = OneHotMatrixi.col(i);
-            }
-        }
-
-    }
-    std::cout<<newMatrix<<std::endl;
-
-	// int x = 5;
-	// int y = 5;
-	// Cosan::CosanMatrix<double> X_input = Cosan::CosanMatrix<double>::Zero(x,y);
-	// // std::cout<<X_input.rows()<<std::endl;
-	// // X_input.setZero();
-	// std::cout<<X_input<<std::endl;	
-	// Cosan::CosanMatrix<db> Y_input;	
-	// constexpr gsl::index nrows = 10000;
-	// constexpr gsl::index ncols = 5;
-	// X_input.resize(nrows,ncols);
-	// Y_input.resize(nrows,1);
-	// // X_input = Eigen::Matrix<decltype(X_input)::Scalar,nrows,ncols>::Random();
-	// // Y_input = Eigen::Matrix<decltype(X_input)::Scalar,nrows,1>::Random();
-	// // std::cout<<X_input <<std::endl;
-	// // std::cout<<Y_input <<std::endl;
-	// // X_input = Eigen::Matrix<X_input::Scalr,X_input.rows(),X_input.cols()>::Random();	
-
-	// // Cosan::CosanData<db>  CRD(X_input,Y_input);
+	int x = 5;
+	int y = 5;
+	Cosan::CosanMatrix<double> X_input = Cosan::CosanMatrix<double>::Zero(x,y);
+	// std::cout<<X_input.rows()<<std::endl;
+	// X_input.setZero();
+	std::cout<<X_input<<std::endl;	
+	Cosan::CosanMatrix<db> Y_input;	
+	constexpr gsl::index nrows = 10000;
+	constexpr gsl::index ncols = 5;
+	X_input.resize(nrows,ncols);
+	Y_input.resize(nrows,1);
+	// X_input = Eigen::Matrix<decltype(X_input)::Scalar,nrows,ncols>::Random();
+	// Y_input = Eigen::Matrix<decltype(X_input)::Scalar,nrows,1>::Random();
+	// std::cout<<X_input <<std::endl;
+	// std::cout<<Y_input <<std::endl;
+	// X_input = Eigen::Matrix<X_input::Scalr,X_input.rows(),X_input.cols()>::Random();	
+	Cosan::CosanData<db>  CRD(X_input,Y_input);
 	// Cosan::CosanData<db>  CRD(Eigen::Matrix<decltype(X_input)::Scalar,nrows,ncols>::Random()
 	// 							,Eigen::Matrix<decltype(X_input)::Scalar,nrows,1>::Random());
 	// // Cosan::CosanLinearRegression<decltype(X_input)::Scalar> CRRwbias(true);

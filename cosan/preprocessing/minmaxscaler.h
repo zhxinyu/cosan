@@ -17,7 +17,6 @@ namespace Cosan{
                 this->fit(RD);
             }
             MinmaxScaler(CosanRawData<NumericType>& RD,NumericType to_lb,NumericType to_ub):Preprocessor<NumericType>(){
-
                 this->fit(RD,to_lb,to_ub);
             }
 
@@ -33,12 +32,12 @@ namespace Cosan{
             }
             void fit(CosanRawData<NumericType> & RD, NumericType to_lb,NumericType to_ub){
                 fmt::print("*********************************\n");
-                fmt::print("Begin transformation to X [{:},{:}]!\n",to_lb,to_ub);
+                fmt::print("Begin transformation to X to [{:},{:}]!\n",to_lb,to_ub);
                 CosanMatrix<NumericType> X = RD.GetInput();
                 X = (X.array().rowwise()-X.colwise().minCoeff().array()).rowwise()/(X.colwise().maxCoeff()-X.colwise().minCoeff()).array();
                 X = X.array()*(to_ub-to_lb)+to_lb;
                 RD.UpdateData(X);
-                fmt::print("End of transformation to X [{:},{:}]!\n",to_lb,to_ub);
+                fmt::print("End of transformation to X to [{:},{:}]!\n",to_lb,to_ub);
                 fmt::print("*********************************\n");
             }
     };

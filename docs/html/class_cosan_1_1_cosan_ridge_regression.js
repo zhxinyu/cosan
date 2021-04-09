@@ -8,6 +8,5 @@ var class_cosan_1_1_cosan_ridge_regression =
     [ "GetModelType", "class_cosan_1_1_cosan_ridge_regression.html#ac47565793e8558a3eac2ad8ad4adca5d", null ],
     [ "GetName", "class_cosan_1_1_cosan_ridge_regression.html#aa42c0f4d08605a6f04dc7a85dc7075a2", null ],
     [ "GetParams", "class_cosan_1_1_cosan_ridge_regression.html#acc0f3d013cffc28ecaef6c71b3ebeb71", null ],
-    [ "SetParams", "class_cosan_1_1_cosan_ridge_regression.html#a637fa5d93eadd8994f42f3a563539922", null ],
-    [ "MLambda", "class_cosan_1_1_cosan_ridge_regression.html#aab214f5dba9ce8f1bf70f169f13c722a", null ]
+    [ "SetParams", "class_cosan_1_1_cosan_ridge_regression.html#a637fa5d93eadd8994f42f3a563539922", null ]
 ];

@@ -8,9 +8,5 @@ var class_cosan_1_1_normalizer =
     [ "Getp", "class_cosan_1_1_normalizer.html#a231a5dbb6471b0b1d68fb63984b44795", null ],
     [ "GetSampleNorm", "class_cosan_1_1_normalizer.html#a88ad3d16ac5f721f4bf1be4fd3a213ff", null ],
     [ "Setp", "class_cosan_1_1_normalizer.html#a2f2ae99fcc394e3685e8d8b5098c6222", null ],
-    [ "transform", "class_cosan_1_1_normalizer.html#a01d43af5e76016f92412a19581b4d235", null ],
-    [ "exist_zero", "class_cosan_1_1_normalizer.html#ad0c7342a165377903e000c33141b7401", null ],
-    [ "p", "class_cosan_1_1_normalizer.html#a1785b71e41174c22b952ef9d0f397279", null ],
-    [ "plist", "class_cosan_1_1_normalizer.html#a75d19930cd1450691f638d709fbeebc6", null ],
-    [ "SampleNorm", "class_cosan_1_1_normalizer.html#af9b090c4147318ae381158601756a977", null ]
+    [ "transform", "class_cosan_1_1_normalizer.html#a01d43af5e76016f92412a19581b4d235", null ]
 ];

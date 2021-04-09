@@ -26,7 +26,7 @@ var hierarchy =
         [ "Cosan::SummaryStatistics< NumericType >", "class_cosan_1_1_summary_statistics.html", null ]
       ] ],
       [ "Cosan::Preprocessor< NumericType >", "class_cosan_1_1_preprocessor.html", [
-        [ "Cosan::CustomerTransform< NumericType, typename >", "class_cosan_1_1_customer_transform.html", null ],
+        [ "Cosan::CustomTransform< NumericType, typename >", "class_cosan_1_1_custom_transform.html", null ],
         [ "Cosan::Encoder< NumericType >", "class_cosan_1_1_encoder.html", [
           [ "Cosan::OnehotEncoder< NumericType >", "class_cosan_1_1_onehot_encoder.html", null ],
           [ "Cosan::OrdinalEncoder< NumericType >", "class_cosan_1_1_ordinal_encoder.html", null ]

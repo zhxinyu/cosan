@@ -17,7 +17,7 @@
 int main() {
 
 	Cosan::CosanRawData CRD("./example_data/toy2/X_.csv","./example_data/toy2/Y_.csv");
-	std::cout<<CRD.GetSummaryMessageX()<<CRD.GetSummaryMessageY()<<std::endl;
+//	std::cout<<CRD.GetSummaryMessageX()<<CRD.GetSummaryMessageY()<<std::endl;
 	Cosan::OverUnderFlow ouf(CRD);
 
 	myarray = myarray.unaryExpr([](double v) { return std::isfinite(v)? v : 0.0; });

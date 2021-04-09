@@ -33,7 +33,7 @@
       <tab type="filelist" visible="yes" title="" intro=""/>
       <tab type="globals" visible="yes" title="" intro=""/>
     </tab>
-    <tab type="user" visible="yes" url="md_tutorial_selectionandevaluation.html"  title="Tutorial"/>
+    <tab type="user" visible="yes" url="md__tutorial__tutorial.html"  title="Tutorial"/>
     <tab type="examples" visible="yes" title="" intro=""/>  
   </navindex>
 

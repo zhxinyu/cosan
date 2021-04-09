@@ -24,6 +24,7 @@
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,17 +100,6 @@ $(document).ready(function(){initNavTree('_k_fold_parallel_test_8cpp.html',''); 
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;cosan/selection/kfoldparallel.h&gt;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for KFoldParallelTest.cpp:</div>
-<div class="dyncontent">
-<div class="center"><img src="_k_fold_parallel_test_8cpp__incl.png" border="0" usemap="#atest_2selection_2_k_fold_parallel_test_8cpp" alt=""/></div>
-<map name="test_2selection_2_k_fold_parallel_test_8cpp" id="test_2selection_2_k_fold_parallel_test_8cpp">
-<area shape="rect" title=" " alt="" coords="40,5,221,47"/>
-<area shape="rect" title=" " alt="" coords="5,95,77,121"/>
-<area shape="rect" title=" " alt="" coords="101,95,160,121"/>
-<area shape="rect" title=" " alt="" coords="184,95,381,121"/>
-</map>
-</div>
 </div>
 <p><a href="_k_fold_parallel_test_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -135,20 +125,33 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_k_fold_parallel_test_8cpp_source.html#l00008">8</a> of file <a class="el" href="_k_fold_parallel_test_8cpp_source.html">KFoldParallelTest.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="_k_fold_parallel_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#a_k_fold_parallel_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
-<map name="_k_fold_parallel_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="_k_fold_parallel_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,13,56,39"/>
-<area shape="rect" href="class_cosan_1_1_k_fold_parallel.html#ac29163931ead93be84f4836f403b8698" title=" " alt="" coords="104,5,249,47"/>
-</map>
-</div>
-
+<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;          {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">auto</span> a = <a class="code" href="class_cosan_1_1_k_fold_parallel.html">Cosan::KFoldParallel</a>(11).<a class="code" href="class_cosan_1_1_k_fold_parallel.html#ac29163931ead93be84f4836f403b8698">GetSplit</a>();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; each:a){</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        fmt::print(<span class="stringliteral">&quot;Train Index: &quot;</span>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; each_test :std::get&lt;0&gt;(each)){</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            std::cout&lt;&lt;each_test;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        }       </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        std::cout&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        fmt::print(<span class="stringliteral">&quot;Test Index: &quot;</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; each_test :std::get&lt;1&gt;(each)){</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            std::cout&lt;&lt;each_test;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        }       </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        std::cout&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::cout&lt;&lt;a.size()&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_cosan_1_1_k_fold_parallel_html"><div class="ttname"><a href="class_cosan_1_1_k_fold_parallel.html">Cosan::KFoldParallel</a></div><div class="ttdef"><b>Definition:</b> <a href="kfold_8h_source.html#l00140">kfold.h:140</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_k_fold_parallel_html_ac29163931ead93be84f4836f403b8698"><div class="ttname"><a href="class_cosan_1_1_k_fold_parallel.html#ac29163931ead93be84f4836f403b8698">Cosan::KFoldParallel::GetSplit</a></div><div class="ttdeci">std::vector&lt; std::tuple&lt; std::vector&lt; gsl::index &gt;, std::vector&lt; gsl::index &gt; &gt; &gt; &amp; GetSplit()</div><div class="ttdef"><b>Definition:</b> <a href="kfold_8h_source.html#l00169">kfold.h:169</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

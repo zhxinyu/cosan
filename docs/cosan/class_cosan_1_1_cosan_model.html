@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Cosan: Cosan::CosanModel Class Reference</title>
+<title>My Project: Cosan::CosanModel Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,6 +24,7 @@
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +33,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Cosan
+   <div id="projectname">My Project
    &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Data Analytics Library</div>
@@ -104,7 +105,7 @@ $(document).ready(function(){initNavTree('class_cosan_1_1_cosan_model.html','');
 Inheritance diagram for Cosan::CosanModel:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_cosan_1_1_cosan_model__inherit__graph.png" border="0" usemap="#a_cosan_1_1_cosan_model_inherit__map" alt="Inheritance graph"/></div>
-<map name="_cosan_1_1_cosan_model_inherit__map" id="a_cosan_1_1_cosan_model_inherit__map">
+<map name="_cosan_1_1_cosan_model_inherit__map" id="_cosan_1_1_cosan_model_inherit__map">
 <area shape="rect" title=" " alt="" coords="179,177,320,203"/>
 <area shape="rect" href="class_cosan_1_1_cosan_linear_model.html" title=" " alt="" coords="368,169,544,211"/>
 <area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="5,177,131,203"/>
@@ -120,11 +121,9 @@ Inheritance diagram for Cosan::CosanModel:</div>
 Collaboration diagram for Cosan::CosanModel:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_cosan_1_1_cosan_model__coll__graph.png" border="0" usemap="#a_cosan_1_1_cosan_model_coll__map" alt="Collaboration graph"/></div>
-<map name="_cosan_1_1_cosan_model_coll__map" id="a_cosan_1_1_cosan_model_coll__map">
-<area shape="rect" title=" " alt="" coords="115,95,256,121"/>
-<area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="5,5,131,32"/>
-<area shape="rect" title=" " alt="" coords="155,5,215,32"/>
-<area shape="rect" title=" " alt="" coords="256,5,352,32"/>
+<map name="_cosan_1_1_cosan_model_coll__map" id="_cosan_1_1_cosan_model_coll__map">
+<area shape="rect" title=" " alt="" coords="5,80,147,107"/>
+<area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="13,5,139,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -185,7 +184,10 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_cosan_model_8h_source.html#l00029">29</a> of file <a class="el" href="_cosan_model_8h_source.html">CosanModel.h</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                    : <a class="code" href="class_cosan_1_1_cosan_b_o.html#ade4a14f5f042dfe1cdf79f5183586b4c">CosanBO</a>(),<a class="code" href="class_cosan_1_1_cosan_model.html#ab0df64fbc6ac35bc4198338705435b76">MaxTrainTime</a>(std::chrono::seconds(std::chrono::hours(1)).count()),</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="class_cosan_1_1_cosan_model.html#ac63606d39c558164bebeb5f3866a522f">SolverType</a>(<a class="code" href="namespace_cosan.html#a4344a216eb3571c76e1bf5944f42be2fad420d0c3f0f54174562fbad458067941">SrAuto</a>){</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -213,7 +215,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_cosan_model_8h_source.html#l00036">36</a> of file <a class="el" href="_cosan_model_8h_source.html">CosanModel.h</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{<span class="keywordflow">return</span> <a class="code" href="class_cosan_1_1_cosan_model.html#ab0df64fbc6ac35bc4198338705435b76">MaxTrainTime</a>;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aad3834ef251cb7826f1577336295c4e3"></a>
@@ -242,7 +245,8 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="class_cosan_1_1_cosan_ridge_regression.html#ac47565793e8558a3eac2ad8ad4adca5d">Cosan::CosanRidgeRegression&lt; NumericType, typename &gt;</a>, <a class="el" href="class_cosan_1_1_cosan_principal_component_regression.html#aae926c7195875df747da78afedeab73e">Cosan::CosanPrincipalComponentRegression&lt; NumericType &gt;</a>, <a class="el" href="class_cosan_1_1_cosan_p_c_r_ridge.html#ac539589ff9b38cf20a58923e18742170">Cosan::CosanPCRRidge&lt; NumericType, typename &gt;</a>, and <a class="el" href="class_cosan_1_1_cosan_linear_regression.html#ad1f1376e4dd65fefdc154ec128e70270">Cosan::CosanLinearRegression&lt; NumericType &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_cosan_model_8h_source.html#l00038">38</a> of file <a class="el" href="_cosan_model_8h_source.html">CosanModel.h</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{<span class="keywordflow">return</span> <a class="code" href="namespace_cosan.html#a2e87a02a9e36d79ab7fd199821292effa1b89d9778bf7f08876ce02d48ec718a3">MdNone</a>;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a43d1bba2e7de9e990bf67a1780321e58"></a>
@@ -271,7 +275,8 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="class_cosan_1_1_cosan_linear_regression.html#abf9b9f3b7d11a9bbfaac91baab782047">Cosan::CosanLinearRegression&lt; NumericType &gt;</a>, <a class="el" href="class_cosan_1_1_cosan_principal_component_regression.html#abce95d22591d28422b931a370c2447bf">Cosan::CosanPrincipalComponentRegression&lt; NumericType &gt;</a>, and <a class="el" href="class_cosan_1_1_cosan_p_c_r_ridge.html#a253055f9b07c8356ad58369553d08e7d">Cosan::CosanPCRRidge&lt; NumericType, typename &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_cosan_model_8h_source.html#l00039">39</a> of file <a class="el" href="_cosan_model_8h_source.html">CosanModel.h</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{<span class="keywordflow">return</span> <a class="code" href="namespace_cosan.html#ac4565f65322db2c53ef57bb2e6f3f883a95e80e947436c79a740f42ec236daab2">PdNone</a>;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab2ef1bba522dd35d84b8ba19b2b6dfdb"></a>
@@ -298,7 +303,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_cosan_model_8h_source.html#l00040">40</a> of file <a class="el" href="_cosan_model_8h_source.html">CosanModel.h</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{<span class="keywordflow">return</span> <a class="code" href="class_cosan_1_1_cosan_model.html#ac63606d39c558164bebeb5f3866a522f">SolverType</a>;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa26e85bff4012c2f8ff66d57bc920627"></a>
@@ -326,7 +332,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_cosan_model_8h_source.html#l00035">35</a> of file <a class="el" href="_cosan_model_8h_source.html">CosanModel.h</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{ <a class="code" href="class_cosan_1_1_cosan_model.html#ab0df64fbc6ac35bc4198338705435b76">MaxTrainTime</a>=t;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a47298a30af3c07828b7f7ce1205e8685"></a>
@@ -354,7 +361,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_cosan_model_8h_source.html#l00041">41</a> of file <a class="el" href="_cosan_model_8h_source.html">CosanModel.h</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{<a class="code" href="class_cosan_1_1_cosan_model.html#ac63606d39c558164bebeb5f3866a522f">SolverType</a>=sr;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -411,6 +419,12 @@ Protected Attributes</h2></td></tr>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="anamespace_cosan_html_a4344a216eb3571c76e1bf5944f42be2fad420d0c3f0f54174562fbad458067941"><div class="ttname"><a href="namespace_cosan.html#a4344a216eb3571c76e1bf5944f42be2fad420d0c3f0f54174562fbad458067941">Cosan::SrAuto</a></div><div class="ttdeci">@ SrAuto</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_model_8h_source.html#l00023">CosanModel.h:23</a></div></div>
+<div class="ttc" id="anamespace_cosan_html_ac4565f65322db2c53ef57bb2e6f3f883a95e80e947436c79a740f42ec236daab2"><div class="ttname"><a href="namespace_cosan.html#ac4565f65322db2c53ef57bb2e6f3f883a95e80e947436c79a740f42ec236daab2">Cosan::PdNone</a></div><div class="ttdeci">@ PdNone</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_model_8h_source.html#l00011">CosanModel.h:11</a></div></div>
+<div class="ttc" id="anamespace_cosan_html_a2e87a02a9e36d79ab7fd199821292effa1b89d9778bf7f08876ce02d48ec718a3"><div class="ttname"><a href="namespace_cosan.html#a2e87a02a9e36d79ab7fd199821292effa1b89d9778bf7f08876ce02d48ec718a3">Cosan::MdNone</a></div><div class="ttdeci">@ MdNone</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_model_8h_source.html#l00016">CosanModel.h:16</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_cosan_b_o_html_ade4a14f5f042dfe1cdf79f5183586b4c"><div class="ttname"><a href="class_cosan_1_1_cosan_b_o.html#ade4a14f5f042dfe1cdf79f5183586b4c">Cosan::CosanBO::CosanBO</a></div><div class="ttdeci">CosanBO()</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00050">CosanBO.h:50</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_cosan_model_html_ab0df64fbc6ac35bc4198338705435b76"><div class="ttname"><a href="class_cosan_1_1_cosan_model.html#ab0df64fbc6ac35bc4198338705435b76">Cosan::CosanModel::MaxTrainTime</a></div><div class="ttdeci">double MaxTrainTime</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_model_8h_source.html#l00043">CosanModel.h:43</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_cosan_model_html_ac63606d39c558164bebeb5f3866a522f"><div class="ttname"><a href="class_cosan_1_1_cosan_model.html#ac63606d39c558164bebeb5f3866a522f">Cosan::CosanModel::SolverType</a></div><div class="ttdeci">ESolverType SolverType</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_model_8h_source.html#l00044">CosanModel.h:44</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

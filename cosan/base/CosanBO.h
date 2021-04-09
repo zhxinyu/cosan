@@ -5,13 +5,18 @@
 #define FMT_HEADER_ONLY
 #include <fmt/format.h>
 #endif
-//typedef Eigen::Matrix<float, 1, Eigen::Dynamic, Eigen::RowMajor> EigenVector;
 #include <gsl/gsl>
 #include <type_traits>
 #include <cosan/utils/utils.h>
 #include <cosan/utils/Exceptions.h>
+#include <random>
+
 template<typename NumericType>
 concept Numeric = std::is_arithmetic<NumericType>::value ;
+
+//template<typename NumericType,
+//        typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+
 template <class T, class U>
 concept Derived = std::is_base_of<U, T>::value;
 
@@ -25,10 +30,12 @@ namespace Cosan
             typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type
     >
     using CosanMatrix = Eigen::Matrix<NumericType, Eigen::Dynamic, Eigen::Dynamic> ;
+
     template<typename NumericType,
             typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type
     >
     using CosanColVector =  Eigen::Matrix<NumericType,  Eigen::Dynamic, 1> ;
+
     template<typename NumericType,
             typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type
     >

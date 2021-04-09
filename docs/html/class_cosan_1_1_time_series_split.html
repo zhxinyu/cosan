@@ -24,6 +24,7 @@
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -92,7 +93,6 @@ $(document).ready(function(){initNavTree('class_cosan_1_1_time_series_split.html
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_cosan_1_1_time_series_split-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Cosan::TimeSeriesSplit Class Reference</div>  </div>
@@ -103,27 +103,14 @@ $(document).ready(function(){initNavTree('class_cosan_1_1_time_series_split.html
 <div class="dynheader">
 Inheritance diagram for Cosan::TimeSeriesSplit:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_cosan_1_1_time_series_split__inherit__graph.png" border="0" usemap="#a_cosan_1_1_time_series_split_inherit__map" alt="Inheritance graph"/></div>
-<map name="_cosan_1_1_time_series_split_inherit__map" id="_cosan_1_1_time_series_split_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,229,165,256"/>
-<area shape="rect" href="class_cosan_1_1_splitter.html" title=" " alt="" coords="31,155,140,181"/>
-<area shape="rect" href="class_cosan_1_1_selection.html" title=" " alt="" coords="24,80,147,107"/>
-<area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="23,5,148,32"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for Cosan::TimeSeriesSplit:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_cosan_1_1_time_series_split__coll__graph.png" border="0" usemap="#a_cosan_1_1_time_series_split_coll__map" alt="Collaboration graph"/></div>
-<map name="_cosan_1_1_time_series_split_coll__map" id="_cosan_1_1_time_series_split_coll__map">
-<area shape="rect" title=" " alt="" coords="687,91,847,117"/>
-<area shape="rect" href="class_cosan_1_1_splitter.html" title=" " alt="" coords="449,35,558,61"/>
-<area shape="rect" href="class_cosan_1_1_selection.html" title=" " alt="" coords="180,5,303,32"/>
-<area shape="rect" href="class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="5,5,131,32"/>
-<area shape="rect" title=" " alt="" coords="215,56,268,83"/>
-<area shape="rect" title=" " alt="" coords="436,86,571,157"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+ <div class="center">
+  <img src="class_cosan_1_1_time_series_split.png" usemap="#Cosan::TimeSeriesSplit_map" alt=""/>
+  <map id="Cosan::TimeSeriesSplit_map" name="Cosan::TimeSeriesSplit_map">
+<area href="class_cosan_1_1_splitter.html" alt="Cosan::Splitter" shape="rect" coords="0,112,140,136"/>
+<area href="class_cosan_1_1_selection.html" alt="Cosan::Selection" shape="rect" coords="0,56,140,80"/>
+<area href="class_cosan_1_1_cosan_b_o.html" alt="Cosan::CosanBO" shape="rect" coords="0,0,140,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -154,11 +141,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ade4a14f5f042dfe1cdf79f5183586b4c inherit pub_methods_class_cosan_1_1_cosan_b_o"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36a75e161a183482930e5b97151e566f inherit pub_methods_class_cosan_1_1_cosan_b_o"><td class="memItemLeft" align="right" valign="top">virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_cosan_b_o.html#a36a75e161a183482930e5b97151e566f">GetName</a> () const</td></tr>
 <tr class="separator:a36a75e161a183482930e5b97151e566f inherit pub_methods_class_cosan_1_1_cosan_b_o"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:adc51399eaf5d1450b488ecb565502f75"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::tuple&lt; std::vector&lt; gsl::index &gt;, std::vector&lt; gsl::index &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cosan_1_1_time_series_split.html#adc51399eaf5d1450b488ecb565502f75">split_batch</a></td></tr>
-<tr class="separator:adc51399eaf5d1450b488ecb565502f75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -194,7 +176,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="timeseriessplit_8h_source.html#l00012">12</a> of file <a class="el" href="timeseriessplit_8h_source.html">timeseriessplit.h</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;: <a class="code" href="class_cosan_1_1_splitter.html#ae52eff7dac6d4c6defe315fcf7f0b00d">Splitter</a>() {}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afbe1e096429ad62242c9cafe31e50f47"></a>
@@ -222,7 +205,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="timeseriessplit_8h_source.html#l00013">13</a> of file <a class="el" href="timeseriessplit_8h_source.html">timeseriessplit.h</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;: <a class="code" href="class_cosan_1_1_splitter.html#ae52eff7dac6d4c6defe315fcf7f0b00d">Splitter</a>(kfoldnumber) {}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acbd99e7619bc2fe217b0d369d62f271f"></a>
@@ -260,7 +244,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="timeseriessplit_8h_source.html#l00014">14</a> of file <a class="el" href="timeseriessplit_8h_source.html">timeseriessplit.h</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;: <a class="code" href="class_cosan_1_1_splitter.html#ae52eff7dac6d4c6defe315fcf7f0b00d">Splitter</a>(nrows,kfoldnumber){}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -288,16 +273,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="timeseriessplit_8h_source.html#l00039">39</a> of file <a class="el" href="timeseriessplit_8h_source.html">timeseriessplit.h</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_cosan_1_1_time_series_split_a81e3d9db4544bfbcff83d8a713965614_icgraph.png" border="0" usemap="#aclass_cosan_1_1_time_series_split_a81e3d9db4544bfbcff83d8a713965614_icgraph" alt=""/></div>
-<map name="class_cosan_1_1_time_series_split_a81e3d9db4544bfbcff83d8a713965614_icgraph" id="class_cosan_1_1_time_series_split_a81e3d9db4544bfbcff83d8a713965614_icgraph">
-<area shape="rect" title=" " alt="" coords="104,5,264,47"/>
-<area shape="rect" href="_time_series_split_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,39"/>
-</map>
-</div>
-
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{<span class="keywordflow">return</span> split_batch;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad2460f9e6fdef22de2986cab406b8d58"></a>
@@ -327,32 +304,30 @@ Here is the caller graph for this function:</div>
 <p>Reimplemented from <a class="el" href="class_cosan_1_1_splitter.html#ab5fc561101f09c2c70798ae9e6f41bd8">Cosan::Splitter</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="timeseriessplit_8h_source.html#l00015">15</a> of file <a class="el" href="timeseriessplit_8h_source.html">timeseriessplit.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="adc51399eaf5d1450b488ecb565502f75"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc51399eaf5d1450b488ecb565502f75">&#9670;&nbsp;</a></span>split_batch</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; std::tuple&lt;std::vector&lt;gsl::index&gt;,std::vector&lt;gsl::index&gt; &gt; &gt; Cosan::TimeSeriesSplit::split_batch</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="timeseriessplit_8h_source.html#l00041">41</a> of file <a class="el" href="timeseriessplit_8h_source.html">timeseriessplit.h</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                                         {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                <span class="keywordflow">if</span> (nrows &lt;= <a class="code" href="class_cosan_1_1_splitter.html#aad4f9d1c9b59e44fe20b89e6c5334b77">KFoldNumber</a>) {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                    <span class="keywordflow">throw</span> <a class="code" href="namespace_cosan.html#a9760ff59644707f4a56c150295bd496c">SmallRows</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                fmt::print(<span class="stringliteral">&quot;*********************************\n&quot;</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                fmt::print(<span class="stringliteral">&quot;Begin Time Series Splitting!!\n&quot;</span>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                <a class="code" href="class_cosan_1_1_splitter.html#aad4f9d1c9b59e44fe20b89e6c5334b77">KFoldNumber</a>= <a class="code" href="class_cosan_1_1_splitter.html#aad4f9d1c9b59e44fe20b89e6c5334b77">KFoldNumber</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                std::vector &lt;gsl::index&gt; idx(nrows);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                std::iota(idx.begin(), idx.end(), 0);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                gsl::index foldSize = nrows/(<a class="code" href="class_cosan_1_1_splitter.html#aad4f9d1c9b59e44fe20b89e6c5334b77">KFoldNumber</a>+1);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <span class="keywordflow">for</span> (gsl::index i = 1; i&lt;=<a class="code" href="class_cosan_1_1_splitter.html#aad4f9d1c9b59e44fe20b89e6c5334b77">KFoldNumber</a>;i++){</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//                    std::vector&lt;gsl::index&gt; trainidx = std::vector&lt;gsl::index&gt;(idx.begin(), idx.begin()+foldSize*i+nrows%(kfoldnumber+1));</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//                    std::vector&lt;gsl::index&gt; testidx  = std::vector&lt;gsl::index&gt;(idx.begin()+foldSize*i+nrows%(kfoldnumber+1), idx.begin()+foldSize*(1+i)+nrows%(kfoldnumber+1));</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//                    split_batch.push_back({trainidx,testidx});</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                    split_batch.push_back({ std::vector&lt;gsl::index&gt;(idx.begin(), idx.begin()+foldSize*i+nrows%(<a class="code" href="class_cosan_1_1_splitter.html#aad4f9d1c9b59e44fe20b89e6c5334b77">KFoldNumber</a>+1)),</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                            std::vector&lt;gsl::index&gt;(idx.begin()+foldSize*i+nrows%(<a class="code" href="class_cosan_1_1_splitter.html#aad4f9d1c9b59e44fe20b89e6c5334b77">KFoldNumber</a>+1), idx.begin()+foldSize*(1+i)+nrows%(<a class="code" href="class_cosan_1_1_splitter.html#aad4f9d1c9b59e44fe20b89e6c5334b77">KFoldNumber</a>+1))});</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                    fmt::print(<span class="stringliteral">&quot;Current Index is {:}, trainidx size:{:}, testidx size:{:}\n&quot;</span>,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                               i-1,foldSize*i+nrows%(<a class="code" href="class_cosan_1_1_splitter.html#aad4f9d1c9b59e44fe20b89e6c5334b77">KFoldNumber</a>+1),foldSize);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                fmt::print(<span class="stringliteral">&quot;End Time Series Splitting!!\n&quot;</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                fmt::print(<span class="stringliteral">&quot;*********************************\n&quot;</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -360,6 +335,9 @@ Here is the caller graph for this function:</div>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="anamespace_cosan_html_a9760ff59644707f4a56c150295bd496c"><div class="ttname"><a href="namespace_cosan.html#a9760ff59644707f4a56c150295bd496c">Cosan::SmallRows</a></div><div class="ttdeci">Cosan::TooSmallSizeException SmallRows</div></div>
+<div class="ttc" id="aclass_cosan_1_1_splitter_html_ae52eff7dac6d4c6defe315fcf7f0b00d"><div class="ttname"><a href="class_cosan_1_1_splitter.html#ae52eff7dac6d4c6defe315fcf7f0b00d">Cosan::Splitter::Splitter</a></div><div class="ttdeci">Splitter()</div><div class="ttdef"><b>Definition:</b> <a href="selection_8h_source.html#l00033">selection.h:33</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_splitter_html_aad4f9d1c9b59e44fe20b89e6c5334b77"><div class="ttname"><a href="class_cosan_1_1_splitter.html#aad4f9d1c9b59e44fe20b89e6c5334b77">Cosan::Splitter::KFoldNumber</a></div><div class="ttdeci">gsl::index KFoldNumber</div><div class="ttdef"><b>Definition:</b> <a href="selection_8h_source.html#l00049">selection.h:49</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

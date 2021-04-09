@@ -48,6 +48,8 @@ namespace Cosan{
                 }
 
                 gsl::index NumOfCat  = RD.GetcolCatX().size();
+                fmt::print("End of cleaning up data of overflow/underflow!\n");
+                fmt::print("*********************************\n");
                 if (NumOfCat==0){
                     return ;
                 }
@@ -59,8 +61,7 @@ namespace Cosan{
                     }
                 }
                 RD.UpdateCat(svaluesX);
-                fmt::print("End of cleaning up data of overflow/underflow!\n");
-                fmt::print("*********************************\n");
+
             }
 
     };

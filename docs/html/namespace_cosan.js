@@ -12,15 +12,15 @@ var namespace_cosan =
     [ "CosanPrincipalComponentRegression", "class_cosan_1_1_cosan_principal_component_regression.html", "class_cosan_1_1_cosan_principal_component_regression" ],
     [ "CosanRawData", "class_cosan_1_1_cosan_raw_data.html", "class_cosan_1_1_cosan_raw_data" ],
     [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html", "class_cosan_1_1_cosan_ridge_regression" ],
-    [ "CustomerTransform", "class_cosan_1_1_customer_transform.html", "class_cosan_1_1_customer_transform" ],
-    [ "DiffSizeException", "class_cosan_1_1_diff_size_exception.html", "class_cosan_1_1_diff_size_exception" ],
+    [ "CustomTransform", "class_cosan_1_1_custom_transform.html", "class_cosan_1_1_custom_transform" ],
+    [ "DiffSizeException", "class_cosan_1_1_diff_size_exception.html", null ],
     [ "Encoder", "class_cosan_1_1_encoder.html", "class_cosan_1_1_encoder" ],
     [ "Evaluation", "class_cosan_1_1_evaluation.html", "class_cosan_1_1_evaluation" ],
     [ "GridSearch", "class_cosan_1_1_grid_search.html", "class_cosan_1_1_grid_search" ],
     [ "GridSearchMulti", "class_cosan_1_1_grid_search_multi.html", "class_cosan_1_1_grid_search_multi" ],
     [ "GridSearchMultiParallel", "class_cosan_1_1_grid_search_multi_parallel.html", "class_cosan_1_1_grid_search_multi_parallel" ],
     [ "GridSearchParallel", "class_cosan_1_1_grid_search_parallel.html", "class_cosan_1_1_grid_search_parallel" ],
-    [ "InvalidLabelShapeException", "class_cosan_1_1_invalid_label_shape_exception.html", "class_cosan_1_1_invalid_label_shape_exception" ],
+    [ "InvalidLabelShapeException", "class_cosan_1_1_invalid_label_shape_exception.html", null ],
     [ "KFold", "class_cosan_1_1_k_fold.html", "class_cosan_1_1_k_fold" ],
     [ "KFoldParallel", "class_cosan_1_1_k_fold_parallel.html", "class_cosan_1_1_k_fold_parallel" ],
     [ "MaxError", "class_cosan_1_1_max_error.html", "class_cosan_1_1_max_error" ],
@@ -50,5 +50,5 @@ var namespace_cosan =
     [ "Test", "class_cosan_1_1_test.html", "class_cosan_1_1_test" ],
     [ "TimeSeriesSplit", "class_cosan_1_1_time_series_split.html", "class_cosan_1_1_time_series_split" ],
     [ "TimeSeriesSplitParallel", "class_cosan_1_1_time_series_split_parallel.html", "class_cosan_1_1_time_series_split_parallel" ],
-    [ "TooSmallSizeException", "class_cosan_1_1_too_small_size_exception.html", "class_cosan_1_1_too_small_size_exception" ]
+    [ "TooSmallSizeException", "class_cosan_1_1_too_small_size_exception.html", null ]
 ];

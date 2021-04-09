@@ -4,7 +4,7 @@ var files_dup =
     [ "CMakeFiles", "dir_017ad5e908c41501f6a06b5119b37293.html", "dir_017ad5e908c41501f6a06b5119b37293" ],
     [ "cosan", "dir_6b5ded946f16c64d435d28f0b0fde929.html", "dir_6b5ded946f16c64d435d28f0b0fde929" ],
     [ "test", "dir_13e138d54eb8818da29c3992edef070a.html", "dir_13e138d54eb8818da29c3992edef070a" ],
-    [ "tutorial", "dir_07c2df013bb20677b8e65a9f18968d2c.html", null ],
+    [ "Tutorial", "dir_b13547ffa933658222e03ef869b68c96.html", null ],
     [ "test.cpp", "test_8cpp.html", "test_8cpp" ],
     [ "test1.cpp", "test1_8cpp.html", "test1_8cpp" ],
     [ "test2.cpp", "test2_8cpp.html", "test2_8cpp" ],

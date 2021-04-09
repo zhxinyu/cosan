@@ -67,6 +67,17 @@ namespace Cosan
             void UpdateData(const CosanMatrix<NumericType>& inputX){
                 X = inputX;
             }
+
+            void ConcatenateData(const CosanMatrix<NumericType>& inputX){
+                if (GetrowsX()!=inputX.rows()){
+                    throw std::invalid_argument(fmt::format("To concatenate, the number of rows from inputX should match with original X. Current nrow of X is {:}", GetrowsX() ));
+                }
+                for (gsl::index i = 0 ;i<inputX.cols();i++){
+                    X.conservativeResize(X.rows(), X.cols()+1);
+                    X.col(X.cols() - 1) = inputX.col(i);
+                }
+            }
+
             void UpdateData(const CosanMatrix<NumericType>& inputX,const CosanMatrix<NumericType>  &inputY){
                 X = inputX;
                 Y = inputY;
@@ -348,6 +359,16 @@ namespace Cosan
     class CosanData: public CosanRawData<NumericType>{
         public:
             CosanData()=default;
+            CosanData(gsl::index nrows,gsl::index ncols,NumericType lb=0,NumericType ub = 1):CosanRawData<NumericType>(){
+                this->X.resize(nrows,ncols);
+                std::default_random_engine generator;
+                std::uniform_real_distribution<double> distribution(lb,ub);
+                for (gsl::index  i = 0;i<nrows*ncols;i++){
+                    this->X(i/ncols,i%ncols) =distribution(generator);
+                }
+            }
+
+
             CosanData(const CosanMatrix<NumericType> & inputX):CosanRawData<NumericType>(){
                 static_assert(std::is_arithmetic<NumericType>::value, "NumericType must be numeric");
                 this->X = inputX;
@@ -356,6 +377,59 @@ namespace Cosan
                 static_assert(std::is_arithmetic<NumericType>::value, "NumericType must be numeric");
                 this->X = inputX;
                 this->Y = inputY;}
+            CosanData(const std::vector<NumericType>&  inputX,gsl::index nrows,const std::string & order = "rowfirst"):CosanRawData<NumericType>(){
+                if (nrows>inputX.size() || inputX.size()%nrows!=0){
+                    throw std::invalid_argument(
+                            fmt::format("Incorrect nrows specification, should be less than or equal to input vector size and size is divisible by nrows. Input vector size is "
+                                        "{:} and nrows is {:}",inputX.size(),nrows));
+                }
+                this->X.resize(nrows,inputX.size()/nrows);
+                gsl::index i =0,__cols=inputX.size()/nrows;
+                if (order=="columnfirst"){
+                    i =0;
+                    for (auto &each :inputX ){
+                        this->X(i%nrows,i/nrows) = each;
+                        i++;
+                    }
+                    return;
+                }
+                i =0;
+                for (auto &each :inputX ){
+                    this->X(i/__cols,i%__cols) = each;
+                    i++;
+                }
+                return;
+            }
+
+            CosanData(const std::vector<NumericType>&  inputX,const std::vector<NumericType>&  inputY,gsl::index nrows,const std::string & order = "rowfirst"):CosanRawData<NumericType>(){
+                if (nrows>inputX.size() || inputX.size()%nrows!=0 || nrows!=inputY.size()){
+                    throw std::invalid_argument(
+                            fmt::format("Incorrect nrows specification, should be less than or equal to input vector size and size is divisible by nrows. inputY size should also be equal to nrows."
+                                        "inputX vector size is {:}, inputY vector size is {:} and nrows is {:}",inputX.size(),inputY.size(),nrows));
+                }
+                this->X.resize(nrows,inputX.size()/nrows);
+                this->Y.resize(nrows,1);
+                gsl::index i =0,__cols=inputX.size()/nrows;
+                for (auto &each:inputY){
+                    this->Y(i,0) = each;
+                    i++;
+                }
+                if (order=="columnfirst"){
+                    i =0;
+                    for (auto &each :inputX ){
+                        this->X(i%nrows,i/nrows) = each;
+                        i++;
+                    }
+                    return;
+                }
+                i =0;
+                for (auto &each :inputX ){
+                    this->X(i/__cols,i%__cols) = each;
+                    i++;
+                }
+                return;
+            }
+
 
             virtual const std::string  GetName() const {return "Processed Data Object.";}
         private:

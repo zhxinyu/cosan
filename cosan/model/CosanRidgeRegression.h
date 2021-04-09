@@ -12,16 +12,29 @@ namespace Cosan{
     class CosanRidgeRegression: public CosanLinearRegression<NumericType>{
         public:
 //        Initialization
-            CosanRidgeRegression()=delete;
-            CosanRidgeRegression(NumericType Lambda):CosanLinearRegression<NumericType>(true){
+//            CosanRidgeRegression()=delete;
+//            CosanRidgeRegression(NumericType Lambda):CosanLinearRegression<NumericType>(false){
+//                MLambda=Lambda;
+//            }
+            CosanRidgeRegression(bool bias=false): CosanLinearRegression<NumericType>(bias){
                 MLambda=Lambda;
             }
-            CosanRidgeRegression(NumericType Lambda,bool Bias): CosanLinearRegression<NumericType>(Bias){
+            CosanRidgeRegression(NumericType Lambda,bool bias=false): CosanLinearRegression<NumericType>(bias){
                 MLambda=Lambda;
             }
+
+//            CosanLinearRegression(CosanMatrix<NumericType>& X,const CosanMatrix<NumericType>& Y,bool Bias): CosanLinearModel<NumericType>(Bias){
+//                    fit(X,Y);
+//            }
+            CosanRidgeRegression(CosanRawData<NumericType>& RD,bool bias = false): CosanLinearModel<NumericType>(bias){
+                    fit(RD.GetInput(),RD.GetTarget());
+            }
+            CosanRidgeRegression(CosanData<NumericType>& CD,bool bias = false): CosanLinearModel<NumericType>(bias){
+                    fit(CD.GetInput(),CD.GetTarget());
+            }
+
             template<class T,
-                    std::enable_if_t<std::is_same_v<std::decay_t<T>,CosanMatrix<NumericType>>,bool> =true
-            >
+                    std::enable_if_t<std::is_same_v<std::decay_t<T>,CosanMatrix<NumericType>>,bool> = true >
             CosanRidgeRegression(T&& X,const CosanMatrix<NumericType>& Y,
                                  NumericType Lambda,bool Bias): CosanLinearRegression<NumericType>(Bias){
                 MLambda=Lambda;

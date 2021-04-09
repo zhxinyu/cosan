@@ -14,11 +14,22 @@ namespace Cosan
     class CosanLinearRegression: public CosanLinearModel<NumericType> {
         public:
 //          Initialization
-            CosanLinearRegression(): CosanLinearModel<NumericType>(true){}
+            CosanLinearRegression(): CosanLinearModel<NumericType>(false){}
             CosanLinearRegression(bool Bias ): CosanLinearModel<NumericType>(Bias){}
-            CosanLinearRegression(CosanMatrix<NumericType>& X,const CosanMatrix<NumericType>& Y,bool Bias): CosanLinearModel<NumericType>(Bias){
+
+            template<class T,
+                std::enable_if_t<std::is_same_v<std::decay_t<T>,CosanMatrix<NumericType>>,bool> =true>
+            CosanLinearRegression(T&& X,const CosanMatrix<NumericType>& Y,bool Bias): CosanLinearModel<NumericType>(Bias){
                 fit(X,Y);
             }
+
+            CosanLinearRegression(CosanRawData<NumericType>& RD,bool Bias): CosanLinearModel<NumericType>(Bias){
+                fit(RD.GetInput(),RD.GetTarget());
+            }
+            CosanLinearRegression(CosanData<NumericType>& CD,bool Bias): CosanLinearModel<NumericType>(Bias){
+                    fit(CD.GetInput(),CD.GetTarget());
+            }
+
 //          Load and Save Model
 //            virtual bool Load(const string & path);
 //            virtual bool Save(const string & path);

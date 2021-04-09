@@ -16,10 +16,23 @@ namespace Cosan
         public:
     //          Initialization
             CosanPCRRidge(): CosanPrincipalComponentRegression<NumericType>(){}
-            CosanPCRRidge(gsl::index ncomp  ): CosanPrincipalComponentRegression<NumericType>(ncomp){}
+            CosanPCRRidge(std::vector<NumericType> params,bool bias=false  ): CosanPrincipalComponentRegression<NumericType>(params[0]){
+                MLambda = params[1];}
 
-            CosanPCRRidge(CosanMatrix<NumericType>& X,const CosanMatrix<NumericType>& Y,std::vector<NumericType> params): CosanPrincipalComponentRegression<NumericType>(false){
-                this->__ncomp = params[0];
+            CosanPCRRidge(CosanRawData<NumericType>& RD,std::vector<NumericType> params ,bool bias = false ): CosanPrincipalComponentRegression<NumericType>(params[0]){
+                    MLambda = params[1];
+                    fit(RD.GetInput(),RD.GetTarget());
+                }
+            CosanPCRRidge(CosanData<NumericType>& CD,std::vector<NumericType> params ,bool bias = false ): CosanPrincipalComponentRegression<NumericType>(params[0]){
+                    MLambda = params[1];
+                    fit(CD.GetInput(),CD.GetTarget());
+                }
+
+
+
+            template<class T,
+                std::enable_if_t<std::is_same_v<std::decay_t<T>,CosanMatrix<NumericType>>,bool> = true >
+            CosanPCRRidge(T&& X,const CosanMatrix<NumericType>& Y,std::vector<NumericType> params,bool bias = false): CosanPrincipalComponentRegression<NumericType>(params[0]){
                 MLambda = params[1];
                 this->PC = PrincipalComponentAnalysis(X,this->__ncomp).GetPC();
                 this->DerivatedCovariate = X*(this->PC);

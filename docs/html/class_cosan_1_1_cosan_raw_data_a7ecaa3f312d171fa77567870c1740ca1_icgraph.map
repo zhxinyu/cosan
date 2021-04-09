@@ -1,14 +1,8 @@
 <map id="Cosan::CosanRawData::UpdateData" name="Cosan::CosanRawData::UpdateData">
-<area shape="rect" id="node1" title=" " alt="" coords="439,136,600,177"/>
-<area shape="rect" id="node2" href="$class_cosan_1_1_minmax_scaler.html#a95f7243d59040f97d4fe4101424358bf" title=" " alt="" coords="216,25,387,51"/>
-<area shape="rect" id="node4" href="$class_cosan_1_1_missing_values.html#a9649572fc4a3224b4e102b70a66087e9" title=" " alt="" coords="216,86,387,113"/>
-<area shape="rect" id="node6" href="$class_cosan_1_1_normalizer.html#acb8293b1403f23fd498d1c13058626fe" title=" " alt="" coords="226,143,377,170"/>
-<area shape="rect" id="node8" href="$class_cosan_1_1_over_under_flow.html#ab01fbe9e3bfaa1f0fe32c26355bcdedd" title=" " alt="" coords="212,202,391,229"/>
-<area shape="rect" id="node10" href="$class_cosan_1_1_standard_scaler.html#a464b57e45c96e72ef2bc990f85bf7905" title=" " alt="" coords="213,267,389,294"/>
-<area shape="rect" id="node3" href="$class_cosan_1_1_minmax_scaler.html#a7f242d320d7a2db188dc83ee9ab02778" title=" " alt="" coords="9,5,160,47"/>
-<area shape="rect" id="node5" href="$class_cosan_1_1_missing_values.html#a101de7ade5697bdc487b944ffc87cdeb" title=" " alt="" coords="9,71,161,112"/>
-<area shape="rect" id="node7" href="$class_cosan_1_1_normalizer.html#a7c7fba4544219ddd092ad0d74d217cbc" title=" " alt="" coords="15,136,154,177"/>
-<area shape="rect" id="node9" href="$class_cosan_1_1_over_under_flow.html#a3729d28d4653196cef4d7331a04124ab" title=" " alt="" coords="5,201,164,243"/>
-<area shape="rect" id="node11" href="$_standard_scaler_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="59,267,110,294"/>
-<area shape="rect" id="node12" href="$class_cosan_1_1_standard_scaler.html#a13c4122ec690f5bc97f2528d50a72c6b" title=" " alt="" coords="6,319,163,360"/>
+<area shape="rect" id="node1" title=" " alt="" coords="435,39,596,80"/>
+<area shape="rect" id="node2" href="$class_cosan_1_1_normalizer.html#acb8293b1403f23fd498d1c13058626fe" title=" " alt="" coords="223,17,374,43"/>
+<area shape="rect" id="node4" href="$class_cosan_1_1_standard_scaler.html#a464b57e45c96e72ef2bc990f85bf7905" title=" " alt="" coords="211,71,387,98"/>
+<area shape="rect" id="node3" href="$class_cosan_1_1_normalizer.html#a7c7fba4544219ddd092ad0d74d217cbc" title=" " alt="" coords="15,5,153,47"/>
+<area shape="rect" id="node5" href="$_standard_scaler_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="59,71,109,98"/>
+<area shape="rect" id="node6" href="$class_cosan_1_1_standard_scaler.html#a13c4122ec690f5bc97f2528d50a72c6b" title=" " alt="" coords="5,123,163,164"/>
 </map>

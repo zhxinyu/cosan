@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Cosan: test/selection/GridSearchTest.cpp File Reference</title>
+<title>My Project: test/selection/GridSearchTest.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,6 +24,7 @@
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +33,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Cosan
+   <div id="projectname">My Project
    &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Data Analytics Library</div>
@@ -99,6 +100,7 @@ $(document).ready(function(){initNavTree('_grid_search_test_8cpp.html',''); init
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 <code>#include &lt;<a class="el" href="_cosan_data_8h_source.html">cosan/data/CosanData.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_cosan_linear_regression_8h_source.html">cosan/model/CosanLinearRegression.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_cosan_ridge_regression_8h_source.html">cosan/model/CosanRidgeRegression.h</a>&gt;</code><br />
@@ -113,51 +115,52 @@ $(document).ready(function(){initNavTree('_grid_search_test_8cpp.html',''); init
 Include dependency graph for GridSearchTest.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_grid_search_test_8cpp__incl.png" border="0" usemap="#atest_2selection_2_grid_search_test_8cpp" alt=""/></div>
-<map name="test_2selection_2_grid_search_test_8cpp" id="atest_2selection_2_grid_search_test_8cpp">
-<area shape="rect" title=" " alt="" coords="714,5,883,47"/>
-<area shape="rect" title=" " alt="" coords="641,736,713,763"/>
-<area shape="rect" title=" " alt="" coords="1527,736,1585,763"/>
-<area shape="rect" href="_cosan_data_8h.html" title=" " alt="" coords="683,512,850,539"/>
-<area shape="rect" href="_cosan_linear_regression_8h.html" title=" " alt="" coords="372,169,623,196"/>
-<area shape="rect" href="_cosan_ridge_regression_8h.html" title=" " alt="" coords="345,95,594,121"/>
-<area shape="rect" href="_cosan_p_c_r_ridge_8h.html" title=" " alt="" coords="90,169,302,196"/>
-<area shape="rect" href="gridsearch_8h.html" title=" " alt="" coords="771,95,959,121"/>
-<area shape="rect" href="_cosan_metric_8h.html" title=" " alt="" coords="1057,341,1266,367"/>
-<area shape="rect" href="randomgridsearch_8h.html" title=" " alt="" coords="983,95,1214,121"/>
-<area shape="rect" href="kfold_8h.html" title=" " alt="" coords="1238,95,1394,121"/>
-<area shape="rect" href="randomkfold_8h.html" title=" " alt="" coords="1339,169,1538,196"/>
-<area shape="rect" href="timeseriessplit_8h.html" title=" " alt="" coords="1470,95,1682,121"/>
-<area shape="rect" title=" " alt="" coords="1291,661,1346,688"/>
-<area shape="rect" title=" " alt="" coords="1315,736,1413,763"/>
-<area shape="rect" title=" " alt="" coords="579,587,666,613"/>
-<area shape="rect" href="io_2utils_8h.html" title=" " alt="" coords="690,587,801,613"/>
-<area shape="rect" title=" " alt="" coords="347,661,397,688"/>
-<area shape="rect" href="_cosan_b_o_8h.html" title=" " alt="" coords="843,587,1005,613"/>
-<area shape="rect" title=" " alt="" coords="445,587,555,613"/>
-<area shape="rect" title=" " alt="" coords="421,661,488,688"/>
-<area shape="rect" title=" " alt="" coords="512,661,552,688"/>
-<area shape="rect" title=" " alt="" coords="577,661,639,688"/>
-<area shape="rect" title=" " alt="" coords="749,736,809,763"/>
-<area shape="rect" title=" " alt="" coords="1067,661,1160,688"/>
-<area shape="rect" title=" " alt="" coords="1184,661,1267,688"/>
-<area shape="rect" href="utils_2utils_8h.html" title=" " alt="" coords="867,661,991,688"/>
+<map name="test_2selection_2_grid_search_test_8cpp" id="test_2selection_2_grid_search_test_8cpp">
+<area shape="rect" title=" " alt="" coords="715,5,885,47"/>
+<area shape="rect" title=" " alt="" coords="699,736,771,763"/>
+<area shape="rect" title=" " alt="" coords="1745,736,1804,763"/>
+<area shape="rect" title=" " alt="" coords="1683,661,1738,688"/>
+<area shape="rect" href="_cosan_data_8h.html" title=" " alt="" coords="1202,512,1369,539"/>
+<area shape="rect" href="_cosan_linear_regression_8h.html" title=" " alt="" coords="53,169,304,196"/>
+<area shape="rect" href="_cosan_ridge_regression_8h.html" title=" " alt="" coords="62,95,311,121"/>
+<area shape="rect" href="_cosan_p_c_r_ridge_8h.html" title=" " alt="" coords="329,169,541,196"/>
+<area shape="rect" href="gridsearch_8h.html" title=" " alt="" coords="930,95,1118,121"/>
+<area shape="rect" href="_cosan_metric_8h.html" title=" " alt="" coords="1545,341,1754,367"/>
+<area shape="rect" href="randomgridsearch_8h.html" title=" " alt="" coords="1142,95,1373,121"/>
+<area shape="rect" href="kfold_8h.html" title=" " alt="" coords="462,95,618,121"/>
+<area shape="rect" href="randomkfold_8h.html" title=" " alt="" coords="694,169,893,196"/>
+<area shape="rect" href="timeseriessplit_8h.html" title=" " alt="" coords="694,95,906,121"/>
+<area shape="rect" title=" " alt="" coords="1521,736,1618,763"/>
+<area shape="rect" title=" " alt="" coords="975,587,1062,613"/>
+<area shape="rect" href="io_2utils_8h.html" title=" " alt="" coords="1323,587,1434,613"/>
+<area shape="rect" title=" " alt="" coords="1061,661,1112,688"/>
+<area shape="rect" href="_cosan_b_o_8h.html" title=" " alt="" coords="654,587,815,613"/>
+<area shape="rect" title=" " alt="" coords="1086,587,1197,613"/>
+<area shape="rect" title=" " alt="" coords="1376,661,1443,688"/>
+<area shape="rect" title=" " alt="" coords="1467,661,1507,688"/>
+<area shape="rect" title=" " alt="" coords="1187,661,1250,688"/>
+<area shape="rect" title=" " alt="" coords="805,736,865,763"/>
+<area shape="rect" title=" " alt="" coords="397,661,491,688"/>
+<area shape="rect" title=" " alt="" coords="565,661,648,688"/>
+<area shape="rect" href="utils_2utils_8h.html" title=" " alt="" coords="673,661,797,688"/>
+<area shape="rect" title=" " alt="" coords="495,736,561,763"/>
+<area shape="rect" href="_exceptions_8h.html" title=" " alt="" coords="872,661,1037,688"/>
 <area shape="rect" title=" " alt="" coords="149,736,217,763"/>
-<area shape="rect" title=" " alt="" coords="1437,736,1502,763"/>
-<area shape="rect" href="_cosan_linear_model_8h.html" title=" " alt="" coords="425,341,644,367"/>
-<area shape="rect" href="_cosan_model_8h.html" title=" " alt="" coords="827,430,1011,457"/>
-<area shape="rect" title=" " alt="" coords="956,512,1017,539"/>
-<area shape="rect" href="_cosan_principal_component_regression_8h.html" title=" " alt="" coords="221,244,409,285"/>
-<area shape="rect" href="principalcomponentanalysis_8h.html" title=" " alt="" coords="201,333,399,375"/>
-<area shape="rect" href="preprocessor_8h.html" title=" " alt="" coords="451,423,594,464"/>
-<area shape="rect" href="crossvalidation_8h.html" title=" " alt="" coords="947,169,1162,196"/>
-<area shape="rect" href="selection_8h.html" title=" " alt="" coords="1213,251,1393,278"/>
-<area shape="rect" title=" " alt="" coords="720,341,781,367"/>
-<area shape="rect" title=" " alt="" coords="1393,341,1455,367"/>
-<area shape="rect" title=" " alt="" coords="1480,341,1555,367"/>
-<area shape="rect" href="_arg_check_8h.html" title=" " alt="" coords="1086,430,1245,457"/>
-<area shape="rect" href="_exceptions_8h.html" title=" " alt="" coords="1421,430,1587,457"/>
-<area shape="rect" title=" " alt="" coords="1579,341,1637,367"/>
-<area shape="rect" title=" " alt="" coords="1442,512,1521,539"/>
+<area shape="rect" title=" " alt="" coords="1642,736,1721,763"/>
+<area shape="rect" href="_cosan_linear_model_8h.html" title=" " alt="" coords="416,341,635,367"/>
+<area shape="rect" href="_cosan_model_8h.html" title=" " alt="" coords="451,430,635,457"/>
+<area shape="rect" title=" " alt="" coords="512,512,573,539"/>
+<area shape="rect" href="_cosan_principal_component_regression_8h.html" title=" " alt="" coords="178,244,366,285"/>
+<area shape="rect" href="principalcomponentanalysis_8h.html" title=" " alt="" coords="195,333,392,375"/>
+<area shape="rect" href="preprocessor_8h.html" title=" " alt="" coords="283,423,426,464"/>
+<area shape="rect" href="crossvalidation_8h.html" title=" " alt="" coords="1150,169,1365,196"/>
+<area shape="rect" href="selection_8h.html" title=" " alt="" coords="934,251,1114,278"/>
+<area shape="rect" title=" " alt="" coords="1295,341,1356,367"/>
+<area shape="rect" title=" " alt="" coords="811,341,874,367"/>
+<area shape="rect" title=" " alt="" coords="899,341,973,367"/>
+<area shape="rect" href="_arg_check_8h.html" title=" " alt="" coords="1453,430,1611,457"/>
+<area shape="rect" title=" " alt="" coords="997,341,1056,367"/>
+<area shape="rect" href="evaluation_8h.html" title=" " alt="" coords="975,430,1169,457"/>
 </map>
 </div>
 </div>
@@ -181,12 +184,12 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef double <a class="el" href="_grid_search_test_8cpp.html#a90f2ea6f94c3ab6f3681721c41a73ec8">db</a></td>
+          <td class="memname">typedef double <a class="el" href="onehotencoding_8cpp.html#a90f2ea6f94c3ab6f3681721c41a73ec8">db</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_grid_search_test_8cpp_source.html#l00019">19</a> of file <a class="el" href="_grid_search_test_8cpp_source.html">GridSearchTest.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_grid_search_test_8cpp_source.html#l00020">20</a> of file <a class="el" href="_grid_search_test_8cpp_source.html">GridSearchTest.cpp</a>.</p>
 
 </div>
 </div>
@@ -207,21 +210,75 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_grid_search_test_8cpp_source.html#l00021">21</a> of file <a class="el" href="_grid_search_test_8cpp_source.html">GridSearchTest.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="_grid_search_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#a_grid_search_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
-<map name="_grid_search_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="a_grid_search_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,46,56,73"/>
-<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html#a6d8c9d1b08c3c1a5430478e066f460f3" title=" " alt="" coords="104,5,265,47"/>
-<area shape="rect" href="class_cosan_1_1_cosan_raw_data.html#ac65e7b82c4109e45c294f6752c491b0b" title=" " alt="" coords="104,71,265,112"/>
-</map>
-</div>
-
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;          {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> x = 5;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> y = 5;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">Cosan::CosanMatrix&lt;double&gt;</a> X_input = <a class="code" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">Cosan::CosanMatrix&lt;double&gt;::Zero</a>(x,y);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">// std::cout&lt;&lt;X_input.rows()&lt;&lt;std::endl;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">// X_input.setZero();</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    std::cout&lt;&lt;X_input&lt;&lt;std::endl;  </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">Cosan::CosanMatrix&lt;db&gt;</a> Y_input; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    constexpr gsl::index nrows = 10000;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    constexpr gsl::index ncols = 5;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    X_input.resize(nrows,ncols);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    Y_input.resize(nrows,1);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// X_input = Eigen::Matrix&lt;decltype(X_input)::Scalar,nrows,ncols&gt;::Random();</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// Y_input = Eigen::Matrix&lt;decltype(X_input)::Scalar,nrows,1&gt;::Random();</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// std::cout&lt;&lt;X_input &lt;&lt;std::endl;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">// std::cout&lt;&lt;Y_input &lt;&lt;std::endl;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">// X_input = Eigen::Matrix&lt;X_input::Scalr,X_input.rows(),X_input.cols()&gt;::Random(); </span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_cosan_1_1_cosan_data.html">Cosan::CosanData&lt;db&gt;</a>  CRD(X_input,Y_input);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">// Cosan::CosanData&lt;db&gt;  CRD(Eigen::Matrix&lt;decltype(X_input)::Scalar,nrows,ncols&gt;::Random()</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">//                          ,Eigen::Matrix&lt;decltype(X_input)::Scalar,nrows,1&gt;::Random());</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">// // Cosan::CosanLinearRegression&lt;decltype(X_input)::Scalar&gt; CRRwbias(true);</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// Cosan::CosanPCRRidge&lt;decltype(X_input)::Scalar&gt; CRRwbias;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// CRRwbias.fit(CRD.GetInput(),CRD.GetTarget());</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// // std::cout&lt;&lt;CRRwbias.GetParams()&lt;&lt;std::endl;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// Cosan::CosanMatrix&lt;db&gt; beta = CRRwbias.GetBeta();</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">// std::cout&lt;&lt;CRRwbias.predict(CRD.GetInput())&lt;&lt;std::endl;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// std::cout&lt;&lt;beta&lt;&lt;std::endl;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// Cosan::MeanSquareError&lt;decltype(X_input)::Scalar&gt; mse;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// Cosan::MeanAbsError&lt;decltype(X_input)::Scalar&gt; mae;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">// Cosan::R2Score&lt;decltype(X_input)::Scalar&gt; r2;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">// Cosan::MaxError&lt;decltype(X_input)::Scalar&gt; me;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; <span class="comment">//    db a = 0.05;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; <span class="comment">//    std::vector&lt;db&gt; v(10);</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; <span class="comment">//    std::generate(v.begin(), v.end(), [n = 1, &amp;a]() mutable { return n++ * a; });</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; <span class="comment">//    Cosan::RandomKFold kf(5);</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; <span class="comment">//    for (auto &amp; each : v){</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; <span class="comment">//     std::cout&lt;&lt;each&lt;&lt;std::endl;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; <span class="comment">//    }</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; <span class="comment">//    // KFoldParallel</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; <span class="comment">//    // TimeSeriesSplitParallel</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; <span class="comment">//    // TimeSeriesSplit</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; <span class="comment">//    // RandomKFoldParallel</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; <span class="comment">//    // RandomKFold</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">// // Cosan::RandomGridSearch GDS1(CRD,CRRwbias,mse,kf,v);</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">// std::cout&lt;&lt;Cosan::RandomGridSearch(CRD,CRRwbias,mse,kf,v).GetBestParams()&lt;&lt;std::endl;    </span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">// // Cosan::RandomGridSearch GDS2(CRD,CRRwbias,mae,kf,v);</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">// std::cout&lt;&lt;GDS2.GetBestParams()&lt;&lt;std::endl;</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// Cosan::RandomGridSearch GDS3(CRD,CRRwbias,r2,kf,v);</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">// std::cout&lt;&lt;GDS3.GetBestParams()&lt;&lt;std::endl;  </span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">// Cosan::RandomGridSearch GDS4(CRD,CRRwbias,me,kf,v);</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">// std::cout&lt;&lt;GDS4.GetBestParams()&lt;&lt;std::endl;  </span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">// std::cout&lt;&lt;GDS.GetBestParams()&lt;&lt;std::endl;</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;   <span class="comment">// std::cout&lt;&lt;CRRwbias.predict(X_input)&lt;&lt;std::endl;</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="anamespace_cosan_html_a2834817f72f8512e1eb8dec1ba41cf6d"><div class="ttname"><a href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">Cosan::CosanMatrix</a></div><div class="ttdeci">Eigen::Matrix&lt; NumericType, Eigen::Dynamic, Eigen::Dynamic &gt; CosanMatrix</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00032">CosanBO.h:32</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_cosan_data_html"><div class="ttname"><a href="class_cosan_1_1_cosan_data.html">Cosan::CosanData</a></div><div class="ttdef"><b>Definition:</b> <a href="_cosan_data_8h_source.html#l00359">CosanData.h:359</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

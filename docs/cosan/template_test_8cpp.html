@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Cosan: test/templateTest.cpp File Reference</title>
+<title>My Project: test/templateTest.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,6 +24,7 @@
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +33,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Cosan
+   <div id="projectname">My Project
    &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Data Analytics Library</div>
@@ -110,7 +111,7 @@ $(document).ready(function(){initNavTree('template_test_8cpp.html',''); initResi
 Include dependency graph for templateTest.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="template_test_8cpp__incl.png" border="0" usemap="#atest_2template_test_8cpp" alt=""/></div>
-<map name="test_2template_test_8cpp" id="atest_2template_test_8cpp">
+<map name="test_2template_test_8cpp" id="test_2template_test_8cpp">
 <area shape="rect" title=" " alt="" coords="251,5,399,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,77,107"/>
 <area shape="rect" title=" " alt="" coords="101,80,160,107"/>
@@ -137,13 +138,13 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a1a8460659b32d3c54f0f6d8595246dfd"><td class="memTemplParams" colspan="2">template&lt;typename NumericType , typename  = typename std::enable_if&lt;std::is_arithmetic&lt;NumericType&gt;::value,NumericType&gt;::type&gt; </td></tr>
-<tr class="memitem:a1a8460659b32d3c54f0f6d8595246dfd"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd">Cosan::vec</a> = std::vector&lt; <a class="el" href="class_numeric_type.html">NumericType</a> &gt;</td></tr>
+<tr class="memitem:a1a8460659b32d3c54f0f6d8595246dfd"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a1a8460659b32d3c54f0f6d8595246dfd">Cosan::vec</a> = std::vector&lt; <a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a> &gt;</td></tr>
 <tr class="separator:a1a8460659b32d3c54f0f6d8595246dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a5d4d11c1bc43a3ee80f25dbb7a4a2025"><td class="memTemplParams" colspan="2">template&lt;typename NumericType  = std::string&gt; </td></tr>
-<tr class="memitem:a5d4d11c1bc43a3ee80f25dbb7a4a2025"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_numeric_type.html">NumericType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a5d4d11c1bc43a3ee80f25dbb7a4a2025">Cosan::StringToNum</a> (std::string arg)</td></tr>
+<tr class="memitem:a5d4d11c1bc43a3ee80f25dbb7a4a2025"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="_load_csv_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cosan.html#a5d4d11c1bc43a3ee80f25dbb7a4a2025">Cosan::StringToNum</a> (std::string arg)</td></tr>
 <tr class="separator:a5d4d11c1bc43a3ee80f25dbb7a4a2025"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="template_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,11 +166,34 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="template_test_8cpp_source.html#l00077">77</a> of file <a class="el" href="template_test_8cpp_source.html">templateTest.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;          {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">// std::vector&lt;bool&gt; myVec = {0,1,1,0,0,1,0,1,0,1};</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">// Eigen::Matrix&lt;bool,2,5,Eigen::RowMajor&gt; X1,X2;</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">// for (gsl::index i =0;i&lt;myVec.size();i++){</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">//  X1(i/5,i%5)=myVec[i];</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">// }    </span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">// std::copy(myVec.begin(),myVec.end(),X2.data());</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">// std::cout&lt;&lt;X1&lt;&lt;std::endl;</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">// X2.resize(2, 5);</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">// std::cout&lt;&lt;X2&lt;&lt;std::endl;    </span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">// std::string a = &quot;nan&quot;;</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">// std::cout&lt;&lt;Cosan::StringToNum&lt;int&gt;(a)&lt;&lt;std::endl;</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="class_cosan_1_1_test.html">Cosan::Test</a> a = <a class="code" href="class_cosan_1_1_test.html">Cosan::Test&lt;int&gt;</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    a.<a class="code" href="class_cosan_1_1_test.html#a252f70622e0082596fe9283a869082a6">face</a>.resize(2,2);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    a.<a class="code" href="class_cosan_1_1_test.html#a252f70622e0082596fe9283a869082a6">face</a>&lt;&lt;1,2,3,4;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    std::cout&lt;&lt;a.<a class="code" href="class_cosan_1_1_test.html#a252f70622e0082596fe9283a869082a6">face</a>&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    static_assert(std::is_same_v&lt;decltype(a.<a class="code" href="class_cosan_1_1_test.html#a252f70622e0082596fe9283a869082a6">face</a>)::Scalar, <span class="keywordtype">int</span>&gt;);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    std::cout&lt;&lt;<span class="keyword">typeid</span>(decltype(a.<a class="code" href="class_cosan_1_1_test.html#a252f70622e0082596fe9283a869082a6">face</a>)::Scalar).name()&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_cosan_1_1_test_html"><div class="ttname"><a href="class_cosan_1_1_test.html">Cosan::Test</a></div><div class="ttdef"><b>Definition:</b> <a href="template_test_8cpp_source.html#l00051">templateTest.cpp:51</a></div></div>
+<div class="ttc" id="aclass_cosan_1_1_test_html_a252f70622e0082596fe9283a869082a6"><div class="ttname"><a href="class_cosan_1_1_test.html#a252f70622e0082596fe9283a869082a6">Cosan::Test::face</a></div><div class="ttdeci">CosanMatrix&lt; NumericType &gt; face</div><div class="ttdef"><b>Definition:</b> <a href="template_test_8cpp_source.html#l00066">templateTest.cpp:66</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

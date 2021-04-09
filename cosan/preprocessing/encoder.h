@@ -20,13 +20,19 @@ namespace Cosan {
 //            ERROR
 //        }
 //        ;
-
-
     public:
         Encoder() = delete;
-        Encoder(CosanRawData <NumericType> &RD) : Preprocessor<NumericType>() {
-            fit(RD);}
+        Encoder(CosanRawData <NumericType> &RD,bool add_back =false) : Preprocessor<NumericType>() {
+            fit(RD);
+            if (add_back==true){
+                RD.ConcatenateData(CatMatrix);
+                fmt::print("Notice that CRD.X has been modified. The dimension of X is ({:},{:}). {:} columns of one-hot encodings have been added.\n",RD.GetrowsX(),RD.GetcolsX(),CatMatrix.cols());
+            }
+        }
         void fit(CosanRawData <NumericType> &RD) {
+            fmt::print("*********************************\n");
+            fmt::print("Begin encoding categorical data !\n");
+
             gsl::index colCat = RD.GetcolCatX().size();
             std::vector <std::string> svaluesX = RD.GetsvaluesX();
             gsl::index totalCol = 0;
@@ -57,6 +63,8 @@ namespace Cosan {
                 }
 
             }
+            fmt::print("Finish encoding categorical data! Get access to the newly-generated additional matrix via .GetCatMatrix()\n");
+            fmt::print("*********************************\n");
         }
 //            virtual std::vector<int> getEncoding(int colIdx, const std::string &category) = 0;
         CosanMatrix<NumericType> & GetCatMatrix() {return CatMatrix;}

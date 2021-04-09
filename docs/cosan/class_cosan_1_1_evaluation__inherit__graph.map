@@ -1,0 +1,10 @@
+<map id="Cosan::Evaluation" name="Cosan::Evaluation">
+<area shape="rect" id="node1" title=" " alt="" coords="179,145,308,171"/>
+<area shape="rect" id="node3" href="$class_cosan_1_1_cosan_metric.html" title=" " alt="" coords="374,104,517,145"/>
+<area shape="rect" id="node8" href="$class_cosan_1_1_summary_statistics.html" title=" " alt="" coords="356,169,535,211"/>
+<area shape="rect" id="node2" href="$class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="5,145,131,171"/>
+<area shape="rect" id="node4" href="$class_cosan_1_1_max_error.html" title=" " alt="" coords="601,5,784,47"/>
+<area shape="rect" id="node5" href="$class_cosan_1_1_mean_abs_error.html" title=" " alt="" coords="617,71,768,112"/>
+<area shape="rect" id="node6" href="$class_cosan_1_1_mean_square_error.html" title=" " alt="" coords="608,136,777,177"/>
+<area shape="rect" id="node7" href="$class_cosan_1_1_r2_score.html" title=" " alt="" coords="583,202,803,229"/>
+</map>

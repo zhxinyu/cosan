@@ -16,12 +16,23 @@ namespace Cosan
     class CosanPrincipalComponentRegression: public CosanLinearModel<NumericType> {
     public:
 //          Initialization
+
         CosanPrincipalComponentRegression(): CosanLinearModel<NumericType>(false){
             __ncomp = 3;}
-        CosanPrincipalComponentRegression(gsl::index ncomp  ): CosanLinearModel<NumericType>(false){
+        CosanPrincipalComponentRegression(gsl::index ncomp ,bool bias = false): CosanLinearModel<NumericType>(false){
             __ncomp = ncomp;}
+        CosanPrincipalComponentRegression(CosanRawData<NumericType>& RD,gsl::index ncomp ,bool bias = false): CosanLinearModel<NumericType>(Bias=false){
+                __ncomp = ncomp;
+                fit(RD.GetInput(),RD.GetTarget());
+        }
+        CosanPrincipalComponentRegression(CosanData<NumericType>& CD,gsl::index ncomp,bool bias = false ): CosanLinearModel<NumericType>(Bias=false){
+                __ncomp = ncomp;
+                fit(CD.GetInput(),CD.GetTarget());
+        }
 
-        CosanPrincipalComponentRegression(CosanMatrix<NumericType>& X,const CosanMatrix<NumericType>& Y,gsl::index ncomp): CosanLinearModel<NumericType>(false){
+        template<class T,
+                std::enable_if_t<std::is_same_v<std::decay_t<T>,CosanMatrix<NumericType>>,bool> = true >
+        CosanPrincipalComponentRegression(T&& X,const CosanMatrix<NumericType>& Y,gsl::index ncomp,bool bias = false): CosanLinearModel<NumericType>(false){
             __ncomp = ncomp;
             PC = PrincipalComponentAnalysis(X,ncomp).GetPC();
             DerivatedCovariate = X*PC;

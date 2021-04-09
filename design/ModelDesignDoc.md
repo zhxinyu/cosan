@@ -1,7 +1,5 @@
 # Linear Model Design Document V1.0
 
-##### Author: Xinyu Zhang (xz2691)
-
 ## Introduction
 This part implements classes and functions that fit `CosanData` into linear models. In 1.0 version, we offer linear models of different variants (Linear Regression, Ridge Regression, Principal Component Regression and Principal Component Regression with L2 square norm penalty). 
 

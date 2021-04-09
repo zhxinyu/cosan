@@ -147,7 +147,8 @@ Location: `cosan\utils\utils.h`
 
 ## Used Open Resource Libraries 
 ### [Eigen](https://eigen.tuxfamily.org/index.php?title=Main_Page)
-### [gsl]()
+### [gsl](https://github.com/microsoft/GSL)
+### [fmt](http://fmt.dev/)
 
 ## Future work and extensibility
 1. Improve code readability. Add detialed comments in the code base.

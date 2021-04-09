@@ -29,9 +29,9 @@ This is to restrict U to be the base of T.
 
 ##### [Data Preprocessing](https://github.com/gchenra/cosan/blob/jiahe/design/PreprocessDesignDoc.md)
 
-##### [Linear Model](https://github.com/gchenra/cosan/blob/jiahe/ModelDesignDoc.md)
+##### [Linear Model](https://github.com/gchenra/cosan/blob/jiahe/design/ModelDesignDoc.md)
 
-##### [Model Selection & Evaluation](https://github.com/gchenra/cosan/blob/jiahe/SelectDesignDoc.md)
+##### [Model Selection & Evaluation](https://github.com/gchenra/cosan/blob/jiahe/design/SelectDesignDoc.md)
 
 ### Base Classes
 

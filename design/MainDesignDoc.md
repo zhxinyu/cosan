@@ -1,6 +1,6 @@
 # Cosan Design Doc V0.8
 
-##### Team member: Jiahe Chen (jc5348), Xinyu Zhang (xz2691), Zida Zhou (zz2791)
+
 
 ## Motivation: 
 TODO

@@ -84,13 +84,13 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Tutorial", "md__tutorial__tutorial.html", null ],
-    [ "Presentation", "Final Presentation.pdf", null ]
+    [ "Presentation", "FinalPresentation.pdf", null ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"Final Presentation.pdf",
+"FinalPresentation.pdf",
 "class_cosan_1_1_cosan_raw_data.html#a7c3bc05dd6f9ad3d9d7dabccee298f18",
 "class_cosan_1_1_time_series_split_parallel.html#a395351ef8512eb64ab6858cfb16011ad"
 ];

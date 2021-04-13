@@ -2,17 +2,17 @@
 
 ##### Team member: Jiahe Chen (jc5348), Xinyu Zhang (xz2691), Zida Zhou (zz2791)
 
-###### *Design document*: this is it or ('design/`)
+###### *Design document*: this is it `./design/*.md`
 
 ###### *Implementation* code can be found in `test/Implementation.cpp`
 
 ###### *measurements* code can be found in `test/Paralleltest.cpp`
 
-###### *Tutorial* can be found in the `Tutorial` tab. Or(`docs/html/md__tutorial__tutorial.html`)
+###### *Tutorial* can be found in the `Tutorial` tab. Or `Tutorial/Tutorial.md`
 
-###### *Presentation* can be found in the `Presentation` tab. Or (`docs/html/Final Presentation.pdf`)
+###### *Presentation* can be found in the `Presentation` tab or `docs/html/FinalPresentation.pdf`
 
-###### *Manual*: this is it or ('docs/html/index.html`)
+###### *Manual*: this is it or `./docs/html/index.html`
 
 ## Overview:
 We aim to write an open-source machine learning library Cosan for C++ which provides a data mining, data analytics and predictive analytics framework. It implements a selected range of simple and efficient data processing procedures and machine learning algorithms and is designed to interoperate with C++ scientific computing library Eigen. 

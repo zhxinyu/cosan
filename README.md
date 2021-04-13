@@ -2,6 +2,8 @@
 
 ##### Team member: Jiahe Chen (jc5348), Xinyu Zhang (xz2691), Zida Zhou (zz2791)
 
+###### Documentation page: www.columbia.edu/~xz2691/cosan
+
 ###### *Design document*: this is it `./design/*.md`
 
 ###### *Implementation* code can be found in `test/Implementation.cpp`

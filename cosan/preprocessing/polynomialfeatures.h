@@ -7,8 +7,10 @@
 #include <cosan/preprocessing/preprocessor.h>
 
 namespace Cosan{
-    template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    /**
+     * Generate polynomial and interaction features. Generate a new feature matrix consisting of all polynomial combinations of the features with degree less than or equal to the specified degree.
+     */
+    template<Numeric NumericType>
     class PolynomialFeatures: public Preprocessor<NumericType>  {
         public:
             PolynomialFeatures()=delete;

@@ -5,6 +5,7 @@ var class_cosan_1_1_cosan_linear_model =
     [ "GetBeta", "class_cosan_1_1_cosan_linear_model.html#a7e1ab18adf7ab073fd2e6c5d32d210dd", null ],
     [ "GetBias", "class_cosan_1_1_cosan_linear_model.html#a3e9d1a9e2417b8a4fb51896064cb12cd", null ],
     [ "GetName", "class_cosan_1_1_cosan_linear_model.html#a032784cb0c90e4b77c0ee87132f4a353", null ],
+    [ "Init", "class_cosan_1_1_cosan_linear_model.html#adb6fa42f884a643639915ac72a73191d", null ],
     [ "predict", "class_cosan_1_1_cosan_linear_model.html#a25eb8c264387cec4fde6faf6dec551de", null ],
     [ "SetBeta", "class_cosan_1_1_cosan_linear_model.html#a362cccfb14a9382a36179c7521576bf1", null ],
     [ "SetBias", "class_cosan_1_1_cosan_linear_model.html#acb5327818538335ac586540e84deb262", null ],

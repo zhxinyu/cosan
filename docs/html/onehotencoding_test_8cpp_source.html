@@ -122,8 +122,8 @@ $(document).ready(function(){initNavTree('onehotencoding_test_8cpp_source.html',
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::vector&lt;std::string&gt;  svaluesX = std::vector&lt;std::string&gt;({<span class="stringliteral">&quot;a&quot;</span>,<span class="stringliteral">&quot;b&quot;</span>,<span class="stringliteral">&quot;c&quot;</span>,<span class="stringliteral">&quot;b&quot;</span>,<span class="stringliteral">&quot;a&quot;</span>,<span class="stringliteral">&quot;c&quot;</span>});</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    gsl::index colCat = 3 ;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    svalues = std::vector&lt;std::vector&lt;std::string&gt;&gt;(colCat,std::vector&lt;std::string&gt;(svaluesX.size()/colCat,<span class="stringliteral">&quot;&quot;</span>) );</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix&lt;NumericType&gt;</a> OneHotMatrixi;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix&lt;NumericType&gt;</a> newMatrix;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="namespace_cosan.html#abf4015ccbd9ddd1cf0fe7b80afec97f3">CosanMatrix&lt;NumericType&gt;</a> OneHotMatrixi;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="namespace_cosan.html#abf4015ccbd9ddd1cf0fe7b80afec97f3">CosanMatrix&lt;NumericType&gt;</a> newMatrix;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">for</span> (gsl::index col = 0;col&lt;colCat;col++){</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        std::unordered_map&lt;std::string, gsl::index&gt; categoryToOrdinal{};</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">for</span> (gsl::index row = 0;row&lt;svaluesX.size()/colCat;row++){</div>
@@ -133,7 +133,7 @@ $(document).ready(function(){initNavTree('onehotencoding_test_8cpp_source.html',
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            }</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        categories.push_back(categoryToOrdinal);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        OneHotMatrixi = <a class="code" href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">CosanMatrix&lt;NumericType&gt;::Zero</a>(svaluesX.size()/colCat,categoryToOrdinal.size());</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        OneHotMatrixi = <a class="code" href="namespace_cosan.html#abf4015ccbd9ddd1cf0fe7b80afec97f3">CosanMatrix&lt;NumericType&gt;::Zero</a>(svaluesX.size()/colCat,categoryToOrdinal.size());</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">for</span> (gsl::index row = 0;row&lt;svaluesX.size()/colCat;row++){</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            OneHotMatrixi(row,categoryToOrdinal[svalues[col][row]]) = 1;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
@@ -250,14 +250,14 @@ $(document).ready(function(){initNavTree('onehotencoding_test_8cpp_source.html',
 <div class="ttc" id="atimeseriessplit_8h_html"><div class="ttname"><a href="timeseriessplit_8h.html">timeseriessplit.h</a></div></div>
 <div class="ttc" id="aencoder_8h_html"><div class="ttname"><a href="encoder_8h.html">encoder.h</a></div></div>
 <div class="ttc" id="a_cosan_data_8h_html"><div class="ttname"><a href="_cosan_data_8h.html">CosanData.h</a></div></div>
-<div class="ttc" id="anamespace_cosan_html"><div class="ttname"><a href="namespace_cosan.html">Cosan</a></div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00020">CosanBO.h:21</a></div></div>
+<div class="ttc" id="anamespace_cosan_html"><div class="ttname"><a href="namespace_cosan.html">Cosan</a></div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00028">CosanBO.h:29</a></div></div>
 <div class="ttc" id="a_cosan_metric_8h_html"><div class="ttname"><a href="_cosan_metric_8h.html">CosanMetric.h</a></div></div>
 <div class="ttc" id="aonehotencoding_test_8cpp_html_aa28a5c88ac75442a7ecebdd88be79a45"><div class="ttname"><a href="onehotencoding_test_8cpp.html#aa28a5c88ac75442a7ecebdd88be79a45">NumericType</a></div><div class="ttdeci">double NumericType</div><div class="ttdef"><b>Definition:</b> <a href="onehotencoding_test_8cpp_source.html#l00020">onehotencodingTest.cpp:20</a></div></div>
 <div class="ttc" id="a_cosan_ridge_regression_8h_html"><div class="ttname"><a href="_cosan_ridge_regression_8h.html">CosanRidgeRegression.h</a></div></div>
-<div class="ttc" id="anamespace_cosan_html_a2834817f72f8512e1eb8dec1ba41cf6d"><div class="ttname"><a href="namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d">Cosan::CosanMatrix</a></div><div class="ttdeci">Eigen::Matrix&lt; NumericType, Eigen::Dynamic, Eigen::Dynamic &gt; CosanMatrix</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00029">CosanBO.h:29</a></div></div>
 <div class="ttc" id="aonehotencoding_test_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="onehotencoding_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="onehotencoding_test_8cpp_source.html#l00022">onehotencodingTest.cpp:22</a></div></div>
 <div class="ttc" id="agridsearch_8h_html"><div class="ttname"><a href="gridsearch_8h.html">gridsearch.h</a></div></div>
 <div class="ttc" id="arandomkfold_8h_html"><div class="ttname"><a href="randomkfold_8h.html">randomkfold.h</a></div></div>
+<div class="ttc" id="anamespace_cosan_html_abf4015ccbd9ddd1cf0fe7b80afec97f3"><div class="ttname"><a href="namespace_cosan.html#abf4015ccbd9ddd1cf0fe7b80afec97f3">Cosan::CosanMatrix</a></div><div class="ttdeci">Eigen::Matrix&lt; NumericType, Eigen::Dynamic, Eigen::Dynamic &gt; CosanMatrix</div><div class="ttdef"><b>Definition:</b> <a href="_cosan_b_o_8h_source.html#l00037">CosanBO.h:37</a></div></div>
 <div class="ttc" id="arandomgridsearch_8h_html"><div class="ttname"><a href="randomgridsearch_8h.html">randomgridsearch.h</a></div></div>
 <div class="ttc" id="a_cosan_p_c_r_ridge_8h_html"><div class="ttname"><a href="_cosan_p_c_r_ridge_8h.html">CosanPCRRidge.h</a></div></div>
 <div class="ttc" id="a_cosan_linear_regression_8h_html"><div class="ttname"><a href="_cosan_linear_regression_8h.html">CosanLinearRegression.h</a></div></div>

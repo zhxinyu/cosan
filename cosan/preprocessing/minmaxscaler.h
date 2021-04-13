@@ -8,8 +8,7 @@
 #include <cosan/preprocessing/preprocessor.h>
 
 namespace Cosan{
-    template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    template<Numeric NumericType>
     class MinmaxScaler: public Preprocessor<NumericType>  {
         public:
             MinmaxScaler()=delete;

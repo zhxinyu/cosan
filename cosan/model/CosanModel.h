@@ -7,11 +7,17 @@
 #include <chrono>
 #include <cosan/base/CosanBO.h>
 namespace Cosan{
+    /**
+     * Problem Type.
+     **/
     enum EProblemType{
         PdNone   = 0,
         PdBinaryClassification = 1,
         PdUnivariateRegression=2,
     };
+    /**
+     * Model Type
+     */
     enum EModelType{
         MdNone = 0,
         MdLinearRegression=1,
@@ -19,11 +25,17 @@ namespace Cosan{
         MdPrincipalComponentRegression=3,
         MdRidgePrincipalComponentRegression=4
     };
+    /**
+     * Solver Type
+     */
     enum ESolverType{
         SrAuto = 0,
         ADMM = 1
 
     };
+    /**
+     * @brief Base Object for CosanModel
+     */
     class CosanModel: public CosanBO {
     public:
         CosanModel(): CosanBO(),MaxTrainTime(std::chrono::seconds(std::chrono::hours(1)).count()),

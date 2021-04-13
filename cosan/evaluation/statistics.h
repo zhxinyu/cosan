@@ -5,8 +5,18 @@
 #ifndef COSAN_STATISTICS_H
 #define COSAN_STATISTICS_H
 #include <cosan/evaluation.h>
-template<Numeric NumericType>
+//template<Numeric NumericType>
 namespace Cosan{
+    /**
+     *  @brief Class for statistics results
+     *  @details calculate SampleCovariance, mean, variance, median, maxNum, minNum;
+     *  @code CosanMatrix<NumericType> & GetSampleCovariance(const CosanMatrix<NumericType> & X) @endcode
+     *  @code NumericType GetMean(const CosanMatrix<NumericType> & X) @endcode
+     *  @code NumericType GetVar(const CosanMatrix<NumericType> & X) @endcode
+     *  @code NumericType GetMedian(const CosanMatrix<NumericType> & X) @endcode
+     *  @code NumericType GetMax(const CosanMatrix<NumericType> & X) @endcode
+     *  @code NumericType GetMin(const CosanMatrix<NumericType> & X) @endcode
+     **/
     template<Numeric NumericType>
     class SummaryStatistics: public Evaluation {
         public:
@@ -74,8 +84,15 @@ namespace Cosan{
         NumericType minNum;
     };
 
-    template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+//    template<typename NumericType,
+//            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    /**
+     * @brief Calculate the mean of std::vector<NumericType>
+     * @tparam NumericType
+     * @param v
+     * @return NumericType
+     */
+    template<Numeric NumericType>
     NumericType getVMean(const std::vector<NumericType>& v){
         return std::accumulate(v.begin(), v.end(), 0)/v.size();
 //        NumericType total = 0;

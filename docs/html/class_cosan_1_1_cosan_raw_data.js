@@ -1,8 +1,9 @@
 var class_cosan_1_1_cosan_raw_data =
 [
-    [ "CosanRawData", "class_cosan_1_1_cosan_raw_data.html#a1bf762fe720b1695c9dea68a3766581c", null ],
-    [ "CosanRawData", "class_cosan_1_1_cosan_raw_data.html#afd3e2b9876d93550d3f10a8e1379f266", null ],
+    [ "CosanRawData", "class_cosan_1_1_cosan_raw_data.html#a1c9c051d4e1f52041df031d421fd2fcd", null ],
     [ "CosanRawData", "class_cosan_1_1_cosan_raw_data.html#a0a0d86a5ab5d5763abdb67c28a89c9e6", null ],
+    [ "CosanRawData", "class_cosan_1_1_cosan_raw_data.html#afd3e2b9876d93550d3f10a8e1379f266", null ],
+    [ "_load_csv", "class_cosan_1_1_cosan_raw_data.html#af1d24606c748857fbe9ae565a2e48c1d", null ],
     [ "ConcatenateData", "class_cosan_1_1_cosan_raw_data.html#a9c1e85f1df7641fbdfa79325552b1dd5", null ],
     [ "GetcatY", "class_cosan_1_1_cosan_raw_data.html#a86188af3ca5976efc74182c50005a165", null ],
     [ "GetcolCatX", "class_cosan_1_1_cosan_raw_data.html#a2333f30f9fdd3781254e06f071b3ec37", null ],
@@ -37,6 +38,8 @@ var class_cosan_1_1_cosan_raw_data =
     [ "UpdateData", "class_cosan_1_1_cosan_raw_data.html#a7ecaa3f312d171fa77567870c1740ca1", null ],
     [ "UpdateData", "class_cosan_1_1_cosan_raw_data.html#a087a53ffece7348c50ef313c6a15cf94", null ],
     [ "__TYPE", "class_cosan_1_1_cosan_raw_data.html#adbbf80be66db885daa031e139ec274da", null ],
+    [ "_raw2catIdx", "class_cosan_1_1_cosan_raw_data.html#a0e9ee302c980faa7a0b37b39d2a387c4", null ],
+    [ "_raw2numIdx", "class_cosan_1_1_cosan_raw_data.html#ab76e4404e7df84ca0f676e436f0e672e", null ],
     [ "catY", "class_cosan_1_1_cosan_raw_data.html#a16f568efea5e05d0f7a9b66b707ed55b", null ],
     [ "colCatX", "class_cosan_1_1_cosan_raw_data.html#a179fe0540e19fe447f3100b0bf6f42b1", null ],
     [ "colCatY", "class_cosan_1_1_cosan_raw_data.html#ad604aa6e19c8b933586e67a5aee5a07b", null ],

@@ -10,6 +10,12 @@ namespace Cosan
 {
 //    template<typename NumericType,
 //            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    /**
+     * y = a+bx
+     * minimize \sum_{i=1}^n (y_i-a-b^T x_i)^2 -> find the optimal a and b
+     * @tparam NumericType
+     * @details https://en.wikipedia.org/wiki/Linear_regression
+     */
     template<Numeric NumericType>
     class CosanLinearRegression: public CosanLinearModel<NumericType> {
         public:

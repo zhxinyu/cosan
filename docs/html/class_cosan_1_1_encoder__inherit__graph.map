@@ -1,7 +1,0 @@
-<map id="Cosan::Encoder&lt; NumericType &gt;" name="Cosan::Encoder&lt; NumericType &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="67,169,284,196"/>
-<area shape="rect" id="node4" href="$class_cosan_1_1_onehot_encoder.html" title=" " alt="" coords="5,244,164,285"/>
-<area shape="rect" id="node5" href="$class_cosan_1_1_ordinal_encoder.html" title=" " alt="" coords="189,244,346,285"/>
-<area shape="rect" id="node2" href="$class_cosan_1_1_preprocessor.html" title=" " alt="" coords="103,80,248,121"/>
-<area shape="rect" id="node3" href="$class_cosan_1_1_cosan_b_o.html" title=" " alt="" coords="113,5,238,32"/>
-</map>

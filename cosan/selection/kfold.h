@@ -6,6 +6,9 @@
 #define COSAN_KFOLD_H
 #include <cosan/selection/selection.h>
 namespace Cosan {
+    /**
+     * https://en.wikipedia.org/wiki/Cross-validation_(statistics)
+     */
     class KFold : public Splitter {
     public:
         KFold() : Splitter() {}

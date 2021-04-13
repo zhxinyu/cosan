@@ -3,9 +3,9 @@
 //
 #include <iostream>
 #include <cosan/data/CosanData.h>
-typedef double NumericType;
+typedef double db;
 int main() {
-    Cosan::CosanRawData<NumericType> CD("./example_data/toy2/X_.csv");
+    Cosan::CosanRawData<db> CD("./example_data/toy2/X_.csv");
     std::cout<<CD.GetSummaryMessageX()<<std::endl;
     return 0;
 }

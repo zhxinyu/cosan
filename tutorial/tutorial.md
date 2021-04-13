@@ -15,7 +15,7 @@ This article will discuss in details on how to use Cosan as a tools for data ana
 </ol>
 
 ## Library Overview
-Cosan aims to provides an end-to-end data mining and data analytics toolkits. The data processing procedures are composed of the following six parts:
+Cosan aims to provide an end-to-end data mining and data analytics toolkits. The data processing procedures are composed of the following six parts:
 <ul>
 <li>Data Reading</li>
 <li>Data Preprocessing</li>
@@ -29,7 +29,7 @@ __Data Reading:__ We accept both numerical and string data written in a `csv` fi
 
 __Data Preprocessing:__ The data preprocessing takes care of overflow and underflow issues, missing values imputation, normalization and standardization and categorical encoding.
 
-__Feature Engineering:__ We provides an toolkit to analyze and produce new features including feature scaling, polynomial features generation, principal component analysis and user-defined transformation.
+__Feature Engineering:__ We provide an toolkit to analyze and produce new features including feature scaling, polynomial features generation, principal component analysis and user-defined transformation.
 
 __Model Fitting:__ Linear models of various types are implemented in the library, including ordinary least square, ridge regression, principal component regression and principal component regression with \f$\ell_2\f$-norm regularization.
 
@@ -123,9 +123,18 @@ We accept both numerical and string data written in a `csv` file as well as data
 
 #### 1.a Read from csv file
 
-We accept data file in `csv` format where each data is of dimension \f$n\times p\f$  where `n` (the number of rows) is number of samples and `p` (the number of columns) denotes number of features. Each data entry is separated by "," and allows for positive/negative infinity (user-specific `NumericType` is `float`,`double` or `long double`), missing values (either emptry entry between two contiguous comma "," or NAN expression ) and non-number string. If user-specific `NumericType` is `float`,`double` or `long double`, acceptable numeric expressions also include hexadecimal and variants of decimal float-poing expression (see [this](https://en.cppreference.com/w/cpp/string/basic_string/stof) for more details). It will throw ``std::invalid_argument`` if the the entry read is not-a-number expression except this entry is of categorical type.
+We accept data file in `csv` format where each data is of dimension \f$n\times p\f$  where `n` (the number of rows) is 
+number of samples and `p` (the number of columns) denotes number of features. Each data entry is separated by "," and 
+allows for positive/negative infinity (user-specific `NumericType` is `float`,`double` or `long double`), missing values
+(either emptry entry between two contiguous comma "," or NAN expression ) and non-number string. If user-specific 
+`NumericType` is `float`,`double` or `long double`, acceptable numeric expressions also include hexadecimal and variants
+of decimal float-poing expression (see [this](https://en.cppreference.com/w/cpp/string/basic_string/stof) for more details).
+It will throw ``std::invalid_argument`` if the the entry read is not-a-number expression except this entry is of categorical type.
 
-We determine each column's data type (either numeric or categorical) by the first row. We treat every entry as numeric if it is a number (whether it is ordinal or numerical) and treat every entry that does not start with a numeric as categorical (also called nominal data specifically). For those starting with a numeric but containing non-numeric character, ```std::invalid_argument``` will be thrown.
+We determine each column's data type (either numeric or categorical) by the first row. We treat every entry as numeric if
+it is a number (whether it is ordinal or numerical) and treat every entry that does not start with a numeric as categorical
+(also called nominal data specifically). For those starting with a numeric but containing non-numeric character,
+```std::invalid_argument``` will be thrown.
 
 The repository includes some example datasets in `example_data` folder. For the first few rows of data at ```/wd/example_data/toy2/X_.csv``` reads 
 

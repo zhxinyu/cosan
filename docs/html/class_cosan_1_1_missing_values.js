@@ -1,5 +1,6 @@
 var class_cosan_1_1_missing_values =
 [
-    [ "MissingValues", "class_cosan_1_1_missing_values.html#a58f6e694b286c697635be16a0929bdea", null ],
-    [ "MissingValues", "class_cosan_1_1_missing_values.html#a101de7ade5697bdc487b944ffc87cdeb", null ]
+    [ "MissingValues", "class_cosan_1_1_missing_values.html#a25de95d392baff336a87856de77e0c69", null ],
+    [ "MissingValues", "class_cosan_1_1_missing_values.html#a0dadede095dc66a9d336d432c17dd012", null ],
+    [ "fit", "class_cosan_1_1_missing_values.html#a6736f83d838e52540a2ba049594f89dc", null ]
 ];

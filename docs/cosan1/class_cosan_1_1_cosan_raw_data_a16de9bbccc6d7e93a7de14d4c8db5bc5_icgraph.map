@@ -1,8 +1,0 @@
-<map id="Cosan::CosanRawData::GetcolsX" name="Cosan::CosanRawData::GetcolsX">
-<area shape="rect" id="node1" title=" " alt="" coords="300,123,461,164"/>
-<area shape="rect" id="node2" href="$class_cosan_1_1_custom_transform.html#a6d6c74b637fc1769189ea1cb2c15ca7a" title=" " alt="" coords="42,5,215,47"/>
-<area shape="rect" id="node3" href="$class_cosan_1_1_encoder.html#a7c796577773bbcaa4e7c0df408800861" title=" " alt="" coords="43,71,215,98"/>
-<area shape="rect" id="node4" href="$class_cosan_1_1_polynomial_features.html#a903c5a65c582ab56af5ca6f5812c556c" title=" " alt="" coords="37,123,220,164"/>
-<area shape="rect" id="node5" href="$class_cosan_1_1_principal_component_analysis.html#a97ec0e5d3e5552ae03ab4e128a1fafce" title=" " alt="" coords="5,188,252,229"/>
-<area shape="rect" id="node6" href="$class_cosan_1_1_polynomial_features.html#a0e5df9ab863e0b65d70055b0ee5c49f3" title=" " alt="" coords="37,253,220,295"/>
-</map>

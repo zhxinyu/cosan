@@ -23,6 +23,16 @@ namespace Cosan {
     */
 //    template<typename NumericType,
 //            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+
+    /**
+     *  @brief CosanMetric class for metric functionality.
+     *  @param[in] yPredict data for prediction
+     *  @param[in] yTrue    data for truth
+     *  @details Initialize metric class by
+     *  @code CosanMetric(const CosanMatrix <NumericType> &yPredict, const CosanMatrix <NumericType> &yTrue) @endcode
+     *  Get the metric error by
+     *  @code GetError(const CosanMatrix <NumericType> &yPredict, const CosanMatrix <NumericType> &yTrue) @endcode
+     **/
     template<Numeric NumericType>
     class CosanMetric : public Evaluation {
     public:
@@ -92,18 +102,13 @@ namespace Cosan {
 //		}
 //	};
 
-
-    /*
-    Mean absolute error
-    Parameters:
-        yTrue: see in error_num cooments
-        yPredict: see in error_num cooments
-    Output of GetError:
-        result: double; refer to
-                https://scikit-learn.org/stable/modules/model_evaluation.html#mean-absolute-error
-    */
-    template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value, NumericType>::type>
+//    template<typename NumericType,
+//            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value, NumericType>::type>
+    /**
+     *  @brief Mean absolute error
+     *  @details https://scikit-learn.org/stable/modules/model_evaluation.html#mean-absolute-error
+     **/
+    template<Numeric NumericType>
     class MeanAbsError : public CosanMetric<NumericType> {
     public:
         MeanAbsError() : CosanMetric<NumericType>() {}
@@ -118,17 +123,12 @@ namespace Cosan {
         }
     };
 
-    /*
-    Mean squared error
-    Input:
-        yTrue: see in error_num cooments
-        yPredict: see in error_num cooments
-    Output:
-        result: double; refer to
-                https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error
-    */
-    template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value, NumericType>::type>
+
+    /**
+     *  @brief Mean squared error
+     *  @details https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error
+     **/
+    template<Numeric NumericType>
     class MeanSquareError : public CosanMetric<NumericType> {
     public:
         MeanSquareError() : CosanMetric<NumericType>() {}
@@ -144,17 +144,11 @@ namespace Cosan {
     };
 
 
-    /*
-    R2 score, computes the coefficient of determination
-    Input:
-        yTrue: see in error_num cooments
-        yPredict: see in error_num cooments
-    Output:
-        result: double; refer to
-                https://scikit-learn.org/stable/modules/model_evaluation.html#r2-score-the-coefficient-of-determination
-    */
-    template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value, NumericType>::type>
+    /**
+     *  @brief R2 square
+     *  @details https://scikit-learn.org/stable/modules/model_evaluation.html#r2-score-the-coefficient-of-determination
+     **/
+    template<Numeric NumericType>
     class R2Score : public CosanMetric<NumericType> {
     public:
         R2Score() : CosanMetric<NumericType>() {}
@@ -169,9 +163,11 @@ namespace Cosan {
             return this->error;
         }
     };
-
-    template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value, NumericType>::type>
+    /**
+     *  @brief maximum error
+     *  @details https://scikit-learn.org/stable/modules/model_evaluation.html#max-error
+     **/
+    template<Numeric NumericType>
     class MaxError : public CosanMetric<NumericType> {
     public:
         MaxError() : CosanMetric<NumericType>() {}

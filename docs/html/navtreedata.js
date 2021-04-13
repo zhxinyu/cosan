@@ -83,15 +83,16 @@ var NAVTREE =
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ],
-    [ "Tutorial", "md__tutorial__tutorial.html", null ]
+    [ "Tutorial", "md__tutorial__tutorial.html", null ],
+    [ "Presentation", "Final Presentation.pdf", null ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"_all_models_8h.html",
-"class_cosan_1_1_cosan_raw_data.html#ac4a9b3f498a60061427cc0bee2ae3f8d",
-"fmt_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4"
+"Final Presentation.pdf",
+"class_cosan_1_1_cosan_raw_data.html#a7c3bc05dd6f9ad3d9d7dabccee298f18",
+"class_cosan_1_1_time_series_split_parallel.html#a395351ef8512eb64ab6858cfb16011ad"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

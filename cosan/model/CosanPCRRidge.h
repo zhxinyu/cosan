@@ -10,8 +10,12 @@
 #include <numeric>
 namespace Cosan
 {
-    template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+
+    /** principal component regression with L2 square penaly term on coefficient beta.
+     * @tparam NumericType
+     * @details https://en.wikipedia.org/wiki/Principal_component_regression
+     */
+    template<Numeric NumericType>
     class CosanPCRRidge: public CosanPrincipalComponentRegression<NumericType>  {
         public:
     //          Initialization

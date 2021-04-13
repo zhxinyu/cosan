@@ -5,24 +5,17 @@
 #include <iostream>
 // #include <Eigen/Dense>
 // #include <cosan/io/utils.h>
-#include <cosan/data/CosanData.h>
-#include <cosan/model/CosanLinearRegression.h>
-#include <cosan/model/CosanRidgeRegression.h>
+#include <cosan/data/CosanData.h>s
+#include <cosan/model/CosanPrincipalComponentRegression.h>
 //using namespace Eigen;
 //using namespace std;
-
+typedef double db;
 int main() {
-   Cosan::CosanRawData CD("./example_data/toy/X.csv","./example_data/toy/y.csv");
-   double RegularizationTerm = 1;
-   Cosan::CosanRidgeRegression CRRwBias(RegularizationTerm,true);
+   Cosan::CosanRawData<db> CD("./example_data/toy/X.csv","./example_data/toy/y.csv");
+   gsl::index ncomp = 4;
+   Cosan::CosanPrincipalComponentRegression<db> CRRwBias(ncomp);
    CRRwBias.fit(CD.GetInput(),CD.GetTarget());
    std::cout<<CRRwBias.GetBeta()<<std::endl;
    std::cout<<(CRRwBias.predict(CD.GetInput())-CD.GetTarget()).norm()<<std::endl;   
-   RegularizationTerm = 0.0001;
-   Cosan::CosanRidgeRegression CRRwoBias(RegularizationTerm,false);
-   CRRwoBias.fit(CD.GetInput(),CD.GetTarget());
-   std::cout<<CRRwoBias.GetBeta()<<std::endl;
-   std::cout<<(CRRwoBias.predict(CD.GetInput())-CD.GetTarget()).norm()<<std::endl;      
-//    save_csv("./example_data/toy/beta_c1.csv",CRR.GetBeta());
     return 0;
 }

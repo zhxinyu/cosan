@@ -9,10 +9,19 @@
 #include <Eigen/Dense>
 #include <gsl/gsl>
 #define __UTILS_H_INCLUDED__
-
+#include <cosan/base/CosanBO.h>
 namespace Cosan{
-    template <typename NumericType,
-                  typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    /**
+     * @brief General string to number conversion function
+     * @details As we allow for user-determined numeric type `NumericType`, the detailed implementation or functions needed maybe slightly
+     * different among each other. For instance, when we are trying to read data from `csv` file. Different data type requires different
+     * string-to-numeric function. For `double`, one is required `std::stod` while 'std::stof' is the candidate function if
+     * `float` is chosen. To take care of this variant before running time, we conside the static-i. The feature
+     * allows us to discard branches of an if statement at compile-time based on a constant expression condition. In the following
+     * code as an example, we define a template function with input requiring `NumericType` as numeric and then the implementation
+     * is decided via `if constexpr` statement.
+     **/
+    template<Numeric NumericType>
     NumericType StringToNum(const std::string& arg, std::size_t* pos = 0) {
         static_assert(std::is_arithmetic<NumericType>::value, "NumericType must be numeric");
         if constexpr (std::is_same_v<NumericType, unsigned long>) {

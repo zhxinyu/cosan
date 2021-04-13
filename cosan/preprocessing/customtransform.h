@@ -7,8 +7,7 @@
 #include <cosan/preprocessing/preprocessor.h>
 
 namespace Cosan{
-    template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    template<Numeric NumericType>
     class CustomTransform: public Preprocessor<NumericType>  {
         public:
             CustomTransform()=delete;
@@ -31,7 +30,6 @@ namespace Cosan{
             decltype(auto) GetCustomFeatures(){return __customFeatures;}
         private:
             CosanMatrix<NumericType> __customFeatures;
-
 };
 }
 

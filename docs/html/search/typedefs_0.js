@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['cosancolvector_588',['CosanColVector',['../namespace_cosan.html#a20fc59e75fcf829c843b0d4efd4ffe23',1,'Cosan']]],
-  ['cosanmatrix_589',['CosanMatrix',['../namespace_cosan.html#a2834817f72f8512e1eb8dec1ba41cf6d',1,'Cosan']]],
-  ['cosanrowvector_590',['CosanRowVector',['../namespace_cosan.html#a2e5c02380f875dff3dd3b3952573f82f',1,'Cosan']]]
+  ['cosancolvector_633',['CosanColVector',['../namespace_cosan.html#a31e385106ac05b81b1c367f3f5554887',1,'Cosan']]],
+  ['cosanmatrix_634',['CosanMatrix',['../namespace_cosan.html#abf4015ccbd9ddd1cf0fe7b80afec97f3',1,'Cosan']]],
+  ['cosanrowvector_635',['CosanRowVector',['../namespace_cosan.html#aa28dcb1d1c3b8c333e52ecdd55add9b5',1,'Cosan']]]
 ];

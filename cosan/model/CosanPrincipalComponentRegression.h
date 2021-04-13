@@ -12,6 +12,10 @@ namespace Cosan
 {
 //    template<typename NumericType,
 //            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    /**
+     * @tparam NumericType
+     * @details https://en.wikipedia.org/wiki/Principal_component_regression
+     */
     template<Numeric NumericType>
     class CosanPrincipalComponentRegression: public CosanLinearModel<NumericType> {
     public:
@@ -49,8 +53,7 @@ namespace Cosan
             return "Principal Component Regression with least square";}
 
         template<class T,
-                std::enable_if_t<std::is_same_v<std::decay_t<T>,CosanMatrix<NumericType>>,bool> =true
-        >
+                std::enable_if_t<std::is_same_v<std::decay_t<T>,CosanMatrix<NumericType>>,bool> =true>
         void fit(T&& X,const CosanMatrix<NumericType>& Y) {
             PC = PrincipalComponentAnalysis(X,__ncomp).GetPC();
             DerivatedCovariate = X*PC;

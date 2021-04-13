@@ -6,8 +6,11 @@
 #define COSAN_OVERUNDERFLOW_H
 #include <cosan/preprocessing/preprocessor.h>
 namespace Cosan{
-    template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    /**
+     * Clean up row with underflow or overflow data enty.
+     *
+     */
+    template<Numeric NumericType>
     class OverUnderFlow: public Preprocessor<NumericType> {
         public:
             OverUnderFlow() = delete;

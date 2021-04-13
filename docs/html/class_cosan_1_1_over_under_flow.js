@@ -1,5 +1,6 @@
 var class_cosan_1_1_over_under_flow =
 [
-    [ "OverUnderFlow", "class_cosan_1_1_over_under_flow.html#a6bfc6f7162314d579fdfda6298e70d75", null ],
-    [ "OverUnderFlow", "class_cosan_1_1_over_under_flow.html#a3729d28d4653196cef4d7331a04124ab", null ]
+    [ "OverUnderFlow", "class_cosan_1_1_over_under_flow.html#a43265a57e9c58a0b01c2bcb9ef35ea9e", null ],
+    [ "OverUnderFlow", "class_cosan_1_1_over_under_flow.html#a5be2bdfb23c2c32361587189475f9e31", null ],
+    [ "fit", "class_cosan_1_1_over_under_flow.html#a11c8a7b732035b2013c03c78d8a79401", null ]
 ];

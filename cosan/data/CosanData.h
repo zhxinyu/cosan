@@ -26,183 +26,361 @@ namespace Cosan
 //
 //    template<typename NumericType,
 //             typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    /**
+     *  @brief Raw Data container.
+     *  @details Every constructor needs to have at least one input. To obtain CosanRawData, three constructors can be used:
+     *  @code CosanRawData(const std::string & srcX); @endcode
+     *  @code CosanRawData(const std::string & srcX, const std::string & srcY); @endcode
+     **/
     template<Numeric NumericType>
     class CosanRawData: public CosanBO{
         public:
-            CosanRawData():CosanBO(){}
-            CosanRawData(const std::string & srcX):CosanBO(){
-                static_assert(std::is_arithmetic<NumericType>::value, "NumericType must be numeric");
-                if (std::is_same_v<NumericType, bool>){
-                    throw std::invalid_argument(
-                            "We do not accept bool at this moment. Try unsigned int, unsigned long, unsigned long long, int, "
-                            "long, long, float, double ,long double.");
-                }
-
-                SetInput(srcX);}
-
-            CosanRawData(const std::string & srcX,
-                      const std::string & srcY):CosanBO(){
-                static_assert(std::is_arithmetic<NumericType>::value, "NumericType must be numeric");
-                if (std::is_same_v<NumericType, bool>){
-                    throw std::invalid_argument(
-                            "We do not accept bool at this moment. Try unsigned int, unsigned long, unsigned long long, int, "
-                            "long, long, float, double ,long double.");
-                }
-
-                SetInput(srcX);
-                SetTarget(srcY);
+            CosanRawData()=default;
+        /**
+         *  @brief Constructor: Read data X and Y from csv files and form raw data container.
+         *  @param[in] srcX path to the csv file of data X;
+         *  @param[in] srcY path to the csv file of data Y.
+         *  @note X and Y are from two separate csv files. For the data format of csv files, see Tutorial.
+         **/
+         CosanRawData(const std::string & srcX, const std::string & srcY):CosanBO(){
+//             static_assert(std::is_arithmetic<NumericType>::value, "NumericType must be numeric");
+             if (std::is_same_v<NumericType, bool>){
+                 throw std::invalid_argument(
+                         "We do not accept bool at this moment. Try unsigned int, unsigned long, unsigned long long, int, "
+                         "long, long, float, double ,long double.");
+             }
+             SetInput(srcX);
+             SetTarget(srcY);
+         }
+        /**
+         *  @brief Constructor: Read data X from csv and form raw data container.
+         *  @param[in] srcX path to the csv file of data X.
+         **/
+        CosanRawData(const std::string & srcX):CosanBO(){
+//            static_assert(std::is_arithmetic<NumericType>::value, "NumericType must be numeric");
+            if (std::is_same_v<NumericType, bool>){
+                throw std::invalid_argument(
+                        "We do not accept bool at this moment. Try unsigned int, unsigned long, unsigned long long, int, "
+                        "long, long, float, double ,long double.");
             }
-            //        virtual ~CosanBO();
-            void SetInput(const std::string & srcX){
-                std::tie(rowsX,colsX,SummaryMessageX) = _load_csv(srcX,X,IdxpinfX,IdxminfX,IdxmissingX,svaluesX,colCatX);
-            }
+            SetInput(srcX);}
+        //        virtual ~CosanBO();
 
-            void SetTarget(const std::string & srcY){
-                std::tie(rowsY,colsY,SummaryMessageY) = _load_csv(srcY,Y,IdxpinfY,IdxminfY,IdxmissingY,svaluesY,colCatY);
-                if (colCatY.size()!=0){
-                    catY=true;
-                }
-            }
+        /**
+         *  @brief Update input X from csv file.
+         *  @param[in] srcX path to the csv file of data X.
+         *  @details
+         **/
+         void SetInput(const std::string & srcX){
+             std::tie(rowsX,colsX,SummaryMessageX) = _load_csv(srcX,X,IdxpinfX,IdxminfX,IdxmissingX,svaluesX,colCatX);
+         }
+        /**
+         *  @brief Update target Y from csv file.
+         *  @param[in] srcY path to the csv file of data Y.
+         *  @details
+         **/
+         void SetTarget(const std::string & srcY){
+             std::tie(rowsY,colsY,SummaryMessageY) = _load_csv(srcY,Y,IdxpinfY,IdxminfY,IdxmissingY,svaluesY,colCatY);
+             if (colCatY.size()!=0){
+                 catY=true;
+             }
+         }
+        /**
+         *  @brief Concatenate X using CosanMatrix<NumericType> input X. Add new columns
+         *  @param[in] const CosanMatrix<NumericType>& inputX
+         *
+         *  @details Add new columns.
+         **/
+         void ConcatenateData(const CosanMatrix<NumericType>& inputX){
+             if (GetrowsX()!=inputX.rows()){
+                 throw std::invalid_argument(fmt::format("To concatenate, the number of rows from inputX should match with original X. Current nrow of X is {:}", GetrowsX() ));
+             }
+             for (gsl::index i = 0 ;i<inputX.cols();i++){
+                 X.conservativeResize(X.rows(), X.cols()+1);
+                 X.col(X.cols() - 1) = inputX.col(i);
+             }
+         }
+        /**
+         *  @brief Update X using CosanMatrix<NumericType> input X
+         *  @param[in] const CosanMatrix<NumericType>& inputX
+         *  @details
+         **/
+        void UpdateData(const CosanMatrix<NumericType>& inputX){
+            X = inputX;
+        }
+        /**
+         *  @brief Update X and Y using CosanMatrix<NumericType> inputX,inputY
+         *  @param[in] const CosanMatrix<NumericType>& inputX,const CosanMatrix<NumericType>& inputY
+         *  @details
+         **/
+         void UpdateData(const CosanMatrix<NumericType>& inputX,const CosanMatrix<NumericType>  &inputY){
+             X = inputX;
+             Y = inputY;
+         }
+        /**
+         *  @brief Update categorical vector svaluesX using std::vector<std::string>  & inputX
+         *  @param[in] const std::vector<std::string>  & inputX
+         *  @details
+         **/
+         void UpdateCat(const std::vector<std::string>  & inputX){
+             svaluesX = inputX;
+         }
+        /**
+         *  @brief Update categorical vector svaluesX,svaluesY using std::vector<std::string>  & inputX,inputY
+         *  @param[in] const std::vector<std::string>  & inputX,inputY
+         *  @details
+         **/
+         void UpdateCat(const std::vector<std::string>  & inputX,const std::vector<std::string>  & inputY){
+             svaluesX = inputX;
+             svaluesY = inputY;
+         }
 
-            void UpdateData(const CosanMatrix<NumericType>& inputX){
-                X = inputX;
-            }
+        /**
+         *  @brief Get a copy of CosanMatrix<NumericType> X
+         **/
+         CosanMatrix<NumericType>  GetInput()  {
+             return X;
+         }
+        /**
+         *  @brief Get a copy of CosanMatrix<NumericType> Y
+         **/
+         CosanMatrix<NumericType>  GetTarget()  {
+             return Y;
+         }
+        /**
+         *  @brief Get a const reference to const CosanMatrix<NumericType> X
+         **/
+         const CosanMatrix<NumericType>&  GetInput()  const {
+             return X;
+         }
+        /**
+         *  @brief Get a const reference to const CosanMatrix<NumericType> Y
+         **/
+         const CosanMatrix<NumericType>&  GetTarget()  const {
+             return Y;
+         }
+        /**
+         *  @brief Get the total number data information
+         *  @return std::tuple<# missing of X,#missing of Y>
+         **/
+        std::tuple<gsl::index,gsl::index> GetMissingNumber(){
+             return {X.array().isNaN().template cast<NumericType>().sum(),Y.array().isNaN().template cast<NumericType>().sum()};
+         }
 
-            void ConcatenateData(const CosanMatrix<NumericType>& inputX){
-                if (GetrowsX()!=inputX.rows()){
-                    throw std::invalid_argument(fmt::format("To concatenate, the number of rows from inputX should match with original X. Current nrow of X is {:}", GetrowsX() ));
-                }
-                for (gsl::index i = 0 ;i<inputX.cols();i++){
-                    X.conservativeResize(X.rows(), X.cols()+1);
-                    X.col(X.cols() - 1) = inputX.col(i);
-                }
-            }
+         //        virtual CosanBO *Shallow_copy() const;
+         //        virtual CosanBO *Deep_copy() const;
+        /**
+         *  @brief Get the name of the objects
+         *  @return std::string
+         **/
+         virtual const std::string  GetName() const {return "Raw Data Object.";}
 
-            void UpdateData(const CosanMatrix<NumericType>& inputX,const CosanMatrix<NumericType>  &inputY){
-                X = inputX;
-                Y = inputY;
-            }
+         //        virtual bool SaveFile(const std::string &path ,const std::string & prefix = "");
+         //        virtual bool LoadFile(const std::string &path);
+         //        void PrintModel();
+         //        virtual bool Equals(CosanBO* other, float accuracy = 0.0);
+         //        virtual CosanBO* Clone();
+        /**
+         *  @brief Get the summary message on reading csv file on X
+         *  @return std::string
+         **/
+         const std::string&  GetSummaryMessageX() const {return SummaryMessageX;}
+        /**
+         *  @brief Get the summary message on reading csv file on Y
+         *  @return std::string
+         **/
+         const std::string&  GetSummaryMessageY() const {return SummaryMessageY;}
+        /**
+         *  @brief Raw data column index to numeric data matrix X column index
+         *  @return std::unordered_map<gsl::index,gsl::index>
+         **/
+         std::unordered_map<gsl::index,gsl::index> & GetRawToNumIdx(){return _raw2numIdx;}
+        /**
+         *  @brief Raw data column index to categorical data column index
+         *  @return std::unordered_map<gsl::index,gsl::index>
+         **/
+         std::unordered_map<gsl::index,gsl::index> & GetRawToCatIdx(){return _raw2catIdx;}
+        /**
+         *  @brief Get the position of positive infinity in the origin data X
+         *  @return std::unordered_map<gsl::index,gsl::index>
+         **/
+         std::vector<std::vector<gsl::index>>   GetIdxpinfX() const {return IdxpinfX;}
+        /**
+         *  @brief Get the position of negative infinity in the origin data X
+         *  @return std::unordered_map<gsl::index,gsl::index>
+         **/
+         std::vector<std::vector<gsl::index>>   GetIdxminfX() const {return IdxminfX;}
+        /**
+         *  @brief Get the position of missing in the origin data X
+         *  @return std::unordered_map<gsl::index,gsl::index>
+         **/
+         std::vector<std::vector<gsl::index>>   GetIdxmissingX() const {return  IdxmissingX;}
+        /**
+         *  @brief Get the position of positive infinity in the origin data Y
+         *  @return std::unordered_map<gsl::index,gsl::index>
+         **/
+         std::vector<std::vector<gsl::index>> GetIdxpinfY() const {return  IdxpinfY;}
+        /**
+         *  @brief Get the position of negative infinity in the origin data Y
+         *  @return std::unordered_map<gsl::index,gsl::index>
+         **/
+         std::vector<std::vector<gsl::index>>  GetIdxminfY()  const {return  IdxminfY;}
+        /**
+         *  @brief Get the position of missing in the origin data Y
+         *  @return std::unordered_map<gsl::index,gsl::index>
+         **/
+         std::vector<std::vector<gsl::index>> GetIdxmissingY()  const {return  IdxmissingY;}
+        /**
+         *  @brief Get the column index (in the origin X of csv file) where the column is of categorical type.
+         *  @return std::set<gsl::index>
+         **/
+         std::set<gsl::index>  GetcolCatX()  const{return colCatX;}
+        /**
+         *  @brief Get the column index (in the origin Y of csv file) where the column is of categorical type.
+         *  @return std::set<gsl::index>
+         *  @note If Y is one dimension, the size of return should be one. Otherwise it is empty.
+         **/
+        std::set<gsl::index>  GetcolCatY()  const {return colCatY;}
+        /**
+         *  @brief True if Y is categorical data type. False otherwise.
+         *  @return bool
+         **/
+         bool GetcatY() const {return catY;}
 
+        /**
+         *  @brief Get the number of rows for X.
+         *  @return gsl::index
+         **/
+         gsl::index GetrowsX()  {
+             rowsX=X.rows();
+             return rowsX;
+         }
+        /**
+         *  @brief Get the number of rows for Y.
+         *  @return gsl::index
+         **/
+        gsl::index GetrowsY()  {
+             rowsY=Y.rows();
+             return rowsY;
+         }
+        /**
+         *  @brief Get the number of columns for X.
+         *  @return gsl::index
+         **/
+         gsl::index GetcolsX() {
+             colsX = X.cols();
+             return colsX;
+         }
+        /**
+         *  @brief Get the number of columns for Y.
+         *  @return gsl::index
+         **/
+        gsl::index GetcolsY()  {
+             colsY = Y.cols();
+             return colsY;
+         }
+        /**
+         *  @brief Get the vector of categorical data from X. order: row first.
+         *  @return std::vector<std::string>
+         *  @note it is a std::vector of std::string. Strings are stored row-first.
+         **/
+         std::vector<std::string>  GetsvaluesX()  const {return svaluesX;}
+        /**
+         *  @brief Get the vector of categorical data from Y. order: row first.
+         *  @return std::vector<std::string>
+         *  @note it is a std::vector of std::string. Strings are stored row-first.
+         **/
+         std::vector<std::string>  GetsvaluesY()  const {return svaluesY;}
+        /**
+         *  @return an empty CosanMatrix<NumericType> data structure
+         *  @note it is used to determined CosanMatrix<NumericType> data type.
+         **/
+        CosanMatrix<NumericType> GetType(){return __TYPE;}
+     protected:
+            /**
+             *  @brief Numeric data from origin CSV file for X.
+             **/
+             CosanMatrix<NumericType> X;
+            /**
+             *  @brief Numeric data from origin CSV file for Y.
+             **/
+             CosanMatrix<NumericType> Y;
+             CosanMatrix<NumericType> __TYPE;
+            /**
+             *  @brief Loading message.
+             **/
+             std::string SummaryMessageX,SummaryMessageY;
+            /**
+             *  @brief position for positive, negative infinity and missing values.
+             **/
+             std::vector<std::vector<gsl::index>> IdxpinfX,IdxminfX,IdxmissingX;
+             std::vector<std::vector<gsl::index>> IdxpinfY,IdxminfY,IdxmissingY;
+            /**
+             *  @brief column idx in the origin data that is categorical data.
+             **/
+             std::set<gsl::index> colCatX,colCatY;
+            /**
+             *  @brief true mean respone variable Y is categorical data.
+             **/
+             bool catY = false;
+            /**
+             *  @brief number of rows.
+             **/
+             gsl::index rowsX = 0,colsX = 0;
+            /**
+             *  @brief number of columns
+             **/
+             gsl::index rowsY = 0,colsY = 0;
+            /**
+             * Get the vector of categorical data from original data. order: row first.
+             */
+             std::vector<std::string> svaluesX,svaluesY;
+     private:
+         std::unordered_map<gsl::index,gsl::index> _raw2numIdx,_raw2catIdx;
+         // template<typename Matrix>
 
-            void UpdateCat(const std::vector<std::string>  & inputX){
-                svaluesX = inputX;
-            }
-            void UpdateCat(const std::vector<std::string>  & inputX,const std::vector<std::string>  & inputY){
-                svaluesX = inputX;
-                svaluesY = inputY;
-            }
+        /**
+         * @brief load data from csv
+         * @details We accept data file in `csv` format where each data is of dimension n\times p  where n (the number of rows)
+         * is number of samples and `p` (the number of columns) denotes number of features. Each data entry is separated by ","
+         * and allows for positive/negative infinity (user-specific `NumericType` is `float`,`double` or `long double`),
+         * missing values (either emptry entry between two contiguous comma "," or NAN expression ) and non-number string.
+         * If user-specific `NumericType` is `float`,`double` or `long double`, acceptable numeric expressions also include
+         * hexadecimal and variants of decimal float-poing expression (see [this](https://en.cppreference.com/w/cpp/string/basic_string/stof) for more details).
+         * It will throw ``std::invalid_argument`` if the the entry read is not-a-number expression except this entry is
+         * of categorical type.
+         *
+         * We determine each column's data type (either numeric or categorical) by the first row.
+         * We treat every entry as numeric if it is a number (whether it is ordinal or numerical) and treat every entry
+         * that does not start with a numeric as categorical (also called nominal data specifically). For those starting
+         * with a numeric but containing non-numeric character, ```std::invalid_argument``` will be thrown.
+         **/
+        std::tuple<gsl::index,gsl::index,std::string> _load_csv (const std::string & path, CosanMatrix<NumericType>& X,std::vector<std::vector<gsl::index>>& Idxpinf,
+                                                      std::vector<std::vector<gsl::index>>& Idxminf,std::vector<std::vector<gsl::index>>& Idxmissing,
+                                                      std::vector<std::string> &svalues, std::set<gsl::index> & colCat) {
 
+             std::ifstream indata;
+             indata.open(path);
+             std::string line;
+             std::vector<NumericType> values;
+             //    std::vector<std::string> svalues;
+             gsl::index rows = 0,cols = 0,col_idx=0;
+             //    uint col_idx=0;
+             //    std::vector<std::vector<uint>> Idxpinf,Idxminf,Idxmissing;
+             //    std::set<uint> colCat;
+             NumericType result;
+             std::size_t pos;
+             std::string SummaryMessage;
 
-            CosanMatrix<NumericType>  GetInput()  {
-                return X;
-            }
-            CosanMatrix<NumericType>  GetTarget()  {
-                return Y;
-            }
-
-            const CosanMatrix<NumericType>&  GetInput()  const {
-                return X;
-            }
-            const CosanMatrix<NumericType>&  GetTarget()  const {
-                return Y;
-            }
-
-            std::tuple<gsl::index,gsl::index> GetMissingNumber(){
-                return {X.array().isNaN().template cast<NumericType>().sum(),Y.array().isNaN().template cast<NumericType>().sum()};
-            }
-
-            //        virtual CosanBO *Shallow_copy() const;
-            //        virtual CosanBO *Deep_copy() const;
-
-            virtual const std::string  GetName() const {return "Raw Data Object.";}
-
-            //        virtual bool SaveFile(const std::string &path ,const std::string & prefix = "");
-            //        virtual bool LoadFile(const std::string &path);
-            //        void PrintModel();
-            //        virtual bool Equals(CosanBO* other, float accuracy = 0.0);
-            //        virtual CosanBO* Clone();
-            const std::string&  GetSummaryMessageX() const {return SummaryMessageX;}
-            const std::string&  GetSummaryMessageY() const {return SummaryMessageY;}
-            std::unordered_map<gsl::index,gsl::index> & GetRawToNumIdx(){return _raw2numIdx;}
-            std::unordered_map<gsl::index,gsl::index> & GetRawToCatIdx(){return _raw2catIdx;}
-            std::vector<std::vector<gsl::index>>   GetIdxpinfX() const {return IdxpinfX;}
-            std::vector<std::vector<gsl::index>>   GetIdxminfX() const {return IdxminfX;}
-            std::vector<std::vector<gsl::index>>   GetIdxmissingX() const {return  IdxmissingX;}
-
-            std::vector<std::vector<gsl::index>> GetIdxpinfY() const {return  IdxpinfY;}
-            std::vector<std::vector<gsl::index>>  GetIdxminfY()  const {return  IdxminfY;}
-            std::vector<std::vector<gsl::index>> GetIdxmissingY()  const {return  IdxmissingY;}
-            std::set<gsl::index>  GetcolCatX()  const{return colCatX;}
-            std::set<gsl::index>  GetcolCatY()  const {return colCatY;}
-            bool GetcatY() const {return catY;}
-            gsl::index GetrowsX()  {
-                rowsX=X.rows();
-                return rowsX;
-            }
-            gsl::index GetrowsY()  {
-                rowsY=Y.rows();
-                return rowsY;
-            }
-            gsl::index GetcolsX() {
-                colsX = X.cols();
-                return colsX;
-            }
-            gsl::index GetcolsY()  {
-                colsY = Y.cols();
-                return colsY;
-            }
-
-            std::vector<std::string>  GetsvaluesX()  const {return svaluesX;}
-            std::vector<std::string>  GetsvaluesY()  const {return svaluesY;}
-
-            CosanMatrix<NumericType> GetType(){return __TYPE;}
-        protected:
-                CosanMatrix<NumericType> X;
-                CosanMatrix<NumericType> Y;
-                CosanMatrix<NumericType> __TYPE;
-                std::string SummaryMessageX,SummaryMessageY;
-                std::vector<std::vector<gsl::index>> IdxpinfX,IdxminfX,IdxmissingX;
-                std::vector<std::vector<gsl::index>> IdxpinfY,IdxminfY,IdxmissingY;
-                std::set<gsl::index> colCatX,colCatY;
-                bool catY = false;
-                gsl::index rowsX = 0,colsX = 0;
-                gsl::index rowsY = 0,colsY = 0;
-                std::vector<std::string> svaluesX,svaluesY;
-        private:
-
-            std::unordered_map<gsl::index,gsl::index> _raw2numIdx,_raw2catIdx;
-            // template<typename Matrix>
-            std::tuple<gsl::index,gsl::index,std::string> _load_csv (const std::string & path, CosanMatrix<NumericType>& X,std::vector<std::vector<gsl::index>>& Idxpinf,
-                                                         std::vector<std::vector<gsl::index>>& Idxminf,std::vector<std::vector<gsl::index>>& Idxmissing,
-                                                         std::vector<std::string> &svalues, std::set<gsl::index> & colCat) {
-
-                std::ifstream indata;
-                indata.open(path);
-                std::string line;
-                std::vector<NumericType> values;
-                //    std::vector<std::string> svalues;
-                gsl::index rows = 0,cols = 0,col_idx=0;
-                //    uint col_idx=0;
-                //    std::vector<std::vector<uint>> Idxpinf,Idxminf,Idxmissing;
-                //    std::set<uint> colCat;
-                NumericType result;
-                std::size_t pos;
-                std::string SummaryMessage;
-
-                //   stod -> "-23","-12E1","-+nan" (is a double type), "+\- inf","+\- infinity", "jklsgfd","1235lkjfg",
+             //   stod -> "-23","-12E1","-+nan" (is a double type), "+\- inf","+\- infinity", "jklsgfd","1235lkjfg",
 //                 first row: empty/nonempty: empty-> numerical nan,
-    //                 not empty-> can read numeric ->  it is indeed a correct numeric format
+ //                 not empty-> can read numeric ->  it is indeed a correct numeric format
 //                                                  ->  wrong format i.e. "1235lkjfg" throw error
-    //                          -> cannot read numeric->  then consider this as category
+ //                          -> cannot read numeric->  then consider this as category
 
 //              then set colCat, cols,
-                //   numeric-format,
-        //
-
-                /**
-                 *  Get the first line information
-                 */
-
+             //   numeric-format,
+     //
                 std::getline(indata, line);
                 std::stringstream lineStream(line);
                 std::string cell;
@@ -355,10 +533,22 @@ namespace Cosan
 
 //    template<typename NumericType,
 //            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    /**
+     *  @brief Data container.
+     *  @details Every constructor needs to have at least one input. To obtain CosanData, the following constructors can be used:
+     *  @code CosanData(gsl::index nrows,gsl::index ncols,NumericType lb=0,NumericType ub = 1) @endcode
+     *  @code CosanData(const CosanMatrix<NumericType> & inputX) @endcode
+     *  @code CosanData(const CosanMatrix<NumericType>&  inputX,const CosanMatrix<NumericType>& inputY) @endcode
+     *  @code CosanData(const std::vector<NumericType>&  inputX,gsl::index nrows,const std::string & order = "rowfirst") @endcode
+     *  @code CosanData(const std::vector<NumericType>&  inputX,const std::vector<NumericType>&  inputY,gsl::index nrows,const std::string & order = "rowfirst") @endcode
+     **/
     template<Numeric NumericType>
     class CosanData: public CosanRawData<NumericType>{
         public:
             CosanData()=default;
+            /**
+             *  @brief Generate random matrix with each entry uniformly sampled from lb to lb. Dimension is nrows by ncols.
+             **/
             CosanData(gsl::index nrows,gsl::index ncols,NumericType lb=0,NumericType ub = 1):CosanRawData<NumericType>(){
                 this->X.resize(nrows,ncols);
                 std::default_random_engine generator;
@@ -367,16 +557,23 @@ namespace Cosan
                     this->X(i/ncols,i%ncols) =distribution(generator);
                 }
             }
-
-
+            /**
+             *  @brief Get CosanData from CosanMatrix<NUmericType> inputX
+             **/
             CosanData(const CosanMatrix<NumericType> & inputX):CosanRawData<NumericType>(){
                 static_assert(std::is_arithmetic<NumericType>::value, "NumericType must be numeric");
                 this->X = inputX;
             }
+            /**
+             *  @brief Get CosanData from CosanMatrix<NUmericType> inputX, inputY
+             **/
             CosanData(const CosanMatrix<NumericType>&  inputX,const CosanMatrix<NumericType>& inputY):CosanRawData<NumericType>(){
                 static_assert(std::is_arithmetic<NumericType>::value, "NumericType must be numeric");
                 this->X = inputX;
                 this->Y = inputY;}
+            /**
+             *  @brief Get CosanData from std::vector inputX, fill the data either by 'rowfirst' or 'columnfirst'.
+             **/
             CosanData(const std::vector<NumericType>&  inputX,gsl::index nrows,const std::string & order = "rowfirst"):CosanRawData<NumericType>(){
                 if (nrows>inputX.size() || inputX.size()%nrows!=0){
                     throw std::invalid_argument(
@@ -401,6 +598,10 @@ namespace Cosan
                 return;
             }
 
+
+            /**
+             *  @brief Get CosanData from std::vector inputX and inputY, fill the data either by 'rowfirst' or 'columnfirst'.
+             **/
             CosanData(const std::vector<NumericType>&  inputX,const std::vector<NumericType>&  inputY,gsl::index nrows,const std::string & order = "rowfirst"):CosanRawData<NumericType>(){
                 if (nrows>inputX.size() || inputX.size()%nrows!=0 || nrows!=inputY.size()){
                     throw std::invalid_argument(
@@ -430,7 +631,9 @@ namespace Cosan
                 return;
             }
 
-
+            /**
+             *  @brief Get the name of the object.
+             **/
             virtual const std::string  GetName() const {return "Processed Data Object.";}
         private:
     };

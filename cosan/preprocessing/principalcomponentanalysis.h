@@ -8,8 +8,11 @@
 #include <cosan/preprocessing/preprocessor.h>
 
 namespace Cosan{
-    template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    /**
+     * @details https://en.wikipedia.org/wiki/Principal_component_analysis
+     *
+     */
+    template<Numeric NumericType>
     class PrincipalComponentAnalysis: public Preprocessor<NumericType>  {
         public:
             PrincipalComponentAnalysis()=delete;

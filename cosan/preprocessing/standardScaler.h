@@ -4,8 +4,10 @@
 #include <cosan/preprocessing/preprocessor.h>
 
 namespace Cosan {
-    template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    /**
+     * Standardize features by removing the mean and scaling to unit variance
+     */
+    template<Numeric NumericType>
     class StandardScaler : public Preprocessor<NumericType> {
     public:
         StandardScaler() = default;

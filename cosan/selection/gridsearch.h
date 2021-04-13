@@ -9,25 +9,16 @@
 #include<cosan/selection/selection.h>
 namespace Cosan
 {
-    /*
-        Hyperparameter tuning for supervised models that have one or more hyperparameter(s) to tune
-        Input required:
-            estimator: class Model&, a model whose hyperparameters need to be tuned;
-            metric: class Metric&, a metric to use in cross-validation
-            paramGrid: a vector of hyperparameters combination. For each entry of the vector, it corresponds to one choice of hyperparameter combination;
-            nthreads: int, the number of threads used. Default is 1.
-        Ouput: call .GetBestParams() to get the best hyperparameters combination.
-            the choice of the hyper-parameter in paramGrid that forms the most accurate model
-    */
-
-
-//    template<typename NumericType,
-//             Derived<CosanModel> Model,
-//             Derived<CosanMetric<NumericType>> Metric,
-//             Derived<Splitter> Split,
-//             typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
-
-
+    /**
+     * Hyperparameter tuning for supervised models that have one or more hyperparameter(s) to tune
+     * Input required:
+     * estimator: class Model&, a model whose hyperparameters need to be tuned;
+     * metric: class Metric&, a metric to use in cross-validation
+     * split: Split &  splitter method;*
+     * paramGrid: a vector of hyperparameters combination. For each entry of the vector, it corresponds to one choice of hyperparameter combination;
+     * Ouput: call .GetBestParams() to get the best hyperparameters combination.
+     * the choice of the hyper-parameter in paramGrid that forms the most accurate model
+    **/
     template<Numeric NumericType,
             Derived<CosanModel> Model,
             Derived<CosanMetric<NumericType>> Metric,
@@ -59,11 +50,18 @@ namespace Cosan
             private:
                 NumericType bestParam;};
 
-//    template<typename NumericType,
-//            Derived<CosanModel> Model,
-//            Derived<CosanMetric<NumericType>> Metric,
-//            Derived<Splitter> Split,
-//            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    /**
+     * @details parallel version for grid search
+     * Hyperparameter tuning for supervised models that have one or more hyperparameter(s) to tune
+     * Input required:
+     * estimator: class Model&, a model whose hyperparameters need to be tuned;
+     * metric: class Metric&, a metric to use in cross-validation
+     * split: Split &  splitter method;*
+     * paramGrid: a vector of hyperparameters combination. For each entry of the vector, it corresponds to one choice of hyperparameter combination;
+     * nthreads: int. number of threads to be used for parallel computing.
+     * Ouput: call .GetBestParams() to get the best hyperparameters combination.
+     * the choice of the hyper-parameter in paramGrid that forms the most accurate model
+    **/
     template<Numeric NumericType,
             Derived<CosanModel> Model,
             Derived<CosanMetric<NumericType>> Metric,

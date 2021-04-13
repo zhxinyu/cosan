@@ -4,8 +4,11 @@
 #include <cosan/preprocessing/preprocessor.h>
 #include <set>
 namespace Cosan {
-    template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    /**
+     *
+     * Scale input vectors individually to unit norm (vector length).
+     */
+    template<Numeric NumericType>
     class Normalizer : public Preprocessor<NumericType> {
     public:
         Normalizer(CosanRawData<NumericType>& RD): Preprocessor<NumericType>() {

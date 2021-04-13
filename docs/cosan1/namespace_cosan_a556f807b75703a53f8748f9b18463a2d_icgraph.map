@@ -1,7 +1,0 @@
-<map id="Cosan::crossValidation" name="Cosan::crossValidation">
-<area shape="rect" id="node1" title=" " alt="" coords="257,111,413,138"/>
-<area shape="rect" id="node2" href="$class_cosan_1_1_grid_search.html#a74fbdbbcd60890d4ea4c13d3b8d3b8ed" title=" " alt="" coords="37,5,178,47"/>
-<area shape="rect" id="node3" href="$class_cosan_1_1_grid_search_multi.html#aa1f01974fb7ecebb7e8945c0450889f2" title=" " alt="" coords="27,71,188,112"/>
-<area shape="rect" id="node4" href="$class_cosan_1_1_grid_search_multi_parallel.html#a6a885b7d894a67d4917029983f703296" title=" " alt="" coords="5,136,209,177"/>
-<area shape="rect" id="node5" href="$class_cosan_1_1_grid_search_parallel.html#ab91260943b0b30707a7eba445f14ebf4" title=" " alt="" coords="19,201,195,243"/>
-</map>

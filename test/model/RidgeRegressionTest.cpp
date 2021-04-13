@@ -10,19 +10,13 @@
 #include <cosan/model/CosanRidgeRegression.h>
 //using namespace Eigen;
 //using namespace std;
-
+typedef double db;
 int main() {
-   Cosan::CosanRawData CD("./example_data/toy/X.csv","./example_data/toy/y.csv");
-   double RegularizationTerm = 1;
-   Cosan::CosanRidgeRegression CRRwBias(RegularizationTerm,true);
+   Cosan::CosanRawData<db> CD("./example_data/toy/X.csv","./example_data/toy/y.csv");
+   db RegularizationTerm = 1;
+   Cosan::CosanRidgeRegression<db> CRRwBias(RegularizationTerm,true);
    CRRwBias.fit(CD.GetInput(),CD.GetTarget());
    std::cout<<CRRwBias.GetBeta()<<std::endl;
    std::cout<<(CRRwBias.predict(CD.GetInput())-CD.GetTarget()).norm()<<std::endl;   
-   RegularizationTerm = 0.0001;
-   Cosan::CosanRidgeRegression CRRwoBias(RegularizationTerm,false);
-   CRRwoBias.fit(CD.GetInput(),CD.GetTarget());
-   std::cout<<CRRwoBias.GetBeta()<<std::endl;
-   std::cout<<(CRRwoBias.predict(CD.GetInput())-CD.GetTarget()).norm()<<std::endl;      
-//    save_csv("./example_data/toy/beta_c1.csv",CRR.GetBeta());
-    return 0;
+   return 0;
 }

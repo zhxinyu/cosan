@@ -2,6 +2,18 @@
 
 ##### Team member: Jiahe Chen (jc5348), Xinyu Zhang (xz2691), Zida Zhou (zz2791)
 
+###### *Design document*: this is it or ('design/`)
+
+###### *Implementation* code can be found in `test/Implementation.cpp`
+
+###### *measurements* code can be found in `test/Paralleltest.cpp`
+
+###### *Tutorial* can be found in the `Tutorial` tab. Or(`docs/html/md__tutorial__tutorial.html`)
+
+###### *Presentation* can be found in the `Presentation` tab. Or (`docs/html/Final Presentation.pdf`)
+
+###### *Manual*: this is it or ('docs/html/index.html`)
+
 ## Overview:
 We aim to write an open-source machine learning library Cosan for C++ which provides a data mining, data analytics and predictive analytics framework. It implements a selected range of simple and efficient data processing procedures and machine learning algorithms and is designed to interoperate with C++ scientific computing library Eigen. 
 
@@ -100,9 +112,9 @@ to meet modern data analysis needs.
 
 [comment]: <> (Our library contains simple and efficient tools for predictive data analysis. It is accessible to everybody, and reusable in various contexts.)
 
-Fun fact: We name this project as Cosan as it is based and derived from the initial of surname of each contributing member. Specifically,
+Fun fact: We name this project as Cosan as it is based on and derived from the initial of surname of each contributing member. Specifically,
 ```
-C(Chen)Z(Zhang)Z(Zhou) --> CZZ --> Cosan (CZZ used to be stock code for Cosan, a public listed company in energy)
+C(Chen)Z(Zhang)Z(Zhou) --> CZZ --> Cosan (CZZ used to be stock code for Cosan, a public listed company in energy. Only recently, Cosan changed its stock code to CSAN.)
 ```
 
 
@@ -123,7 +135,7 @@ on C++, handling all stages pre-processing, model fitting and post-processing.
 
 Following the hypothetical ice cream example in the Introduction section, let's set our goal to be gaining a good 
 prediction of \f$y\f$ based on input \f$X\in\mathbf{R}^{n\times p}\f$ and output the best model \f$f(\cdot)\f$ where 
-\f$X \f$ as the input of the model that can predict \f$y\f$ as `close` as possible. 
+\f$X \f$ as the input of the model that can predict \f$y\f$ as "close"  as possible. 
 
 To that end, the first and foremost step is data preprocessing. Due to diversity of the data types and numerous data collections practices, 
 it is not possible to expect that data in a well-written format. Common issues including missing values, outliers, different data types: some are numeric 
@@ -150,10 +162,10 @@ train/validation/test split [see](https://en.wikipedia.org/wiki/Training,_valida
 
 We consider an objective oriented design pattern where ```CosanBO``` as our base class which is inherited by five separate objects that 
 are responsible for different functionality, data container `CosanRawData`, data preprocessor `Preprocessor`,model 'CosanModel', evaluation class `Evaluation`  
-and selection class `Selection`. Each class object provide interfaces to communicate and integrate with different objects to 
+and selection class `Selection`. Each class object provides interfaces to communicate and integrate with different objects to 
 perform data analysis task. For instance, to conduct a best model using ridge regression, data from input source or random generation
 is stored by container `CosanRawData`, updated and modified by preprocessor, accepted by model class for fitting procedure. 
-To perform cross validation, `Evaluation` class provide an interface to evaluate model performance and `Selection` class dictates
+To perform cross validation, `Evaluation` class provides an interface to evaluate model performance and `Selection` class dictates
 what kinds of separation to calculate the metric needed. 
 
 
@@ -300,14 +312,15 @@ We design CosanData class as a wrapper to handle a mixture of all of the use cas
 ### Utility Classes
 
 ##### Kfold & Random Kfold
-A class to split give data set for kflod cross validation. \
-Given a kfold number k, the class's `setSplit` function will generate k groups of data set. In each group, k-1/k part of data set will be used for training and the rest 1/k for testing. In all k groups, the testing data sets are different. We achieve this by using the ith 1/k of the data set in the ith group.
+A class to split given data set for kfold cross validation. Given a kfold number k, the class's `setSplit` function will
+generate k groups of data set. In each group, k-1/k part of data set will be used for training and the rest 1/k for testing. 
+In all k groups, the testing data sets are different. We achieve this by using the ith 1/k of the data set in the ith group.
 We will also implement a splitter using parallelism. 
 
 Location: `cosan\selection\kfold.h` & `cosan\selection\randomkfold.h`
 
 ##### Time Series Splitter 
-A class to split give data set for time series cross validation. It's variation of kfold. \
+A class to split given data set for time series cross validation. It's variation of kfold. \
 For more detial about the theory of time series cross validation, check this [link](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html). 
 
 Location: `cosan\selection\timeseriessplit.h` 

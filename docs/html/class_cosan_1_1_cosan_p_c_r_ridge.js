@@ -1,15 +1,16 @@
 var class_cosan_1_1_cosan_p_c_r_ridge =
 [
-    [ "CosanPCRRidge", "class_cosan_1_1_cosan_p_c_r_ridge.html#ad933301c1f746becaf0b5dde8e410286", null ],
-    [ "CosanPCRRidge", "class_cosan_1_1_cosan_p_c_r_ridge.html#ad37e252f004eb15c688a15c9e16de189", null ],
-    [ "CosanPCRRidge", "class_cosan_1_1_cosan_p_c_r_ridge.html#a5b6e7390b889634aef7fe6af0baf2f16", null ],
-    [ "CosanPCRRidge", "class_cosan_1_1_cosan_p_c_r_ridge.html#abdb98c6af435fde2713f77eab2b818ce", null ],
-    [ "CosanPCRRidge", "class_cosan_1_1_cosan_p_c_r_ridge.html#aa0c6ea00f69dbeb29a815046d68bf84f", null ],
-    [ "fit", "class_cosan_1_1_cosan_p_c_r_ridge.html#af1d69f666f951938fedea68fb72fe663", null ],
-    [ "GetModelType", "class_cosan_1_1_cosan_p_c_r_ridge.html#ac539589ff9b38cf20a58923e18742170", null ],
-    [ "GetName", "class_cosan_1_1_cosan_p_c_r_ridge.html#abe8dfb5d1317b3005abc075e4dcba193", null ],
-    [ "GetParams", "class_cosan_1_1_cosan_p_c_r_ridge.html#a5682c8e923781472afa73dd5c11b3b9c", null ],
-    [ "GetPC", "class_cosan_1_1_cosan_p_c_r_ridge.html#aa350c884bd7e44761f1c6c4d4e57a86a", null ],
-    [ "GetProblemType", "class_cosan_1_1_cosan_p_c_r_ridge.html#a253055f9b07c8356ad58369553d08e7d", null ],
-    [ "SetParams", "class_cosan_1_1_cosan_p_c_r_ridge.html#ad8cf46020730eb17a771cf01c7c669e6", null ]
+    [ "CosanPCRRidge", "class_cosan_1_1_cosan_p_c_r_ridge.html#a3d5d200b96f70eeca482e4b1265b70c4", null ],
+    [ "CosanPCRRidge", "class_cosan_1_1_cosan_p_c_r_ridge.html#a85f7f3626203edf9c13f0dbf1c4d467f", null ],
+    [ "CosanPCRRidge", "class_cosan_1_1_cosan_p_c_r_ridge.html#a9d7f02cceb2ce595f6a694f729f5ae51", null ],
+    [ "CosanPCRRidge", "class_cosan_1_1_cosan_p_c_r_ridge.html#aca225e69944952d21894c83920ad30c3", null ],
+    [ "CosanPCRRidge", "class_cosan_1_1_cosan_p_c_r_ridge.html#a28e379594928b0d9e6353c014742c8a7", null ],
+    [ "fit", "class_cosan_1_1_cosan_p_c_r_ridge.html#a80ab669493ab03b260a83a1323d42459", null ],
+    [ "GetModelType", "class_cosan_1_1_cosan_p_c_r_ridge.html#a4db32d45561dce423e03b19806f85f16", null ],
+    [ "GetName", "class_cosan_1_1_cosan_p_c_r_ridge.html#a1338770af05d78433475d123fad89ade", null ],
+    [ "GetParams", "class_cosan_1_1_cosan_p_c_r_ridge.html#ae9b92fcec2f62da58cee2da135e3f28a", null ],
+    [ "GetPC", "class_cosan_1_1_cosan_p_c_r_ridge.html#af81784fb3c8fcea715405200a04e6c91", null ],
+    [ "GetProblemType", "class_cosan_1_1_cosan_p_c_r_ridge.html#a4dd78e789395560cca924f1aef4de925", null ],
+    [ "SetParams", "class_cosan_1_1_cosan_p_c_r_ridge.html#aa14c8f35a30528e1a5accd4e78c12b21", null ],
+    [ "MLambda", "class_cosan_1_1_cosan_p_c_r_ridge.html#a3fe63a2f61ae4270c0e3acd99b2c2137", null ]
 ];

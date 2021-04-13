@@ -6,6 +6,10 @@
 namespace Cosan {
 //    template<typename NumericType,
 //            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+    /**
+     * Base class for precessor
+     *
+     */
     template<Numeric NumericType>
     class Preprocessor: public CosanBO{
     public:

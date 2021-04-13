@@ -7,8 +7,14 @@
 #include <cosan/model/CosanLinearRegression.h>
 
 namespace Cosan{
-    template<typename NumericType,
-            typename = typename std::enable_if<std::is_arithmetic<NumericType>::value,NumericType>::type>
+
+    /**
+     * y = a+bx
+     * minimize \sum_{i=1}^n (y_i-a-b^Tx_i)^2+\|b\|_2^2 -> find the optimal a and b
+     * @tparam NumericType
+     * @details https://en.wikipedia.org/wiki/Ridge_regression
+     */
+    template<Numeric NumericType>
     class CosanRidgeRegression: public CosanLinearRegression<NumericType>{
         public:
 //        Initialization

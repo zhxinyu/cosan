@@ -1,13 +1,14 @@
 var class_cosan_1_1_cosan_ridge_regression =
 [
-    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#abd2ab4febe669257acd6f99159a0f554", null ],
-    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#ac1727c15c1562c848a9f21326db1b4da", null ],
-    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#a55ae6a12fda4f344a4730be4e93829f6", null ],
-    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#a5bdc3de6a8c75fbb3c6eac68fa1432b5", null ],
-    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#a316363b64801562dde0216690e836370", null ],
-    [ "fit", "class_cosan_1_1_cosan_ridge_regression.html#ae26ec8a69e040ba52a2aad921b34809f", null ],
-    [ "GetModelType", "class_cosan_1_1_cosan_ridge_regression.html#ac47565793e8558a3eac2ad8ad4adca5d", null ],
-    [ "GetName", "class_cosan_1_1_cosan_ridge_regression.html#aa42c0f4d08605a6f04dc7a85dc7075a2", null ],
-    [ "GetParams", "class_cosan_1_1_cosan_ridge_regression.html#acc0f3d013cffc28ecaef6c71b3ebeb71", null ],
-    [ "SetParams", "class_cosan_1_1_cosan_ridge_regression.html#a637fa5d93eadd8994f42f3a563539922", null ]
+    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#a1d5ba5af2dc3185032932c4f61e60156", null ],
+    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#a13993e28a914e9abcb07a3054c9db1fe", null ],
+    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#ad4aa77c6a5aab3d8266fd5a4bac7d54d", null ],
+    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#ae624cf144b436188ddd19d408cd03747", null ],
+    [ "CosanRidgeRegression", "class_cosan_1_1_cosan_ridge_regression.html#a0fcc8aab26187bf0fdbc94a841915c55", null ],
+    [ "fit", "class_cosan_1_1_cosan_ridge_regression.html#af1a5af9734b9a606066f5154640acf95", null ],
+    [ "GetModelType", "class_cosan_1_1_cosan_ridge_regression.html#a533b6f35358db499236274740c9b2c14", null ],
+    [ "GetName", "class_cosan_1_1_cosan_ridge_regression.html#afad175a4506eae7e51ddab8c0f748c0b", null ],
+    [ "GetParams", "class_cosan_1_1_cosan_ridge_regression.html#abbe029641aeda4f225b19598d840ccbc", null ],
+    [ "SetParams", "class_cosan_1_1_cosan_ridge_regression.html#a388502b21695038efbe2df9084388084", null ],
+    [ "MLambda", "class_cosan_1_1_cosan_ridge_regression.html#a4649d7fa78c0614e29d36860d82089c2", null ]
 ];

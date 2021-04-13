@@ -168,12 +168,8 @@ is stored by container `CosanRawData`, updated and modified by preprocessor, acc
 To perform cross validation, `Evaluation` class provides an interface to evaluate model performance and `Selection` class dictates
 what kinds of separation to calculate the metric needed. 
 
-
-<!-- <img src="./design/class_hierarchy2.png" alt="class hierarchy chart2" width="800"/> -->
-
-
 @image html ./design/class_hierarchy.png width=1200
-
+<img src="./design/class_hierarchy.png" width="1200"/>
 
 ## Template& concept for class and type
 We make use of template and concept to define a type (an integral type or a floating-point) have a template type that 

@@ -1,5 +1,7 @@
 # Cosan 
 
+##### Course project for Design using C++ taught by Bjarne Stroustrup in Spring 2021
+
 ##### Team member: Jiahe Chen (jc5348), Xinyu Zhang (xz2691), Zida Zhou (zz2791)
 
 ###### Documentation page: www.columbia.edu/~xz2691/cosan

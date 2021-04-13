@@ -15,12 +15,17 @@
 ###### *Manual*: this is it or `./docs/html/index.html`
 
 ## Overview:
-We aim to write an open-source machine learning library Cosan for C++ which provides a data mining, data analytics and predictive analytics framework. It implements a selected range of simple and efficient data processing procedures and machine learning algorithms and is designed to interoperate with C++ scientific computing library Eigen. 
+We aim to write an open-source machine learning library Cosan for C++ which provides a data mining, data analytics and
+predictive analytics framework. It implements a selected range of simple and efficient data processing procedures and
+machine learning algorithms and is designed to interoperate with C++ scientific computing library Eigen. 
 
 ## Getting started
 
 ### How to install Cosan
-To use Cosan, you just need to download Cosan source code and include the header files in your program. The header files are the same for all platforms. It is not necessary to use CMake or install anything. In order for your compiler to locate the header files, you can copy or symlink the Cosan folder to ```/usr/local/include```, or specify the path to Cosan when you compile your program.
+To use Cosan, you just need to download Cosan source code and include the header files in your program. The header files 
+are the same for all platforms. It is not necessary to use CMake or install anything. In order for your compiler to locate
+the header files, you can copy or symlink the Cosan folder to ```/usr/local/include```, or specify the path to Cosan when 
+you compile your program.
 
 ### How to compile and run Cosan
 
@@ -41,7 +46,7 @@ Cosan::CosanRawData<NumericType> CRD("./path/to/example.csv");
 You can also choose to create your own dataset when initializing the object.
 
 ~~~~~~~~~~~~~~~{.cpp}
-Cosan::CosanMatrixNumericType X{3,3};
+Cosan::CosanMatrix<NumericType> X{3,3};
     X << 1, -1, 2,
          2, 0, 0,
          0, 1, -1;
@@ -52,13 +57,13 @@ CosanRawData will fulfill your needs with different kinds of data types and all 
 #### Preprocessing
 Usually the first step when doing data analytics is dataset transformation and preprocessing.
 ~~~~~~~~~~~~~~~{.cpp}
-Cosan::StandardScaler ss(CRD);
+Cosan::StandardScaler<NumericType> ss(CRD);
 ~~~~~~~~~~~~~~~
 
 #### Linear Models
 
 ~~~~~~~~~~~~~~~{.cpp}
-Cosan::CosanLinearRegression CLR();
+Cosan::CosanLinearRegression<NumericType> CLR();
 CLR.fit(CRD.GetInput(),CRD.GetTarget());
 std::cout<<CLR.GetBeta()<<std::endl;
 ~~~~~~~~~~~~~~~
@@ -85,7 +90,7 @@ The discovery or revelation of the relationship can help people better understan
 how input will affect output and may even help predict the future. 
 
 Such an task (also called learning problem or [superviesd learning](https://en.wikipedia.org/wiki/Supervised_learning) ) are naturally ubiquitous
-and highly-desired. For instance, imagine you own an ice cream store. A simple learning task would be to find a relationship between
+and highly-desired. For instance, as an ice cream store owner, a simple learning task would be to find a relationship between
 the revenue and a series of climatological data including temperature, precipitation, wind speed and also a series of demographic data
 including population, zip code region and etc. In this hypothetical scenario, we have a sample size for revenue as the 
 target value \f$y\f$ and the aforementioned climatological or demographic data as the input data.
@@ -127,10 +132,10 @@ mainly focus on implementing various machine learning model, skimming the surfac
 In other programming language also possess and provides similar functionality. In [Python](https://www.python.org/), the counterpart library is 
 [scikit-learn](https://scikit-learn.org/stable/&#41). Among the list also includes [MATLAB](https://en.wikipedia.org/wiki/MATLAB)
 which is for numeric computing and [R](https://en.wikipedia.org/wiki/R_(programming_language)) specific for statistical computing. However, they are all subject to a high-level manipulation constraint. 
-Specifically, [scikit-learn](https://scikit-learn.org/stable/&#41) replied on scientific libraries [NumPy](https://en.wikipedia.org/wiki/NumPy) and [SciPy](https://en.wikipedia.org/wiki/SciPy)
+Specifically, [scikit-learn](https://scikit-learn.org/stable/&#41) replies on scientific libraries [NumPy](https://en.wikipedia.org/wiki/NumPy) and [SciPy](https://en.wikipedia.org/wiki/SciPy)
 which in turn, just like MATLAB, relies on [BLAS](https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms) and 
 [LAPACK](https://en.wikipedia.org/wiki/LAPACK) for linear algebra computation. For R, most of computationally intensive 
-task are linked to and solved by C, C++ and Fortran. Therefore, we target to develop a data analytics library directly based 
+tasks are linked to and solved by C, C++ and Fortran. Therefore, we target to develop a data analytics library directly based 
 on C++, handling all stages pre-processing, model fitting and post-processing.  
 
 Following the hypothetical ice cream example in the Introduction section, let's set our goal to be gaining a good 
@@ -140,7 +145,7 @@ prediction of \f$y\f$ based on input \f$X\in\mathbf{R}^{n\times p}\f$ and output
 To that end, the first and foremost step is data preprocessing. Due to diversity of the data types and numerous data collections practices, 
 it is not possible to expect that data in a well-written format. Common issues including missing values, outliers, different data types: some are numeric 
 data and some are categorical data and etc. Taking all those into account, we should parse data reading and data preprocessing with great care.
-The next step follows by exploratory data analysis. One may extract useful features via data mining. For instance, a dimension 
+The next step is exploratory data analysis. One may extract useful features via data mining. For instance, a dimension 
 reduction techniques may reveal that the data lies in a lower dimension space. 
 
 With the data clean and new features generated, one is ready to fit model for the target goal (in our case, prediction). 
@@ -148,8 +153,8 @@ Roughly speaking, model can be divided into two types: Linear model and nonlinea
 including linear regression, logistic regression. The past decade has seen a rising interest in deep learning and neutral 
 network, which is a typical instance of non-linear models. 
 
-Some models contains various parameters (also called hyper-parameters in some research and application community) to specifize models. Picking 
-the models (model selection) for best performance (as `close` as possible in previous paragraph) is often highly-desired. To remove 
+Some models contains various parameters (also called hyper-parameters in some research and application community) to determine models. Picking 
+the models (model selection) for best performance (as "close" as possible in previous paragraph) is often highly-desired. To remove 
 ambiguity of such adjective word, often is the case that people utilize numerical metric to quantify the closeness to the truth. 
 Typical cases includes average of absolute error, average of absolute error square. During the model selection procedure, 
 one has to evaluate model performance based on unforeseen dataset (trying to mimic realistic application for the fitted model). A
@@ -158,7 +163,6 @@ dataset to train the model and only use the test dataset to evaluate the model. 
 train/validation/test split [see](https://en.wikipedia.org/wiki/Training,_validation,_and_test_sets))
 
 ## Module Structure
-<!-- <img src="./design/class_hierarchy.png" alt="class hierarchy chart" width="800"/> -->
 
 We consider an objective oriented design pattern where ```CosanBO``` as our base class which is inherited by five separate objects that 
 are responsible for different functionality, data container `CosanRawData`, data preprocessor `Preprocessor`,model 'CosanModel', evaluation class `Evaluation`  
@@ -172,9 +176,10 @@ what kinds of separation to calculate the metric needed.
 <img src="./design/class_hierarchy.png" width="1200"/>
 
 ## Template& concept for class and type
-We make use of template and concept to define a type (an integral type or a floating-point) have a template type that 
-accepts any numeric type  and more importantly only numeric types. 
-This type is widely used throughout our library in `CosanData`, `CosanMatrix`, `CosanModel`, etc.
+We make use of template and concept to define a type (an integral type or a floating-point). We restrict a template type 
+to accept any numeric type and, more importantly, only numeric types. This type restriction is widely used throughout our library in 
+`CosanData`, `CosanMatrix`, `CosanModel`, etc.
+
 Its definition is as follow.
 ~~~~~~~~~~~~~~~{.cpp}
 template<typename NumericType,
@@ -190,24 +195,23 @@ concept Derived = std::is_base_of<U, T>::value;
 This is to restrict U to be the base of T.
 
 With the above two newly-defined concepts, for instance, we can write the following template class that performs the grid search
-functionality. In particular, grid search needs data container `CRD`, with type `NumericType` which is restricted to with concept 
+functionality. In particular, grid search needs data container `CRD`, with type `NumericType` which is restricted to concept 
 Numeric, class `Model` are required to be an inherited class from `CosanModel`, class `Metric` is required to be an 
-inherited class of CosanMetric and class 'Split' is required to be an inherited class of `Splitter`. 
-
+inherited class of CosanMetric and class 'Split' is required to be an inherited class of `Splitter`.
 
 ~~~~~~~~~~~~~~~{.cpp}
 template<Numeric NumericType,
             Derived<CosanModel> Model,
             Derived<CosanMetric<NumericType>> Metric,
             Derived<Splitter> Split>
-    class GridSearch: public Search{
-            public:
-                GridSearch() = delete;
-                GridSearch(  CosanData<NumericType> &CRD,
-                           Model & estimator,
-                           Metric & metric,
-                           Split & split,
-                           const std::vector<NumericType> & paramGrid): Search() {
+class GridSearch: public Search{
+        public:
+            GridSearch() = delete;
+            GridSearch(  CosanData<NumericType> &CRD,
+                       Model & estimator,
+                       Metric & metric,
+                       Split & split,
+                       const std::vector<NumericType> & paramGrid): Search() {
 ~~~~~~~~~~~~~~~
 
 ## Template for functions
@@ -233,10 +237,10 @@ void fit(T&& X,const CosanMatrix<NumericType>& Y) {
 ~~~~~~~~~~~~~~~
 
 ## constexpr
-As we allow for user-determined numeric type `NumericType`, the detailed implementation or functions needed maybe slightly
+As we allow for user-determined numeric type `NumericType`, the detailed implementation or functions needed may be slightly
 different among each other. For instance, when we are trying to read data from `csv` file. Different data type requires different
 string-to-numeric function. For `double`, one is required `std::stod` while 'std::stof' is the candidate function if 
-`float` is chosen. To take care of this variant before running time, we conside the static-i. The feature 
+`float` is chosen. To take care of this variant before running time, we conside the static-if. The feature 
 allows us to discard branches of an if statement at compile-time based on a constant expression condition. In the following 
 code as an example, we define a template function with input requiring `NumericType` as numeric and then the implementation 
 is decided via `if constexpr` statement.   
@@ -276,12 +280,16 @@ NumericType StringToNum(const std::string& arg, std::size_t* pos = 0) {
 ### Key Classes
 
 ##### Data Preprocessing
-In any Machine Learning process, data preprocessing is that step in which the data gets transformed, or Encoded, to bring it to such a state that now the machine can easily parse it. In other words, the features of the data can now be easily interpreted by the algorithm.
+In any Machine Learning process, data preprocessing is that step in which the data gets transformed, or Encoded, to 
+bring it to such a state that now the machine can easily parse it. In other words, the features of the data can now be 
+easily interpreted by the algorithm.
 
 [Design doc](./design/PreprocessDesignDoc.md) for preprocessing
 
 ##### Model Object
-This part implements classes and functions that fit `CosanData` into linear models. In 1.0 version, we offer linear models of different variants (Linear Regression, Ridge Regression, Principal Component Regression and Principal Component Regression with L2 square norm penalty). 
+This part implements classes and functions that fit `CosanData` into linear models. In 1.0 version, we offer linear 
+models of different variants (Linear Regression, Ridge Regression, Principal Component Regression and Principal Component 
+Regression with L2 square norm penalty). 
 
 [Design doc](./design/ModelDesignDoc.md) for model objects
 
@@ -293,21 +301,28 @@ The main purpose of this part is to offer tools to evaluate the linear models wi
 ### Base Classes
 
 ##### CosanBO
-Location: `cosan\base\CosanBO.h` \
+Location: `cosan\base\CosanBO.h`
+
 Cosan Base Objects. 
 
 This class is the base that is inherited by all classes and models. 
 
 ##### CosanData
-Location: `cosan\data\CosanData.h` \
+Location: `cosan\data\CosanData.h`
+In machine learning, input and output data are presented in the form of matrices or vectors (which is essentially a matrix 
+with its row or its column of length 1). There could be numerical data and categorical data. Raw data by nature are very 
+noisy - there could be infinite numbers and even missing data. 
 
-In machine learning, input and output data are presented in the form of matrices or vectors (which is essentially a matrix with its row or its column of length 1). There could be numerical data and categorical data. Raw data by nature are very noisy - there could be infinite numbers and even missing data. 
-
-We design CosanData class as a wrapper to handle a mixture of all of the use cases (double for numerical data, string for categorical data, corner cases of these data representations, etc.). It organizes feature columns such that numerical, categorical, missing, infinite values are represented separately, so other Cosan models can manipulate the raw data in a simple yet powerful way. It takes advantages of gsl::index for indexing. It parses the CSV files for you while providing the error checking needed for downstream processing. 
+We design `CosanData` class as a wrapper to handle a mixture of all of the use cases (double for numerical data, string 
+for categorical data, corner cases of these data representations, etc.). It organizes feature columns such that numerical, 
+categorical, missing, infinite values are represented separately, so other `Cosan` models can manipulate the raw data in 
+a simple yet powerful way. It takes advantages of `gsl::index` for indexing. It parses the CSV files for you while 
+providing the error checking needed for downstream processing. 
 
 ### Utility Classes
 
 ##### Kfold & Random Kfold
+
 A class to split given data set for kfold cross validation. Given a kfold number k, the class's `setSplit` function will
 generate k groups of data set. In each group, k-1/k part of data set will be used for training and the rest 1/k for testing. 
 In all k groups, the testing data sets are different. We achieve this by using the ith 1/k of the data set in the ith group.
@@ -316,23 +331,23 @@ We will also implement a splitter using parallelism.
 Location: `cosan\selection\kfold.h` & `cosan\selection\randomkfold.h`
 
 ##### Time Series Splitter 
-A class to split given data set for time series cross validation. It's variation of kfold. \
+A class to split given data set for time series cross validation. It's variation of kfold. 
 For more detial about the theory of time series cross validation, check this [link](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html). 
 
 Location: `cosan\selection\timeseriessplit.h` 
 
 ##### ArgCheck
-A collective of functions to check the data size or shape. \
+A collective of functions to check the data size or shape.
 
 Location: `cosan\utils\ArgCheck.h`
 
 ##### Exception
-A collection of self-defined exception classes to warn users for inappropriate data size or shape. \
+A collection of self-defined exception classes to warn users for inappropriate data size or shape.
 
 Location: `cosan\utils\Exception.h`
 
 ##### io
-A collection of functions to read data from csv files and write back to csv files. \
+A collection of functions to read data from csv files and write back to csv files.
 
 Location: `cosan\io\utils.h`
 
@@ -342,16 +357,20 @@ Location: `cosan\utils\utils.h`
 ## Additional Modern C++ features or API used
 -- gsl::index
    
-As recommended in CppCoreGuidelines, we use gsl::index for all matrix and vector indexing, in order to avoid signed/unsigned confusion and enable better optimization and error detection.
+As recommended in CppCoreGuidelines, we use `gsl::index` for all matrix and vector indexing, in order to avoid signed/unsigned 
+confusion and enable better optimization and error detection.
    
 -- concurrency
 
-We introduce concurrency when doing tasks like cross validation and hyper-parameter tuning. For example, the parameter grid search tools evaluate each parameter combination on each data fold independently.  Computations can be run in parallel by passing in the "nthreads" parameter when initializing the splitter.
-We took advantage of OpenMP library, the "omp_set_num_threads" routine to specify the number of threads to be used for subsequent parallel section marked by omp #pragma
+We introduce concurrency when doing tasks like cross validation and hyper-parameter tuning. For example, the parameter 
+grid search tools evaluate each parameter combination on each data fold independently.  Computations can be run in parallel 
+by passing in the `nthreads` parameter when initializing the splitter. We took advantage of `OpenMP` library, the `omp_set_num_threads`
+routine to specify the number of threads to be used for subsequent parallel section marked by omp `#pragma`.
 
 -- chrono
 
-The chrono library contains a set of utility functions and types that deal with durations, clocks, and time points. Useful cases of this library include code benchmarking, or simply defining a maximum training time for our models.
+The chrono library contains a set of utility functions and types that deal with durations, clocks, and time points. 
+Useful cases of this library include code benchmarking, or simply defining a maximum training time for our models.
 
 -- fmt
 
